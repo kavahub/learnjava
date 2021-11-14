@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.kavahub.learnjava.core-java</groupId>
+    <artifactId>core-java-modules</artifactId>
+    <name>core-java-modules</name>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>io.github.kavahub.learnjava</groupId>
+        <artifactId>learnjava-modules</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modules>
+        <module>core-java-nio</module>
+        <module>core-java-string</module>
+        <module>core-java-lang</module>
+        <module>core-java-stream</module>
+        <module>core-java-designpattern</module>
+        <module>core-java-concurrent</module>
+        <module>core-java-net</module>
+        <module>core-java-io</module>
+        <module>core-java-datetime</module>
+        <module>core-java-collection</module>
+        <module>core-java-javax</module>
+        <module>core-java-awt</module>
+        <module>core-java-security</module>
+        <module>core-java-jvm</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+          </dependency>
+
+          <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <scope>test</scope>
+          </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

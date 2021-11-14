@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://maven.apache.org/POM/4.0.0" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.kavahub.learnjava</groupId>
+  <artifactId>learnjava-modules</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>learnjava-parent-modules</name>
+  <packaging>pom</packaging>
+
+  <properties>
+    <!-- Generic properties -->
+    <java.version>11</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <argLine>-Dfile.encoding=UTF-8</argLine>
+
+    <!-- maven plugin -->
+    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+
+    <!-- logging -->
+    <logback.version>1.3.0-alpha10</logback.version>
+    <jcl-over-slf4j.version>2.0.0-alpha5</jcl-over-slf4j.version>
+
+    <junit-bom.version>5.8.1</junit-bom.version>
+    <lombok.version>1.18.20</lombok.version>
+    <guava.version>31.0.1-jre</guava.version>
+    <assertj-core.version>3.21.0</assertj-core.version>
+    <openjdk.jmh.version>1.33</openjdk.jmh.version>
+    <commons-lang3.version>3.12.0</commons-lang3.version>
+    <icu4j.version>69.1</icu4j.version>
+    <ahocorasick.version>0.6.3</ahocorasick.version>
+    <passay.version>1.6.1</passay.version>
+    <commons-text.version>1.9</commons-text.version>
+    <diff-match-patch.version>1.2</diff-match-patch.version>
+    <commons-validator.version>1.7</commons-validator.version>
+    <maven-artifact.version>3.8.3</maven-artifact.version>
+    <gradle-core.version>4.3-rc-4</gradle-core.version>
+    <jackson-core.version>2.13.0</jackson-core.version>
+    <semver4j.version>3.1.0</semver4j.version>
+    <commons-io.version>2.11.0</commons-io.version>
+    <hamcrest.version>2.2</hamcrest.version>
+    <javamoney.moneta.version>1.4.2</javamoney.moneta.version>
+    <commons-collections4.version>4.4</commons-collections4.version>
+    <joda-time.version>2.10.12</joda-time.version>
+    <eclipse.collections.version>11.0.0.M3</eclipse.collections.version>
+    <mockserver.version>5.11.2</mockserver.version>
+    <jakarta.ws-api.version>3.0.1</jakarta.ws-api.version>
+    <jaxws-rt.version>3.0.2</jaxws-rt.version>
+    <commons-beanutils.version>1.9.4</commons-beanutils.version>
+    <commons-math3.version>3.6.1</commons-math3.version>
+    <combinatoricslib3.version>3.3.2</combinatoricslib3.version>
+    <exp4j.version>0.4.8</exp4j.version>
+    <javaluator.version>3.0.3</javaluator.version>
+    <reflections.version>0.9.12</reflections.version>
+    <spring-framework.version>5.3.12</spring-framework.version>
+    <unix4j.version>0.6</unix4j.version>
+    <jmockit.version>1.49</jmockit.version>
+    <bouncycastle.version>1.69</bouncycastle.version>
+    <commons-codec.version>1.15</commons-codec.version>
+    <jaxb-api.version>2.3.1</jaxb-api.version>
+    <javax-mail.version>1.6.2</javax-mail.version>
+    <jgonian-commons-ip-math.version>1.32</jgonian-commons-ip-math.version>
+    <seancfoley-ipaddress.version>5.3.3</seancfoley-ipaddress.version>
+    <googlecode-ipv6.version>0.17</googlecode-ipv6.version>
+    <jetty-server.version>11.0.7</jetty-server.version>
+    <tomcat-embeded.version>10.1.0-M6</tomcat-embeded.version>
+    <async-http-client.version>2.12.3</async-http-client.version>
+    <greenmail.version>1.6.5</greenmail.version>
+    <javaassist.version>3.28.0-GA</javaassist.version>
+    <bcel.version>6.5.0</bcel.version>
+    <asm.version>9.2</asm.version>
+    <json.version>20210307</json.version>
+    <opencsv.version>5.5.2</opencsv.version>
+    <wiremock.version>2.31.0</wiremock.version>
+    <servlet-api.version>4.0.1</servlet-api.version>
+    <fscontext.version>4.6-b01</fscontext.version>
+    <jmimemagic.version>0.1.5</jmimemagic.version>
+    <tika.version>2.1.0</tika.version>
+    <log4j-slf4j-impl.version>2.14.1</log4j-slf4j-impl.version>
+    <avaitility.version>1.7.0</avaitility.version>
+    <jcabi-aspects.version>0.23.2</jcabi-aspects.version>
+    <ea-async.version>1.2.3</ea-async.version>
+    <cactoos.version>0.50</cactoos.version>
+    <threadweaver.version>0.2</threadweaver.version>
+    <tempus-fugit.version>1.1</tempus-fugit.version>
+    <junit.version>4.13.2</junit.version>
+    <jcstress-core.version>0.14</jcstress-core.version>
+    <multithreadedtc.version>1.01</multithreadedtc.version>
+    <jool.version>0.9.14</jool.version>
+  </properties>
+
+  <modules>
+    <module>core-java</module>
+    <module>webservice</module>
+    <module>google-guava</module>
+    <module>dubhe</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.jooq</groupId>
+        <artifactId>jool</artifactId>
+        <version>${jool.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.googlecode.multithreadedtc</groupId>
+        <artifactId>multithreadedtc</artifactId>
+        <version>${multithreadedtc.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.openjdk.jcstress</groupId>
+        <artifactId>jcstress-core</artifactId>
+        <version>${jcstress-core.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.thread-weaver</groupId>
+        <artifactId>threadweaver</artifactId>
+        <version>${threadweaver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.tempus-fugit</groupId>
+        <artifactId>tempus-fugit</artifactId>
+        <version>${tempus-fugit.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.cactoos</groupId>
+        <artifactId>cactoos</artifactId>
+        <version>${cactoos.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.ea.async</groupId>
+        <artifactId>ea-async</artifactId>
+        <version>${ea-async.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.jcabi</groupId>
+        <artifactId>jcabi-aspects</artifactId>
+        <version>${jcabi-aspects.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.jayway.awaitility</groupId>
+        <artifactId>awaitility</artifactId>
+        <version>${avaitility.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>${log4j-slf4j-impl.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.tika</groupId>
+        <artifactId>tika-core</artifactId>
+        <version>${tika.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>net.sf.jmimemagic</groupId>
+        <artifactId>jmimemagic</artifactId>
+        <version>${jmimemagic.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.sun.messaging.mq</groupId>
+        <artifactId>fscontext</artifactId>
+        <version>${fscontext.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>${servlet-api.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.github.tomakehurst</groupId>
+        <artifactId>wiremock-jre8</artifactId>
+        <version>${wiremock.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>${json.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.opencsv</groupId>
+        <artifactId>opencsv</artifactId>
+        <version>${opencsv.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-util</artifactId>
+        <version>${asm.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.bcel</groupId>
+        <artifactId>bcel</artifactId>
+        <version>${bcel.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.javassist</groupId>
+        <artifactId>javassist</artifactId>
+        <version>${javaassist.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.icegreen</groupId>
+        <artifactId>greenmail</artifactId>
+        <version>${greenmail.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>${jcl-over-slf4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.asynchttpclient</groupId>
+        <artifactId>async-http-client</artifactId>
+        <version>${async-http-client.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.tomcat.embed</groupId>
+        <artifactId>tomcat-embed-core</artifactId>
+        <version>${tomcat-embeded.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-server</artifactId>
+        <version>${jetty-server.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.googlecode.java-ipv6</groupId>
+        <artifactId>java-ipv6</artifactId>
+        <version>${googlecode-ipv6.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.github.seancfoley</groupId>
+        <artifactId>ipaddress</artifactId>
+        <version>${seancfoley-ipaddress.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.github.jgonian</groupId>
+        <artifactId>commons-ip-math</artifactId>
+        <version>${jgonian-commons-ip-math.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.sun.mail</groupId>
+        <artifactId>javax.mail</artifactId>
+        <version>${javax-mail.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>${jaxb-api.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcprov-jdk15on</artifactId>
+        <version>${bouncycastle.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.jmockit</groupId>
+        <artifactId>jmockit</artifactId>
+        <version>${jmockit.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.unix4j</groupId>
+        <artifactId>unix4j-command</artifactId>
+        <version>${unix4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${junit-bom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>${spring-framework.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring-framework.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest</artifactId>
+        <version>${hamcrest.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.reflections</groupId>
+        <artifactId>reflections</artifactId>
+        <version>${reflections.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>net.objecthunter</groupId>
+        <artifactId>exp4j</artifactId>
+        <version>${exp4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fathzer</groupId>
+        <artifactId>javaluator</artifactId>
+        <version>${javaluator.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.github.dpaukov</groupId>
+        <artifactId>combinatoricslib3</artifactId>
+        <version>${combinatoricslib3.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-math3</artifactId>
+        <version>${commons-math3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-beanutils</groupId>
+        <artifactId>commons-beanutils</artifactId>
+        <version>${commons-beanutils.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.xml.ws</groupId>
+        <artifactId>jaxws-rt</artifactId>
+        <version>${jaxws-rt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>jakarta.xml.ws</groupId>
+        <artifactId>jakarta.xml.ws-api</artifactId>
+        <version>${jakarta.ws-api.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.mock-server</groupId>
+        <artifactId>mockserver-junit-jupiter</artifactId>
+        <version>${mockserver.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.collections</groupId>
+        <artifactId>eclipse-collections</artifactId>
+        <version>${eclipse.collections.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>${joda-time.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-collections4</artifactId>
+        <version>${commons-collections4.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.javamoney</groupId>
+        <artifactId>moneta</artifactId>
+        <version>${javamoney.moneta.version}</version>
+        <type>pom</type>
+      </dependency>
+
+
+      <dependency>
+        <groupId>commons-validator</groupId>
+        <artifactId>commons-validator</artifactId>
+        <version>${commons-validator.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.maven</groupId>
+        <artifactId>maven-artifact</artifactId>
+        <version>${maven-artifact.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.gradle</groupId>
+        <artifactId>gradle-core</artifactId>
+        <version>${gradle-core.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jackson-core.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.vdurmont</groupId>
+        <artifactId>semver4j</artifactId>
+        <version>${semver4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>${commons-codec.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bitbucket.cowwoc</groupId>
+        <artifactId>diff-match-patch</artifactId>
+        <version>${diff-match-patch.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.passay</groupId>
+        <artifactId>passay</artifactId>
+        <version>${passay.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-text</artifactId>
+        <version>${commons-text.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.ahocorasick</groupId>
+        <artifactId>ahocorasick</artifactId>
+        <version>${ahocorasick.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.ibm.icu</groupId>
+        <artifactId>icu4j</artifactId>
+        <version>${icu4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons-lang3.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.openjdk.jmh</groupId>
+        <artifactId>jmh-generator-annprocess</artifactId>
+        <version>${openjdk.jmh.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>${assertj-core.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+  <repositories>
+    <repository>
+      <id>aliyun</id>
+      <name>aliyun</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+        <configuration>
+          <forkCount>3</forkCount>
+          <reuseForks>true</reuseForks>
+          <excludes>
+            <exclude>**/*ManualTest.java</exclude>
+            <exclude>**/*IntegrationTest.java</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
