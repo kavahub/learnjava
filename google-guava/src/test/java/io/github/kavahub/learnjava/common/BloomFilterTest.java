@@ -58,6 +58,6 @@ public class BloomFilterTest {
         assertThat(filter.mightContain(1)).isTrue();
         assertThat(filter.mightContain(2)).isTrue();
         assertThat(filter.mightContain(3)).isTrue();
-        assertThat(filter.mightContain(1_000_000)).isTrue();
+        assertThat(filter.mightContain(100_000_000)).isTrue();
     }
 }

@@ -17,3 +17,4 @@ gongle guava项目学习
 - [Guava Cache本地缓存在 Spring Boot应用中的实践](https://www.jianshu.com/p/921c588289c7)
 - [guava-retrying 初体验](https://www.jianshu.com/p/a289dde63043)
 - [Guava中的集合类](https://mrlongx.com/index.php/2016/10/30/new-collections-in-guava/)
+- [Google Guava Cache 全解析](https://www.jianshu.com/p/38bd5f1cf2f2)
