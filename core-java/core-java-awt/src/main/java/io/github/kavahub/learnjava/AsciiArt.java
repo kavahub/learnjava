@@ -6,6 +6,9 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 
+/**
+ * 将字符串输出为艺术体
+ */
 public class AsciiArt {
     public void drawString(String text, String artChar, Settings settings) {
         BufferedImage image = getImageIntegerMode(settings.width, settings.height);

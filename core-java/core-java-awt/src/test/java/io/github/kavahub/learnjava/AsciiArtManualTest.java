@@ -6,7 +6,7 @@ import io.github.kavahub.learnjava.AsciiArt.Settings;
 
 import java.awt.*;
 
-public class AsciiArtTest {
+public class AsciiArtManualTest {
     @Test
     public void givenTextWithAsciiCharacterAndSettings_shouldPrintAsciiArt() {
         AsciiArt asciiArt = new AsciiArt();
