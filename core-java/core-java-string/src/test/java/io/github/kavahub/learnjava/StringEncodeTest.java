@@ -9,6 +9,10 @@ import java.nio.charset.StandardCharsets;
 import org.apache.commons.codec.binary.StringUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 字符串加解码
+ * 
+ */
 public class StringEncodeTest {
     @Test
     public void givenGermanAsciiString_whenComparing_thenCompareNotEquals() {

@@ -8,6 +8,10 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 生成随机字符串
+ * 
+ */
 @Slf4j
 public class RandomStringsTest {
     @Test

@@ -10,6 +10,9 @@ import org.bitbucket.cowwoc.diffmatchpatch.DiffMatchPatch.Operation;
 import org.junit.jupiter.api.Test;
 
 /**
+ * 两个字符串之间的差异
+ * 
+ * <p>
  * StringUtils.difference与DiffMatchPatch的用法
  */
 public class StringDiffTest {

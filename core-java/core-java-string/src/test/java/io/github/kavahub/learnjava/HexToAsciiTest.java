@@ -4,6 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 16进制与文本互转
+ */
 public class HexToAsciiTest {
     @Test
     public void whenHexToAscii() {

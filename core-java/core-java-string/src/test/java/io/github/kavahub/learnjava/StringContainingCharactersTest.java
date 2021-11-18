@@ -7,13 +7,17 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 字符串包含大写和小写字母，数字，特殊符号
+ * 
+ * <p>
+ * 说明：isMatchingRegex函数，checkString函数与regex正则表达式功能相同
+ * 
+ */
 public class StringContainingCharactersTest {
     private static final Pattern[] inputRegexes = new Pattern[4];
 
-     // isMatchingRegex函数与checkString函数与regex正则表达式功能相同
-
     private static final String regex = "^(?=.*?\\p{Lu})(?=.*?\\p{Ll})(?=.*?\\d)(?=.*?[`~!@#$%^&*()\\-_=+\\\\|\\[{\\]};:'\",<.>/?]).*$";
-
 
     static {
         // 大写字母

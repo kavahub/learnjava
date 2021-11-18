@@ -6,16 +6,15 @@ import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
 
-import io.github.kavahub.learnjava.util.MultiLineString;
+import static io.github.kavahub.learnjava.util.MultiLineStringJoiner.*;
 
 public class MultiLineStringTest {
     @Test
     public void whenCompareMultiLineStrings_thenTheyAreAllTheSame() throws IOException {
-        MultiLineString ms = new MultiLineString();
-        assertEquals(ms.stringConcatenation(), ms.stringJoin());
-        assertEquals(ms.stringJoin(), ms.stringBuilder());
-        assertEquals(ms.stringBuilder(), ms.guavaJoiner());
-        assertEquals(ms.guavaJoiner(), ms.loadFromFile());
-        //assertEquals(ms.loadFromFile(), ms.textBlocks());
+        assertEquals(stringConcatenation(), stringJoin());
+        assertEquals(stringJoin(), stringBuilder());
+        assertEquals(stringBuilder(), guavaJoiner());
+        assertEquals(guavaJoiner(), loadFromFile());
+        //assertEquals(loadFromFile(), textBlocks());
     }    
 }
