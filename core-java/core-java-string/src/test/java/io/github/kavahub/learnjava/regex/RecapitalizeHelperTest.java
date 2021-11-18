@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-import static io.github.kavahub.learnjava.regex.RecapitalizeHelper.*;
+import static io.github.kavahub.learnjava.util.RecapitalizeHelper.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class RecapitalizeHelperTest {

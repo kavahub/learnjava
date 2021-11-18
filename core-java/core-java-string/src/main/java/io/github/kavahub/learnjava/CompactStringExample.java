@@ -7,6 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * 字符串
+ */
 @Slf4j
 public class CompactStringExample {
   public static void main(String[] args) {

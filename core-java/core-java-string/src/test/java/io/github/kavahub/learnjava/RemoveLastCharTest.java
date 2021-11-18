@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.StringRemoveHelper;
+
 public class RemoveLastCharTest {
     public static final String TEST_STRING = "abcdef";
     public static final String NULL_STRING = null;

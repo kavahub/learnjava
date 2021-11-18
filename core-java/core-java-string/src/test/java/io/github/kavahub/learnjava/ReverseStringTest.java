@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.ReverseString;
+
 public class ReverseStringTest {
 
     private static final String STRING_INPUT = "cat";

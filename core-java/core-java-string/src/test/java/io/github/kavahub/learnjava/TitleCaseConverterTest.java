@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.TitleCaseConverter;
+
 public class TitleCaseConverterTest {
     private static final String TEXT = "tHis IS a tiTLe";
     private static final String TEXT_EXPECTED = "This Is A Title";

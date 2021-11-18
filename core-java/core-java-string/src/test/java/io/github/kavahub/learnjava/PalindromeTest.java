@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.Palindrome;
+
 public class PalindromeTest {
     private String[] words = { "Anna", "Civic", "Kayak", "Level", "Madam", };
 

@@ -1,6 +1,6 @@
 package io.github.kavahub.learnjava.regex;
 
-import static io.github.kavahub.learnjava.regex.CamelCaseToWordsHelper.*;
+import static io.github.kavahub.learnjava.util.CamelCaseToWordsHelper.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;

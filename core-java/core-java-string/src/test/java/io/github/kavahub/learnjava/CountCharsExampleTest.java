@@ -10,6 +10,9 @@ import com.google.common.base.CharMatcher;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.WordCounter;
+import io.github.kavahub.learnjava.util.WordIndexer;
+
 /**
  * @see WordCounter
  * @see WordIndexer

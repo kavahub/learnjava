@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.MultiLineString;
+
 public class MultiLineStringTest {
     @Test
     public void whenCompareMultiLineStrings_thenTheyAreAllTheSame() throws IOException {

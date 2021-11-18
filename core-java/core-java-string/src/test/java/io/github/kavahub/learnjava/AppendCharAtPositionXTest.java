@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.AppendCharAtPositionX;
+
 public class AppendCharAtPositionXTest {
     private String word = "Titanc";
     private char letter = 'i';

@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.InsertCharacterInString;
+
 public class InsertCharInStringTest {
     @Test
     public void whenInsertCharAtIndexUsingSubstring_thenSuccess() {

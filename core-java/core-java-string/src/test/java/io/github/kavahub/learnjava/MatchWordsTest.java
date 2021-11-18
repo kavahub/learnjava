@@ -2,6 +2,8 @@ package io.github.kavahub.learnjava;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.MatchWords;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatchWordsTest {

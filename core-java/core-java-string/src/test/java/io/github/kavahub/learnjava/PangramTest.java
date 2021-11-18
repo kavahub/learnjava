@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.Pangram;
+
 public class PangramTest {
     @Test
     public void givenValidString_isPangram_shouldReturnSuccess() {

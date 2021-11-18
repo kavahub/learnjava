@@ -7,6 +7,8 @@ import com.google.common.base.Strings;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.StringPaddingUtil;
+
 public class StringPaddingUtilTest {
     String inputString = "123456";
     String expectedPaddedStringSpaces = "    123456";

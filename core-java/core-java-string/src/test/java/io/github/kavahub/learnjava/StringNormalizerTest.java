@@ -7,6 +7,8 @@ import java.text.Normalizer;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.StringNormalizer;
+
 public class StringNormalizerTest {
     @Test
     public void givenNotNormalizedString_whenIsNormalized_thenReturnFalse() {

@@ -8,6 +8,9 @@ import java.util.ResourceBundle;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Java格式化
+ */
 @Slf4j
 public class JavaSEFormat {
     public static String getLabel(Locale locale, Object[] data) {

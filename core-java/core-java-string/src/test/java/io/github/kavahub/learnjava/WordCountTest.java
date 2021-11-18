@@ -6,6 +6,8 @@ import java.util.StringTokenizer;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.WordCounter;
+
 public class WordCountTest {
     private String string1 = "This is a test sentence with eight words";
     private String string2 = "This#is%a test sentence with eight       words";

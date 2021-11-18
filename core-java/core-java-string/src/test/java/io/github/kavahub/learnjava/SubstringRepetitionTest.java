@@ -1,6 +1,6 @@
 package io.github.kavahub.learnjava;
 
-import static io.github.kavahub.learnjava.SubstringRepetition.*;
+import static io.github.kavahub.learnjava.util.SubstringRepetition.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

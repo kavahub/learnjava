@@ -3,6 +3,8 @@ package io.github.kavahub.learnjava;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.RemoveDuplicateFromString;
+
 /**
  * 注意，个功能返回字符串的顺序不相同
  */

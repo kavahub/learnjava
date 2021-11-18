@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.EmailValidation;
+
 public class EmailValidationTest {
     private String emailAddress;
     private String regexPattern;

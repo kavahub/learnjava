@@ -12,6 +12,8 @@ import org.apache.maven.artifact.versioning.ComparableVersion;
 import org.gradle.util.VersionNumber;
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.VersionCompare;
+
 public class VersionComparisonTest {
     
     @Test

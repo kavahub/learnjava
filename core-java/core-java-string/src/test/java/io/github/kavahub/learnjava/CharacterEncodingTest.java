@@ -19,6 +19,8 @@ import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.CharacterEncoding;
+
 public class CharacterEncodingTest {
     @Test
     public void givenTextFile_whenCalledWithEncodingASCII_thenProduceIncorrectResult() throws IOException {

@@ -10,6 +10,10 @@ import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * {@link StreamTokenizer} 使用示例
+ * 
+ */
 @Slf4j
 public class StreamTokenizerExample {
     private static final String INPUT_FILE = "/stream-tokenizer-example.txt";

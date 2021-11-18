@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.WordIndexer;
+
 public class WordIndexerTest {
     final String theString = "To be, or not to be: that is the question: "
             + "Whether 'tis nobler in the mind to suffer " + "The slings and arrows of outrageous fortune, "

@@ -6,8 +6,12 @@ import java.util.ResourceBundle;
 
 import com.ibm.icu.text.MessageFormat;
 
+/**
+ * ICU格式化
+ */
 public class ICUFormat {
     public static String getLabel(Locale locale, Object[] data) {
+        // 读取资源文件
         ResourceBundle bundle = ResourceBundle.getBundle("formats", locale);
         String format = bundle.getString("label-icu");
         MessageFormat formatter = new MessageFormat(format, locale);

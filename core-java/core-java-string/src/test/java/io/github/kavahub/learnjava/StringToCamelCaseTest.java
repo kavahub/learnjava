@@ -2,7 +2,7 @@ package io.github.kavahub.learnjava;
 
 import org.junit.jupiter.api.Test;
 
-import static io.github.kavahub.learnjava.StringToCamelCase.*;
+import static io.github.kavahub.learnjava.util.StringToCamelCase.*;
 import static org.assertj.core.api.Assertions.*;
 
 import com.google.common.base.CaseFormat;

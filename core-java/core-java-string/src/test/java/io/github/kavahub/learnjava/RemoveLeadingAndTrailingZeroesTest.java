@@ -7,6 +7,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import io.github.kavahub.learnjava.util.RemoveLeadingAndTrailingZeroes;
+
 /**
  * 通常，会遇到这样的情况，同一个测试案例，改变的只是测试时候输入的参数不同。
  * 按照之前的做法，可能会是通过每个输入参数都写一个测试，或者将测试参数封装到集合中循环遍历执行测试。

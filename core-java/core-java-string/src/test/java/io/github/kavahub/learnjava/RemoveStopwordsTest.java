@@ -14,10 +14,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
-import io.github.kavahub.learnjava.benchmark.RemovingStopwordsExample;
+import io.github.kavahub.learnjava.benchmark.RemovingStopwordsBenchmark;
 
 /**
- * @see RemovingStopwordsExample
+ * @see RemovingStopwordsBenchmark
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RemoveStopwordsTest {
