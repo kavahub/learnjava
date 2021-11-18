@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.util;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -6,7 +6,13 @@ import java.util.stream.Stream;
 
 import org.apache.commons.collections4.CollectionUtils;
 
-public class NullSafeCollectionStreamsDereferenceCheck {
+import lombok.experimental.UtilityClass;
+
+/**
+ * 空集合转换成流检查器
+ */
+@UtilityClass
+public class NullSafeCollectionStreamsDereferenceChecker {
     public Stream<String> toStreamUsingNull(Collection<String> collection) {
         return collection == null ? Stream.empty() : collection.stream();
     } 

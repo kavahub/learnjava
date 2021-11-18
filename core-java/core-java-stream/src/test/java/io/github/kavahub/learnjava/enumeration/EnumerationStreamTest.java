@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.enumeration;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.hamcrest.Matchers.*;
@@ -12,14 +12,14 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
-import io.github.kavahub.learnjava.enumeration.EnumerationStream;
+import static io.github.kavahub.learnjava.enumeration.EnumerationStream.*;
 
 public class EnumerationStreamTest {
     @Test
     public void givenEnumeration_whenConvertedToStream_thenNotNull() {
         Vector<Integer> input = new Vector<>(Arrays.asList(2, 3, 1, 5, 4));
 
-        Stream<Integer> resultingStream = EnumerationStream.of(input.elements());
+        Stream<Integer> resultingStream = of(input.elements());
 
         assertNotNull(resultingStream);
     }
@@ -28,7 +28,7 @@ public class EnumerationStreamTest {
     public void whenConvertedToList_thenCorrect() {
         Vector<Integer> input = new Vector<>(Arrays.asList(1, 2, 3, 4, 5));
 
-        Stream<Integer> stream = EnumerationStream.of(input.elements());
+        Stream<Integer> stream = of(input.elements());
         List<Integer> list = stream.filter(e -> e >= 3)
             .collect(Collectors.toList());
         assertThat(list, contains(3, 4, 5));

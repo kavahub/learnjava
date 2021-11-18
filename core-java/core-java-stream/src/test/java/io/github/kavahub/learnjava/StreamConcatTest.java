@@ -8,6 +8,9 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 连接（合并）多个流
+ */
 public class StreamConcatTest {
     @Test
     public void givenStream_whenAppendingObject_thenAppended() {

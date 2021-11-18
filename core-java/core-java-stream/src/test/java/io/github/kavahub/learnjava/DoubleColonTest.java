@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava.lambda;
+package io.github.kavahub.learnjava;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -16,6 +16,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 双冒号的使用方法
+ */
 @Slf4j
 public class DoubleColonTest {
     @Test
@@ -45,7 +48,7 @@ public class DoubleColonTest {
 
         inventory.sort(Comparator.comparing(Computer::getAge));
 
-        assertEquals( c6, inventory.get(0), "Oldest Computer in inventory");
+        assertEquals(c6, inventory.get(0), "Oldest Computer in inventory");
 
     }
 
@@ -81,7 +84,7 @@ public class DoubleColonTest {
         Double initialValue = 999.99;
         final Double actualValue = macbookPro.calculateValue(initialValue);
         assertEquals(766.659, actualValue, 0.0);
-    }   
+    }
 
     @Getter
     @Setter
@@ -90,38 +93,38 @@ public class DoubleColonTest {
         private Integer age;
         private String color;
         private Integer healty;
-    
+
         Computer(final int age, final String color) {
             this.age = age;
             this.color = color;
         }
-    
+
         Computer(final Integer age, final String color, final Integer healty) {
             this.age = age;
             this.color = color;
             this.healty = healty;
         }
-    
+
         public Computer() {
         }
-    
+
         public void turnOnPc() {
             System.out.println("Computer turned on");
         }
-    
+
         public void turnOffPc() {
             System.out.println("Computer turned off");
         }
-    
+
         public Double calculateValue(Double initialValue) {
             return initialValue / 1.50;
         }
-    
+
         @Override
         public String toString() {
             return "Computer{" + "age=" + age + ", color='" + color + '\'' + ", healty=" + healty + '}';
         }
-    
+
         @Override
         public boolean equals(final Object o) {
             if (this == o) {
@@ -130,13 +133,14 @@ public class DoubleColonTest {
             if (o == null || getClass() != o.getClass()) {
                 return false;
             }
-    
+
             final Computer computer = (Computer) o;
-    
-            return (age != null ? age.equals(computer.age) : computer.age == null) && (color != null ? color.equals(computer.color) : computer.color == null);
-    
+
+            return (age != null ? age.equals(computer.age) : computer.age == null)
+                    && (color != null ? color.equals(computer.color) : computer.color == null);
+
         }
-    
+
         @Override
         public int hashCode() {
             int result = age != null ? age.hashCode() : 0;
@@ -149,67 +153,67 @@ public class DoubleColonTest {
         public MacbookPro(int age, String color) {
             super(age, color);
         }
-    
+
         MacbookPro(Integer age, String color, Integer healty) {
             super(age, color, healty);
         }
-    
+
         @Override
         public void turnOnPc() {
             log.debug("MacbookPro turned on");
         }
-    
+
         @Override
         public void turnOffPc() {
             log.debug("MacbookPro turned off");
         }
-    
+
         @Override
         public Double calculateValue(Double initialValue) {
             Function<Double, Double> function = super::calculateValue;
             final Double pcValue = function.apply(initialValue);
             log.debug("First value is:" + pcValue);
             return pcValue + (initialValue / 10);
-    
+
         }
     }
-    
+
     public static class ComputerUtils {
 
         static final ComputerPredicate after2010Predicate = (c) -> (c.getAge() > 2010);
         static final ComputerPredicate blackPredicate = (c) -> "black".equals(c.getColor());
-    
+
         public static List<Computer> filter(final List<Computer> inventory, final ComputerPredicate p) {
-    
+
             final List<Computer> result = new ArrayList<>();
             inventory.stream().filter(p::filter).forEach(result::add);
-    
+
             return result;
         }
-    
+
         static void repair(final Computer computer) {
             if (computer.getHealty() < 50) {
                 computer.setHealty(100);
             }
         }
-    
+
     }
 
     @FunctionalInterface
-public static interface ComputerPredicate {
+    public static interface ComputerPredicate {
 
-    boolean filter(Computer c);
+        boolean filter(Computer c);
 
-}
-
-@FunctionalInterface
-public interface TriFunction<A, B, C, R> {
-
-    R apply(A a, B b, C c);
-
-    default <V> TriFunction<A, B, C, V> andThen(final Function<? super R, ? extends V> after) {
-        Objects.requireNonNull(after);
-        return (final A a, final B b, final C c) -> after.apply(apply(a, b, c));
     }
-}
+
+    @FunctionalInterface
+    public interface TriFunction<A, B, C, R> {
+
+        R apply(A a, B b, C c);
+
+        default <V> TriFunction<A, B, C, V> andThen(final Function<? super R, ? extends V> after) {
+            Objects.requireNonNull(after);
+            return (final A a, final B b, final C c) -> after.apply(apply(a, b, c));
+        }
+    }
 }

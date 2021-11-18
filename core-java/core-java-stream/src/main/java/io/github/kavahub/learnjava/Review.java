@@ -1,10 +1,9 @@
-package io.github.kavahub.learnjava.reduce;
+package io.github.kavahub.learnjava;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+
+@Data
 public class Review {
     int points;
     String review;

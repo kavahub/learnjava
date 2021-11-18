@@ -12,6 +12,10 @@ import static org.hamcrest.Matchers.contains;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 将Iterable转换成流
+ * 
+ */
 public class IterableStreamTest {
     @Test
     public void givenIterable_whenConvertedToStream_thenNotNull() {
@@ -24,7 +28,6 @@ public class IterableStreamTest {
     public void whenConvertedToList_thenCorrect() {
         Iterable<String> iterable = Arrays.asList("Testing", "Iterable", "conversion", "to", "Stream");
 
-        // 将Iterable转换成流
         List<String> result = StreamSupport.stream(iterable.spliterator(), false).map(String::toUpperCase)
                 .collect(Collectors.toList());
 

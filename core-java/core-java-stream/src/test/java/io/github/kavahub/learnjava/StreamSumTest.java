@@ -7,12 +7,14 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class StreamSumHelperTest {
+import static io.github.kavahub.learnjava.util.StreamSum.*;
+
+public class StreamSumTest {
     
     @Test
     public void givenListOfIntegersWhenSummingUsingCustomizedAccumulatorThenCorrectValueReturned() {
         List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
-        Integer sum = StreamSumHelper.getSumUsingCustomizedAccumulator(integers);
+        Integer sum = getSumUsingCustomizedAccumulator(integers);
         assertEquals(15, sum.intValue());
 
     }
@@ -20,28 +22,28 @@ public class StreamSumHelperTest {
     @Test
     public void givenListOfIntegersWhenSummingUsingJavaAccumulatorThenCorrectValueReturned() {
         List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
-        Integer sum = StreamSumHelper.getSumUsingJavaAccumulator(integers);
+        Integer sum = getSumUsingJavaAccumulator(integers);
         assertEquals(15, sum.intValue());
     }
 
     @Test
     public void givenListOfIntegersWhenSummingUsingReduceThenCorrectValueReturned() {
         List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
-        Integer sum = StreamSumHelper.getSumUsingReduce(integers);
+        Integer sum = getSumUsingReduce(integers);
         assertEquals(15, sum.intValue());
     }
 
     @Test
     public void givenListOfIntegersWhenSummingUsingCollectThenCorrectValueReturned() {
         List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
-        Integer sum = StreamSumHelper.getSumUsingCollect(integers);
+        Integer sum = getSumUsingCollect(integers);
         assertEquals(15, sum.intValue());
     }
 
     @Test
     public void givenListOfIntegersWhenSummingUsingSumThenCorrectValueReturned() {
         List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
-        Integer sum = StreamSumHelper.getSumUsingSum(integers);
+        Integer sum = getSumUsingSum(integers);
         assertEquals(15, sum.intValue());
     }
 }

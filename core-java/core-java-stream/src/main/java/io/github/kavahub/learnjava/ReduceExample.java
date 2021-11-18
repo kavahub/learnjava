@@ -1,8 +1,11 @@
-package io.github.kavahub.learnjava.reduce;
+package io.github.kavahub.learnjava;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import io.github.kavahub.learnjava.util.NumberDivider;
+
 
 public class ReduceExample {
     public static void main(String[] args) {
@@ -51,10 +54,10 @@ public class ReduceExample {
         System.out.println(result10);
         System.out.println("Parallel stream time: " + (t4 - t3) + "ms");
         
-        int result11 = NumberUtils.divideListElements(numbers, 1);
+        int result11 = NumberDivider.divideListElements(numbers, 1);
         System.out.println(result11);
         
-        int result12 = NumberUtils.divideListElementsWithExtractedTryCatchBlock(numbers, 0);
+        int result12 = NumberDivider.divideListElementsWithExtractedTryCatchBlock(numbers, 0);
         System.out.println(result12);
     }       
 }

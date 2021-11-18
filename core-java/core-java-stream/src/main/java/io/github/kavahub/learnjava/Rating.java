@@ -1,13 +1,11 @@
-package io.github.kavahub.learnjava.reduce;
+package io.github.kavahub.learnjava;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class Rating {
     double points;
     List<Review> reviews = new ArrayList<>();

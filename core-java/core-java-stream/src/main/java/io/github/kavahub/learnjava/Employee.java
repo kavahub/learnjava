@@ -1,8 +1,8 @@
 package io.github.kavahub.learnjava;
 
-import lombok.Getter;
+import lombok.Data;
 
-@Getter
+@Data
 public class Employee {
     private Integer id;
     private String name;

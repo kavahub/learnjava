@@ -1,12 +1,15 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.lambda;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 在Lambda表达式中抛出异常
+ */
 @UtilityClass
-public class LambdaExceptionHelper {
+public class LambdaExceptionRethrow {
     @FunctionalInterface
     public interface Consumer_WithExceptions<T, E extends Exception> {
         void accept(T t) throws E;

@@ -7,9 +7,12 @@ import java.util.stream.StreamSupport;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * {@link Enumeration} 集合支持流
+ */
 @UtilityClass
 public class EnumerationStream {
-    public static <T> Stream<T> of(Enumeration<T> enumeration) {
+    public <T> Stream<T> of(Enumeration<T> enumeration) {
         // ORDERED（有序）,DISTINCT（不重复），SORTED（可排序），
         // SIZED（明确集合大小），NONNULL（所有元素非空），IMMUTABLE（不可更改），
         // CONCURRENT（支持并发）和SUBSIZED（拆分的子Spliterator是SIZED）

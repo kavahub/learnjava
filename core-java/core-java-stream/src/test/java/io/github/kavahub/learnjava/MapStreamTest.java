@@ -12,6 +12,9 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * map 的使用
+ */
 public class MapStreamTest {
     private Map<String, String> books;
 

@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.util;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,53 +7,56 @@ import java.util.stream.Collectors;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 流合计
+ */
 @UtilityClass
-public class StreamSumHelper {
+public class StreamSum {
 
-    private static int add(int a, int b) {
+    private int add(int a, int b) {
         return a + b;
     }
 
-    public static Integer getSumUsingCustomizedAccumulator(List<Integer> integers) {
+    public Integer getSumUsingCustomizedAccumulator(List<Integer> integers) {
         return integers.stream()
-            .reduce(0, StreamSumHelper::add);
+            .reduce(0, StreamSum::add);
 
     }
 
-    public static Integer getSumUsingJavaAccumulator(List<Integer> integers) {
+    public Integer getSumUsingJavaAccumulator(List<Integer> integers) {
         return integers.stream()
             .reduce(0, Integer::sum);
 
     }
 
-    public static Integer getSumUsingReduce(List<Integer> integers) {
+    public Integer getSumUsingReduce(List<Integer> integers) {
         return integers.stream()
             .reduce(0, (a, b) -> a + b);
 
     }
 
-    public static Integer getSumUsingCollect(List<Integer> integers) {
+    public Integer getSumUsingCollect(List<Integer> integers) {
 
         return integers.stream()
             .collect(Collectors.summingInt(Integer::intValue));
 
     }
 
-    public static Integer getSumUsingSum(List<Integer> integers) {
+    public Integer getSumUsingSum(List<Integer> integers) {
 
         return integers.stream()
             .mapToInt(Integer::intValue)
             .sum();
     }
 
-    public static Integer getSumOfMapValues(Map<Object, Integer> map) {
+    public Integer getSumOfMapValues(Map<Object, Integer> map) {
         return map.values()
             .stream()
             .mapToInt(Integer::valueOf)
             .sum();
     }
 
-    public static Integer getSumIntegersFromString(String str) {
+    public Integer getSumIntegersFromString(String str) {
         Integer sum = Arrays.stream(str.split(" "))
             .filter((s) -> s.matches("\\d+"))
             .mapToInt(Integer::valueOf)

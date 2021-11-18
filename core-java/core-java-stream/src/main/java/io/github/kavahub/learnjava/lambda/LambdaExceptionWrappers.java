@@ -4,6 +4,10 @@ import java.util.function.Consumer;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * Lambda表达式异常适配器
+ * 
+ */
 @UtilityClass
 public class LambdaExceptionWrappers {
     public Consumer<Integer> lambdaWrapper(Consumer<Integer> consumer) {

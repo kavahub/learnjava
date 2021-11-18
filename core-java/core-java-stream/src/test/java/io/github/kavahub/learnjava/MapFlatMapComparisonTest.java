@@ -11,7 +11,10 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
-public class MapAndFlatMapTest {
+/**
+ * map 与 flatMap 的区别
+ */
+public class MapFlatMapComparisonTest {
     @Test
     public void givenStream_whenCalledMap_thenProduceList() {
         List<String> myList = Stream.of("a", "b").map(String::toUpperCase).collect(Collectors.toList());

@@ -4,6 +4,9 @@ import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 查找奇数
+ */
 public class EvenNumFinderManualTest {
     @Test
     public void givenRange_whenStream_thenFindEvenNum() {

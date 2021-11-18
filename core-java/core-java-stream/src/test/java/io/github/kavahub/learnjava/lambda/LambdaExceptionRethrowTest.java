@@ -1,6 +1,6 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.lambda;
 
-import static io.github.kavahub.learnjava.LambdaExceptionHelper.*;
+import static io.github.kavahub.learnjava.lambda.LambdaExceptionRethrow.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
-public class LambdaExceptionHelperTest {
+public class LambdaExceptionRethrowTest {
     @Test
     public void testConsumer() throws MyTestException {
         assertThrows(MyTestException.class,

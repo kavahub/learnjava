@@ -10,6 +10,8 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 
+import static io.github.kavahub.learnjava.util.StreamsGroupingBy.*;
+
 /**
  * Junit5 已不需要RunWith的注释
  * 
@@ -17,7 +19,7 @@ import org.junit.jupiter.api.Test;
  * 
  */ 
 // @RunWith(JUnitPlatform.class)
-public class StreamsGroupingCollectionFilterTest {
+public class StreamsGroupingByTest {
     private static final Collection<Integer> BASE_INTEGER_COLLECTION = Arrays.asList(9, 12, 55, 56, 101, 115, 8002, 223, 2668, 19, 8);
     private static final Map<Integer, List<Integer>> EXPECTED_EVEN_FILTERED_AFTER_GROUPING_MAP = createExpectedFilterAfterGroupingMap();
     private static Map<Integer, List<Integer>> createExpectedFilterAfterGroupingMap() {
@@ -42,8 +44,8 @@ public class StreamsGroupingCollectionFilterTest {
 
     @Test
     public void givenAStringCollection_whenFilteringFourLetterWords_thenObtainTheFilteredCollection() {
-        Map<Integer, List<Integer>> filteredAfterGroupingMap = StreamsGroupingCollectionFilter.findEvenNumbersAfterGroupingByQuantityOfDigits(BASE_INTEGER_COLLECTION);
-        Map<Integer, List<Integer>> filteredBeforeGroupingMap = StreamsGroupingCollectionFilter.findEvenNumbersBeforeGroupingByQuantityOfDigits(BASE_INTEGER_COLLECTION);
+        Map<Integer, List<Integer>> filteredAfterGroupingMap = findEvenNumbersAfterGroupingByQuantityOfDigits(BASE_INTEGER_COLLECTION);
+        Map<Integer, List<Integer>> filteredBeforeGroupingMap = findEvenNumbersBeforeGroupingByQuantityOfDigits(BASE_INTEGER_COLLECTION);
 
         assertThat(filteredAfterGroupingMap).containsAllEntriesOf(EXPECTED_EVEN_FILTERED_AFTER_GROUPING_MAP);
         assertThat(filteredBeforeGroupingMap).doesNotContainKey(3)

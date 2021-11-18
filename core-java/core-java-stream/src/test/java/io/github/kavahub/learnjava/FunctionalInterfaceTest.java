@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava.lambda;
+package io.github.kavahub.learnjava;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;

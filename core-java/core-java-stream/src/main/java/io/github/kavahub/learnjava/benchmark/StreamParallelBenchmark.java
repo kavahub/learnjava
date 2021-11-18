@@ -18,19 +18,25 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-import lombok.Getter;
+import io.github.kavahub.learnjava.User;
 
+/**
+ * {@link Stream} 多线程与单线程性能测试
+ */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
 @Measurement(iterations = 10, time = 1)
 @Warmup(iterations = 1)
 @Fork(1)
-public class ReduceExample {
+public class StreamParallelBenchmark {
     private final List<User> userList = createUsers();
 
     public static void main(String[] args) throws RunnerException {
-        Options opts = new OptionsBuilder().include(ReduceExample.class.getSimpleName()).build();
+        Options opts = new OptionsBuilder().include(StreamParallelBenchmark.class.getSimpleName())
+        .shouldFailOnError(true)
+        .threads(8)
+        .build();
 
         new Runner(opts).run();
     }
@@ -55,22 +61,5 @@ public class ReduceExample {
         return this.userList
                 .stream()
                 .reduce(0, (partialAgeResult, user) -> partialAgeResult + user.getAge(), Integer::sum);
-    }
-
-    @Getter
-    public static class User {
-
-        private final String name;
-        private final int age;
-    
-        public User(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-        
-        @Override
-        public String toString() {
-            return "User{" + "name=" + name + ", age=" + age + '}';
-        }
     }
 }

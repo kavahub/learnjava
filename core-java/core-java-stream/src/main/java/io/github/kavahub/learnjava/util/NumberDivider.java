@@ -1,15 +1,21 @@
-package io.github.kavahub.learnjava.reduce;
+package io.github.kavahub.learnjava.util;
 
 import java.util.List;
 import java.util.function.BiFunction;
 
+import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 除法，与集合中的每个数相除
+ * 
+ * <p>
+ * 说明：函数执行的功能相同，实现方式不同
+ */
 @Slf4j
-public class NumberUtils {
-    // 函数执行的功能相同，实现方式不同
-
-    public static int divideListElements(List<Integer> values, Integer divider) {
+@UtilityClass
+public class NumberDivider {
+    public int divideListElements(List<Integer> values, Integer divider) {
         return values.stream()
                 .reduce(0, (a, b) -> {
                     try {
@@ -21,16 +27,16 @@ public class NumberUtils {
                 });
     }
     
-    public static int divideListElementsWithExtractedTryCatchBlock(List<Integer> values, int divider) {
+    public int divideListElementsWithExtractedTryCatchBlock(List<Integer> values, int divider) {
         return values.stream().reduce(0, (a, b) -> divide(a, divider) + divide(b, divider));
     }
     
-    public static int divideListElementsWithApplyFunctionMethod(List<Integer> values, int divider) {
+    public int divideListElementsWithApplyFunctionMethod(List<Integer> values, int divider) {
         BiFunction<Integer, Integer, Integer> division = (a, b) -> a / b;
         return values.stream().reduce(0, (a, b) -> applyFunction(division, a, divider) + applyFunction(division, b, divider));
     }
     
-    private static int divide(int value, int factor) {
+    private int divide(int value, int factor) {
         int result = 0;
         try {
             result = value / factor;
@@ -40,7 +46,7 @@ public class NumberUtils {
         return result;
     }
     
-    private static int applyFunction(BiFunction<Integer, Integer, Integer> function, int a, int b) {
+    private int applyFunction(BiFunction<Integer, Integer, Integer> function, int a, int b) {
         try {
             return function.apply(a, b);
         }

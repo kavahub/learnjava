@@ -8,10 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import io.github.kavahub.learnjava.reduce.NumberUtils;
-import io.github.kavahub.learnjava.reduce.Rating;
-import io.github.kavahub.learnjava.reduce.Review;
-import io.github.kavahub.learnjava.reduce.User;
+import io.github.kavahub.learnjava.util.NumberDivider;
 
 public class StreamReduceTest {
     @Test
@@ -106,35 +103,35 @@ public class StreamReduceTest {
     public void givenNumberUtilsClass_whenCalledDivideListElements_thenCorrect() {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
         
-        assertThat(NumberUtils.divideListElements(numbers, 1)).isEqualTo(21);
+        assertThat(NumberDivider.divideListElements(numbers, 1)).isEqualTo(21);
     }
 
     @Test
     public void givenNumberUtilsClass_whenCalledDivideListElementsWithExtractedTryCatchBlock_thenCorrect() {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
         
-        assertThat(NumberUtils.divideListElementsWithExtractedTryCatchBlock(numbers, 1)).isEqualTo(21);
+        assertThat(NumberDivider.divideListElementsWithExtractedTryCatchBlock(numbers, 1)).isEqualTo(21);
     }
 
     @Test
     public void givenNumberUtilsClass_whenCalledDivideListElementsWithExtractedTryCatchBlockAndListContainsZero_thenCorrect() {
         List<Integer> numbers = Arrays.asList(0, 1, 2, 3, 4, 5, 6);
         
-        assertThat(NumberUtils.divideListElementsWithExtractedTryCatchBlock(numbers, 1)).isEqualTo(21);
+        assertThat(NumberDivider.divideListElementsWithExtractedTryCatchBlock(numbers, 1)).isEqualTo(21);
     }
     
     @Test
     public void givenNumberUtilsClass_whenCalledDivideListElementsWithExtractedTryCatchBlockAndDividerIsZero_thenCorrect() {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
         
-        assertThat(NumberUtils.divideListElementsWithExtractedTryCatchBlock(numbers, 0)).isEqualTo(0);
+        assertThat(NumberDivider.divideListElementsWithExtractedTryCatchBlock(numbers, 0)).isEqualTo(0);
     }
     
     @Test
     public void givenStream_whneCalleddivideListElementsWithApplyFunctionMethod_thenCorrect() {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
         
-        assertThat(NumberUtils.divideListElementsWithApplyFunctionMethod(numbers, 1)).isEqualTo(21);
+        assertThat(NumberDivider.divideListElementsWithApplyFunctionMethod(numbers, 1)).isEqualTo(21);
     }
 
     @Test
