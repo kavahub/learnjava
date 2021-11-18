@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class CharStack {
-    // LinkedList类是双向列表,列表中的每个节点都包含了对前一个和后一个元素的引用.
     private LinkedList<Character> items;
 
     public CharStack() {

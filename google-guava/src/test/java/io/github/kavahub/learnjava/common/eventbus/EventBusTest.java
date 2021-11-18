@@ -26,7 +26,7 @@ public class EventBusTest {
                 System.out.println("getSubscriber:" + content.getSubscriber());
                 System.out.println("getEventBus:" + content.getEventBus());
                 System.out.println("getSubscriberMethod:" + content.getSubscriberMethod());
-                exception.printStackTrace();
+                //exception.printStackTrace();
             }
         );
         listener = new CustomEventListener();
