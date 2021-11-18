@@ -1,34 +1,35 @@
 package io.github.kavahub.learnjava;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static io.github.kavahub.learnjava.PrimitivesArrayToListConverter.*;
 
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-public class ConvertPrimitivesArrayToListTest {
+public class PrimitivesArrayToListConverterTest {
     @Test
     public void givenArrayWithPrimitives_whenIterativeConvert_thenArrayGetsConverted() {
-        assertEquals(Arrays.asList(1,2,3,4), ConvertPrimitivesArrayToList.iterateConvert(new int[]{1,2,3,4}));
+        assertEquals(Arrays.asList(1,2,3,4), iterateConvert(new int[]{1,2,3,4}));
     }
 
     @Test
     public void givenArrayWithPrimitives_whenStreamConvert_thenArrayGetsConverted() {
-        assertEquals(Arrays.asList(1,2,3,4), ConvertPrimitivesArrayToList.streamConvert(new int[]{1,2,3,4}));
+        assertEquals(Arrays.asList(1,2,3,4), streamConvert(new int[]{1,2,3,4}));
     }
 
     @Test
     public void givenArrayWithPrimitives_whenIntStreamConvert_thenArrayGetsConverted() {
-        assertEquals(Arrays.asList(1,2,3,4), ConvertPrimitivesArrayToList.streamConvertIntStream(new int[]{1,2,3,4}));
+        assertEquals(Arrays.asList(1,2,3,4), streamConvertIntStream(new int[]{1,2,3,4}));
     }
 
     @Test
     public void givenArrayWithPrimitives_whenGuavaConvert_thenArrayGetsConverted() {
-        assertEquals(Arrays.asList(1,2,3,4), ConvertPrimitivesArrayToList.guavaConvert(new int[]{1,2,3,4}));
+        assertEquals(Arrays.asList(1,2,3,4), guavaConvert(new int[]{1,2,3,4}));
     }
 
     @Test
     public void givenArrayWithPrimitives_whenApacheCommonConvert_thenArrayGetsConverted() {
-        assertEquals(Arrays.asList(1,2,3,4), ConvertPrimitivesArrayToList.apacheCommonConvert(new int[]{1,2,3,4}));
+        assertEquals(Arrays.asList(1,2,3,4), apacheCommonConvert(new int[]{1,2,3,4}));
     }
 }

@@ -11,6 +11,9 @@ import com.google.common.collect.Multiset;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Multiset有一个有用的功能，就是跟踪每种对象的数量，所以你可以用来进行数字统计
+ */
 public class MultisetTest {
     @Test
     public void givenMultiSet_whenAddingValues_shouldReturnCorrectCount() {

@@ -1,16 +1,17 @@
 package io.github.kavahub.learnjava;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class Employee implements Comparable<Employee> {
     private Integer id;
     private String name;
     private int age;
     private double salary;
 
+    public Employee(String name) {
+        this.name = name;
+    }
 
     public Employee(int id, String name) {
         this.id = id;
@@ -35,21 +36,21 @@ public class Employee implements Comparable<Employee> {
     }
 
     @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        if (id != null) {
+            result = result + id.hashCode();
+        }
+        if (name != null) {
+            result = result + name.hashCode();
+        }
+        return result;
+    }
+
+    @Override
     public int compareTo(Employee o) {
         Employee e = (Employee) o;
         return getName().compareTo(e.getName());
     }
-
-    @Override
-    public String toString() {
-        return new StringBuffer().append("(")
-            .append(getName())
-            .append(getAge())
-            .append(",")
-            .append(getSalary())
-            .append(")")
-            .toString();
-    }
-
 
 }

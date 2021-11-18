@@ -23,19 +23,19 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 
 // Benchmark                                   Mode  Cnt   Score   Error  Units
-// SetBenchMark.benchmark01_HashSetContains    avgt   10  26.160 ± 1.540  ns/op
-// SetBenchMark.benchmark01_LinkedSetContains  avgt   10  28.083 ± 2.892  ns/op
-// SetBenchMark.benchmark02_HashSetRemove      avgt   10  28.058 ± 2.489  ns/op
-// SetBenchMark.benchmark02_LinkedSetRemove    avgt   10  31.701 ± 3.367  ns/op
-// SetBenchMark.benchmark03_HashSetAdd         avgt   10  37.129 ± 3.821  ns/op
-// SetBenchMark.benchmark03_LinkedSetAdd       avgt   10  40.015 ± 5.140  ns/op
+// SetBenchmark.benchmark01_HashSetContains    avgt   10  26.160 ± 1.540  ns/op
+// SetBenchmark.benchmark01_LinkedSetContains  avgt   10  28.083 ± 2.892  ns/op
+// SetBenchmark.benchmark02_HashSetRemove      avgt   10  28.058 ± 2.489  ns/op
+// SetBenchmark.benchmark02_LinkedSetRemove    avgt   10  31.701 ± 3.367  ns/op
+// SetBenchmark.benchmark03_HashSetAdd         avgt   10  37.129 ± 3.821  ns/op
+// SetBenchmark.benchmark03_LinkedSetAdd       avgt   10  40.015 ± 5.140  ns/op
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Measurement(iterations = 10, time = 1)
 @Warmup(iterations = 1)
 @Fork(1)
-public class SetBenchMark {
+public class SetBenchmark {
     @State(Scope.Thread)
     public static class MyState {
 
@@ -67,37 +67,37 @@ public class SetBenchMark {
 
     public static void main(String[] args) throws Exception {
         Options options = new OptionsBuilder()
-                .include(SetBenchMark.class.getSimpleName()).build();
+                .include(SetBenchmark.class.getSimpleName()).build();
         new Runner(options).run();
     }
 
     @Benchmark
-    public Boolean benchmark01_HashSetContains(SetBenchMark.MyState state) {
+    public Boolean benchmark01_HashSetContains(SetBenchmark.MyState state) {
         return state.employeeHashSet.contains(state.randomIndex);
     }
 
     @Benchmark
-    public Boolean  benchmark01_LinkedSetContains(SetBenchMark.MyState state) {
+    public Boolean  benchmark01_LinkedSetContains(SetBenchmark.MyState state) {
         return state.employeeLinkedSet.contains(state.randomIndex);
     }
 
     @Benchmark
-    public Boolean benchmark02_HashSetRemove(SetBenchMark.MyState state) {
+    public Boolean benchmark02_HashSetRemove(SetBenchmark.MyState state) {
         return state.employeeHashSet.remove(state.randomIndex);
     }
 
     @Benchmark
-    public Boolean  benchmark02_LinkedSetRemove(SetBenchMark.MyState state) {
+    public Boolean  benchmark02_LinkedSetRemove(SetBenchmark.MyState state) {
         return state.employeeLinkedSet.remove(state.randomIndex);
     }
 
     @Benchmark
-    public Boolean benchmark03_HashSetAdd(SetBenchMark.MyState state) {
+    public Boolean benchmark03_HashSetAdd(SetBenchmark.MyState state) {
         return state.employeeHashSet.add(state.randomIndex);
     }
 
     @Benchmark
-    public Boolean  benchmark03_LinkedSetAdd(SetBenchMark.MyState state) {
+    public Boolean  benchmark03_LinkedSetAdd(SetBenchmark.MyState state) {
         return state.employeeLinkedSet.add(state.randomIndex);
     }
 

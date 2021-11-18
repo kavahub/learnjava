@@ -11,9 +11,6 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
-import lombok.Getter;
-import lombok.Setter;
-
 public class StreamGroupingByCollectorTest {
     @Test
     public void givenListOfStrings_whenGroupingEqualStrings_thenUseCollectorsGroupingByToGroupEqualStringsAndCountOfOccurrences() {
@@ -50,20 +47,5 @@ public class StreamGroupingByCollectorTest {
         assertEquals(2, result.get(1));
         assertEquals(3, result.get(2));
 
-    }
-
-    @Getter
-    @Setter
-    static class Employee {
-
-        Integer employeeId;
-        String employeeName;
-        Integer departmentId;
-
-        Employee(Integer employeeId, String employeeName, Integer departmentId) {
-            this.employeeId = employeeId;
-            this.employeeName = employeeName;
-            this.departmentId = departmentId;
-        }
     }
 }

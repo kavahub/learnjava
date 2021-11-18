@@ -13,7 +13,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass
-public class ConvertPrimitivesArrayToList {
+public class PrimitivesArrayToListConverter {
     public void failConvert() {
         // int[] input = new int[]{1,2,3,4};
         // List<Integer> inputAsList = Arrays.asList(input);
