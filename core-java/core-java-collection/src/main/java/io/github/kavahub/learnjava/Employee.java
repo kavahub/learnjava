@@ -1,9 +1,11 @@
 package io.github.kavahub.learnjava;
 
+import java.io.Serializable;
+
 import lombok.Data;
 
 @Data
-public class Employee implements Comparable<Employee> {
+public class Employee implements Comparable<Employee>, Serializable {
     private Integer id;
     private String name;
     private int age;
