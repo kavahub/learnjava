@@ -20,19 +20,27 @@ import org.junit.jupiter.api.Test;
 /**
  * AsynchronousFileChannel文件读写
  * 
+ * <p>
  * Java
  * NIO中的FileChannel是一个连接到文件的通道。可以通过文件通道读写文件。FileChannel无法设置为非阻塞模式，他总是运行在阻塞模式下。
- * 在Java 7中，AsynchronousFileChannel被添加到Java
- * NIO。AsynchronousFileChannel使读取数据，并异步地将数据写入文件成为可能。
  * 
+ * <p>
+ * 在Java
+ * 7中，AsynchronousFileChannel被添加到JavaNIO。AsynchronousFileChannel使读取数据，并异步地将数据写入文件成为可能。
+ * 
+ * <p>
  * 在 Java 7 中，AsynchronousFileChannel 已添加到 Java NIO 中，它可以异步读取数据并将数据写入文件。
- * 先说明，异步和阻塞/非阻塞没有关系，下面简单介绍一下相关概念： 
- * 1. 阻塞是线程的一个状态，线程发起任务请求然后一直等，直到到任务完成再把结果返回，如果任务未完成当前线程会被挂起。 
- * 2. 非阻塞是发起任务请求之后先马上返回去做别的事，然后再时不时主动查看任务请求是否被完成。（轮询） 
- * 3. 同步是同时只能有一个线程处理某个对象或者操作，例如一个线程占用了一个对象，其他线程如果要访问此对象，则需要等之前得线程操作完成返回，相关概念有同步方法、同步代码块、对象锁。
- * 4. 异步是如果完成任务时，遇到一个耗时操作（或者对象已经被别的线程占用了），不等待而是去做其他事情，也不主动查看是否完成，而是等耗时操作完成，发通知再叫线程回来处理结果，常见的例子就是
- * Ajax ，相关概念有回调函数等。
+ * 先说明，异步和阻塞/非阻塞没有关系，下面简单介绍一下相关概念：
  * 
+ * <ul>
+ * <li>1. 阻塞是线程的一个状态，线程发起任务请求然后一直等，直到到任务完成再把结果返回，如果任务未完成当前线程会被挂起。</li>
+ * <li>2. 非阻塞是发起任务请求之后先马上返回去做别的事，然后再时不时主动查看任务请求是否被完成。（轮询）</li>
+ * <li>3. 同步是同时只能有一个线程处理某个对象或者操作，例如一个线程占用了一个对象，其他线程如果要访问此对象，
+ * 则需要等之前得线程操作完成返回，相关概念有同步方法、同步代码块、对象锁。</li>
+ * <li>4. 异步是如果完成任务时，遇到一个耗时操作（或者对象已经被别的线程占用了），不等待而是去做其他事情，
+ * 也不主动查看是否完成，而是等耗时操作完成，发通知再叫线程回来处理结果，常见的例子就是Ajax，相关概念有回调函数等。</li>
+ * 
+ * <p>
  * 一般异步都是和非阻塞组合使用的。
  */
 public class AsyncFileChannelTest {
@@ -152,7 +160,7 @@ public class AsyncFileChannelTest {
                 } catch (ExecutionException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                
+
             }
 
             @Override
@@ -184,5 +192,5 @@ public class AsyncFileChannelTest {
         final String fileContent = new String(buffer.array()).trim();
         buffer.clear();
         return fileContent;
-    }    
+    }
 }

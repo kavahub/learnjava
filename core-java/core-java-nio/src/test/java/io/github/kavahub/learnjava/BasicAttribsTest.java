@@ -13,21 +13,19 @@ import java.nio.file.attribute.FileTime;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 基本属性
+ * 基本属性示例
  */
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @Slf4j
 public class BasicAttribsTest {
-    private final String HOME = System.getProperty("user.home");
-    private BasicFileAttributes basicAttribs;
+    private final static String HOME = System.getProperty("user.home");
+    private static BasicFileAttributes basicAttribs;
 
     @BeforeAll
-    public void setup() throws IOException {
+    public static void setup() throws IOException {
         Path home = Paths.get(HOME);
         BasicFileAttributeView basicView = Files.getFileAttributeView(home, BasicFileAttributeView.class);
         basicAttribs = basicView.readAttributes();

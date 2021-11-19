@@ -11,8 +11,18 @@ import java.util.stream.IntStream;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 链接示例
+ * 
+ */
 @Slf4j
 public class SymLinkExample {
+    /**
+     * 软链接
+     * @param link
+     * @param target
+     * @throws IOException
+     */
     public void createSymbolicLink(Path link, Path target) throws IOException {
         if (Files.exists(link)) {
             Files.delete(link);
@@ -20,6 +30,12 @@ public class SymLinkExample {
         Files.createSymbolicLink(link, target);
     }
 
+    /**
+     * 硬链接
+     * @param link
+     * @param target
+     * @throws IOException
+     */
     public void createHardLink(Path link, Path target) throws IOException {
         if (Files.exists(link)) {
             Files.delete(link);

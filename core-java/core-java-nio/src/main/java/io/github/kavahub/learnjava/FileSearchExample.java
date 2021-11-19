@@ -10,6 +10,9 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 文件查找示例
+ */
 @Slf4j
 public class FileSearchExample implements FileVisitor<Path> {
     private final String fileName;
@@ -25,6 +28,9 @@ public class FileSearchExample implements FileVisitor<Path> {
         return FileVisitResult.CONTINUE;
     }
 
+    /**
+     * 访问文件时
+     */
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
         String fileName = file.getFileName().toString();
@@ -35,12 +41,18 @@ public class FileSearchExample implements FileVisitor<Path> {
         return FileVisitResult.CONTINUE;
     }
 
+    /**
+     * 访问文件失败时
+     */
     @Override
     public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
         log.info("Failed to access file: " + file.toString());
         return FileVisitResult.CONTINUE;
     }
 
+    /**
+     * 访问目录时
+     */
     @Override
     public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
         boolean finishedSearch = Files.isSameFile(dir, startDir);

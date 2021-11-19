@@ -19,19 +19,17 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class FilesTest {
     private static final String TEMP_DIR = "target\\" +UUID.randomUUID().toString();
 
     @BeforeAll
-    public void setup() throws IOException  {
+    public static void setup() throws IOException  {
         Files.createDirectory(Paths.get(TEMP_DIR));
     }
 
     @AfterAll
-    public void cleanup() throws IOException  {
+    public static void cleanup() throws IOException  {
       FileUtils.deleteDirectory(new File(TEMP_DIR));
     }
 

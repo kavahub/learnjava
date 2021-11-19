@@ -32,26 +32,32 @@ public class FileChannelTest {
         path = Paths.get(TEST_TRUNCATE);
         Files.deleteIfExists(path);
     }
-    
-    
+
     @Test
     public void givenFile_whenReadWithFileChannelUsingRandomAccessFile_thenCorrect() throws IOException {
+        // RandomAccessFile读取文件
+        try (RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "r");
+                // 获取读通道
+                FileChannel channel = reader.getChannel();
+                ByteArrayOutputStream out = new ByteArrayOutputStream()) {
 
-        try (RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "r"); 
-            FileChannel channel = reader.getChannel(); 
-            ByteArrayOutputStream out = new ByteArrayOutputStream()) {
-
+            // 缓冲区大小
             int bufferSize = 1024;
             if (bufferSize > channel.size()) {
                 bufferSize = (int) channel.size();
             }
+            // 创建缓冲区
             ByteBuffer buff = ByteBuffer.allocate(bufferSize);
 
-            while (channel.read(buff) > 0) {
-                out.write(buff.array(), 0, buff.position());
+            // 循环读取文件
+            int byteRead;
+            while ((byteRead = channel.read(buff)) > 0) {
+                // 输出
+                out.write(buff.array(), 0, byteRead);
                 buff.clear();
             }
 
+            // 转换成字符串
             String fileContent = new String(out.toByteArray(), StandardCharsets.UTF_8);
 
             assertEquals("Hello world", fileContent);
@@ -60,10 +66,10 @@ public class FileChannelTest {
 
     @Test
     public void givenFile_whenReadWithFileChannelUsingFileInputStream_thenCorrect() throws IOException {
-
-        try (ByteArrayOutputStream out = new ByteArrayOutputStream(); 
-            FileInputStream fin = new FileInputStream("src/test/resources/test_read.in"); 
-            FileChannel channel = fin.getChannel()) {
+        // FileInputStream读取文件
+        try (FileInputStream fin = new FileInputStream("src/test/resources/test_read.in");
+                FileChannel channel = fin.getChannel();
+                ByteArrayOutputStream out = new ByteArrayOutputStream()) {
 
             int bufferSize = 1024;
             if (bufferSize > channel.size()) {
@@ -84,9 +90,9 @@ public class FileChannelTest {
     @Test
     public void givenFile_whenReadAFileSectionIntoMemoryWithByteArrayOutputStream_thenCorrect() throws IOException {
 
-        try (RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "r"); 
-            FileChannel channel = reader.getChannel(); 
-            ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+        try (RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "r");
+                FileChannel channel = reader.getChannel();
+                ByteArrayOutputStream out = new ByteArrayOutputStream()) {
             // MappedByteBuffer操作大文件的方式，其读写性能极高
             MappedByteBuffer buff = channel.map(FileChannel.MapMode.READ_ONLY, 6, 5);
 
@@ -100,9 +106,9 @@ public class FileChannelTest {
 
     @Test
     public void whenWriteWithFileChannelUsingRandomAccessFile_thenCorrect() throws IOException {
-        
-        try (RandomAccessFile writer = new RandomAccessFile(TEST_WRITE_USING_FILECHANNEL, "rw"); 
-            FileChannel channel = writer.getChannel()) {
+
+        try (RandomAccessFile writer = new RandomAccessFile(TEST_WRITE_USING_FILECHANNEL, "rw");
+                FileChannel channel = writer.getChannel()) {
             ByteBuffer buff = ByteBuffer.wrap("Hello world".getBytes(StandardCharsets.UTF_8));
 
             channel.write(buff);
@@ -116,9 +122,9 @@ public class FileChannelTest {
 
     @Test
     public void givenFile_whenWriteAFileUsingLockAFileSectionWithFileChannel_thenCorrect() throws IOException {
-        try (RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "rw"); 
-            FileChannel channel = reader.getChannel(); 
-            FileLock fileLock = channel.tryLock(6, 5, Boolean.FALSE);) {
+        try (RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "rw");
+                FileChannel channel = reader.getChannel();
+                FileLock fileLock = channel.tryLock(6, 5, Boolean.FALSE);) {
 
             assertNotNull(fileLock);
         }
@@ -127,9 +133,9 @@ public class FileChannelTest {
     @Test
     public void givenFile_whenReadWithFileChannelGetPosition_thenCorrect() throws IOException {
 
-        try (ByteArrayOutputStream out = new ByteArrayOutputStream(); 
-            RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "r"); 
-            FileChannel channel = reader.getChannel()) {
+        try (ByteArrayOutputStream out = new ByteArrayOutputStream();
+                RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "r");
+                FileChannel channel = reader.getChannel()) {
 
             int bufferSize = 1024;
             if (bufferSize > channel.size()) {
@@ -142,7 +148,8 @@ public class FileChannelTest {
                 buff.clear();
             }
 
-            // the original file is 11 bytes long, so that's where the position pointer should be
+            // the original file is 11 bytes long, so that's where the position pointer
+            // should be
             assertEquals(11, channel.position());
 
             channel.position(4);
@@ -153,11 +160,13 @@ public class FileChannelTest {
     @Test
     public void whenGetFileSize_thenCorrect() throws IOException {
 
-        try (RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "r"); 
-            FileChannel channel = reader.getChannel()) {
+        try (RandomAccessFile reader = new RandomAccessFile("src/test/resources/test_read.in", "r");
+                FileChannel channel = reader.getChannel()) {
 
-            // the original file is 11 bytes long, so that's where the position pointer should be
+            // the original file is 11 bytes long, so that's where the position pointer
+            // should be
             assertEquals(11, channel.size());
+            assertEquals(0, channel.position());
         }
     }
 
@@ -177,5 +186,5 @@ public class FileChannelTest {
 
         fout.close();
         channel.close();
-    }    
+    }
 }
