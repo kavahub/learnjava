@@ -1,5 +1,6 @@
 package io.github.kavahub.learnjava.lock;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
@@ -21,11 +22,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 /**
  * @formatter::off
- * 8核心的机器上，8线程是最快的
- * Benchmark                                                         Mode  Cnt    Score     Error   Units
- * ThreadLocalRandomBenchMarker.randomValuesUsingRandom             thrpt   10  449.442 ±  11.584  ops/us
- * ThreadLocalRandomBenchMarker.randomValuesUsingThreadLocalRandom  thrpt   10  806.171 ± 104.025  ops/us
- * @formatter::on
+Benchmark                                                         Mode  Cnt    Score    Error   Units
+ThreadLocalRandomBenchMarker.randomValuesUsingRandom             thrpt   10  429.473 ± 25.148  ops/us
+ThreadLocalRandomBenchMarker.randomValuesUsingSecureRandom       thrpt   10    2.775 ±  0.160  ops/us
+ThreadLocalRandomBenchMarker.randomValuesUsingThreadLocalRandom  thrpt   10  765.769 ± 80.361  ops/us* @formatter::on
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
@@ -35,6 +35,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @State(Scope.Thread)
 public class ThreadLocalRandomBenchMarker {
     private final Random random = new Random();
+    private final SecureRandom  secureRandom = new SecureRandom();
 
     public static void main(String[] args) throws Exception {
         ChainedOptionsBuilder opts = new OptionsBuilder().include(ThreadLocalRandomBenchMarker.class.getSimpleName());
@@ -52,5 +53,10 @@ public class ThreadLocalRandomBenchMarker {
     @Benchmark
     public int randomValuesUsingThreadLocalRandom() {
         return ThreadLocalRandom.current().nextInt();
+    }
+
+    @Benchmark
+    public int randomValuesUsingSecureRandom() {
+        return secureRandom.nextInt();
     }
 }

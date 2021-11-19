@@ -53,6 +53,6 @@ public class AccessingAllClassesInPackage {
 
     public static void main(String[] args) {
         System.out.println(
-            new AccessingAllClassesInPackage().findAllClassesUsingReflectionsLibrary("net.learnjava.reflect.demo"));
+            new AccessingAllClassesInPackage().findAllClassesUsingReflectionsLibrary("nio.github.kavahub.learnjava.reflect.demo"));
     }
 }

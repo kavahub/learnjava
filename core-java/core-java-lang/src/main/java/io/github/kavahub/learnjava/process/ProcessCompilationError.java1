@@ -1,4 +1,4 @@
-package net.learnjava.process;
+package io.github.kavahub.learnjava.process;
 
 // 后缀java1，避免IDE编译异常
 public class ProcessCompilationError {

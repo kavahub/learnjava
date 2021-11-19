@@ -18,7 +18,7 @@ public class JMXTutorialMainlauncherExample {
         log.debug("This is basic JMX tutorial");
 
         try {
-            ObjectName objectName = new ObjectName("net.learnjava:type=basic,name=game");
+            ObjectName objectName = new ObjectName("io.github.kavahub.learnjava:type=basic,name=game");
             MBeanServer server = ManagementFactory.getPlatformMBeanServer();
             server.registerMBean(new Game(), objectName);
         } catch (MalformedObjectNameException | InstanceAlreadyExistsException |

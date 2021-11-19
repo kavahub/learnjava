@@ -18,7 +18,7 @@ public class ProcessUnderstandingHelper {
                 // 等待编译完成
                 .waitFor();
 
-        Process process = Runtime.getRuntime().exec("java -cp  src/main/java net.learnjava.process.ProcessOutStream");
+        Process process = Runtime.getRuntime().exec("java -cp  src/main/java io.github.kavahub.learnjavaprocess.ProcessOutStream");
         process.waitFor();
 
         BufferedReader output = new BufferedReader(new InputStreamReader(process.getInputStream()));

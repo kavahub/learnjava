@@ -18,34 +18,29 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
+ * <p>
  * org.ietf.jgss 该软件包提供了一个框架，允许应用程序开发人员使用统一的API从各种底层安全机制（如Kerberos）中使用安全服务，
- * 如身份验证，数据完整性和数据机密性。 应用程序可以选择使用的安全机制用唯一对象标识符标识。 
- * 这种机制的一个示例是Kerberos v5 GSS-API机制（对象标识符1.2.840.113554.1.2.2）。 
- * 此机制可通过GSSManager类的默认实例获得。
+ * 如身份验证，数据完整性和数据机密性。 应用程序可以选择使用的安全机制用唯一对象标识符标识。 这种机制的一个示例是Kerberos v5
+ * GSS-API机制（对象标识符1.2.840.113554.1.2.2）。 此机制可通过GSSManager类的默认实例获得。
  * 
  * @see <a href="https://www.baeldung.com/java-gss">Baeldung</a>
  * 
  */
-@Disabled("无法运行")
+@Disabled
 public class JgssIntegrationTest {
     private static final String SERVER_PRINCIPAL = "HTTP/localhost@EXAMPLE.COM";
     private static final String MECHANISM = "1.2.840.113554.1.2.2";
 
-    static GSSContext serverContext;
-    static GSSContext clientContext;
+    private static GSSContext serverContext;
+    private static GSSContext clientContext;
 
     @BeforeAll
     public static void setUp() throws SaslException, GSSException {
         GSSManager manager = GSSManager.getInstance();
-        
+        serverContext = manager.createContext((GSSCredential) null);
         String serverPrinciple = SERVER_PRINCIPAL;
         GSSName serverName = manager.createName(serverPrinciple, null);
-
         Oid krb5Oid = new Oid(MECHANISM);
-        //GSSCredential cred = manager.createCredential(serverName, GSSCredential.INDEFINITE_LIFETIME, krb5Oid, GSSCredential.ACCEPT_ONLY);
-        GSSContext clientContext = manager.createContext(serverName, krb5Oid, (GSSCredential)null, GSSContext.DEFAULT_LIFETIME);
-
-        
         clientContext = manager.createContext(serverName, krb5Oid, (GSSCredential) null, GSSContext.DEFAULT_LIFETIME);
         clientContext.requestMutualAuth(true);
         clientContext.requestConf(true);

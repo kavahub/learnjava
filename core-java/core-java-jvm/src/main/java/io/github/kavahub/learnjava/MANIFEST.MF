@@ -1,1 +1,1 @@
-Premain-class: net.learnjava.InstrumentationAgent
+Premain-class: io.github.kavahub.learnjava.InstrumentationAgent

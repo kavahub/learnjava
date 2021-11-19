@@ -29,9 +29,6 @@ import javax.net.ssl.X509TrustManager;
 
 import org.junit.jupiter.api.Test;
 
-//import lombok.extern.slf4j.Slf4j;
-
-//@Slf4j
 public class CertificatesTest {
     private static final String GODADDY_CA_ALIAS = "godaddyrootg2ca [jdk]";
 

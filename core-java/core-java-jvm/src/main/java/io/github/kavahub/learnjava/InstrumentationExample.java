@@ -12,7 +12,7 @@ public class InstrumentationExample {
     public static void main(String[] arguments) {
         String emptyString = "";
         String string = "Estimating Object Size Using Instrumentation";
-        String[] stringArray = { emptyString, string, "net.learnjava" };
+        String[] stringArray = { emptyString, string, "io.github.kavahub.learnjava" };
         String[] anotherStringArray = new String[100];
         List<String> stringList = new ArrayList<>();
         StringBuilder stringBuilder = new StringBuilder(100);

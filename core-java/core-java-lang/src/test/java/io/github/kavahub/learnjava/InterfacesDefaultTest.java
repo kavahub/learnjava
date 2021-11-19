@@ -37,7 +37,7 @@ public class InterfacesDefaultTest {
     
     public static class CustomFoo implements Foo {
 
-        // 这个main不能运行：找不到或无法加载主类 net.learnjava.InterfacesDefaultTest$CustomFoo
+        // 这个main不能运行：找不到或无法加载主类 io.github.kavahub.learnjava.InterfacesDefaultTest$CustomFoo
         public static void main(String... args) {
             Foo customFoo = new CustomFoo();
             customFoo.bar(); // 'Hello world!'
