@@ -17,6 +17,9 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+/**
+ * 发送邮件，带附件
+ */
 public class EMailWithAttachmentService {
     private String username = "";
     private String password = "";

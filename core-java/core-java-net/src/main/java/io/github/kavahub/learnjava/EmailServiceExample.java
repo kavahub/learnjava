@@ -14,6 +14,9 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+/**
+ * 发送邮件
+ */
 public class EmailServiceExample {
     private String host = "";
     private int port = 0;

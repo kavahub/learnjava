@@ -23,6 +23,9 @@ import javax.mail.internet.MimeUtility;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 邮件附件下载
+ */
 @Slf4j
 public class EmailAttachmentsDownloadExample {
     private String downloadDirectory;
@@ -121,7 +124,7 @@ public class EmailAttachmentsDownloadExample {
         String userName = "your_username";
         String password = "your_password";
 
-        String saveDirectory = "c:\\users\\wpw\\DownloadEmailAttachments";
+        String saveDirectory = "EmailAttachmentsDownloadExample";
 
         Path path = Paths.get(saveDirectory);
         if (Files.notExists(path)) {

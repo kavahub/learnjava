@@ -9,6 +9,12 @@ import java.io.InputStream;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.InputStreamToString;
+
+/**
+ * curl命令行测试
+ * 
+ */
 public class JavaCurlIntegrateTest {
     private final static String USER_HOME = System.getProperty("user.home");
     @Test

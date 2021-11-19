@@ -145,5 +145,13 @@ public class MappedByteBufferExample {
             TimeUnit.SECONDS.sleep(1);
             work.run();
         }
+
+        // 清理文件
+        System.gc();
+        try {
+            Files.deleteIfExists(Paths.get(FILE_NAME));
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
     }
 }

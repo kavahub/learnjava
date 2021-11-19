@@ -10,6 +10,10 @@ import java.util.Spliterators;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+/**
+ * 获取本机所有的mac地址
+ * 
+ */
 public class GetAllMacAddressesExample {
     public static void main(String[] args) throws SocketException {
         Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
