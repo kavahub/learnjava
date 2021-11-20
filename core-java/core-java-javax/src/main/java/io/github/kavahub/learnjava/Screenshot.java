@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
+/**
+ * 截屏
+ */
 public class Screenshot {
     private final String path;
 

@@ -3,6 +3,9 @@ package io.github.kavahub.learnjava.recordsound;
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
 
+/**
+ * 程序入口
+ */
 public class RecorderMain {
     
     public static void main(String[] args) throws Exception {

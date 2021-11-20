@@ -10,6 +10,9 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.TargetDataLine;
 
+/**
+ * 声音录制
+ */
 public class SoundRecorder implements Runnable {
     private AudioInputStream audioInputStream;
     private AudioFormat format;

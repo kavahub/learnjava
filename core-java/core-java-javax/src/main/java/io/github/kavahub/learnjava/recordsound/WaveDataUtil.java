@@ -6,8 +6,19 @@ import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 
+/**
+ * 声音数据工具
+ */
 public class WaveDataUtil {
 
+    /**
+     * 保存到文件
+     * 
+     * @param name
+     * @param fileType
+     * @param audioInputStream
+     * @return
+     */
     public boolean saveToFile(String name, AudioFileFormat.Type fileType, AudioInputStream audioInputStream) {
         System.out.println("Saving...");
         if (null == name || null == fileType || audioInputStream == null) {
