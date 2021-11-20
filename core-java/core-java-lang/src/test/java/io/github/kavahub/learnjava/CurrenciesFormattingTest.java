@@ -11,6 +11,10 @@ import java.util.Locale;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 货币格式化
+ * 
+ */
 public class CurrenciesFormattingTest {
  
     @Test

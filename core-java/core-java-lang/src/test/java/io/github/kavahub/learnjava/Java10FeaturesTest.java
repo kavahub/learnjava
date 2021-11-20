@@ -11,14 +11,12 @@ import java.util.stream.Collectors;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Java10FeaturesTest {
-    private List<Integer> someIntList;
+    private static  List<Integer> someIntList;
     
     @BeforeAll
-    public void setup() {
+    public static void setup() {
         someIntList = new ArrayList<>();
         
         someIntList.add(1);

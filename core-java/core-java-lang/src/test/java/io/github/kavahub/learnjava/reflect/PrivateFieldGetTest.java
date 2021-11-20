@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Test;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * 私有属性获取
+ */
 public class PrivateFieldGetTest {
     @Test
     public void whenGetIntegerFields_thenSuccess() throws Exception {

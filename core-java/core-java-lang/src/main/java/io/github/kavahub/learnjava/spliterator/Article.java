@@ -2,11 +2,9 @@ package io.github.kavahub.learnjava.spliterator;
 
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class Article {
     private List<Author> listOfAuthors;
     private int id;

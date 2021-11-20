@@ -6,6 +6,9 @@ import java.lang.reflect.Field;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 静态变量
+ */
 public class StaticVariableTest {
     @Test
     public void initializeStaticVariable_checkAssignedValues() throws ClassNotFoundException, NoSuchFieldException,
@@ -87,6 +90,11 @@ public class StaticVariableTest {
         public StaticVariableDemo() {
         }
 
+        // 位置不一样，结果不同
+        // static {
+        //     z = 30;
+        //     a = 40;
+        // }
     }
 
 }

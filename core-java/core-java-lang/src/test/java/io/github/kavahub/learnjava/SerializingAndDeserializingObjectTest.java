@@ -18,6 +18,9 @@ import org.junit.jupiter.api.Test;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * 序列化与反序列化，将对象序列化到文件，从文件反序列化到对象
+ */
 public class SerializingAndDeserializingObjectTest {
     private final static String OUTPUT_YOUR_FILE = "yourfile.txt";
     private final static String OUTPUT_YOUR_FILE_1 = "yourfile1.txt";

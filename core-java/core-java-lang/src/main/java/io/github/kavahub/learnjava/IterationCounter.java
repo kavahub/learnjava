@@ -8,6 +8,10 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
+/**
+ * 迭代计数器，集合的循环方法
+ * 
+ */
 public class IterationCounter {
     public static final List<String> IMDB_TOP_MOVIES = Arrays.asList("The Shawshank Redemption",
     "The Godfather", "The Godfather II", "The Dark Knight");

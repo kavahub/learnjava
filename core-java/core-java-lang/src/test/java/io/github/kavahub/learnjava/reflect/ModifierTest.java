@@ -12,6 +12,10 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link Modifier}示例
+ * 
+ */
 public class ModifierTest {
     @Test
     void givenAbstractClass_whenCheckModifierIsAbstract_thenTrue() {

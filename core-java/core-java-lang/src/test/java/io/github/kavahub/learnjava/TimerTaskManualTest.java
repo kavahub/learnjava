@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * {@link TimerTask} 示例
+ */
 @Slf4j
 public class TimerTaskManualTest {
     @Test

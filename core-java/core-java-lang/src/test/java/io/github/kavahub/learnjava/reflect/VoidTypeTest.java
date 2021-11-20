@@ -7,6 +7,9 @@ import java.util.function.Function;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link Void}类型示例 
+ */
 public class VoidTypeTest {
     @Test
     void givenVoidCallable_whenDiffer_thenReturnNull() throws Exception {

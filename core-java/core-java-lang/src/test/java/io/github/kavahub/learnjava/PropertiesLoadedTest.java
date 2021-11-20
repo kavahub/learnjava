@@ -13,6 +13,9 @@ import java.util.Properties;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link Properties} 加载，支持 <code>properties</code>, <code>xml</code> 文件格式
+ */
 public class PropertiesLoadedTest {
     @Test
     public void givenPropertyValue_whenPropertiesFileLoaded_thenCorrect() throws IOException {

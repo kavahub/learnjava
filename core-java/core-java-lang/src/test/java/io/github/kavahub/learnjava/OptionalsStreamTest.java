@@ -10,6 +10,9 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link Optional} 流
+ */
 public class OptionalsStreamTest {
     private static List<Optional<String>> listOfOptionals = Arrays.asList(Optional.empty(), Optional.of("foo"),
             Optional.empty(), Optional.of("bar"));

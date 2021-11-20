@@ -8,6 +8,10 @@ import org.junit.jupiter.api.Test;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * 私有属性设置
+ * 
+ */
 public class PrivateFieldSetTest {
     @Test
     public void whenSetIntegerFields_thenSuccess() throws Exception {

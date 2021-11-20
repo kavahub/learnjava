@@ -223,30 +223,95 @@ public class BitSetManualTest {
             bitSet.set(randomResult);
         }
 
-        //bitSet.stream().forEach(System.out::println);
+        // bitSet.stream().forEach(System.out::println);
 
         System.out.println("========= 前100 =========");
         int index = 0;
         int loop = 100;
         do {
-            if(bitSet.get(index)) {
+            if (bitSet.get(index)) {
                 System.out.print(index + ",");
                 loop--;
-            } 
+            }
             index++;
-        }while(loop > 0);
-        
+        } while (loop > 0);
+
         System.out.println("\n========= 后100 =========");
         index = aHundredMillion - 1;
         loop = 100;
         do {
-            if(bitSet.get(index)) {
+            if (bitSet.get(index)) {
                 System.out.print(index + ",");
                 loop--;
-            } 
+            }
             index--;
-        }while(loop > 0);
+        } while (loop > 0);
 
         System.out.println("\n耗时（毫秒）" + (System.currentTimeMillis() - start));
     }
+
+    // 1千万个IP地址列表，给定一个IP地址，判断是否存在，（类似的问题如 电话号码判断）
+
+    @Test
+    public void givenManyOfIP_whenFillIn4BitSet_thenLookup() {
+        /**
+         * 实现思路：将IP地址分割成4个数字，分别存入4个BitSet中，每个BitSet中存储0~255的数字
+         */
+
+        /**
+         * 警告：此思路有问题，1千万个ip地址装入BitSet数组中，BitSet数组表示的IP地址不止1千万个。
+         * 例如：将任意2个IP地址装入后，BitSet数组表示的IP地址数量是 2*2*2*2 = 16 个
+         * 
+         * <p>
+         * 建议使用Guava包BloomFilter布隆过滤器
+         */
+
+        final int loopCount = 255; // 循环255次,相当与最多生成（255 * 255 * 255 * 255）个ip
+        final int MAX_IP_VALUE = 255;
+        BitSet[] bitSet = { new BitSet(255), new BitSet(255), new BitSet(255), new BitSet(255) };
+
+        // 准备数据
+        for (int i = 0; i < loopCount; i++) {
+            int randomResult = ThreadLocalRandom.current().nextInt(MAX_IP_VALUE);
+            bitSet[0].set(randomResult);
+            randomResult = ThreadLocalRandom.current().nextInt(MAX_IP_VALUE);
+            bitSet[1].set(randomResult);
+            randomResult = ThreadLocalRandom.current().nextInt(MAX_IP_VALUE);
+            bitSet[2].set(randomResult);
+            randomResult = ThreadLocalRandom.current().nextInt(MAX_IP_VALUE);
+            bitSet[3].set(randomResult);
+        }
+        System.out.printf("生成IP数：%s 亿个\n",
+                (bitSet[0].cardinality() * bitSet[0].cardinality() * bitSet[0].cardinality() * bitSet[0].cardinality())
+                        / 100000000);
+
+        // 判断，给10个IP地址，判断是否存在
+        for (int i = 0; i < 10; i++) {
+            int one = ThreadLocalRandom.current().nextInt(MAX_IP_VALUE);
+            int two = ThreadLocalRandom.current().nextInt(MAX_IP_VALUE);
+            int three = ThreadLocalRandom.current().nextInt(MAX_IP_VALUE);
+            int four = ThreadLocalRandom.current().nextInt(MAX_IP_VALUE);
+
+            boolean exist = bitSet[0].get(one) && bitSet[1].get(two) && bitSet[2].get(three) && bitSet[3].get(four);
+            System.out.printf("%s.%s.%s.%s %s \n", one, two, three, four, (exist == true ? "存在" : "不存在"));
+        }
+
+        System.out.print("\n未使用的数值[0]:");
+        bitSet[0].flip(0, 255);
+        bitSet[0].stream().forEach(e -> System.out.print(e + ","));
+
+        System.out.print("\n未使用的数值[1]:");
+        bitSet[1].flip(0, 255);
+        bitSet[1].stream().forEach(e -> System.out.print(e + ","));
+
+        System.out.print("\n未使用的数值[2]:");
+        bitSet[2].flip(0, 255);
+        bitSet[2].stream().forEach(e -> System.out.print(e + ","));
+
+        System.out.print("\n未使用的数值[3]:");
+        bitSet[3].flip(0, 255);
+        bitSet[3].stream().forEach(e -> System.out.print(e + ","));
+    }
+
+
 }

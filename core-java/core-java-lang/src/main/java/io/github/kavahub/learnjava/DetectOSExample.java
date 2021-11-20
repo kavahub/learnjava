@@ -4,6 +4,9 @@ import org.apache.commons.lang3.SystemUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 操作系统判定
+ */
 @UtilityClass
 public class DetectOSExample {
     public String getOperatingSystem() {

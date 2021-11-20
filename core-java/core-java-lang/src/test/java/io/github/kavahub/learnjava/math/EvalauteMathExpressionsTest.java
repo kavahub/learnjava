@@ -13,6 +13,9 @@ import com.fathzer.soft.javaluator.StaticVariableSet;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
+/**
+ * 数学表达式计算工具
+ */
 public class EvalauteMathExpressionsTest {
     @Test
     public void givenSimpleExpression_whenCallEvaluateMethod_thenSuccess() {

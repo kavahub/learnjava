@@ -18,10 +18,16 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+/**
+ * {@link Externalizable}使用
+ * 
+ * <p>
+ * Externalizable接口扩展自java.io.Serializable接口。实现java.io.Serializable即可获得对类的对象的序列化功能。
+ * 而Externalizable可以通过writeExternal()和readExternal()方法可以指定序列化哪些属性
+ */
 public class ExternalizableTest {
     private final static String OUTPUT_FILE = "externalizable.txt";
 
@@ -88,34 +94,30 @@ public class ExternalizableTest {
         fileInputStream.close();
 
         assertTrue(r2.getPopulation() == null);
-    } 
+    }
 
-    @Getter
-    @Setter
-    @ToString
+    @Data
     public static class Community implements Serializable {
         private int id;
     }
-    
+
     /**
      * 可以指定序列化字段
      */
-    @Getter
-    @Setter
-    @ToString
+    @Data
     public static class Country implements Externalizable {
-    
+
         private String name;
         private String capital;
         private int code;
-    
+
         @Override
         public void writeExternal(ObjectOutput out) throws IOException {
             out.writeUTF(name);
             out.writeUTF(capital);
             out.writeInt(code);
         }
-    
+
         @Override
         public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
             this.name = in.readUTF();
@@ -123,15 +125,14 @@ public class ExternalizableTest {
             this.code = in.readInt();
         }
     }
-    
-    @Getter
-    @Setter
-    @ToString
-    public class Region extends Country {    
+
+    @Data
+    @EqualsAndHashCode(callSuper=false)
+    public class Region extends Country {
         private String climate;
         private Double population;
         private Community community;
-    
+
         @Override
         public void writeExternal(ObjectOutput out) throws IOException {
             super.writeExternal(out);
@@ -140,13 +141,13 @@ public class ExternalizableTest {
             community.setId(5);
             out.writeObject(community);
         }
-    
+
         @Override
         public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
             super.readExternal(in);
             this.climate = in.readUTF();
             community = (Community) in.readObject();
         }
-    
+
     }
 }

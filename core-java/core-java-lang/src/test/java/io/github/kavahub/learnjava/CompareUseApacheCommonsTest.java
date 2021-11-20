@@ -5,24 +5,29 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
+import java.util.Objects;
+
+/**
+ * {@link ObjectUtils} 工具比较对象
+ */
 public class CompareUseApacheCommonsTest {
-    @SuppressWarnings("deprecation")
     @Test
     void givenTwoStringsWithSameValues_whenApacheCommonsEqualityMethods_thenEqualsTrueNotEqualsFalse() {
         String a = new String("Hello!");
         String b = new String("Hello!");
 
-        assertThat(ObjectUtils.equals(a, b)).isTrue();
+        // assertThat(ObjectUtils.equals(a, b)).isTrue();
+        assertThat(Objects.equals(a, b)).isTrue();
         assertThat(ObjectUtils.notEqual(a, b)).isFalse();
     }
 
-    @SuppressWarnings("deprecation")
     @Test
     void givenTwoStringsWithDifferentValues_whenApacheCommonsEqualityMethods_thenEqualsFalseNotEqualsTrue() {
         String a = new String("Hello!");
         String b = new String("Hello World!");
 
-        assertThat(ObjectUtils.equals(a, b)).isFalse();
+        // assertThat(ObjectUtils.equals(a, b)).isFalse();
+        assertThat(Objects.equals(a, b)).isFalse();
         assertThat(ObjectUtils.notEqual(a, b)).isTrue();
     }
 

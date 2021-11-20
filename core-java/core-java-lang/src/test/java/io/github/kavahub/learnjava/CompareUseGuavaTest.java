@@ -13,6 +13,9 @@ import lombok.Getter;
 
 import static org.assertj.core.api.Assertions.*;
 
+/**
+ * {@link Objects} 工具比较对象
+ */
 public class CompareUseGuavaTest {
     @Nested
     class ObjectsEqualMethod {

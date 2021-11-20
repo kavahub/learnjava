@@ -1,5 +1,8 @@
 package io.github.kavahub.learnjava.spliterator;
 
+/**
+ * 统计关联作者数
+ */
 public class RelatedAuthorCounter {
     private final int counter;
     private final boolean isRelated;
@@ -17,6 +20,7 @@ public class RelatedAuthorCounter {
         }
     }
 
+    // 合并对象
     public RelatedAuthorCounter combine(RelatedAuthorCounter RelatedAuthorCounter) {
         return new RelatedAuthorCounter(counter + RelatedAuthorCounter.counter, RelatedAuthorCounter.isRelated);
     }

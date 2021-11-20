@@ -137,7 +137,7 @@ public class ProcessUnderstandingTest {
 
     @Test
     public void outputStreamDemoTest() throws IOException, InterruptedException {
-        int code = ProcessUnderstandingHelper.outputStreamDemo();
+        int code = ProcessUnderstanding.outputStreamDemo();
         assertEquals(0, code);
     }
 }

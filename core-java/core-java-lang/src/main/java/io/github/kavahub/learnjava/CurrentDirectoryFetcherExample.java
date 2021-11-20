@@ -4,6 +4,9 @@ import java.io.File;
 import java.nio.file.FileSystems;
 import java.nio.file.Paths;
 
+/**
+ * 获取当前工作路径
+ */
 public class CurrentDirectoryFetcherExample {
     public static void main(String[] args) {
         System.out.printf("Current Directory Using Java System API: %s%n", currentDirectoryUsingSystemProperties());

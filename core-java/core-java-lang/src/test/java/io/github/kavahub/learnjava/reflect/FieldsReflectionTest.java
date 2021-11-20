@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 属性反射
+ */
 public class FieldsReflectionTest {
     // Fields names
     private static final String LAST_NAME_FIELD = "lastName";

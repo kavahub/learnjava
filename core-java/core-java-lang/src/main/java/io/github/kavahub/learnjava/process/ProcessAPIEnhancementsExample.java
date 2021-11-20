@@ -34,7 +34,7 @@ public class ProcessAPIEnhancementsExample {
   private static void infoOfSpawnProcess() throws IOException {
     log.info("**************** {} ****************", "infoOfSpawnProcess");
 
-    String javaCmd = ProcessHelper.getJavaCmd().getAbsolutePath();
+    String javaCmd = Processes.getJavaCmd().getAbsolutePath();
     ProcessBuilder processBuilder = new ProcessBuilder(javaCmd, "-version");
     Process process = processBuilder.inheritIO().start();
     ProcessHandle processHandle = process.toHandle();
@@ -64,7 +64,7 @@ public class ProcessAPIEnhancementsExample {
 
     int childProcessCount = 5;
     for (int i = 0; i < childProcessCount; i++) {
-      String javaCmd = ProcessHelper.getJavaCmd().getAbsolutePath();
+      String javaCmd = Processes.getJavaCmd().getAbsolutePath();
       ProcessBuilder processBuilder = new ProcessBuilder(javaCmd, "-version");
       processBuilder.inheritIO().start();
     }
@@ -79,7 +79,7 @@ public class ProcessAPIEnhancementsExample {
   private static void infoOfExitCallback() throws IOException, InterruptedException, ExecutionException {
     log.info("**************** {} ****************", "infoOfExitCallback");
 
-    String javaCmd = ProcessHelper.getJavaCmd().getAbsolutePath();
+    String javaCmd = Processes.getJavaCmd().getAbsolutePath();
     ProcessBuilder processBuilder = new ProcessBuilder(javaCmd, "-version");
     Process process = processBuilder.inheritIO().start();
     ProcessHandle processHandle = process.toHandle();

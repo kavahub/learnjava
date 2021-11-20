@@ -10,6 +10,9 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link Properties} 合并
+ */
 public class MergePropertiesTest {
     @Test
     public void givenTwoProperties_whenMergedUsingIteration_thenAllPropertiesInResult() {

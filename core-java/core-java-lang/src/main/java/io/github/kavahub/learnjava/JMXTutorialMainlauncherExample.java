@@ -11,6 +11,9 @@ import javax.management.ObjectName;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * JMX示例。运行后，使用jconsole工具连接，在MBean标签中查看
+ */
 @Slf4j
 public class JMXTutorialMainlauncherExample {
     public static void main(String[] args) {

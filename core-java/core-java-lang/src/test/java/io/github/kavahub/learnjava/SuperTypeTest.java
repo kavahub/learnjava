@@ -8,6 +8,9 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 父泛型类型
+ */
 public class SuperTypeTest {
     @Test
     public void givenGenericToken_whenUsingSuperTypeToken_thenPreservesTheTypeInfo() {

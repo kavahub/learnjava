@@ -8,6 +8,9 @@ import com.google.common.math.DoubleMath;
 import org.apache.commons.math3.util.Precision;
 import org.junit.jupiter.api.Test;
 
+/**
+ * double类型比较
+ */
 public class CompareDoubleTest {
     @Test
     public void givenDoubleValuesThatShouldHaveSameValue_whenUsingSimpleComparison_thenFails() {

@@ -4,6 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link String} 与 {@link Boolean} 之间的互转
+ */
 public class StringToBooleanTest {
     @Test
     public void givenStringTrue_whenUsingParseBoolean_thenTrue() {

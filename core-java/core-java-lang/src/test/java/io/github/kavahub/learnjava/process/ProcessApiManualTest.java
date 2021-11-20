@@ -20,12 +20,16 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 /**
- * 说明：
- * > 使用IDE单独运行每个测试，与Maven运行测试的结果不同
- * > Maven运行测试偶尔会失败
- * > 而且测试失败后，创建的JVM线程未关闭（已解决）
- * > Maven运行测试失败后，测试无响应（已解决）
  * 
+ * 运行情况说明：
+ * <ul>
+ * <li> 使用IDE单独运行每个测试，与Maven运行测试的结果不同 </li>
+ * <li> Maven运行测试偶尔会失败 </li>
+ * <li> 而且测试失败后，创建的JVM线程未关闭（已解决） </li>
+ * <li> Maven运行测试失败后，测试无响应（已解决） </li>
+ * </ul>
+ * 
+ * <p>
  * mvn test -Dtest=ProcessApiTest
  */
 public class ProcessApiManualTest {
@@ -63,7 +67,7 @@ public class ProcessApiManualTest {
         System.out.println(cpuUsage.get().toMillis());
 
         Stream<ProcessHandle> allProc = ProcessHandle.current().children();
-        assertEquals(0, allProc.count());
+        assertEquals(1, allProc.count());
 
         // Stream 已经关闭，重新获取
         allProc = ProcessHandle.current().children();
@@ -80,9 +84,11 @@ public class ProcessApiManualTest {
             createNewJVM(ServiceMain.class, i).pid();
         }
 
+        Thread.sleep(5000);
+        
         Stream<ProcessHandle> childProc = ProcessHandle.current().children();
         // 本身也算一个
-        assertEquals(numberOfChildProcesses, childProc.count());
+        assertEquals(numberOfChildProcesses + 1, childProc.count());
 
         childProc = ProcessHandle.current().children();
         childProc.forEach(processHandle -> {
@@ -114,9 +120,9 @@ public class ProcessApiManualTest {
 
     private Process createNewJVM(Class<?> mainClass, int number) throws IOException {
         ArrayList<String> cmdParams = new ArrayList<String>(5);
-        cmdParams.add(ProcessHelper.getJavaCmd().getAbsolutePath());
+        cmdParams.add(Processes.getJavaCmd().getAbsolutePath());
         cmdParams.add("-cp");
-        cmdParams.add(ProcessHelper.getClassPath());
+        cmdParams.add(Processes.getClassPath());
         cmdParams.add(mainClass.getName());
         // 给main函数传递参数
         cmdParams.add("Service " + number);

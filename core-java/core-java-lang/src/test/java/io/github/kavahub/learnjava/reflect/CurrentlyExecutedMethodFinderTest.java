@@ -4,6 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 当前正在执行方法查找
+ */
 public class CurrentlyExecutedMethodFinderTest {
     @Test
     public void givenCurrentThread_whenGetStackTrace_thenFindMethod() {

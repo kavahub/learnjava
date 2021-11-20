@@ -26,6 +26,9 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
+/**
+ * {@link ProcessBuilder} 示例
+ */
 public class ProcessBuilderTest {
     @TempDir
     Path directory;

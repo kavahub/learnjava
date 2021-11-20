@@ -14,9 +14,11 @@ import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.apache.commons.lang3.tuple.Pair;
 import org.junit.jupiter.api.Test;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
+/**
+ * 多个返回值。
+ */
 public class MultipleReturnValuesTest {
     @Test
     void whenUsingApacheCommonsPair_thenMultipleFieldsAreReturned() {
@@ -88,8 +90,7 @@ public class MultipleReturnValuesTest {
         }
     }
 
-    @Getter
-    @Setter
+    @Data
     static class Coordinates {
 
         private double longitude;

@@ -9,9 +9,11 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
+/**
+ * 方法参数信息获取
+ */
 public class MethodParamNameTest {
     @Test
     public void whenGetConstructorParams_thenOk() 
@@ -34,8 +36,7 @@ public class MethodParamNameTest {
     	assertThat(parameter.get().getName()).isEqualTo("fullName");
     } 
 
-    @Getter
-    @Setter
+    @Data
     public static class Person {
 
         private String fullName;

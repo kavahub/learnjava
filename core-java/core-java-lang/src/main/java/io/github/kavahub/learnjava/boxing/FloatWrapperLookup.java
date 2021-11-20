@@ -4,6 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openjdk.jmh.annotations.*;
 
+/**
+ * 单精度包装类型定位
+ */
 @State(Scope.Thread)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Measurement(iterations = 10, time = 1)

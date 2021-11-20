@@ -11,16 +11,17 @@ import com.google.common.base.Supplier;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+/**
+ * {@link Optional} 链
+ */
 public class OptionalChainingTest {
-    private boolean getEmptyEvaluated;
-    private boolean getHelloEvaluated;
-    private boolean getByeEvaluated;
+    private static boolean getEmptyEvaluated;
+    private static boolean getHelloEvaluated;
+    private static boolean getByeEvaluated;
 
     @BeforeAll
-    public void setUp() {
+    public static void setUp() {
         getEmptyEvaluated = false;
         getHelloEvaluated = false;
         getByeEvaluated = false;
@@ -69,9 +70,9 @@ public class OptionalChainingTest {
                 .map(Optional::get)
                 .findFirst();
 
-        assertTrue(this.getEmptyEvaluated);
-        assertTrue(this.getHelloEvaluated);
-        assertFalse(this.getByeEvaluated);
+        assertTrue(getEmptyEvaluated);
+        assertTrue(getHelloEvaluated);
+        assertFalse(getByeEvaluated);
         assertEquals(getHello(), found);
     }
 
@@ -90,17 +91,17 @@ public class OptionalChainingTest {
     }
 
     private Optional<String> getEmpty() {
-        this.getEmptyEvaluated = true;
+        getEmptyEvaluated = true;
         return Optional.empty();
     }
 
     private Optional<String> getHello() {
-        this.getHelloEvaluated = true;
+        getHelloEvaluated = true;
         return Optional.of("hello");
     }
 
     private Optional<String> getBye() {
-        this.getByeEvaluated = true;
+        getByeEvaluated = true;
         return Optional.of("bye");
     }
 

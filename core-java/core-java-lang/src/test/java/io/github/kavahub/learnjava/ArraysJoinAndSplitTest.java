@@ -5,6 +5,9 @@ import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 数组的合并及分割
+ */
 public class ArraysJoinAndSplitTest {
     private final String[] sauces = { "Marinara", "Olive Oil" };
     private final String[] cheeses = { "Mozzarella", "Feta", "Parmesan" };

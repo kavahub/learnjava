@@ -1,5 +1,8 @@
 package io.github.kavahub.learnjava.boxing;
 
+/**
+ * 对象类型与基本类型的性能测试
+ */
 public class BenchmarkRunnerExample {
 
     public static void main(String[] args) throws Exception {
