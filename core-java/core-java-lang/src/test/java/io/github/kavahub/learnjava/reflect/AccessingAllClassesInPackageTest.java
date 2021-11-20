@@ -12,7 +12,7 @@ public class AccessingAllClassesInPackageTest {
     // @Rule
     // public final ExpectedException exception = ExpectedException.none();
 
-    private static final String PACKAGE_NAME = "io.github.kavahub.learnjava.reflect.demo";
+    private static final String PACKAGE_NAME = "io.github.kavahub.learnjava.reflect.example";
 
     @Test
     public void when_findAllClassesUsingClassLoader_thenSuccess() {

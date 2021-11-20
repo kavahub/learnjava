@@ -1,10 +1,14 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.enhance;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * 自定义类加载器
+ * 
+ */
 public class CustomClassLoader extends ClassLoader {
     @Override
     public Class<?> findClass(String name) throws ClassNotFoundException {
@@ -12,6 +16,11 @@ public class CustomClassLoader extends ClassLoader {
         return defineClass(name, b, 0, b.length);
     }
 
+    /**
+     * 读取class文件
+     * @param fileName
+     * @return
+     */
     private byte[] loadClassFromFile(String fileName)  {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(
                 fileName.replace('.', File.separatorChar) + ".class");

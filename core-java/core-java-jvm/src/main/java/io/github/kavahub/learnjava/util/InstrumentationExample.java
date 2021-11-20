@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.util;
 
 import java.util.ArrayList;
 import java.util.List;
