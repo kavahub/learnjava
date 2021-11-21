@@ -3,8 +3,6 @@ package io.github.kavahub.learnjava;
 /**
  * 常量的最佳实践
  * 
- * @see <a href="https://www.baeldung.com/java-constants-good-practices">Baeldung</a>
- * 
  * 
  */
 public final class MathConstants {
