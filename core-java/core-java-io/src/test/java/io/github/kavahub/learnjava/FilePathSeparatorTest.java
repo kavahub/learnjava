@@ -10,6 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 
+/**
+ * 文件路径分割符
+ */
 public class FilePathSeparatorTest {
     @Test
     @EnabledOnOs(OS.WINDOWS)

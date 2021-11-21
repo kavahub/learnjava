@@ -7,6 +7,9 @@ import com.google.common.io.Files;
 import org.apache.commons.io.FilenameUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 获取文件名，不带扩展名
+ */
 public class FileNameDelExtensionTest {
     @Test
     public void givenDotFileWithoutExt_whenCallGuavaMethod_thenCannotGetDesiredResult() {

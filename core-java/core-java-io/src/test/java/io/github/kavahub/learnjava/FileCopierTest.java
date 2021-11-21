@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,23 +15,25 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 文件复制示例
+ */
 public class FileCopierTest {
-    private final static File original = new File("src/test/resources/sample.txt");
-    private final static String FILE_TO_COPY = "fileToCopy.txt";
+    private final static Path original = Paths.get("src", "test", "resources", "sample.txt");
+    private final static Path FILE_TO_COPY = Paths.get("target","fileToCopy.txt");
 
-    @AfterAll
-    public static void clearUp() throws IOException {
-        Files.deleteIfExists(Paths.get(FILE_TO_COPY));
+    @BeforeEach
+    public void clearUp() throws IOException {
+        Files.deleteIfExists(FILE_TO_COPY);
     }
 
     @Test
     public void givenIoAPI_whenCopied_thenCopyExistsWithSameContents() throws IOException {
-        File copied = new File(FILE_TO_COPY);
-        try (InputStream in = new BufferedInputStream(new FileInputStream(original));
-                OutputStream out = new BufferedOutputStream(new FileOutputStream(copied))) {
+        try (InputStream in = new BufferedInputStream(new FileInputStream(original.toFile()));
+                OutputStream out = new BufferedOutputStream(new FileOutputStream(FILE_TO_COPY.toFile()))) {
             byte[] buffer = new byte[1024];
             int lengthRead;
             while ((lengthRead = in.read(buffer)) > 0) {
@@ -40,32 +41,28 @@ public class FileCopierTest {
                 out.flush();
             }
         }
-        assertThat(copied).exists();
-        assertThat(Files.readAllLines(original.toPath()).equals(Files.readAllLines(copied.toPath())));
+        assertThat(FILE_TO_COPY).exists();
+        assertThat(Files.readAllLines(original).equals(Files.readAllLines(FILE_TO_COPY)));
     }
 
     @Test
     public void givenCommonsIoAPI_whenCopied_thenCopyExistsWithSameContents() throws IOException {
-        File copied = new File(FILE_TO_COPY);
-        FileUtils.copyFile(original, copied);
-        assertThat(copied).exists();
-        assertThat(Files.readAllLines(original.toPath()).equals(Files.readAllLines(copied.toPath())));
+        FileUtils.copyFile(original.toFile(), FILE_TO_COPY.toFile());
+        assertThat(FILE_TO_COPY).exists();
+        assertThat(Files.readAllLines(original).equals(Files.readAllLines(FILE_TO_COPY)));
     }
 
     @Test
     public void givenNIO2_whenCopied_thenCopyExistsWithSameContents() throws IOException {
-        Path copied = Paths.get(FILE_TO_COPY);
-        Path originalPath = original.toPath();
-        Files.copy(originalPath, copied, StandardCopyOption.REPLACE_EXISTING);
-        assertThat(copied).exists();
-        assertThat(Files.readAllLines(originalPath).equals(Files.readAllLines(copied)));
+        Files.copy(original, FILE_TO_COPY, StandardCopyOption.REPLACE_EXISTING);
+        assertThat(FILE_TO_COPY).exists();
+        assertThat(Files.readAllLines(original).equals(Files.readAllLines(FILE_TO_COPY)));
     }
 
     @Test
     public void givenGuava_whenCopied_thenCopyExistsWithSameContents() throws IOException {
-        File copied = new File(FILE_TO_COPY);
-        com.google.common.io.Files.copy(original, copied);
-        assertThat(copied).exists();
-        assertThat(Files.readAllLines(original.toPath()).equals(Files.readAllLines(copied.toPath())));
+        com.google.common.io.Files.copy(original.toFile(), FILE_TO_COPY.toFile());
+        assertThat(FILE_TO_COPY).exists();
+        assertThat(Files.readAllLines(original).equals(Files.readAllLines(FILE_TO_COPY)));
     }
 }

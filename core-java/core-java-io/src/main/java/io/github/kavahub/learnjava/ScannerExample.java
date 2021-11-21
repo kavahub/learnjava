@@ -6,7 +6,7 @@ import java.util.Scanner;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * next方法和nextLine方法的区别
+ * {@link Scanner} 示例，读取字符串（包含换行符）
  */
 @Slf4j
 public class ScannerExample {

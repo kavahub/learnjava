@@ -1,5 +1,6 @@
 package io.github.kavahub.learnjava;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
@@ -10,52 +11,52 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 文件创建
+ */
 public class FileCreateTest {
-    private final String FILE_TO_CREATE = "fileToCreate.txt";
+    private final Path FILE_TO_CREATE = Paths.get("target", "fileToCreate.txt");
 
     @BeforeEach
-    @AfterEach
     public void cleanUpFiles() throws IOException {
-        Files.deleteIfExists(Paths.get(FILE_TO_CREATE));
+        Files.deleteIfExists(FILE_TO_CREATE);
     }
 
     @Test
     public void givenUsingNio_whenCreatingFile_thenCorrect() throws IOException {
-        Path newFilePath = Paths.get(FILE_TO_CREATE);
-        Files.createFile(newFilePath);
+        Files.createFile(FILE_TO_CREATE);
     }
 
     @Test
     public void givenUsingFile_whenCreatingFile_thenCorrect() throws IOException {
-        File newFile = new File(FILE_TO_CREATE);
+        File newFile = FILE_TO_CREATE.toFile();
         boolean success = newFile.createNewFile();
         assertTrue(success);
     }
 
     @Test
     void givenUsingFileOutputStream_whenCreatingFile_thenCorrect() throws IOException {
-        try(FileOutputStream fileOutputStream = new FileOutputStream(FILE_TO_CREATE)){
+        try(FileOutputStream fileOutputStream = new FileOutputStream(FILE_TO_CREATE.toFile())){
             
         }
 
-        assertTrue(Files.exists(Paths.get(FILE_TO_CREATE)));
+        assertThat(FILE_TO_CREATE).exists();
     }
 
     @Test
     public void givenUsingGuava_whenCreatingFile_thenCorrect() throws IOException {
-        com.google.common.io.Files.touch(new File(FILE_TO_CREATE));
+        com.google.common.io.Files.touch(FILE_TO_CREATE.toFile());
 
-        assertTrue(Files.exists(Paths.get(FILE_TO_CREATE)));
+        assertThat(FILE_TO_CREATE).exists();
     }
 
     @Test
     public void givenUsingCommonsIo_whenCreatingFile_thenCorrect() throws IOException {
-        FileUtils.touch(new File(FILE_TO_CREATE));
+        FileUtils.touch(FILE_TO_CREATE.toFile());
 
-        assertTrue(Files.exists(Paths.get(FILE_TO_CREATE)));
+        assertThat(FILE_TO_CREATE).exists();
     }    
 }

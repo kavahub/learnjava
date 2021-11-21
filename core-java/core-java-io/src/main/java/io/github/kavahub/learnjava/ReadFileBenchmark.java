@@ -24,7 +24,20 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.ChainedOptionsBuilder;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-
+/**
+ * 读取文件性能测试
+ * 
+ * <p>
+ * 测试结果：
+ * 
+ * <pre>
+ * Benchmark                                           Mode  Cnt   Score    Error  Units
+ * ReadFileBenchmark.readAllLinesUsingApacheCommons   thrpt   10  43.111 ±  2.699  ops/s
+ * ReadFileBenchmark.readAllLinesUsingBufferedReader  thrpt   10   0.761 ±  0.130  ops/s
+ * ReadFileBenchmark.readAllLinesUsingGoogleGuava     thrpt   10  75.422 ±  6.792  ops/s
+ * ReadFileBenchmark.readAllLinesUsingJavaFiles       thrpt   10  85.609 ± 13.245  ops/s
+ * </pre>
+ */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.SECONDS)
@@ -33,9 +46,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @Fork(1)
 public class ReadFileBenchmark {
     private Path file;
-    
+
     public static void main(String[] args) throws Exception {
-        
 
         ChainedOptionsBuilder opts = new OptionsBuilder().include(ReadFileBenchmark.class.getSimpleName());
 
@@ -44,7 +56,7 @@ public class ReadFileBenchmark {
 
     @Setup
     public void setup() throws Exception {
-        file = getFileURIFromResources("license.txt");
+        file = getFileURIFromResources("largefile.txt");
     }
 
     @Benchmark
@@ -58,13 +70,13 @@ public class ReadFileBenchmark {
 
         try (FileReader fileReader = new FileReader(file.toFile());
                 BufferedReader bufferedReader = new BufferedReader(fileReader)) {
-    
+
             while (bufferedReader.ready()) {
                 char[] c = new char[8192];
                 bufferedReader.read(c);
                 readData = readData + new String(c);
             }
-    
+
         }
 
         return readData;

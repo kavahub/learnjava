@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+/**
+ * {@link Scanner} 示例，读取控制台输入的信息
+ */
 public class ConsoleScannerExample {
     public static void main(String[] args) {
         System.out.println("Please enter your name and surname: ");

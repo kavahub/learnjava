@@ -19,6 +19,7 @@ public class RecorderMain {
         soundRecorder.start();
         Thread.sleep(20000);
         soundRecorder.stop();
+        System.out.println("record end ....");
 
         WaveDataUtil wd = new WaveDataUtil();
         Thread.sleep(3000);

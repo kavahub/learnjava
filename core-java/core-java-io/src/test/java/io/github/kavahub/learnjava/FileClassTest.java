@@ -16,6 +16,9 @@ import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link File} 示例
+ */
 public class FileClassTest {
     @Test
     public void givenDir_whenMkdir_thenDirIsDeleted() {

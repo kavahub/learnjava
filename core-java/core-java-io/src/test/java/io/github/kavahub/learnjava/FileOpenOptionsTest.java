@@ -1,5 +1,6 @@
 package io.github.kavahub.learnjava;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -15,12 +16,14 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 import org.hamcrest.CoreMatchers;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 文件打开选项
+ */
 public class FileOpenOptionsTest {
-    private static final String HOME = "";
+    private static final String HOME = "target";
     private static final String DUMMY_FILE_NAME = "sample.txt";
     private static final String EXISTING_FILE_NAME = "existingFile.txt";
 
@@ -29,8 +32,12 @@ public class FileOpenOptionsTest {
 
     @BeforeAll
     public static void beforeAll() throws IOException {
-        Path path = Paths.get(HOME, DUMMY_FILE_NAME);
+        Files.deleteIfExists(Paths.get(HOME, "newfile.txt"));
+        Files.deleteIfExists(Paths.get(HOME, "sparse.txt"));
+        Files.deleteIfExists(Paths.get(HOME, DUMMY_FILE_NAME));
+        Files.deleteIfExists(Paths.get(HOME, EXISTING_FILE_NAME));
 
+        Path path = Paths.get(HOME, DUMMY_FILE_NAME);
         try (OutputStream out = Files.newOutputStream(path)) {
             out.write(DUMMY_TEXT.getBytes());
         }
@@ -38,13 +45,6 @@ public class FileOpenOptionsTest {
         Files.createFile(Paths.get(HOME, EXISTING_FILE_NAME));
     }
 
-    @AfterAll
-    public static void afterAll() throws IOException {
-        Files.deleteIfExists(Paths.get(HOME, "newfile.txt"));
-        Files.deleteIfExists(Paths.get(HOME, "sparse.txt"));
-        Files.deleteIfExists(Paths.get(HOME, DUMMY_FILE_NAME));
-        Files.deleteIfExists(Paths.get(HOME, EXISTING_FILE_NAME));
-    }
 
     @Test
     public void givenExistingPath_whenCreateNewFile_thenCorrect() throws IOException {
@@ -52,7 +52,7 @@ public class FileOpenOptionsTest {
         assertFalse(Files.exists(path));
 
         Files.write(path, DUMMY_TEXT.getBytes(), StandardOpenOption.CREATE);
-        assertTrue(Files.exists(path));
+        assertThat(path).exists();
     }
 
     @Test

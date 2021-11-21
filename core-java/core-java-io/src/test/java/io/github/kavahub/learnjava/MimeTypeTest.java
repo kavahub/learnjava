@@ -9,6 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URLConnection;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import javax.activation.MimetypesFileTypeMap;
 
@@ -22,6 +23,9 @@ import net.sf.jmimemagic.MagicMatch;
 import net.sf.jmimemagic.MagicMatchNotFoundException;
 import net.sf.jmimemagic.MagicParseException;
 
+/**
+ * 确定文件类型
+ */
 public class MimeTypeTest {
     /**
      * Expected Ouput.
@@ -31,18 +35,20 @@ public class MimeTypeTest {
     /**
      * The location of the file.
      */
-    public static final String FILE_LOC = "src/test/resources/product.png";
+    public static final Path FILE_LOC = Paths.get("src","test","resources","product.png");
 
     /**
      * Test method, demonstrating usage in Java 7.
+     * 
+     * <p>
+     * 使用扩展名判断
      * 
      * @throws IOException
      */
     @Test
     public void whenUsingJava7_thenSuccess() throws IOException {
-        final Path path = new File(FILE_LOC).toPath();
-        final String mimeType = Files.probeContentType(path);
-        assertEquals(mimeType, PNG_EXT);
+        final String mimeType = Files.probeContentType(FILE_LOC);
+        assertEquals(PNG_EXT, mimeType);
     }
 
     /**
@@ -53,34 +59,39 @@ public class MimeTypeTest {
      */
     @Test
     public void whenUsingGetContentType_thenSuccess() throws MalformedURLException, IOException {
-        final File file = new File(FILE_LOC);
+        final File file = FILE_LOC.toFile();
         final URLConnection connection = file.toURI().toURL().openConnection();
         final String mimeType = connection.getContentType();
-        assertEquals(mimeType, PNG_EXT);
+        assertEquals(PNG_EXT, mimeType);
     }
 
     /**
      * Test method demonstrating the usage of URLConnection to resolve MIME type.
      * 
+     * <p>
+     * 使用扩展名判断
+     * 
      */
     @Test
     public void whenUsingGuessContentTypeFromName_thenSuccess() {
-        final File file = new File(FILE_LOC);
+        final File file = FILE_LOC.toFile();
         final String mimeType = URLConnection.guessContentTypeFromName(file.getName());
-        assertEquals(mimeType, PNG_EXT);
+        assertEquals(PNG_EXT, mimeType);
     }
 
     /**
      * Test method demonstrating the usage of FileNameMap from URLConnection to
      * resolve MIME type of a file.
      * 
+     * <p>
+     * 使用扩展名判断
      */
     @Test
     public void whenUsingGetFileNameMap_thenSuccess() {
-        final File file = new File(FILE_LOC);
+        final File file = FILE_LOC.toFile();
         final FileNameMap fileNameMap = URLConnection.getFileNameMap();
         final String mimeType = fileNameMap.getContentTypeFor(file.getName());
-        assertEquals(mimeType, PNG_EXT);
+        assertEquals(PNG_EXT, mimeType);
     }
 
     /**
@@ -89,12 +100,12 @@ public class MimeTypeTest {
      * 
      */
     @Test
-    @Disabled("")
+    @Disabled("java.lang.NoClassDefFoundError: com/sun/activation/registries/LogSupport")
     public void whenUsingMimeTypesFileTypeMap_thenSuccess() {
-        final File file = new File(FILE_LOC);
+        final File file = FILE_LOC.toFile();
         final MimetypesFileTypeMap fileTypeMap = new MimetypesFileTypeMap();
         final String mimeType = fileTypeMap.getContentType(file.getName());
-        assertEquals(mimeType, PNG_EXT);
+        assertEquals(PNG_EXT, mimeType);
     }
 
     /**
@@ -107,9 +118,9 @@ public class MimeTypeTest {
     @Test
     public void whenUsingJmimeMagic_thenSuccess()
             throws MagicParseException, MagicMatchNotFoundException, MagicException {
-        final File file = new File(FILE_LOC);
+        final File file = FILE_LOC.toFile();
         final MagicMatch match = Magic.getMagicMatch(file, false);
-        assertEquals(match.getMimeType(), PNG_EXT);
+        assertEquals(PNG_EXT, match.getMimeType());
     }
 
     /**
@@ -119,7 +130,7 @@ public class MimeTypeTest {
      */
     @Test
     public void whenUsingTika_thenSuccess() throws IOException {
-        final File file = new File(FILE_LOC);
+        final File file = FILE_LOC.toFile();
         final Tika tika = new Tika();
         final String mimeType = tika.detect(file);
         assertEquals(mimeType, PNG_EXT);

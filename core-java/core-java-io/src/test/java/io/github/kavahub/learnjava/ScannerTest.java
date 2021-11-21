@@ -11,18 +11,20 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
 
 public class ScannerTest {
-    private static final String TEST_READ_FILE = "src/test/resources/test_read.in".replace("/", File.separator);
-    private static final String TEST_READ_MULT_FILE = "src/test/resources/test_read_multiple.in".replace("/", File.separator);
+    private static final Path TEST_READ_FILE = Paths.get("src","test","resources","test_read.in");
+    private static final Path TEST_READ_MULT_FILE = Paths.get("src", "test","resources", "test_read_multiple.in");
 
     @Test
     public void whenReadFileWithScanner_thenCorrect() throws IOException {
-        final Scanner scanner = new Scanner(new File(TEST_READ_FILE));
+        final Scanner scanner = new Scanner(TEST_READ_FILE);
 
         assertTrue(scanner.hasNext());
         assertEquals("Hello", scanner.next());
@@ -35,7 +37,7 @@ public class ScannerTest {
     @Test
     public void whenConvertInputStreamToString_thenConverted() throws IOException {
         final String expectedValue = "Hello world 中文";
-        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE);
+        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE.toFile());
         final Scanner scanner = new Scanner(inputStream);
         scanner.useDelimiter("\\A");
 
@@ -49,7 +51,7 @@ public class ScannerTest {
     public void whenReadUsingBufferedReader_thenCorrect() throws IOException {
         final String firstLine = "Hello world";
         final String secondLine = "Hi, John";
-        final BufferedReader reader = new BufferedReader(new FileReader(TEST_READ_MULT_FILE));
+        final BufferedReader reader = new BufferedReader(new FileReader(TEST_READ_MULT_FILE.toFile()));
 
         String result = reader.readLine();
         assertEquals(firstLine, result);
@@ -63,7 +65,7 @@ public class ScannerTest {
     @Test
     public void whenReadUsingScanner_thenCorrect() throws IOException {
         final String firstLine = "Hello world";
-        final FileInputStream inputStream = new FileInputStream(TEST_READ_MULT_FILE);
+        final FileInputStream inputStream = new FileInputStream(TEST_READ_MULT_FILE.toFile());
         final Scanner scanner = new Scanner(inputStream);
 
         final String result = scanner.nextLine();
@@ -122,7 +124,7 @@ public class ScannerTest {
     @Test
     public void whenFindPatternUsingScanner_thenFound() throws IOException {
         final String expectedValue = "world";
-        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE);
+        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE.toFile());
         final Scanner scanner = new Scanner(inputStream);
 
         final String result = scanner.findInLine("wo..d");
@@ -134,7 +136,7 @@ public class ScannerTest {
     @Test
     public void whenFindPatternInHorizon_thenFound() throws IOException {
         final String expectedValue = "world";
-        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE);
+        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE.toFile());
         final Scanner scanner = new Scanner(inputStream);
 
         String result = scanner.findWithinHorizon("wo..d", 10);
@@ -149,7 +151,7 @@ public class ScannerTest {
 
     @Test
     public void whenSkipPatternUsingScanner_thenSkiped() throws IOException {
-        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE);
+        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE.toFile());
         final Scanner scanner = new Scanner(inputStream);
 
         scanner.skip(".e.lo");
@@ -164,7 +166,7 @@ public class ScannerTest {
         final String expectedValue = "Hello world 中文";
         final String[] splited = expectedValue.split("o");
 
-        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE);
+        final FileInputStream inputStream = new FileInputStream(TEST_READ_FILE.toFile());
         final Scanner scanner = new Scanner(inputStream);
         scanner.useDelimiter("o");
 

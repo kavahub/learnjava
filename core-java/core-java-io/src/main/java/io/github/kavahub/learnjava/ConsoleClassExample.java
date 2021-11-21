@@ -2,6 +2,11 @@ package io.github.kavahub.learnjava;
 
 import java.io.Console;
 
+/**
+ * {@link Console} 示例
+ * 
+ * 
+ */
 public class ConsoleClassExample {
     public static void main(String[] args) {
         Console console = System.console();

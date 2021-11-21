@@ -16,6 +16,9 @@ import java.util.UUID;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 临时目录
+ */
 public class TemporaryDirectoriesTest {
     @Test
     public void givenTempDirWithPrefixNoTargetSpecified_whenCreateWithPlainJava_thenInsideOSTempDirStructure() throws IOException {

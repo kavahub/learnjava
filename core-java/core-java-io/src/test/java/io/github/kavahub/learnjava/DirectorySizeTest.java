@@ -17,6 +17,9 @@ import java.util.stream.StreamSupport;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 目录大小示例
+ */
 public class DirectorySizeTest {
     private final long EXPECTED_SIZE = 24;
     private String path = "src/test/resources/size".replace("/", File.separator);
@@ -71,6 +74,9 @@ public class DirectorySizeTest {
         assertEquals(EXPECTED_SIZE, size);
     }
 
+    /**
+     * 目录大小格式化输出
+     */
     @Test
     public void whenGetReadableSize_thenCorrect() {
         final File folder = new File(path);
@@ -84,6 +90,12 @@ public class DirectorySizeTest {
         assertEquals(EXPECTED_SIZE + " B", readableSize);
     }
 
+    /**
+     * 递归调用计算目录大小
+     * 
+     * @param folder
+     * @return
+     */
     private long getFolderSize(final File folder) {
         long length = 0;
         final File[] files = folder.listFiles();

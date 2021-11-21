@@ -25,7 +25,6 @@
         <module>core-java-datetime</module>
         <module>core-java-collection</module>
         <module>core-java-javax</module>
-        <module>core-java-awt</module>
         <module>core-java-security</module>
         <module>core-java-jvm</module>
     </modules>
