@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.util;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -10,6 +10,8 @@ import java.time.ZonedDateTime;
 
 import org.junit.jupiter.api.Test;
 
+import static io.github.kavahub.learnjava.util.DateTimeComparer.*;
+
 public class DateTimeComparisonUtilsTest {
     @Test
     void givenLocalDateTimes_whenIsSameDay_thenCompareTrue() {
@@ -17,8 +19,8 @@ public class DateTimeComparisonUtilsTest {
         LocalDateTime secondTimestamp = firstTimestamp.plusHours(5);
         LocalDateTime thirdTimestamp = firstTimestamp.plusDays(1);
 
-        assertTrue(DateTimeComparisonUtils.isSameDay(firstTimestamp, secondTimestamp));
-        assertFalse(DateTimeComparisonUtils.isSameDay(secondTimestamp, thirdTimestamp));
+        assertTrue(isSameDay(firstTimestamp, secondTimestamp));
+        assertFalse(isSameDay(secondTimestamp, thirdTimestamp));
     }
 
     @Test
@@ -26,7 +28,7 @@ public class DateTimeComparisonUtilsTest {
         LocalDate localDate = LocalDate.of(2019, 8, 10);
         LocalDateTime localDateTime = LocalDateTime.of(2019, 8, 10, 11, 30, 0);
 
-        assertTrue(DateTimeComparisonUtils.isSameDay(localDateTime, localDate));
+        assertTrue(isSameDay(localDateTime, localDate));
     }
 
     @Test
@@ -35,9 +37,9 @@ public class DateTimeComparisonUtilsTest {
         LocalDateTime secondTimestamp = firstTimestamp.plusMinutes(15);
         LocalDateTime thirdTimestamp = firstTimestamp.plusHours(2);
 
-        assertTrue(DateTimeComparisonUtils.isSameHour(firstTimestamp, secondTimestamp));
+        assertTrue(isSameHour(firstTimestamp, secondTimestamp));
 
-        assertFalse(DateTimeComparisonUtils.isSameHour(secondTimestamp, thirdTimestamp));
+        assertFalse(isSameHour(secondTimestamp, thirdTimestamp));
     }
 
     @Test
@@ -46,9 +48,9 @@ public class DateTimeComparisonUtilsTest {
         LocalDateTime secondTimestamp = firstTimestamp.plusSeconds(30);
         LocalDateTime thirdTimestamp = firstTimestamp.plusMinutes(5);
 
-        assertTrue(DateTimeComparisonUtils.isSameMinute(firstTimestamp, secondTimestamp));
+        assertTrue(isSameMinute(firstTimestamp, secondTimestamp));
 
-        assertFalse(DateTimeComparisonUtils.isSameMinute(secondTimestamp, thirdTimestamp));
+        assertFalse(isSameMinute(secondTimestamp, thirdTimestamp));
     }
 
     @Test
@@ -58,7 +60,7 @@ public class DateTimeComparisonUtilsTest {
         ZonedDateTime zonedTimestampToCompare = ZonedDateTime.of(2019, 8, 10, 14, 0, 0, 0,
           ZoneId.of("Europe/Berlin"));
 
-        assertTrue(DateTimeComparisonUtils.isSameHour(zonedTimestamp, zonedTimestampToCompare));
+        assertTrue(isSameHour(zonedTimestamp, zonedTimestampToCompare));
     }
 
     @Test
@@ -68,6 +70,6 @@ public class DateTimeComparisonUtilsTest {
         LocalDateTime localTimestamp = LocalDateTime.of(2019, 8, 10, 14, 20, 0);
         ZoneId zoneId = ZoneId.of("Europe/Berlin");
 
-        assertTrue(DateTimeComparisonUtils.isSameHour(zonedTimestamp, localTimestamp, zoneId));
+        assertTrue(isSameHour(zonedTimestamp, localTimestamp, zoneId));
     }  
 }

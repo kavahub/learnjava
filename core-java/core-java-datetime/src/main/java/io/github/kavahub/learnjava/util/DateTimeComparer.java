@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.util;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,8 +9,11 @@ import lombok.experimental.UtilityClass;
 
 import static java.time.temporal.ChronoUnit.*;
 
+/**
+ * 日期时间比较器
+ */
 @UtilityClass
-public class DateTimeComparisonUtils {
+public class DateTimeComparer {
     public boolean isSameDay(LocalDateTime timestamp, LocalDate localDateToCompare) {
         return timestamp.toLocalDate().isEqual(localDateToCompare);
     }
