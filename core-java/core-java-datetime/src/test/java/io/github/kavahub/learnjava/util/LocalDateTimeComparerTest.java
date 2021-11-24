@@ -10,9 +10,9 @@ import java.time.ZonedDateTime;
 
 import org.junit.jupiter.api.Test;
 
-import static io.github.kavahub.learnjava.util.DateTimeComparer.*;
+import static io.github.kavahub.learnjava.util.LocalDateTimeComparer.*;
 
-public class DateTimeComparisonUtilsTest {
+public class LocalDateTimeComparerTest {
     @Test
     void givenLocalDateTimes_whenIsSameDay_thenCompareTrue() {
         LocalDateTime firstTimestamp = LocalDateTime.of(2019, 8, 10, 11, 00, 0);

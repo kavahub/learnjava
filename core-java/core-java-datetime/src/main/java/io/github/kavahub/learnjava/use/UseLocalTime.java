@@ -1,8 +1,11 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.use;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class UseLocalTime {
     LocalTime getLocalTimeUsingFactoryOfMethod(int hour, int min, int seconds) {
         return LocalTime.of(hour, min, seconds);

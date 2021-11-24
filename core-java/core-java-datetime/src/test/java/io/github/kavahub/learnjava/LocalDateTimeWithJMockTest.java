@@ -14,12 +14,7 @@ import mockit.Expectations;
 import mockit.Mock;
 import mockit.MockUp;
 
-/**
- * 不能在IDE中执行测试。
- * 
- * mvn test -Dtest=LocalDateTimeWithJMockTest
- */
-@Disabled("测试失败")
+@Disabled("JMockit didn't get initialized")
 public class LocalDateTimeWithJMockTest {
     @Test
     public void givenLocalDateTimeWithJMock_whenNow_thenGetFixedLocalDateTime() {

@@ -11,7 +11,10 @@ import java.time.temporal.ChronoUnit;
 import org.junit.jupiter.api.Test;
 
 /**
- * Period 和 Duration。两个类看表示时间量或两个日期之间的差，两者之间的差异为：Period基于日期值，而Duration基于时间值。
+ * Period 和 Duration。两个类看表示时间量或两个日期之间的差.
+ * 
+ * <p>
+ * 两者之间的差异为：Period基于日期值，而Duration基于时间值。
  */
 public class JavaPeriodTest {
     @Test
@@ -19,8 +22,7 @@ public class JavaPeriodTest {
         LocalDate initialDate = LocalDate.parse("2007-05-10");
         LocalDate finalDate = initialDate.plus(Period.ofDays(5));
 
-        int days = Period.between(initialDate, finalDate)
-            .getDays();
+        int days = Period.between(initialDate, finalDate).getDays();
 
         assertThat(days).isEqualTo(5);
     }
@@ -43,10 +45,8 @@ public class JavaPeriodTest {
         Period period = Period.between(startDate, endDate);
 
         assertFalse(period.isNegative());
-        assertEquals(56, period.plusDays(50)
-            .getDays());
-        assertEquals(9, period.minusMonths(2)
-            .getMonths());
+        assertEquals(56, period.plusDays(50).getDays());
+        assertEquals(9, period.minusMonths(2).getMonths());
 
         Period fromUnits = Period.of(3, 10, 10);
         Period fromDays = Period.ofDays(50);
@@ -78,5 +78,5 @@ public class JavaPeriodTest {
         assertEquals(2, fromCharYears.getYears());
         Period fromCharUnits = Period.parse("P2Y3M5D");
         assertEquals(5, fromCharUnits.getDays());
-    }   
+    }
 }

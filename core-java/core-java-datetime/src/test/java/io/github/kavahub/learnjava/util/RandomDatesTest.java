@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.util;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -6,7 +6,9 @@ import java.util.concurrent.TimeUnit;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 
-public class LegacyRandomDateTimesTest {
+import static io.github.kavahub.learnjava.util.RandomDates.*;
+
+public class RandomDatesTest {
     private static final Date MIN_DATE = new Date(Long.MIN_VALUE);
     private static final Date MAX_DATE = new Date(Long.MAX_VALUE);
 
@@ -18,13 +20,13 @@ public class LegacyRandomDateTimesTest {
         Date hundredYearsAgo = new Date(now - aDay * 365 * 100);
         Date tenDaysAgo = new Date(now - aDay * 10);
 
-        Date random = LegacyRandomDateTimes.between(hundredYearsAgo, tenDaysAgo);
+        Date random = between(hundredYearsAgo, tenDaysAgo);
         Assertions.assertThat(random).isBetween(hundredYearsAgo, tenDaysAgo);
     }
 
     @RepeatedTest(100)
     void givenNoRange_WhenGenTimestamp_ShouldGenerateRandomTimestamps() {
-        Date random = LegacyRandomDateTimes.timestamp();
+        Date random = timestamp();
 
         Assertions.assertThat(random)
                 .isNotNull()

@@ -13,7 +13,7 @@ import static java.time.temporal.ChronoUnit.*;
  * 日期时间比较器
  */
 @UtilityClass
-public class DateTimeComparer {
+public class LocalDateTimeComparer {
     public boolean isSameDay(LocalDateTime timestamp, LocalDate localDateToCompare) {
         return timestamp.toLocalDate().isEqual(localDateToCompare);
     }

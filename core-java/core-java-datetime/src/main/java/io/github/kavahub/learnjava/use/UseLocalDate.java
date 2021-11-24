@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.use;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -7,6 +7,9 @@ import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class UseLocalDate {
     LocalDate getLocalDateUsingFactoryOfMethod(int year, int month, int dayOfMonth) {
         return LocalDate.of(year, month, dayOfMonth);

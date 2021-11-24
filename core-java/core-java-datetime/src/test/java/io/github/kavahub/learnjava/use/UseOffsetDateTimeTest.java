@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.use;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,15 +9,15 @@ import java.time.ZoneOffset;
 
 import org.junit.jupiter.api.Test;
 
-public class UseOffsetDateTimeTest {
-    private final UseOffsetDateTime subject = new UseOffsetDateTime();
+import static io.github.kavahub.learnjava.use.UseOffsetDateTime.*;
 
+public class UseOffsetDateTimeTest {
     @Test
     public void givenAZoneOffSetAndLocalDateTime_whenCombing_thenValidResult() {
         ZoneOffset offset = ZoneOffset.of("+02:00");
         LocalDateTime localDateTime = LocalDateTime.of(2015, Month.FEBRUARY, 20, 6, 30);
 
-        OffsetDateTime result = subject.offsetOfLocalDateTimeAndOffset(localDateTime, offset);
+        OffsetDateTime result = offsetOfLocalDateTimeAndOffset(localDateTime, offset);
 
         assertThat(result.toString()).isEqualTo("2015-02-20T06:30+02:00");
     } 

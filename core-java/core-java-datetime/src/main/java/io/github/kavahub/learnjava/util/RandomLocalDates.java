@@ -1,10 +1,19 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.util;
 
 import java.time.LocalDate;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class RandomDates {
-    public static LocalDate between(LocalDate startInclusive, LocalDate endExclusive) {
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
+public class RandomLocalDates {
+    /**
+     * 随机生成之间的日期
+     * @param startInclusive
+     * @param endExclusive
+     * @return
+     */
+    public LocalDate between(LocalDate startInclusive, LocalDate endExclusive) {
         long startEpochDay = startInclusive.toEpochDay();
         long endEpochDay = endExclusive.toEpochDay();
         long randomDay = ThreadLocalRandom.current().nextLong(startEpochDay, endEpochDay);
@@ -12,7 +21,11 @@ public class RandomDates {
         return LocalDate.ofEpochDay(randomDay);
     }
 
-    public static LocalDate date() {
+    /**
+     * 随机生成日期
+     * @return
+     */
+    public LocalDate date() {
         int hundredYears = 100 * 365;
         return LocalDate.ofEpochDay(ThreadLocalRandom.current().nextInt(-hundredYears, hundredYears));
     }    

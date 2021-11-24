@@ -8,16 +8,17 @@ import java.time.ZoneId;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import mockit.Expectations;
 import mockit.Mock;
 import mockit.MockUp;
+import mockit.integration.junit5.JMockitExtension;
 
-/**
- * mvn test -Dtest=InstantWithJMockTest
- */
-@Disabled("测试失败")
+@Disabled("JMockit didn't get initialized")
+@ExtendWith(JMockitExtension.class)
 public class InstantWithJMockTest {
+
     @Test
     public void givenInstantWithJMock_whenNow_thenGetFixedInstant() {
         String instantExpected = "2014-12-21T10:15:30Z";
@@ -48,5 +49,5 @@ public class InstantWithJMockTest {
         Instant now = Instant.now();
 
         assertThat(now).isEqualTo(instantExpected);
-    }   
+    }
 }

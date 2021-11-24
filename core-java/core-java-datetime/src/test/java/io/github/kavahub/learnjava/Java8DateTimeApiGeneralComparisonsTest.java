@@ -12,6 +12,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * Java提供的日期比较方法示例
+ */
 public class Java8DateTimeApiGeneralComparisonsTest {
     @Test
     public void givenLocalDates_whenComparing_thenAssertsPass() {

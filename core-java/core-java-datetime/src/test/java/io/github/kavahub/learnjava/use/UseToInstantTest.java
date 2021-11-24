@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.use;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -13,14 +13,14 @@ import java.util.GregorianCalendar;
 
 import org.junit.jupiter.api.Test;
 
-public class UseToInstantTest {
-    private UseToInstant subject = new UseToInstant();
+import static io.github.kavahub.learnjava.use.UseToInstant.*;
 
+public class UseToInstantTest {
     @Test
     public void givenAGregorianCalenderDate_whenConvertingToLocalDate_thenAsExpected() {
         GregorianCalendar givenCalender = new GregorianCalendar(2018, Calendar.JULY, 28);
 
-        LocalDateTime localDateTime = subject.convertDateToLocalDate(givenCalender);
+        LocalDateTime localDateTime = convertDateToLocalDate(givenCalender);
 
         assertThat(localDateTime).isEqualTo("2018-07-28T00:00:00");
     }
@@ -30,7 +30,7 @@ public class UseToInstantTest {
         LocalDateTime currentDateTime = LocalDateTime.now();
         Date givenDate = Date.from(currentDateTime.atZone(ZoneId.systemDefault()).toInstant());
 
-        LocalDateTime localDateTime = subject.convertDateToLocalDate(givenDate);
+        LocalDateTime localDateTime = convertDateToLocalDate(givenDate);
 
         // 在转换的过程中，毫秒精确位丢失。  Date类的毫秒数只保留三位，所以不能相等
         // 参考： givenInstant_whenDateFromToInstant_thenNotEqual

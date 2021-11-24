@@ -5,7 +5,11 @@ import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 
-public class RangeDatesIteration {
+/**
+ * 日期范围迭代器，日期循环
+ * 
+ */
+public class RangeDatesIterationExample {
     public void iterateBetweenDatesJava9(LocalDate startDate, LocalDate endDate) {
 
         startDate.datesUntil(endDate)
@@ -57,7 +61,7 @@ public class RangeDatesIteration {
         LocalDate start = LocalDate.now();
         LocalDate end = start.plus(10L, ChronoUnit.DAYS);
 
-        RangeDatesIteration iteration = new RangeDatesIteration();
+        RangeDatesIterationExample iteration = new RangeDatesIterationExample();
 
         iteration.iterateBetweenDatesJava9(start, end);
     }
@@ -66,7 +70,7 @@ public class RangeDatesIteration {
         LocalDate start = LocalDate.now();
         LocalDate end = start.plus(10L, ChronoUnit.DAYS);
 
-        RangeDatesIteration iteration = new RangeDatesIteration();
+        RangeDatesIterationExample iteration = new RangeDatesIterationExample();
 
         iteration.iterateBetweenDatesJava8(start, end);
     }
@@ -81,7 +85,7 @@ public class RangeDatesIteration {
         calendar.add(Calendar.DATE, 10);
         Date end = calendar.getTime();
 
-        RangeDatesIteration iteration = new RangeDatesIteration();
+        RangeDatesIterationExample iteration = new RangeDatesIterationExample();
 
         iteration.iterateBetweenDatesJava7(start, end);
     }

@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.use;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

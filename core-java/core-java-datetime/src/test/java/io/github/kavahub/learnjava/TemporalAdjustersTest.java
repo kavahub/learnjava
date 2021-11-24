@@ -8,6 +8,9 @@ import java.time.temporal.TemporalAdjusters;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link TemporalAdjusters} 示例
+ */
 public class TemporalAdjustersTest {
     @Test
     public void whenAdjust_thenNextSunday() {

@@ -15,6 +15,9 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * {@link  Clock} 类用于使用时区提供对当前时刻, 日期和时间的访问
+ */
 @Slf4j
 public class ClockTest {
     @Test
@@ -37,6 +40,7 @@ public class ClockTest {
 		assertFalse(clockSystem.instant().equals(null));
 
 		log.debug("System zone :: " + clockSystem.getZone());
+		log.debug("instant :: " + clockSystem.instant());
 	}
 
 	@Test
@@ -47,6 +51,7 @@ public class ClockTest {
 		assertFalse(clockSystemDefault.getZone().equals(null));
 		assertFalse(clockSystemDefault.instant().equals(null));
 
+		log.debug("System Default zone :: " + clockSystemDefault.getZone());
 		log.debug("System Default instant :: " + clockSystemDefault.instant());
 	}
 
@@ -108,8 +113,6 @@ public class ClockTest {
 		
 		Clock clockDefaultZone = Clock.systemDefaultZone();
         assertThrows(IllegalArgumentException.class, () -> Clock.tick(clockDefaultZone, Duration.ofSeconds(-300)));
-		;
-
 	}
 	
 	@Test

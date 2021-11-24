@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.use;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,14 +12,14 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
+import static io.github.kavahub.learnjava.use.UseZonedDateTime.*;
+
 
 public class UseZonedDateTimeTest {
-    private UseZonedDateTime zonedDateTime = new UseZonedDateTime();
-
     @Test
     public void givenZoneId_thenZonedDateTime() {
         ZoneId zoneId = ZoneId.of("Europe/Paris");
-        ZonedDateTime zonedDatetime = zonedDateTime.getZonedDateTime(LocalDateTime.parse("2016-05-20T06:30"), zoneId);
+        ZonedDateTime zonedDatetime = getZonedDateTime(LocalDateTime.parse("2016-05-20T06:30"), zoneId);
         assertEquals(zoneId, ZoneId.from(zonedDatetime));
     }
 
@@ -36,11 +36,11 @@ public class UseZonedDateTimeTest {
         ZoneId zone = ZoneId.of("Europe/Paris");
         ZonedDateTime zonedGiven = ZonedDateTime.of(given, LocalTime.NOON, zone);
 
-        ZonedDateTime startOfOfDayWithMethod = zonedDateTime.getStartOfDay(given, zone);
-        ZonedDateTime startOfOfDayWithShorthandMethod = zonedDateTime.getStartOfDayShorthand(given, zone);
-        ZonedDateTime startOfOfDayFromZonedDateTime = zonedDateTime.getStartOfDayFromZonedDateTime(zonedGiven);
-        ZonedDateTime startOfOfDayAtMinTime = zonedDateTime.getStartOfDayAtMinTime(zonedGiven);
-        ZonedDateTime startOfOfDayAtMidnightTime = zonedDateTime.getStartOfDayAtMidnightTime(zonedGiven);
+        ZonedDateTime startOfOfDayWithMethod = getStartOfDay(given, zone);
+        ZonedDateTime startOfOfDayWithShorthandMethod = getStartOfDayShorthand(given, zone);
+        ZonedDateTime startOfOfDayFromZonedDateTime = getStartOfDayFromZonedDateTime(zonedGiven);
+        ZonedDateTime startOfOfDayAtMinTime = getStartOfDayAtMinTime(zonedGiven);
+        ZonedDateTime startOfOfDayAtMidnightTime = getStartOfDayAtMidnightTime(zonedGiven);
 
         assertThat(startOfOfDayWithMethod).isEqualTo(startOfOfDayWithShorthandMethod)
             .isEqualTo(startOfOfDayFromZonedDateTime)
@@ -59,7 +59,7 @@ public class UseZonedDateTimeTest {
         // UTC offset = +01:00,  UTC DST offset = +02:00,
 
         //ZonedDateTime resultFromString = zonedDateTime.getZonedDateTimeUsingParseMethod("2015-05-03T10:15:30+01:00[Europe/Paris]");
-        ZonedDateTime resultFromString = zonedDateTime.getZonedDateTimeUsingParseMethod("2015-05-03T10:15:30+02:00[Europe/Paris]");
+        ZonedDateTime resultFromString = getZonedDateTimeUsingParseMethod("2015-05-03T10:15:30+02:00[Europe/Paris]");
         ZonedDateTime resultFromLocalDateTime = ZonedDateTime.of(2015, 5, 3, 10, 15, 30, 0, ZoneId.of("Europe/Paris"));
 
         assertThat(resultFromString.getZone()).isEqualTo(ZoneId.of("Europe/Paris"));
@@ -70,7 +70,7 @@ public class UseZonedDateTimeTest {
     
     @Test
     public void givenAStringWithTimeZone_whenParsingByShanghai_thenEqualsExpected() {
-        ZonedDateTime resultFromString = zonedDateTime.getZonedDateTimeUsingParseMethod("2015-05-03T10:15:30+08:00[Asia/Shanghai]");
+        ZonedDateTime resultFromString = getZonedDateTimeUsingParseMethod("2015-05-03T10:15:30+08:00[Asia/Shanghai]");
         ZonedDateTime resultFromLocalDateTime = ZonedDateTime.of(2015, 5, 3, 10, 15, 30, 0, ZoneId.of("Asia/Shanghai"));
 
         assertThat(resultFromString.getZone()).isEqualTo(ZoneId.of("Asia/Shanghai"));

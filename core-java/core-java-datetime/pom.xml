@@ -41,9 +41,9 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <argLine>
-                        -javaagent:"${settings.localRepository}"/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar
+                        -javaagent:${user.home}/.m2/repository/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar
                     </argLine>
-                    <disableXmlReport>true</disableXmlReport>
+                    <useSystemClassLoader>true</useSystemClassLoader>
                 </configuration>
             </plugin>
         </plugins>

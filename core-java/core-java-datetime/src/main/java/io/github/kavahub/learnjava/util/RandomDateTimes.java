@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.util;
 
 import java.time.Instant;
 import java.util.concurrent.ThreadLocalRandom;

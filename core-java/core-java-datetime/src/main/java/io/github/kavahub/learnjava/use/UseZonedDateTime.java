@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.use;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -6,6 +6,9 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoField;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class UseZonedDateTime {
     ZonedDateTime getZonedDateTime(LocalDateTime localDateTime, ZoneId zoneId) {
         return ZonedDateTime.of(localDateTime, zoneId);
