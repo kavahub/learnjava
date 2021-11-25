@@ -5,20 +5,22 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.concurrent.atomic.AtomicMarkableReference;
+import java.util.concurrent.atomic.AtomicStampedReference;
 
 import org.junit.jupiter.api.Test;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
- * AtomicMarkableReference 与 AtomicStampedReference 一样也可以解决 ABA的问题，两者唯一的区别是，
- * AtomicStampedReference 是通过 int 类型的版本号，而 AtomicMarkableReference 是通过 boolean
+ * {@link AtomicMarkableReference} 与 {@link AtomicStampedReference} 一样也可以解决 ABA的问题，两者唯一的区别是，
+ * <code>AtomicStampedReference</code> 是通过 int 类型的版本号，而 AtomicMarkableReference 是通过 boolean
  * 型的标识来判断数据是否有更改过。
  * 
- * 既然有了 AtomicStampedReference 为啥还需要再提供 AtomicMarkableReference
+ * <p>
+ * 既然有了 <code>AtomicStampedReference</code> 为啥还需要再提供 <code>AtomicMarkableReference</code>
  * 呢，在现实业务场景中，不关心引用变量被修改了几次， 只是单纯的关心是否更改过
  * 
+ * <p>
  * 描述ABA: 假设两个线程T1和T2访问同一个变量V，当T1访问变量V时，读取到V的值为A；此时线程T1被抢占了，T2开始执行，
  * T2先将变量V的值从A变成了B，然后又将变量V从B变回了A；此时T1又抢占了主动权，继续执行，它发现变量V的值还是A，以为没有发生变化，
  * 所以就继续执行了。这个过程中，变量V从A变为B，再由B变为A就被形象地称为ABA问题了
@@ -180,8 +182,7 @@ public class AtomicMarkableReferenceTest {
         assertTrue(employeeNode.isMarked());
     }
 
-    @Getter
-    @Setter
+    @Data
     class Employee {
         private int id;
         private String name;

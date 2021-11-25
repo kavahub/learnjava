@@ -18,7 +18,8 @@ import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Test;
 
 /**
- * 一个基于链接节点的无界线程安全的队列，按照先进先出原则对元素进行排序。新元素从队列尾部插入，而获取队列元素，则需要从队列头部获取。
+ * {@link ConcurrentLinkedQueue} 一个基于链接节点的无界线程安全的队列，按照先进先出原则对元素进行排序。新元素从队列尾部插入，
+ * 而获取队列元素，则需要从队列头部获取。
  * 
  * 
  */
@@ -53,8 +54,7 @@ public class ConcurrentLinkedQueueManualTest {
             // peek方法获取但不移除此队列的头；如果此队列为空，则返回 null
             while (concurrentLinkedQueue.peek() != null) {
                 // poll方法获取并移除此队列的头，如果此队列为空，则返回 null
-                return concurrentLinkedQueue.poll()
-                    .intValue();
+                return concurrentLinkedQueue.poll().intValue();
             }
             return null;
         };
@@ -63,8 +63,7 @@ public class ConcurrentLinkedQueueManualTest {
         TimeUnit.SECONDS.sleep(1);
 
         Future<Integer> returnedElement = executorService.submit(pollTask);
-        assertThat(returnedElement.get()
-            .intValue(), is(equalTo(element)));
+        assertThat(returnedElement.get().intValue(), is(equalTo(element)));
         executorService.awaitTermination(1, TimeUnit.SECONDS);
         executorService.shutdown();
     }

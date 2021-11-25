@@ -13,6 +13,9 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * {@link Exchanger} 示例
+ */
 @Slf4j
 public class ExchangerPipeLineInterruptManualTest {
     private static final int BUFFER_SIZE = 100;

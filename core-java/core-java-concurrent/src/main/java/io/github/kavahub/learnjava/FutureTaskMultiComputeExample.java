@@ -10,10 +10,8 @@ import java.util.concurrent.FutureTask;
 
 /**
  * 
+ * {@link FutureTask} 执行多任务计算
  * 
- * FutureTask可用于异步获取执行结果或取消执行任务的场景
- * 
- * @see <a href="https://blog.csdn.net/chenliguan/article/details/54345993">Java多线程之FutureTask的用法及解析</a>
  */
 public class FutureTaskMultiComputeExample {
     public static void main(String[] args) {
@@ -51,6 +49,9 @@ public class FutureTaskMultiComputeExample {
  
     }
 
+    /**
+     * 计算任务
+     */
     private class ComputeTask implements Callable<Integer> {
  
         private Integer result = 0;
@@ -67,7 +68,7 @@ public class FutureTaskMultiComputeExample {
                 result =+ i;
             }
             // 模拟长时间业务
-            Thread.sleep(5000);
+            Thread.sleep(1000);
             System.out.println(Thread.currentThread().getName() +" 完成");
             return result;
         }

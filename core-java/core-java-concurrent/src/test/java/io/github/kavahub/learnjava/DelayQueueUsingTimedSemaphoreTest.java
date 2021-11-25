@@ -11,6 +11,8 @@ import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.enhance.DelayQueueUsingTimedSemaphore;
+
 public class DelayQueueUsingTimedSemaphoreTest {
     @Test
     public void givenDelayQueue_whenReachLimit_thenBlocked() throws InterruptedException {

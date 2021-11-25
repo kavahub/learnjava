@@ -39,7 +39,8 @@ public class BinarySemaphoreVsReentrantLockTest {
     @Test
     public void givenReentrantLock_whenLockMultipleTimes_thenUnlockMultipleTimesToRelease() throws InterruptedException {
         ReentrantLock reentrantLock = new ReentrantLock(); 
-        try { 
+        try {
+            // 可重入锁的特点 
             reentrantLock.lock(); 
             reentrantLock.lock();
             assertEquals(2, reentrantLock.getHoldCount()); 

@@ -38,7 +38,8 @@ public class ThreadWakingUpExample {
                     sum += i;
                     i++;
                 }
-                notify();
+                // 非必须的，可能线程可以自动notify
+                // notify();
             }
         }
     }

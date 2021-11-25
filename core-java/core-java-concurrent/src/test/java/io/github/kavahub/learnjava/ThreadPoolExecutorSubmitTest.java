@@ -83,6 +83,7 @@ public class ThreadPoolExecutorSubmitTest {
         assertTrue(output.length() == 0);
     }
 
+
     @Test
     public void givenRunable_whenSubmit_thenSleep() throws InterruptedException {
         WORKER_THREAD_POOL.submit(runnable);

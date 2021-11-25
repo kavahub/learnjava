@@ -1,7 +1,14 @@
 package io.github.kavahub.learnjava;
 
+/**
+ * 同步方法实践
+ * 
+ */
 @SuppressWarnings("unused")
 public class SynchronizationPractice {
+    /**
+     * 最佳实践
+     */
     public static class BestPractice {
 
         private final String stringLock = new String("LOCK_STRING"); 
@@ -31,6 +38,9 @@ public class SynchronizationPractice {
     
     }
 
+    /**
+     * 不好的实践
+     */
     public class BadPractice {
 
         public void stringBadPractice1() { 

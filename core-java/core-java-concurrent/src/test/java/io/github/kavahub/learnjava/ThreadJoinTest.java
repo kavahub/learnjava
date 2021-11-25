@@ -3,7 +3,6 @@ package io.github.kavahub.learnjava;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ThreadJoinTest {
     class SampleThread extends Thread {
-        public int processingCount = 0;
+        // 如果不定义 volatile， 测试givenThreadTerminated_checkForEffect_notGuaranteed无法停止
+        public volatile int processingCount = 0;
 
         SampleThread(int processingCount) {
             this.processingCount = processingCount;
@@ -67,13 +67,13 @@ public class ThreadJoinTest {
     }
 
     @Test
-    @Disabled("测试无响应")
     public void givenThreadTerminated_checkForEffect_notGuaranteed() throws InterruptedException {
         SampleThread t4 = new SampleThread(5);
         t4.start();
         log.info("t4.processingCount: {}", t4.processingCount);
         // not guaranteed to stop even if t4 finishes.
         do {
+            
         } while (t4.processingCount > 0);
         log.info("t4.processingCount: {}", t4.processingCount);
     }

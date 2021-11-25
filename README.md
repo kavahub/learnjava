@@ -13,3 +13,7 @@
 
 [GitHub](https://github.com/kavahub/learnjava)
 
+## 参考文章
+
+- [如何优雅地记录操作日志？](https://tech.meituan.com/2021/09/16/operational-logbook.html)
+- [Spock单元测试框架介绍以及在美团优选的实践](https://tech.meituan.com/2021/08/06/spock-practice-in-meituan.html)

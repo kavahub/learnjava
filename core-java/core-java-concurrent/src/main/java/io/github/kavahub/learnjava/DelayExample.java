@@ -5,6 +5,9 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 延时示例
+ */
 public class DelayExample {
     public static void main(String args[]) throws InterruptedException {
         threadSleep(4, 1);

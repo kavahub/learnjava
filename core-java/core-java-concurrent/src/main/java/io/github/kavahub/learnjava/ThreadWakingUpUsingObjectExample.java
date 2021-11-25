@@ -43,6 +43,7 @@ public class ThreadWakingUpUsingObjectExample {
                     sum += i;
                     i++;
                 }
+                // 必须的
                 this.lock.notify();
             }
             

@@ -19,7 +19,7 @@ import org.junit.jupiter.api.Test;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * LinkedBlockingQueue内部由单链表实现，只能从head取元素，从tail添加元素, 先进先出的顺序。
+ * {@link LinkedBlockingQueue} 内部由单链表实现，只能从head取元素，从tail添加元素, 先进先出的顺序。
  * 添加元素和获取元素都有独立的锁，也就是说LinkedBlockingQueue是读写分离的，
  * 读写操作可以并行执行。LinkedBlockingQueue采用可重入锁(ReentrantLock)来保证在并发情况下的线程安全。
  */

@@ -18,10 +18,13 @@ import com.google.common.util.concurrent.MoreExecutors;
 import com.jcabi.aspects.Async;
 import com.jcabi.aspects.Loggable;
 
+/**
+ * 异步示例：使用线程执行计算
+ */
 public class AsyncExample {
     static {
         // 开启代码将导致无法调试
-        //com.ea.async.Async.init();
+        com.ea.async.Async.init();
     }
 
     private static final ExecutorService threadpool = Executors.newCachedThreadPool();
@@ -56,8 +59,8 @@ public class AsyncExample {
 
         // 导致主线程无法结束
         // cactoos async example
-        // Future<Long> asyncFuture = factorialUsingCactoos(number);
-        // System.out.println("Factorial of " + number + " is: " + asyncFuture.get());
+        Future<Long> asyncFuture = factorialUsingCactoos(number);
+        System.out.println("Factorial of " + number + " is: " + asyncFuture.get());
 
         threadpool.shutdown();
     }

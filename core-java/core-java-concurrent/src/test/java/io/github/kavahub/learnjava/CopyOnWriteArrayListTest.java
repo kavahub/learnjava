@@ -11,7 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import org.junit.jupiter.api.Test;
 
 /**
- * CopyOnWriteArrayList是ArrayList的线程安全版本，从他的名字可以推测，CopyOnWriteArrayList是在有写操作的时候会copy一份数据，
+ * {@link CopyOnWriteArrayList} 是ArrayList的线程安全版本，从他的名字可以推测，CopyOnWriteArrayList是在有写操作的时候会copy一份数据，
  * 然后写完再设置成新的数据。CopyOnWriteArrayList适用于读多写少的并发场景
  */
 public class CopyOnWriteArrayListTest {
