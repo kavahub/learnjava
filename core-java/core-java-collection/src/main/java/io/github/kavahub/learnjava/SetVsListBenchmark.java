@@ -22,21 +22,27 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-// Benchmark                                     Mode  Cnt      Score     Error   Units
-// SetVsListBenchmark.benchmark02_listContains  thrpt   10      8.855 ±   0.755  ops/ms
-// SetVsListBenchmark.benchmark02_setContains   thrpt   10  11137.365 ± 200.158  ops/ms
-// SetVsListBenchmark.benchmark05_listRemove    thrpt   10     20.131 ±  15.004  ops/ms
-// SetVsListBenchmark.benchmark05_setRemove     thrpt   10  11178.329 ± 141.819  ops/ms
-// SetVsListBenchmark.benchmark06_listAdd       thrpt   10  27961.016 ± 704.714  ops/ms
-// SetVsListBenchmark.benchmark06_setAdd        thrpt   10   8757.738 ± 296.209  ops/ms
 
-
+/**
+ * 性能测试结果如下：
+ * 
+ * <pre>
+ * Benchmark                                     Mode  Cnt      Score     Error   Units
+ * SetVsListBenchmark.benchmark02_listContains  thrpt   10      8.855 ±   0.755  ops/ms
+ * SetVsListBenchmark.benchmark02_setContains   thrpt   10  11137.365 ± 200.158  ops/ms
+ * SetVsListBenchmark.benchmark05_listRemove    thrpt   10     20.131 ±  15.004  ops/ms
+ * SetVsListBenchmark.benchmark05_setRemove     thrpt   10  11178.329 ± 141.819  ops/ms
+ * SetVsListBenchmark.benchmark06_listAdd       thrpt   10  27961.016 ± 704.714  ops/ms
+ * SetVsListBenchmark.benchmark06_setAdd        thrpt   10   8757.738 ± 296.209  ops/ms
+ * </pre>
+ */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Measurement(iterations = 10, time = 1)
 @Warmup(iterations = 1)
 @Fork(1)
 public class SetVsListBenchmark {
+    
     @State(Scope.Thread)
     public static class MyState {
         private Set<Employee> set = new HashSet<>();

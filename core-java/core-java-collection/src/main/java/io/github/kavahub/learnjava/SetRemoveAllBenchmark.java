@@ -22,12 +22,17 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-// Benchmark                                                                                                              Mode  Cnt     Score     Error  Units       
-// SetRemoveAllBenchmark.givenSizeOfHashsetGreaterThanSizeOfCollection_WhenRemoveAllFromHashSet_ThenGoodPerformance      thrpt   10  1273.916 ±  43.535  ops/s       
-// SetRemoveAllBenchmark.givenSizeOfHashsetSmallerThanSizeOfAnotherHashSet_WhenRemoveAllFromHashSet_ThenGoodPerformance  thrpt   10   656.568 ± 112.353  ops/s       
-// SetRemoveAllBenchmark.givenSizeOfHashsetSmallerThanSizeOfCollection_WhenRemoveAllFromHashSet_ThenBadPerformance       thrpt   10     0.108 ±   0.015  ops/s       
 
-
+/**
+ * 性能测试结果如下：
+ * 
+ * <pre>
+ * Benchmark                                                                                                              Mode  Cnt     Score     Error  Units       
+ * SetRemoveAllBenchmark.givenSizeOfHashsetGreaterThanSizeOfCollection_WhenRemoveAllFromHashSet_ThenGoodPerformance      thrpt   10  1273.916 ±  43.535  ops/s       
+ * SetRemoveAllBenchmark.givenSizeOfHashsetSmallerThanSizeOfAnotherHashSet_WhenRemoveAllFromHashSet_ThenGoodPerformance  thrpt   10   656.568 ± 112.353  ops/s       
+ * SetRemoveAllBenchmark.givenSizeOfHashsetSmallerThanSizeOfCollection_WhenRemoveAllFromHashSet_ThenBadPerformance       thrpt   10     0.108 ±   0.015  ops/s       
+ * </pre>
+ */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.SECONDS)
 @Measurement(iterations = 10, time = 1)

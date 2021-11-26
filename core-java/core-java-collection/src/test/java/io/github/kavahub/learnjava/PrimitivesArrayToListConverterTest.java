@@ -1,7 +1,7 @@
 package io.github.kavahub.learnjava;
 
+import static io.github.kavahub.learnjava.util.PrimitivesArrayToListConverter.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static io.github.kavahub.learnjava.PrimitivesArrayToListConverter.*;
 
 import java.util.Arrays;
 

@@ -19,7 +19,7 @@ import java.util.TreeMap;
 
 import org.junit.jupiter.api.Test;
 
-import io.github.kavahub.learnjava.collection.MyLinkedHashMap;
+import io.github.kavahub.learnjava.enhance.LRUCache;
 
 public class MapTest {
     @Test
@@ -275,7 +275,7 @@ public class MapTest {
 
     @Test
     public void givenLinkedHashMap_whenRemovesEldestEntry_thenCorrect() {
-        LinkedHashMap<Integer, String> map = new MyLinkedHashMap<>(16, .75f, true);
+        LRUCache<Integer, String> map = new LRUCache<>(5);
         map.put(1, null);
         map.put(2, null);
         map.put(3, null);

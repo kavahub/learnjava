@@ -17,12 +17,12 @@ import org.junit.jupiter.api.Test;
  * EnumMap，它在内部以一个非常紧凑的数组存储value，
  * 并且根据enum类型的key直接定位到内部数组的索引，并不需要计算hashCode()，不但效率最高，而且没有额外的空间浪费
  */
-@SuppressWarnings("all")
 public class EnumMapTest {
     public enum DayOfWeek {
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
     }
 
+    @SuppressWarnings("all")
     @Test
     public void whenContructedWithEnumType_ThenOnlyAcceptThatAsKey() {
         Map dayMap = new EnumMap<>(DayOfWeek.class);
@@ -43,8 +43,8 @@ public class EnumMapTest {
 
     @Test
     public void givenEmptyMap_whenConstructedWithMap_ThenException() {
-        HashMap ordinaryMap = new HashMap();
-        assertThatCode(() -> new EnumMap(ordinaryMap)).isInstanceOf(IllegalArgumentException.class)
+        HashMap<Object, Object> ordinaryMap = new HashMap<Object, Object>();
+        assertThatCode(() -> newEnumMap(ordinaryMap)).isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("Specified map is empty");
     }
 
@@ -53,7 +53,7 @@ public class EnumMapTest {
         HashMap<DayOfWeek, String> ordinaryMap = new HashMap<>();
         ordinaryMap.put(DayOfWeek.MONDAY, "Soccer");
         ordinaryMap.put(DayOfWeek.TUESDAY, "Basketball");
-        
+
         EnumMap<DayOfWeek, String> enumMap = new EnumMap<>(ordinaryMap);
         assertThat(enumMap.size()).isEqualTo(2);
         assertThat(enumMap.get(DayOfWeek.MONDAY)).isEqualTo("Soccer");
@@ -62,15 +62,15 @@ public class EnumMapTest {
 
     @Test
     public void givenMapWithMultiTypeEntries_whenConstructedWithMap_ThenException() {
-        HashMap<Enum, String> ordinaryMap = new HashMap<>();
+        HashMap<Enum<?>, String> ordinaryMap = new HashMap<>();
         ordinaryMap.put(DayOfWeek.MONDAY, "Soccer");
         ordinaryMap.put(TimeUnit.MILLISECONDS, "Other enum type");
-        assertThatCode(() -> new EnumMap(ordinaryMap)).isInstanceOf(ClassCastException.class);
+        assertThatCode(() -> newEnumMap(ordinaryMap)).isInstanceOf(ClassCastException.class);
     }
 
     @Test
     public void whenPut_thenGet() {
-        Map<DayOfWeek, String> activityMap = new EnumMap(DayOfWeek.class);
+        Map<DayOfWeek, String> activityMap = new EnumMap<>(DayOfWeek.class);
         activityMap.put(DayOfWeek.WEDNESDAY, "Hiking");
         activityMap.put(DayOfWeek.THURSDAY, null);
         assertThat(activityMap.get(DayOfWeek.WEDNESDAY)).isEqualTo("Hiking");
@@ -79,7 +79,7 @@ public class EnumMapTest {
 
     @Test
     public void givenMapping_whenContains_thenTrue() {
-        EnumMap<DayOfWeek, String> activityMap = new EnumMap(DayOfWeek.class);
+        EnumMap<DayOfWeek, String> activityMap = new EnumMap<>(DayOfWeek.class);
         assertThat(activityMap.containsKey(DayOfWeek.WEDNESDAY)).isFalse();
         assertThat(activityMap.containsValue("Hiking")).isFalse();
         activityMap.put(DayOfWeek.WEDNESDAY, "Hiking");
@@ -95,7 +95,7 @@ public class EnumMapTest {
 
     @Test
     public void whenRemove_thenRemoved() {
-        EnumMap<DayOfWeek, String> activityMap = new EnumMap(DayOfWeek.class);
+        EnumMap<DayOfWeek, String> activityMap = new EnumMap<>(DayOfWeek.class);
 
         activityMap.put(DayOfWeek.MONDAY, "Soccer");
         assertThat(activityMap.remove(DayOfWeek.MONDAY)).isEqualTo("Soccer");
@@ -108,7 +108,7 @@ public class EnumMapTest {
 
     @Test
     public void whenSubView_thenSubViewOrdered() {
-        EnumMap<DayOfWeek, String> activityMap = new EnumMap(DayOfWeek.class);
+        EnumMap<DayOfWeek, String> activityMap = new EnumMap<>(DayOfWeek.class);
         activityMap.put(DayOfWeek.THURSDAY, "Karate");
         activityMap.put(DayOfWeek.WEDNESDAY, "Hiking");
         activityMap.put(DayOfWeek.MONDAY, "Soccer");
@@ -119,13 +119,15 @@ public class EnumMapTest {
         Set<DayOfWeek> keys = activityMap.keySet();
         assertThat(keys).containsExactly(DayOfWeek.MONDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY);
 
-        assertThat(activityMap.entrySet()).containsExactly(new SimpleEntry(DayOfWeek.MONDAY, "Soccer"),
-                new SimpleEntry(DayOfWeek.WEDNESDAY, "Hiking"), new SimpleEntry(DayOfWeek.THURSDAY, "Karate"));
+        assertThat(activityMap.entrySet()).containsExactly(
+                new SimpleEntry<>(DayOfWeek.MONDAY, "Soccer"),
+                new SimpleEntry<>(DayOfWeek.WEDNESDAY, "Hiking"),
+                new SimpleEntry<>(DayOfWeek.THURSDAY, "Karate"));
     }
 
     @Test
     public void givenSubView_whenChange_thenReflected() {
-        EnumMap<DayOfWeek, String> activityMap = new EnumMap(DayOfWeek.class);
+        EnumMap<DayOfWeek, String> activityMap = new EnumMap<>(DayOfWeek.class);
         activityMap.put(DayOfWeek.THURSDAY, "Karate");
         activityMap.put(DayOfWeek.WEDNESDAY, "Hiking");
         activityMap.put(DayOfWeek.MONDAY, "Soccer");
@@ -139,5 +141,10 @@ public class EnumMapTest {
         values.remove("Hiking");
         assertThat(activityMap.containsKey(DayOfWeek.WEDNESDAY)).isFalse();
         assertThat(activityMap.size()).isEqualTo(3);
+    }
+
+    @SuppressWarnings("all")
+    private EnumMap newEnumMap(Map map) {
+        return new EnumMap(map);
     }
 }

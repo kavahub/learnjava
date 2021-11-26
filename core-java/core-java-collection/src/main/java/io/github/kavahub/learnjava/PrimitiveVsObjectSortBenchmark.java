@@ -16,10 +16,16 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-// Benchmark                                                  Mode  Cnt  Score   Error  Units
-// PrimitiveVsObjectSortBenchmark.benchmarkArraysIntSort      avgt   10  1.476 ± 0.027  ms/op
-// PrimitiveVsObjectSortBenchmark.benchmarkArraysIntegerSort  avgt   10  4.904 ± 0.130  m
 
+/**
+ * 性能测试结果如下：
+ * 
+ * <pre>
+ * Benchmark                                                  Mode  Cnt  Score   Error  Units
+ * PrimitiveVsObjectSortBenchmark.benchmarkArraysIntSort      avgt   10  1.476 ± 0.027  ms/op
+ * PrimitiveVsObjectSortBenchmark.benchmarkArraysIntegerSort  avgt   10  4.904 ± 0.130  m
+ * </pre>
+ */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Measurement(batchSize = 100000, iterations = 10, time = 1)

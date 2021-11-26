@@ -22,14 +22,20 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 
-// Benchmark                                   Mode  Cnt   Score   Error  Units
-// SetBenchmark.benchmark01_HashSetContains    avgt   10  26.160 ± 1.540  ns/op
-// SetBenchmark.benchmark01_LinkedSetContains  avgt   10  28.083 ± 2.892  ns/op
-// SetBenchmark.benchmark02_HashSetRemove      avgt   10  28.058 ± 2.489  ns/op
-// SetBenchmark.benchmark02_LinkedSetRemove    avgt   10  31.701 ± 3.367  ns/op
-// SetBenchmark.benchmark03_HashSetAdd         avgt   10  37.129 ± 3.821  ns/op
-// SetBenchmark.benchmark03_LinkedSetAdd       avgt   10  40.015 ± 5.140  ns/op
 
+/**
+ * 性能测试结果如下：
+ * 
+ * <pre>
+ * Benchmark                                   Mode  Cnt   Score   Error  Units
+ * SetBenchmark.benchmark01_HashSetContains    avgt   10  26.160 ± 1.540  ns/op
+ * SetBenchmark.benchmark01_LinkedSetContains  avgt   10  28.083 ± 2.892  ns/op
+ * SetBenchmark.benchmark02_HashSetRemove      avgt   10  28.058 ± 2.489  ns/op
+ * SetBenchmark.benchmark02_LinkedSetRemove    avgt   10  31.701 ± 3.367  ns/op
+ * SetBenchmark.benchmark03_HashSetAdd         avgt   10  37.129 ± 3.821  ns/op
+ * SetBenchmark.benchmark03_LinkedSetAdd       avgt   10  40.015 ± 5.140  ns/op
+ * </pre>
+ */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Measurement(iterations = 10, time = 1)

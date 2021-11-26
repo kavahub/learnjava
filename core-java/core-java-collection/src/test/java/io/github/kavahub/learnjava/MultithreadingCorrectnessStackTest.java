@@ -39,7 +39,7 @@ public class MultithreadingCorrectnessStackTest {
 
     @Test
     public void givenConcurrentLinkedQueue_whenExecutedParallel_thenWorkRight() {
-
+        // 一种基于链表的无界的同时支持FIFO、LIFO的非阻塞并发双端队列
         ConcurrentLinkedDeque<Integer> deque = new ConcurrentLinkedDeque<>();
 
         // Serial execution of push on ConcurrentLinkedQueue will always result in correct execution.

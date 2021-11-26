@@ -25,27 +25,54 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-// Benchmark                                                 Mode  Cnt    Score     Error  Units
-// HashMapBenchmark.benchmark01_concurrentHashMapGet         avgt   10   67.974 ±  15.285  ns/op
-// HashMapBenchmark.benchmark01_concurrentSkipListMapGet     avgt   10  355.361 ±   6.634  ns/op
-// HashMapBenchmark.benchmark01_hashMapGet                   avgt   10   84.301 ±  33.591  ns/op
-// HashMapBenchmark.benchmark01_identityHashMapGet           avgt   10   90.121 ±  20.177  ns/op
-// HashMapBenchmark.benchmark01_linkedHashMapGet             avgt   10   77.602 ±   9.472  ns/op
-// HashMapBenchmark.benchmark01_weakHashMapGet               avgt   10   71.934 ±  12.635  ns/op
-// HashMapBenchmark.benchmark02_concurrentHashMapPut         avgt   10  194.111 ±  26.315  ns/op
-// HashMapBenchmark.benchmark02_concurrentSkipListMapPut     avgt   10  576.933 ± 142.144  ns/op
-// HashMapBenchmark.benchmark02_hashMapPut                   avgt   10  185.656 ±  16.484  ns/op
-// HashMapBenchmark.benchmark02_identityHashMapPut           avgt   10  738.552 ± 588.374  ns/op
-// HashMapBenchmark.benchmark02_linkedHashMapPut             avgt   10  181.679 ±  20.413  ns/op
-// HashMapBenchmark.benchmark02_weakHashMapPut               avgt   10  192.679 ±  24.778  ns/op
-// HashMapBenchmark.benchmark03_concurrentHashMapRemove      avgt   10   29.346 ±   1.658  ns/op
-// HashMapBenchmark.benchmark03_concurrentSkipListMapRemove  avgt   10   31.352 ±   1.205  ns/op
-// HashMapBenchmark.benchmark03_hashMapRemove                avgt   10   28.614 ±   2.309  ns/op
-// HashMapBenchmark.benchmark03_identityHashMapRemove        avgt   10   87.536 ±   9.085  ns/op
-// HashMapBenchmark.benchmark03_linkedHashMapRemove          avgt   10   30.655 ±   3.919  ns/op
-// HashMapBenchmark.benchmark03_weakHashMapRemove            avgt   10   31.368 ±   1.242  ns/op
-
-
+/**
+ * {@link HashMap}, {@link IdentityHashMap}, {@link WeakHashMap}
+ * ,{@link ConcurrentHashMap}, {@link ConcurrentSkipListMap} 性能比较
+ * 
+ * <p>
+ * {@link IdentityHashMap}
+ * 比较的是Key地址值，也就是key1==key2时，才是重复的健。允许空的键和值，但是不保证map中的顺序，尤其是不保证顺序会恒定不变。线程不安全的,
+ * 迭代器是快速失败的，请注意，迭代器的故障快速行为不能得到保证
+ * 
+ * <p>
+ * {@link WeakHashMap} 继承AbstractMap，实现了Map接口。和HashMap一样，WeakHashMap也是一个散列表，
+ * 它存储的内容也是键值对(key-value)映射，而且键和值都可以是null。不过WeakHashMap的键是"弱键"。
+ * 在WeakHashMap中，当某个键不再正常使用时，会被从WeakHashMap中被自动移除。更精确地说，对于一个给定的键，
+ * 其映射的存在并不阻止垃圾回收器对该键的丢弃，这就使该键成为可终止的，被终止，然后被回收。某个键被终止时，它对应的键值对也就从映射中有效地移除了。
+ * 
+ * <p>
+ * {@link ConcurrentSkipListMap} 优点：
+ * <ul>
+ * <li> ConcurrentSkipListMap 的key是有序的。</li>
+ * <li> ConcurrentSkipListMap 支持更高的并发。ConcurrentSkipListMap 的存取时间是log（N），和线程数几乎无关。
+ * 也就是说在数据量一定的情况下，并发的线程越多，ConcurrentSkipListMap越能体现出他的优势。</li>
+ * </ul>
+ * 
+ * <p>
+ * 性能测试结果如下：
+ * 
+ * <pre>
+ * Benchmark                                                 Mode  Cnt    Score     Error  Units
+ * HashMapBenchmark.benchmark01_concurrentHashMapGet         avgt   10   67.974 ±  15.285  ns/op
+ * HashMapBenchmark.benchmark01_concurrentSkipListMapGet     avgt   10  355.361 ±   6.634  ns/op
+ * HashMapBenchmark.benchmark01_hashMapGet                   avgt   10   84.301 ±  33.591  ns/op
+ * HashMapBenchmark.benchmark01_identityHashMapGet           avgt   10   90.121 ±  20.177  ns/op
+ * HashMapBenchmark.benchmark01_linkedHashMapGet             avgt   10   77.602 ±   9.472  ns/op
+ * HashMapBenchmark.benchmark01_weakHashMapGet               avgt   10   71.934 ±  12.635  ns/op
+ * HashMapBenchmark.benchmark02_concurrentHashMapPut         avgt   10  194.111 ±  26.315  ns/op
+ * HashMapBenchmark.benchmark02_concurrentSkipListMapPut     avgt   10  576.933 ± 142.144  ns/op
+ * HashMapBenchmark.benchmark02_hashMapPut                   avgt   10  185.656 ±  16.484  ns/op
+ * HashMapBenchmark.benchmark02_identityHashMapPut           avgt   10  738.552 ± 588.374  ns/op
+ * HashMapBenchmark.benchmark02_linkedHashMapPut             avgt   10  181.679 ±  20.413  ns/op
+ * HashMapBenchmark.benchmark02_weakHashMapPut               avgt   10  192.679 ±  24.778  ns/op
+ * HashMapBenchmark.benchmark03_concurrentHashMapRemove      avgt   10   29.346 ±   1.658  ns/op
+ * HashMapBenchmark.benchmark03_concurrentSkipListMapRemove  avgt   10   31.352 ±   1.205  ns/op
+ * HashMapBenchmark.benchmark03_hashMapRemove                avgt   10   28.614 ±   2.309  ns/op
+ * HashMapBenchmark.benchmark03_identityHashMapRemove        avgt   10   87.536 ±   9.085  ns/op
+ * HashMapBenchmark.benchmark03_linkedHashMapRemove          avgt   10   30.655 ±   3.919  ns/op
+ * HashMapBenchmark.benchmark03_weakHashMapRemove            avgt   10   31.368 ±   1.242  ns/op
+ * </pre>
+ */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Measurement(iterations = 10, time = 1)

@@ -20,9 +20,16 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+/**
+ * 性能测试结果如下：
+ * 
+ * <pre>
+ * TODO
+ * </pre>
+ */
 @State(Scope.Benchmark)
-@BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.NANOSECONDS)
+@BenchmarkMode(Mode.Throughput)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Measurement(iterations = 10, time = 1)
 @Warmup(iterations = 1)
 @Fork(1)
@@ -31,7 +38,7 @@ public class MapBenchmark {
     
     public static void main(String[] args) throws Exception {
         Options options = new OptionsBuilder()
-                .include(MapBenchmark.class.getSimpleName()).threads(10).build();
+                .include(MapBenchmark.class.getSimpleName()).shouldFailOnError(true).threads(10).build();
         new Runner(options).run();
     }
     

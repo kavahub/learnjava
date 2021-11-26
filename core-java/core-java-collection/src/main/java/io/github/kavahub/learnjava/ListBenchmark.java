@@ -3,7 +3,6 @@ package io.github.kavahub.learnjava;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -21,28 +20,29 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-// Benchmark                                               Mode  Cnt     Score     Error  Units
-// ListBenchmark.benchmark01_arrayListAdd                  avgt   10    28.288 ±   1.242  ns/op
-// ListBenchmark.benchmark01_copyOnWriteArrayListAdd       avgt   10   165.258 ±   1.925  ns/op
-// ListBenchmark.benchmark01_linkedListAdd                 avgt   10    30.992 ±   0.195  ns/op
-// ListBenchmark.benchmark02_arrayListContains             avgt   10   390.358 ±   4.695  ns/op
-// ListBenchmark.benchmark02_copyOnWriteArrayListContains  avgt   10   420.651 ±  20.872  ns/op
-// ListBenchmark.benchmark02_linkedListContains            avgt   10  1034.986 ± 125.845  ns/op
-// ListBenchmark.benchmark03_arrayListRemove               avgt   10    24.147 ±   2.919  ns/op
-// ListBenchmark.benchmark03_copyOnWriteArrayListRemove    avgt   10    24.252 ±   1.712  ns/op
-// ListBenchmark.benchmark03_linkedListRemove              avgt   10    21.604 ±   1.494  ns/op
-
-@BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.NANOSECONDS)
+/**
+ * 性能测试结果如下：
+ * 
+ * <pre>
+ * Benchmark                                      Mode  Cnt      Score      Error   Units
+ * ListBenchmark.benchmark01_arrayListAdd        thrpt   10  37071.421 ±  472.159  ops/ms
+ * ListBenchmark.benchmark01_linkedListAdd       thrpt   10  32530.566 ±  872.869  ops/ms
+ * ListBenchmark.benchmark02_arrayListContains   thrpt   10   2542.931 ±   26.388  ops/ms
+ * ListBenchmark.benchmark02_linkedListContains  thrpt   10   1065.221 ±   33.670  ops/ms
+ * ListBenchmark.benchmark03_arrayListRemove     thrpt   10  46655.488 ±  194.944  ops/ms
+ * ListBenchmark.benchmark03_linkedListRemove    thrpt   10  48047.383 ±  274.248  ops/ms
+ * ListBenchmark.benchmark04_arrayListAddAt      thrpt   10     15.476 ±    5.985  ops/ms
+ * ListBenchmark.benchmark04_linkedListAddAt     thrpt   10    939.467 ±  234.178  ops/ms
+ * </pre>
+ */
+@BenchmarkMode(Mode.Throughput)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Measurement(iterations = 10, time = 1)
 @Warmup(iterations = 1)
 @Fork(1)
 public class ListBenchmark {
-
         @State(Scope.Thread)
         public static class MyState {
-
-                CopyOnWriteArrayList<Integer> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
                 ArrayList<Integer> arrayList = new ArrayList<>();
                 LinkedList<Integer> linkedList = new LinkedList<>();
 
@@ -53,7 +53,6 @@ public class ListBenchmark {
                 @Setup(Level.Trial)
                 public void setUp() {
                         for (int i = 0; i < iterations; i++) {
-                                copyOnWriteArrayList.add(i);
                                 arrayList.add(i);
                                 linkedList.add(i);
                         }
@@ -72,18 +71,11 @@ public class ListBenchmark {
         }
 
         // add
-        // 需要清空集合，因方法调用太快，造成java.lang.OutOfMemoryError: Java heap space
-        @Benchmark
-        public void benchmark01_copyOnWriteArrayListAdd(ListBenchmark.MyState state) {
-                if (state.copyOnWriteArrayList.size() >= state.iterations) {
-                        state.copyOnWriteArrayList.clear();
-                }
-                state.copyOnWriteArrayList.add(state.randomIndex);
-        }
 
         @Benchmark
         public void benchmark01_arrayListAdd(ListBenchmark.MyState state) {
-                if (state.arrayList.size() >= state.iterations) {
+                // 避免OOM异常
+                if (state.arrayList.size() >= state.iterations * 10) {
                         state.arrayList.clear();
                 }
                 state.arrayList.add(state.randomIndex);
@@ -91,18 +83,13 @@ public class ListBenchmark {
 
         @Benchmark
         public void benchmark01_linkedListAdd(ListBenchmark.MyState state) {
-                if (state.linkedList.size() >= state.iterations) {
+                if (state.linkedList.size() >= state.iterations * 10) {
                         state.linkedList.clear();
                 }
                 state.linkedList.add(state.randomIndex);
         }
 
         // contains
-
-        @Benchmark
-        public void benchmark02_copyOnWriteArrayListContains(ListBenchmark.MyState state) {
-                state.copyOnWriteArrayList.contains(state.randomIndex);
-        }
 
         @Benchmark
         public void benchmark02_arrayListContains(ListBenchmark.MyState state) {
@@ -117,11 +104,6 @@ public class ListBenchmark {
         // remove
 
         @Benchmark
-        public void benchmark03_copyOnWriteArrayListRemove(ListBenchmark.MyState state) {
-                state.copyOnWriteArrayList.remove(state.randomIndex);
-        }
-
-        @Benchmark
         public void benchmark03_arrayListRemove(ListBenchmark.MyState state) {
                 state.arrayList.remove(state.randomIndex);
         }
@@ -131,4 +113,15 @@ public class ListBenchmark {
                 state.linkedList.remove(state.randomIndex);
         }
 
+        // addAt
+
+        @Benchmark
+        public void benchmark04_arrayListAddAt(ListBenchmark.MyState state) {
+                state.arrayList.add(state.randomIndex, state.randomIndex);
+        }
+
+        @Benchmark
+        public void benchmark04_linkedListAddAt(ListBenchmark.MyState state) {
+                state.linkedList.add(state.randomIndex, state.randomIndex);
+        }
 }

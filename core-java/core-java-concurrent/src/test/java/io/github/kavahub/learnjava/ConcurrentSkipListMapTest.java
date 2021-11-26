@@ -16,11 +16,13 @@ import java.util.stream.IntStream;
 import org.junit.jupiter.api.Test;
 
 /**
- * {@link ConcurrentSkipListMap} 简单说是TreeMap的并发实现，但是为什么没有称之为ConcurrentTreeMap呢？这和其自身的实现有关。
+ * {@link ConcurrentSkipListMap}
+ * 简单说是TreeMap的并发实现，但是为什么没有称之为ConcurrentTreeMap呢？这和其自身的实现有关。
  * 该类是SkipLists的变种实现，提供了log(n)的时间开销：containsKey、get、put、remove。Insertion,
  * removal, update, and access
- * 等操作都是线程安全的。迭代器是弱一致性的，升序迭代器比降序的快。该map的size方法不是常量时间开销，需要遍历，所以这个值在并发的时候可能不准。
- * 该map也不允许空键或值
+ * 等操作都是线程安全的。迭代器是弱一致性的，升序迭代器比降序的快。该map的size方法不是常量时间开销，
+ * 需要遍历，所以这个值在并发的时候可能不准。该map也不允许空键或值
+ * 
  */
 public class ConcurrentSkipListMapTest {
     @Test

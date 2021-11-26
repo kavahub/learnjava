@@ -21,20 +21,31 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-// Benchmark                                                  Mode  Cnt      Score      Error   Units
-// ArrayListVsVectorBenchmark.benchmark01_arrayListAddAt     thrpt   10     27.246 ±    6.536  ops/ms
-// ArrayListVsVectorBenchmark.benchmark01_vectorAddAt        thrpt   10     27.648 ±    8.677  ops/ms
-// ArrayListVsVectorBenchmark.benchmark02_arrayListContains  thrpt   10      9.715 ±    0.898  ops/ms
-// ArrayListVsVectorBenchmark.benchmark02_vectorContains     thrpt   10      8.483 ±    0.860  ops/ms
-// ArrayListVsVectorBenchmark.benchmark03_arrayListIndexOf   thrpt   10     10.520 ±    0.538  ops/ms
-// ArrayListVsVectorBenchmark.benchmark03_vectorIndexOf      thrpt   10      8.982 ±    1.029  ops/ms
-// ArrayListVsVectorBenchmark.benchmark04_arrayListGet       thrpt   10  95283.917 ± 3890.007  ops/ms
-// ArrayListVsVectorBenchmark.benchmark04_vectorGet          thrpt   10  93292.957 ± 6353.712  ops/ms
-// ArrayListVsVectorBenchmark.benchmark05_arrayListRemove    thrpt   10      6.452 ±    1.312  ops/ms
-// ArrayListVsVectorBenchmark.benchmark05_vectorRemove       thrpt   10      6.622 ±    0.773  ops/ms
-// ArrayListVsVectorBenchmark.benchmark06_arrayListAdd       thrpt   10  61722.974 ± 3527.918  ops/ms
-// ArrayListVsVectorBenchmark.benchmark06_vectorAdd          thrpt   10  35211.406 ± 1932.546  ops/ms
 
+
+/**
+ * {@link ArrayList} 性能整体优于 {@link Vector}
+ * 
+ * <p>
+ * 性能测试结果如下:
+ * 
+ * <pre>
+ * Benchmark                                                  Mode  Cnt      Score      Error   Units
+ * ArrayListVsVectorBenchmark.benchmark01_arrayListAddAt     thrpt   10     27.246 ±    6.536  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark01_vectorAddAt        thrpt   10     27.648 ±    8.677  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark02_arrayListContains  thrpt   10      9.715 ±    0.898  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark02_vectorContains     thrpt   10      8.483 ±    0.860  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark03_arrayListIndexOf   thrpt   10     10.520 ±    0.538  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark03_vectorIndexOf      thrpt   10      8.982 ±    1.029  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark04_arrayListGet       thrpt   10  95283.917 ± 3890.007  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark04_vectorGet          thrpt   10  93292.957 ± 6353.712  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark05_arrayListRemove    thrpt   10      6.452 ±    1.312  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark05_vectorRemove       thrpt   10      6.622 ±    0.773  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark06_arrayListAdd       thrpt   10  61722.974 ± 3527.918  ops/ms
+ * ArrayListVsVectorBenchmark.benchmark06_vectorAdd          thrpt   10  35211.406 ± 1932.546  ops/ms
+ * </pre>
+ * 
+ */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Measurement(iterations = 10, time = 1)

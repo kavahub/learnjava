@@ -9,6 +9,8 @@ import com.google.common.collect.ImmutableMap;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.kavahub.learnjava.util.HashMapCopier;
+
 public class HashMapCopierTest {
     @Test
     public void givenHashMap_whenShallowCopy_thenCopyisNotSameAsOriginal() {

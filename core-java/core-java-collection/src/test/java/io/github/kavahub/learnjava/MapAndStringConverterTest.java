@@ -1,7 +1,5 @@
 package io.github.kavahub.learnjava;
 
-import static io.github.kavahub.learnjava.MapAndStringConverter.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,6 +7,8 @@ import org.apache.commons.collections4.MapUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+
+import static io.github.kavahub.learnjava.util.MapAndStringConverter.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MapAndStringConverterTest {
