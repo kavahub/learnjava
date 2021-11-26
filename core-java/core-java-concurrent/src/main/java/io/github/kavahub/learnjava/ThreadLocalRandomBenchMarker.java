@@ -38,12 +38,12 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @Warmup(iterations = 1)
 @Fork(1)
 @State(Scope.Thread)
-public class ThreadLocalRandomBenchMarker {
+public class ThreadLocalRandomBenchmarker {
     private final Random random = new Random();
     private final SecureRandom  secureRandom = new SecureRandom();
 
     public static void main(String[] args) throws Exception {
-        ChainedOptionsBuilder opts = new OptionsBuilder().include(ThreadLocalRandomBenchMarker.class.getSimpleName());
+        ChainedOptionsBuilder opts = new OptionsBuilder().include(ThreadLocalRandomBenchmarker.class.getSimpleName());
 
         for (Integer i : ImmutableList.of(1, 2, 8, 32)) {
             new Runner(opts.threads(i).build()).run();
