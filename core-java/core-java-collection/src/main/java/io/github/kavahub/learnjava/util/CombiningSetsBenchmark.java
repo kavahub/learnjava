@@ -19,13 +19,23 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-// Benchmark                                        Mode  Cnt       Score       Error  Units
-// CombiningSetsBenchmark.A_usingNativeJava         avgt   10  480775.747 ± 21469.436  ns/op
-// CombiningSetsBenchmark.B_usingJava8ObjectStream  avgt   10  455894.355 ± 24523.459  ns/op
-// CombiningSetsBenchmark.C_usingJava8FlatMaps      avgt   10  532660.012 ± 71621.736  ns/op
-// CombiningSetsBenchmark.D_usingGuava              avgt   10       4.239 ±     0.510  ns/op
-// CombiningSetsBenchmark.E_usingApacheCommons      avgt   10       9.705 ±     0.823  ns/op
 
+/**
+ * 
+ * {@link CombiningSets} 性能测试
+ * 
+ * <pre>
+ * Benchmark                                        Mode  Cnt       Score       Error  Units
+ * CombiningSetsBenchmark.A_usingNativeJava         avgt   10  480775.747 ± 21469.436  ns/op
+ * CombiningSetsBenchmark.B_usingJava8ObjectStream  avgt   10  455894.355 ± 24523.459  ns/op
+ * CombiningSetsBenchmark.C_usingJava8FlatMaps      avgt   10  532660.012 ± 71621.736  ns/op
+ * CombiningSetsBenchmark.D_usingGuava              avgt   10       4.239 ±     0.510  ns/op
+ * CombiningSetsBenchmark.E_usingApacheCommons      avgt   10       9.705 ±     0.823  ns/op
+ * </pre> 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)

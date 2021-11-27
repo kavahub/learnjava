@@ -45,6 +45,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * ArrayListVsVectorBenchmark.benchmark06_vectorAdd          thrpt   10  35211.406 ± 1932.546  ops/ms
  * </pre>
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)

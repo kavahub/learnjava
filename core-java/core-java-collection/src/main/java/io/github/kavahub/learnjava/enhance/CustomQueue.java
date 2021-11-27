@@ -4,6 +4,13 @@ import java.util.AbstractQueue;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * 
+ * 自定义队列，适用链表实现，非线程安全的
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CustomQueue<T> extends AbstractQueue<T> {
 
     private LinkedList<T> elements;

@@ -20,12 +20,22 @@ import org.apache.commons.collections4.multimap.HashSetValuedHashMap;
 import org.junit.jupiter.api.Test;
 
 /**
- * MultiValuedMap:一个key可对应多个值，内部的数据结构逻辑交给它去维护
+ * :
  * <p>
  * 
- * MultiSet: 与Guava的Multiset功能一样
+ * : 
  * <p>
  * 
+ */
+/**
+ * 
+ * {@link MultiValuedMap} 一个key可对应多个值，内部的数据结构逻辑交给它去维护
+ * 
+ * <p>
+ * {@link MultiSet} 与Guava的 {@code Multiset} 功能一样
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MultiValuedMapTest {
     @Test

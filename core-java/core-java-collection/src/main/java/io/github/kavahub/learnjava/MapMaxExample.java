@@ -7,6 +7,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 
+/**
+ * 
+ * {@link Map} 集合元素中，找出最大值
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapMaxExample {
     public <K, V extends Comparable<V>> V maxUsingIteration(Map<K, V> map) {
 

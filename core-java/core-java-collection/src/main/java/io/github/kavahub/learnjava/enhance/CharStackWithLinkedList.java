@@ -3,8 +3,13 @@ package io.github.kavahub.learnjava.enhance;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+
 /**
- * {@link LinkedList} 是基于链表实现。相应地，也就是说在新增、删除元素时，LinkedList 的效率要高
+ * 
+ * 字符栈，适用链表实现，非线程安全的
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CharStackWithLinkedList {
     private LinkedList<Character> items;

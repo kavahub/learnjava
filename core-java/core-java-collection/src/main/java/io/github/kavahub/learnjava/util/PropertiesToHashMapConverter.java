@@ -9,6 +9,13 @@ import com.google.common.collect.Maps;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * {@code Properties} 与 {@code HashMap} 相互转换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class PropertiesToHashMapConverter {
     @SuppressWarnings({"rawtypes", "unchecked"})

@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 import lombok.Data;
 
+/**
+ * 
+ * 实体
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Data
 public class Employee implements Comparable<Employee>, Serializable {
     private Integer id;

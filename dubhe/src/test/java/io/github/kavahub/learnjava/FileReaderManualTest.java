@@ -7,6 +7,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link FileReader} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileReaderManualTest {
     @Test
     public void givenFile_whenSystemOut() throws IOException, InterruptedException {

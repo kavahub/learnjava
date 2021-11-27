@@ -13,6 +13,13 @@ import com.google.common.collect.Sets;
 import org.apache.commons.collections4.CollectionUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link List} 与 {@link Set} 相互转换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @SuppressWarnings("unused")
 public class ListSetConversionManualTest {
     // Set -> List; List -> Set

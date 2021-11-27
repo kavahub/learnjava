@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.CombiningArrays.*;
 
+/**
+ * 
+ * {@link CombiningArrays} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CombiningArraysTest {
     private static final String first[] = { "One", "Two", "Three" };
 

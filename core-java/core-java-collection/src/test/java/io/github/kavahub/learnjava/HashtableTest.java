@@ -15,7 +15,15 @@ import java.util.Map;
 import org.junit.jupiter.api.Test;
 
 /**
- * HashTable是较为远古的使用Hash算法的容器结构了，现在基本已被淘汰，单线程转为使用HashMap，多线程使用ConcurrentHashMap。
+ * 
+ * {@link HashTable} 示例
+ * 
+ * <p>
+ * {@code HashTable} 是较为远古的使用Hash算法的容器结构了，现在基本已被淘汰，
+ * 单线程转为使用HashMap，多线程使用ConcurrentHashMap。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class HashtableTest {
     @Test
@@ -126,11 +134,13 @@ public class HashtableTest {
         String definition;
 
         // old way
-        /* if (table.containsKey(key)) {
-            definition = table.get(key);
-        } else {
-            definition = "not found";
-        }*/
+        /*
+         * if (table.containsKey(key)) {
+         * definition = table.get(key);
+         * } else {
+         * definition = "not found";
+         * }
+         */
 
         // new way
         definition = table.getOrDefault(key, "not found");
@@ -146,9 +156,11 @@ public class HashtableTest {
 
         String definition = "an animal";
         // old way
-        /* if (!table.containsKey(new Word("cat"))) {
-            table.put(new Word("cat"), definition);
-        }*/
+        /*
+         * if (!table.containsKey(new Word("cat"))) {
+         * table.put(new Word("cat"), definition);
+         * }
+         */
         // new way
         table.putIfAbsent(new Word("cat"), definition);
 
@@ -162,9 +174,11 @@ public class HashtableTest {
         table.put(new Word("cat"), "a small domesticated carnivorous mammal");
 
         // old way
-        /* if (table.get(new Word("cat")).equals("an animal")) {
-            table.remove(new Word("cat"));
-        }*/
+        /*
+         * if (table.get(new Word("cat")).equals("an animal")) {
+         * table.remove(new Word("cat"));
+         * }
+         */
 
         // new way
         boolean result = table.remove(new Word("cat"), "an animal");
@@ -181,9 +195,12 @@ public class HashtableTest {
         String definition = "an animal";
 
         // old way
-        /* if (table.containsKey(new Word("cat")) && table.get(new Word("cat")).equals("a small domesticated carnivorous mammal")) {
-            table.put(new Word("cat"), definition);
-        }*/
+        /*
+         * if (table.containsKey(new Word("cat")) && table.get(new
+         * Word("cat")).equals("a small domesticated carnivorous mammal")) {
+         * table.put(new Word("cat"), definition);
+         * }
+         */
         // new way
         table.replace(new Word("cat"), "a small domesticated carnivorous mammal", definition);
 
@@ -198,11 +215,12 @@ public class HashtableTest {
         table.put(new Word("cat"), "a small domesticated carnivorous mammal");
 
         // old way
-        /* if (!table.containsKey(cat)) {
-            String definition = "an animal";// calculate
-            table.put(new Word("cat"), definition);
-        }
-        */
+        /*
+         * if (!table.containsKey(cat)) {
+         * String definition = "an animal";// calculate
+         * table.put(new Word("cat"), definition);
+         * }
+         */
         // new way
 
         table.computeIfAbsent(new Word("cat"), key -> "an animal");
@@ -218,10 +236,12 @@ public class HashtableTest {
 
         Word cat = new Word("cat");
         // old way
-        /* if (table.containsKey(cat)) {
-            String concatination = cat.getName() + " - " + table.get(cat);
-            table.put(cat, concatination);
-        }*/
+        /*
+         * if (table.containsKey(cat)) {
+         * String concatination = cat.getName() + " - " + table.get(cat);
+         * table.put(cat, concatination);
+         * }
+         */
 
         // new way
         table.computeIfPresent(cat, (key, value) -> key.getName() + " - " + value);
@@ -275,32 +295,31 @@ public class HashtableTest {
         assertThat(table.values(), hasItems("cat - a small domesticated carnivorous mammal", "dog - another animal"));
     }
 
-
     public class Word {
         private String name;
-    
+
         public Word(String name) {
             this.name = name;
         }
-    
+
         public String getName() {
             return name;
         }
-    
+
         public boolean equals(Object o) {
             if (o == this)
                 return true;
             if (!(o instanceof Word))
                 return false;
-    
+
             Word word = (Word) o;
             return word.getName().equals(this.name) ? true : false;
-    
+
         }
-    
+
         public int hashCode() {
             return name.hashCode();
         }
     }
-    
+
 }

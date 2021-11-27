@@ -6,6 +6,13 @@ import io.github.kavahub.learnjava.PriorityJobExecutor.Job;
 import io.github.kavahub.learnjava.PriorityJobExecutor.JobPriority;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * {@link PriorityJobExecutor} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class PriorityJobExecutorManualTest {
     @Test

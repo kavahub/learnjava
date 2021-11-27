@@ -13,8 +13,11 @@ import java.util.Set;
 import org.junit.jupiter.api.Test;
 
 /**
- * LinkedHashMap是一个Map实现，它维护其元素的插入顺序。当我们将true传递给accessOrder时，我们将实例化一个访问顺序LinkedHashMap
- * 。 访问顺序LinkedHashMap维护从最近使用到最近使用的元素的访问顺序，而不是插入顺序。
+ * 
+ * {@link Map} 集合第一个元素获取
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MapFirstPairTest {
     private Map.Entry<Integer, String> getFirstPairUsingIterator(Map<Integer, String> map) {

@@ -24,6 +24,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 
 /**
+ * {@link HashSet} 删除所有性能比较
+ * 
+ * <p>
  * 性能测试结果如下：
  * 
  * <pre>
@@ -32,6 +35,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * SetRemoveAllBenchmark.givenSizeOfHashsetSmallerThanSizeOfAnotherHashSet_WhenRemoveAllFromHashSet_ThenGoodPerformance  thrpt   10   656.568 ± 112.353  ops/s       
  * SetRemoveAllBenchmark.givenSizeOfHashsetSmallerThanSizeOfCollection_WhenRemoveAllFromHashSet_ThenBadPerformance       thrpt   10     0.108 ±   0.015  ops/s       
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.SECONDS)

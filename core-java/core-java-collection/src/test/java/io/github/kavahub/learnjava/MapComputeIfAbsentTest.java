@@ -9,6 +9,14 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Map#computeIfAbsent(Object, java.util.function.Function)} 实现当一个key的值缺失的时候，
+ * 使用给定的映射函数重新计算填充KEY的值并返回结果
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapComputeIfAbsentTest {
     @Test
     public void whenKeyIsPresent_thenFetchTheValue() {

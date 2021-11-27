@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * 状态位
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class BitState implements Serializable {
 
     private volatile int state;

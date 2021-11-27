@@ -3,7 +3,11 @@ package io.github.kavahub.learnjava.enhance;
 import java.util.Collection;
 
 /**
- * 后进先出
+ * 
+ * 栈，后进先出
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public interface LifoStack<E> extends Collection<E> {
 

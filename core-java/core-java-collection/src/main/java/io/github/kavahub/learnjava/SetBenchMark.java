@@ -24,6 +24,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 
 /**
+ * {@link HashMap} 与 {@link LinkedMap} 性能比较
+ * 
+ * <p>
  * 性能测试结果如下：
  * 
  * <pre>
@@ -35,6 +38,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * SetBenchmark.benchmark03_HashSetAdd         avgt   10  37.129 ± 3.821  ns/op
  * SetBenchmark.benchmark03_LinkedSetAdd       avgt   10  40.015 ± 5.140  ns/op
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)

@@ -12,6 +12,13 @@ import org.apache.commons.collections4.SetUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 合并 <code>Set</code> 工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class CombiningSets {
     public <T> Set<T> usingNativeJava(Set<T> first, Set<T> second) {

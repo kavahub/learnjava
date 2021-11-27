@@ -10,6 +10,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.CombiningLists.*;
 
+/**
+ * 
+ * {@link CombiningLists} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CombiningListsTest {
     private static final List<String> first = Arrays.asList(new String[] { "One", "Two", "Three" });
 

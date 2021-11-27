@@ -14,8 +14,15 @@ import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Test;
 
 /**
- * EnumMap，它在内部以一个非常紧凑的数组存储value，
- * 并且根据enum类型的key直接定位到内部数组的索引，并不需要计算hashCode()，不但效率最高，而且没有额外的空间浪费
+ * 
+ * {@link EnumMap} 示例
+ *
+ * <p>
+ * {@code EnumMap} 在内部以一个非常紧凑的数组存储value，并且根据enum类型的key直接定位到内部数组的索引，
+ * 并不需要计算hashCode()，不但效率最高，而且没有额外的空间浪费
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class EnumMapTest {
     public enum DayOfWeek {

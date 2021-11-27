@@ -18,6 +18,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 
 /**
+ * 基础类型与对象类型排序性能测试
+ * 
+ * <p>
  * 性能测试结果如下：
  * 
  * <pre>
@@ -25,6 +28,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * PrimitiveVsObjectSortBenchmark.benchmarkArraysIntSort      avgt   10  1.476 ± 0.027  ms/op
  * PrimitiveVsObjectSortBenchmark.benchmarkArraysIntegerSort  avgt   10  4.904 ± 0.130  m
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)

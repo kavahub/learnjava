@@ -12,6 +12,13 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 基础类型数组转换成 {@code List} 集合
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class PrimitivesArrayToListConverter {
     public void failConvert() {

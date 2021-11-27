@@ -16,6 +16,13 @@ import java.util.Properties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link PropertiesToHashMapConverter} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PropertiesToHashMapConverterTest {
     private Properties properties;
 

@@ -12,6 +12,13 @@ import org.junit.jupiter.api.Test;
 
 import lombok.Data;
 
+/**
+ * 
+ * {@link Map} 自定义健示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapKeyManualTest {
     private Map<CoordinateKey, Color> pixels = new HashMap<>();
 

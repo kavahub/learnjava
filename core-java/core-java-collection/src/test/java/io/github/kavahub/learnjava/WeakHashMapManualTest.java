@@ -8,6 +8,20 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link WeakHashMap} 示例
+ * 
+ * <p>
+ * {@code WeakHashMap} 继承AbstractMap，实现了Map接口。和HashMap一样，WeakHashMap也是一个散列表，
+ * 它存储的内容也是键值对(key-value)映射，而且键和值都可以是null
+ * 
+ * <p>
+ * {@code WeakHashMap} 的键是虚引用，当垃圾回收器触发时，并不会阻止键被回收
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class WeakHashMapManualTest {
     @Test
     public void givenWeakHashMap_whenCacheValueThatHasNoReferenceToIt_GCShouldReclaimThatObject() {

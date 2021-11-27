@@ -34,6 +34,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * FilterBenchmark.filterWithGuava          avgt   10    0.005 ±  0.001  us/op
  * FilterBenchmark.filterWithStream         avgt   10  102.078 ±  1.413  us/op
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)

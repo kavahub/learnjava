@@ -6,7 +6,11 @@ import java.util.List;
 import java.util.ListIterator;
 
 /**
+ * 
  * {@link ListIterator} 允许我们向前、向后两个方向遍历 List; 在遍历时修改 List 的元素；遍历时获取迭代器当前游标所在位置。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ListIteratorExample {
     public static void main(String[] args) {

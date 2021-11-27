@@ -10,7 +10,15 @@ import org.openjdk.jol.info.ClassLayout;
 import org.openjdk.jol.info.GraphLayout;
 
 /**
- * BitSet就是“位图”数据结构，根据“位图”的语义，数据的存在性可以使用bit位上的1或0来表示；一个bit具有2个值：0和1，正好可以用来表示false和true
+ * 
+ * {@link BitSet} 示例
+ * 
+ * <p>
+ * {@code BitSet} 就是“位图”数据结构，根据“位图”的语义，数据的存在性可以使用bit位上的1或0来表示；
+ * 一个bit具有2个值：0和1，正好可以用来表示false和true
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class BitSetManualTest {
 
@@ -312,6 +320,5 @@ public class BitSetManualTest {
         bitSet[3].flip(0, 255);
         bitSet[3].stream().forEach(e -> System.out.print(e + ","));
     }
-
 
 }

@@ -4,6 +4,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ * 
+ * {@link Map} 遍历元素示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapIterationExample {
     public static void main(String[] args) {
         MapIterationExample iteration = new MapIterationExample();

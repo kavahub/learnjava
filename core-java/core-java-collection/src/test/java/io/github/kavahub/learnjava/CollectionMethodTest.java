@@ -17,6 +17,13 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Collections} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CollectionMethodTest {
     @Test
     public void givenCollection_whenUsingRemoveIfToRemoveAllNamesStartingWithLetterA_finalListShouldContainNoNamesStartingWithLetterA() {

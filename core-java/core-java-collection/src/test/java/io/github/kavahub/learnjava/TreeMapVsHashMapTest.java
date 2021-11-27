@@ -12,6 +12,13 @@ import java.util.TreeMap;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link TreeMap}, {@link HashMap} 应用比较
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class TreeMapVsHashMapTest {
     @Test
     public void whenInsertObjectsTreeMap_thenNaturalOrder() {

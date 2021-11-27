@@ -11,6 +11,13 @@ import org.apache.commons.lang3.StringUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * {@code Map} 月 {@code String} 相互转换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class MapAndStringConverter {
     public Map<String, String> convertWithStream(String mapAsString) {

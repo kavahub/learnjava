@@ -7,6 +7,13 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link HashMap} 集合创建示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HashMapLoadFactorTest {
     @Test
     public void whenCreateMapWithDefaultParam_thenSucces() {

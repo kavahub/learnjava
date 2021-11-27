@@ -12,6 +12,13 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link List} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ListFactoryMethodsTest {
     @Test
     public void whenListCreated_thenSuccess() {

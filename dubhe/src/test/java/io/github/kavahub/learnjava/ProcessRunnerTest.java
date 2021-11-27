@@ -26,6 +26,13 @@ import org.junit.jupiter.api.Test;
 import io.github.kavahub.learnjava.ProcessRunner.ProcessResult;
 import io.github.kavahub.learnjava.ProcessRunner.ProcessRunnerBuilder;
 
+/**
+ * 
+ * {@link ProcessRunner} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ProcessRunnerTest {
     private static ExecutorService executorService;
 

@@ -12,6 +12,13 @@ import org.apache.commons.exec.util.MapUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 合并 <code>Map</code> 工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class CombiningMaps {
     public <K, V> Map<K, V> usingPlainJava(Map<K, V> first, Map<K, V> second) {

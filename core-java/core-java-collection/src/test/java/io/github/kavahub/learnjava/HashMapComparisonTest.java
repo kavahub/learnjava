@@ -20,6 +20,13 @@ import com.google.common.collect.Maps;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link HashMap} 集合比较
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HashMapComparisonTest {
     Map<String, String> asiaCapital1;
     Map<String, String> asiaCapital2;

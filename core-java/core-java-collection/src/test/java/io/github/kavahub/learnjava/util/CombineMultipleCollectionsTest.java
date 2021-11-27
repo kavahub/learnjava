@@ -19,6 +19,13 @@ import org.apache.commons.collections4.IterableUtils;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * 
+ * 合并多个集合示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CombineMultipleCollectionsTest {
     @Test
     public void givenUsingJava8_whenConcatenatingUsingConcat_thenCorrect() {

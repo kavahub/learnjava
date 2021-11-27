@@ -7,6 +7,13 @@ import com.google.common.base.Predicate;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 过滤集合，使用 <code>Java Steam</code>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class FilterWithStream {
     public <T> Collection<T> filterCollectionHelperMethod(Collection<T> baseCollection, Predicate<T> predicate) {

@@ -14,6 +14,13 @@ import com.google.common.collect.Lists;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Hashmap}， {@link Hashtable} 应用比较
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HashmapVsHashtableDifferenceTest {
     // null values
     @Test

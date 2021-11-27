@@ -4,6 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CharStackWithArray} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CharStackWithArrayTest {
     @Test
     public void whenCharStackIsCreated_thenItHasSize0() {

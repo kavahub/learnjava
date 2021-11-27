@@ -5,12 +5,13 @@ import java.util.Collection;
 import java.util.Deque;
 import java.util.Iterator;
 
+
 /**
- * 后进先出
  * 
- * <p>
- * {@link ArrayDeque} 被称为“双端队列”，可以从两端进行插入或删除操作，当需要使用栈时，Java已不推荐使用Stack，
- * 而是推荐使用更高效的ArrayDeque，当需要使用队列时也可以使用ArrayDeque
+ * 栈，后进先出，适用 <code>ArrayDeque</code> 实现，非线程安全的
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class LifoStackWithArray<E> implements LifoStack<E> {
     private final Deque<E> deque = new ArrayDeque<>();

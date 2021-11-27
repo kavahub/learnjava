@@ -20,6 +20,13 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 数值排序示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ArraysSortingTest {
     private int[] toSort;
     private int[] sortedInts;

@@ -22,6 +22,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 
 /**
+ * 集合转换成数组性能比较
+ * 
+ * <p>
  * 性能测试结果如下：
  * 
  * <pre>
@@ -39,6 +42,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * ToArrayBenchmark.zero_sized  10000000  array-list  avgt   15   36757374.199 ± 1342328.814  ns/op
  * ToArrayBenchmark.zero_sized  10000000    tree-set  avgt   15  107969508.741 ± 3995345.237  ns/op
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)

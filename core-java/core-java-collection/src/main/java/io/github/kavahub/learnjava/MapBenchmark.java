@@ -21,11 +21,18 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 /**
+ * {@link ConcurrentHashMap} 与 {@code Collections.synchronizedMap} 性能比较
+ * 
+ * <p>
  * 性能测试结果如下：
  * 
  * <pre>
  * TODO
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)

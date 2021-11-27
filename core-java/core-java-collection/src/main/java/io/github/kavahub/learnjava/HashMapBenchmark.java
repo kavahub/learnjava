@@ -72,6 +72,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * HashMapBenchmark.benchmark03_linkedHashMapRemove          avgt   10   30.655 ±   3.919  ns/op
  * HashMapBenchmark.benchmark03_weakHashMapRemove            avgt   10   31.368 ±   1.242  ns/op
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)

@@ -11,6 +11,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.CombiningSets.*;
 
+/**
+ * 
+ * {@link CombiningSets} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CombiningSetsTest {
     private static final Set<String> first = new HashSet<String>(Arrays.asList(new String[] { "One", "Two", "Three" }));
 

@@ -8,7 +8,14 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import org.junit.jupiter.api.Test;
 
 /**
- * Stack继承自Vector。底层是通过数组实现的
+ * 
+ */
+/**
+ * 
+ * {@link Stack} 继承自 {@code Vector}。底层是通过数组实现的
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StackTest {
     @Test

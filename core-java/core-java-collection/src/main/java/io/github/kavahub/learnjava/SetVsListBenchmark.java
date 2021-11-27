@@ -24,6 +24,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 
 /**
+ * {@link HashSet} 与 {@link ArrayList} 性能比较
+ * 
+ * <p>
  * 性能测试结果如下：
  * 
  * <pre>
@@ -35,6 +38,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * SetVsListBenchmark.benchmark06_listAdd       thrpt   10  27961.016 ± 704.714  ops/ms
  * SetVsListBenchmark.benchmark06_setAdd        thrpt   10   8757.738 ± 296.209  ops/ms
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)

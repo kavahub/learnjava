@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava.enhance;
 
+/**
+ * 
+ * 字符栈，适用数组实现，非线程安全的
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CharStackWithArray {
     private char[] elements;
     private int size;

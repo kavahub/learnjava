@@ -7,6 +7,13 @@ import com.google.common.collect.Collections2;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 过滤集合，使用 <code>Guava</code>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class FilterWithGuava {
     public Collection<Integer> findEvenNumbers(Collection<Integer> baseCollection) {

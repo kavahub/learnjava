@@ -8,6 +8,13 @@ import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 任务运行器，适用于运行时间短的任务
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public abstract class QuickTimerTask implements Runnable {
     private static final ScheduledExecutorService SCHEDULED_EXECUTOR_SERVICE = new ScheduledThreadPoolExecutor(1, new ThreadFactory() {

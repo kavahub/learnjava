@@ -17,6 +17,13 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 连接与分割集合
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JoinSplitCollectionsTest {
     @Test
     public void whenJoiningTwoArrays_thenJoined() {

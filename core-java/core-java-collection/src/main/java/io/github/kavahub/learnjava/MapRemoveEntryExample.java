@@ -6,6 +6,13 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * 
+ * {@link Map} 集合中删除元素
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapRemoveEntryExample {
     public static void main(String[] args) {
 

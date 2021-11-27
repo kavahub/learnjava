@@ -34,6 +34,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * ListBenchmark.benchmark04_arrayListAddAt      thrpt   10     15.476 ±    5.985  ops/ms
  * ListBenchmark.benchmark04_linkedListAddAt     thrpt   10    939.467 ±  234.178  ops/ms
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)

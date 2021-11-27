@@ -4,6 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link QuickTimerTask} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class QuickTimerTaskManualTest {
     @Test
     public void whenStaticCreate_thenRun() throws InterruptedException {

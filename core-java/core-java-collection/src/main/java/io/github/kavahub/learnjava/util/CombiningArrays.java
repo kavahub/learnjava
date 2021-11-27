@@ -9,6 +9,13 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 合并数组工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class CombiningArrays {
     public Object[] usingNativeJava(Object[] first, Object[] second) {

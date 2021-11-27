@@ -28,8 +28,6 @@ public class ExchangerPipeLineExceptionManualTest {
         Exchanger<Queue<String>> writerExchanger = new Exchanger<>();
 
         Runnable reader = () -> {
-            // ConcurrentLinkedQueue是线程安全的队列，它适用于“高并发”的场景。它是一个基于链接节点的无界线程安全队列，按照
-            // FIFO（先进先出）原则对元素进行排序。队列元素中不可以放置null元素
             Queue<String> readerBuffer = new ConcurrentLinkedQueue<>();
             int no = 1;
             try {

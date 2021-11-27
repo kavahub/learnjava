@@ -9,6 +9,13 @@ import java.util.Stack;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Stack}, {@link Deque} 应用比较
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StackVsDequeTest {
     
     @Test

@@ -15,6 +15,13 @@ import com.google.common.base.Functions;
 import com.google.common.collect.ImmutableSortedMap;
 import com.google.common.collect.Ordering;
 
+/**
+ * 
+ * {@link HashMap} 排序示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HashMapSorterExample {
     private static Map<String, Employee> map = new HashMap<>();
 

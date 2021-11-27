@@ -10,6 +10,13 @@ import java.util.function.BiConsumer;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 文件异步读取工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class FileReader implements CompletionHandler<Integer, AsynchronousFileChannel> {
     private final Path file;

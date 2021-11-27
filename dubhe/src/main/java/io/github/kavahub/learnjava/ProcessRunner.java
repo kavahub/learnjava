@@ -18,6 +18,13 @@ import lombok.Getter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 命令行运行器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class ProcessRunner{
     private final static int DEFAULT_OUTPUT_LINES = 100;

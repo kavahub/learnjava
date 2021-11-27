@@ -21,6 +21,31 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+/**
+ * 
+ * {@link EnumMap}, {@link HashMap}, {@link TreeMap} 性能测试
+ * 
+ * <p>
+ * 测试结果如下：
+ * <pre>
+ * Benchmark                                          Mode  Cnt    Score    Error  Units
+ * EnumMapBenchmark.benchmark01_EnumMapPut            avgt   10   38.890 ±  3.377  ns/op
+ * EnumMapBenchmark.benchmark01_HashMapPut            avgt   10   56.448 ±  4.050  ns/op
+ * EnumMapBenchmark.benchmark01_TreeMapPut            avgt   10   71.783 ±  6.499  ns/op
+ * EnumMapBenchmark.benchmark02_EnumMapGet            avgt   10   34.551 ±  4.618  ns/op
+ * EnumMapBenchmark.benchmark02_HashMapGet            avgt   10   35.359 ±  1.253  ns/op
+ * EnumMapBenchmark.benchmark02_TreeMapGet            avgt   10   54.428 ±  4.994  ns/op
+ * EnumMapBenchmark.benchmark03_EnumMapContainsKey    avgt   10   33.990 ±  5.823  ns/op
+ * EnumMapBenchmark.benchmark03_HashMapContainsKey    avgt   10   35.515 ±  2.765  ns/op
+ * EnumMapBenchmark.benchmark03_TreeMapContainsKey    avgt   10   50.693 ±  1.708  ns/op
+ * EnumMapBenchmark.benchmark04_EnumMapContainsValue  avgt   10  124.317 ± 17.164  ns/op
+ * EnumMapBenchmark.benchmark04_HashMapContainsValue  avgt   10  221.068 ± 25.290  ns/op
+ * EnumMapBenchmark.benchmark04_TreeMapContainsValue  avgt   10  211.598 ± 42.258  ns/op
+ * </pre>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)

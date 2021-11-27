@@ -21,6 +21,18 @@ import org.junit.jupiter.api.Test;
 
 import io.github.kavahub.learnjava.enhance.LRUCache;
 
+/**
+ * 
+ * {@link Map} 示例
+ * 
+ * <p>
+ * {@link LinkedHashMap} 是一个Map实现，它维护其元素的插入顺序。当我们将true传递给 {@code accessOrder}
+ * 时，我们将实例化一个访问顺序 {@code LinkedHashMap} 。
+ * 访问顺序维护从最近使用到最近使用的元素的访问顺序，而不是插入顺序。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapTest {
     @Test
     public void givenHashMap_whenRetrievesKeyset_thenCorrect() {

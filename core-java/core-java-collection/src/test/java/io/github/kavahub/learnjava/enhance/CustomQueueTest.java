@@ -5,6 +5,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CustomQueue} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CustomQueueTest {
     private CustomQueue<Integer> customQueue;
 

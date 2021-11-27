@@ -10,6 +10,17 @@ import org.junit.jupiter.api.Test;
 
 import static java.util.stream.IntStream.range;
 
+/**
+ * 
+ * 多线程读取栈示例
+ * 
+ * <p>
+ * {@link ConcurrentLinkedDeque} 非阻塞，无锁，无界 ，线程安全双端操作的队列
+ * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MultithreadingCorrectnessStackTest {
     @Test
     public void givenSynchronizedDeque_whenExecutedParallel_thenWorkRight() {

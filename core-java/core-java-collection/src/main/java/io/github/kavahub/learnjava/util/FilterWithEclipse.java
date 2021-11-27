@@ -8,6 +8,13 @@ import org.eclipse.collections.impl.utility.Iterate;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 过滤集合，使用 <code>Eclipse</code>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class FilterWithEclipse {
     public Collection<Integer> findEvenNumbers(Collection<Integer> baseCollection) {

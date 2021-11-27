@@ -11,6 +11,13 @@ import org.apache.commons.collections4.iterators.ReverseListIterator;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 迭代器反向
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ReverseIteratorManualTest {
     private final static int SIZE = 100;
     private final static List<Integer> list = new ArrayList<>();
@@ -31,8 +38,6 @@ public class ReverseIteratorManualTest {
 
     @Test
     public void iterateUsingListIterator() {
-        // ListIterator是一个更加强大的Iterator的子类型,它只能用于各种List类的访问,尽管Iterator只能向前移动,但是ListIterator可以双向移动,它还可以产生相对于迭代器在列表指向的当前位置的前一个和后一个元素的索引,并且可以使用set()方法替换它访问过的最后一个元素.
-        // 你可以通过ListIterator()方法产生一个指向List开始处的ListIteraor,并且还可以通过调用ListIterator(n)方法创建一个一开始就指向索引列表n的元素处的ListIterator
         final ListIterator<Integer> listIterator = list.listIterator(list.size());
         while (listIterator.hasPrevious()) {
             System.out.println(listIterator.previous());

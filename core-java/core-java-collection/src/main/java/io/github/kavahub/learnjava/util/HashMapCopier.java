@@ -10,6 +10,13 @@ import org.apache.commons.lang3.SerializationUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 复制 <code>HashMap</code> 集合
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class HashMapCopier {
     public <K, V> HashMap<K, V> copyUsingConstructor(HashMap<K, V> originalMap) {

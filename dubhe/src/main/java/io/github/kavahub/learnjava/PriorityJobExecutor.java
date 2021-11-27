@@ -10,6 +10,13 @@ import lombok.Getter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 任务运行器，按任务的优先级运行，优先级高的先运行
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class PriorityJobExecutor {
     private ExecutorService jobExecutor;

@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava;
 
 import lombok.Data;
 
+/**
+ * 
+ * 健
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Data
 public class MyKey {
     private String name;

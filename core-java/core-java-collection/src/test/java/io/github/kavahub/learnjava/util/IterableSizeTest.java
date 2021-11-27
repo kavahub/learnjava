@@ -11,6 +11,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.IterableSize.*;
 
+/**
+ * 
+ * {@link IterableSize} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class IterableSizeTest {
     private final List<String> list = Lists.newArrayList("Apple", "Orange", "Banana");
 

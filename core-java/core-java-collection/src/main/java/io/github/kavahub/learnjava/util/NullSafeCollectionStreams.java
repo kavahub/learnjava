@@ -8,6 +8,13 @@ import lombok.experimental.UtilityClass;
 
 import static org.apache.commons.collections4.CollectionUtils.emptyIfNull;
 
+/**
+ * 
+ * 空流
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class NullSafeCollectionStreams {
     public Stream<String> nullSafeCollectionStreamsUsingCommonsEmptyIfNull(Collection<String> collection) {

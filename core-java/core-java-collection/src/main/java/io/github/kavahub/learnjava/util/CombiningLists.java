@@ -13,6 +13,13 @@ import org.apache.commons.collections4.ListUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 合并 <code>List</code> 工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class CombiningLists {
     public <T> List<T> usingNativeJava(List<T> first, List<T> second) {

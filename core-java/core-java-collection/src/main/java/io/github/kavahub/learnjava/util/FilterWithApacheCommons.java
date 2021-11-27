@@ -7,6 +7,13 @@ import org.apache.commons.collections4.Predicate;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 过滤集合，使用 <code>Apache Commons</code>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class FilterWithApacheCommons {
     public Collection<Integer> findEvenNumbers(Collection<Integer> baseCollection) {

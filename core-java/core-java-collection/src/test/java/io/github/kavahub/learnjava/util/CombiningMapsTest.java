@@ -12,6 +12,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.CombiningMaps.*;
 
+/**
+ * 
+ * {@link CombiningMaps} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CombiningMapsTest {
     private static final Map<String, String> first = new HashMap<>();
     private static final Map<String, String> second = new HashMap<>();

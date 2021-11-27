@@ -15,6 +15,13 @@ import org.apache.commons.collections4.IterableUtils;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link List} 集合中查找元素
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FindInListTest {
     private final static int SIZE = 100;
     private final static List<Integer> list = new ArrayList<>();

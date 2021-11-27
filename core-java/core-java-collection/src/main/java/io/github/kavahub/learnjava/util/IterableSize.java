@@ -9,6 +9,13 @@ import org.apache.commons.collections4.IterableUtils;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 获取迭代器大小
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class IterableSize {
   /**

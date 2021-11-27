@@ -7,6 +7,13 @@ import java.util.stream.Stream;
 
 import one.util.streamex.EntryStream;
 
+/**
+ * 
+ * {@link Map} 集合合并
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapsMergerExample {
         private static Map<String, Employee> map1 = new HashMap<>();
         private static Map<String, Employee> map2 = new HashMap<>();
