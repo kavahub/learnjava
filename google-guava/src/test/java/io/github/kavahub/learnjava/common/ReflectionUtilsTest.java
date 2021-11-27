@@ -18,6 +18,13 @@ import com.google.common.reflect.TypeToken;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 反射示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ReflectionUtilsTest {
     @Test
     public void givenTwoGenericList_whenCheckIsAssignableFrom_thenReturnTrueDueToTypeErasure() {

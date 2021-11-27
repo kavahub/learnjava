@@ -6,6 +6,14 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
+
+/**
+ * 
+ * Fibonacci(菲波那契数列)，使用缓存实现
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FibonacciSequence {
     private static LoadingCache<Integer, BigInteger> memo = CacheBuilder.newBuilder()
             .maximumSize(100)

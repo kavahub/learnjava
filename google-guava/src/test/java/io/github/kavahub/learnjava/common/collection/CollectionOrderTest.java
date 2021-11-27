@@ -11,7 +11,15 @@ import com.google.common.collect.Comparators;
 
 import org.junit.jupiter.api.Test;
 
-public class ComparatorsTest {
+/**
+ * 集合排序
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
+ * @see Comparators#isInOrder(Iterable, Comparator)
+ */
+public class CollectionOrderTest {
     @Test
     public void isInOrderTest() {
 

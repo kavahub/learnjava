@@ -14,7 +14,11 @@ import com.google.common.collect.ImmutableBiMap;
 import org.junit.jupiter.api.Test;
 
 /**
- * BiMap提供了一种新的集合类型，它提供了key和value的双向关联的数据结构
+ * 
+ * {@link BiMap} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class BiMapTest {
     @Test

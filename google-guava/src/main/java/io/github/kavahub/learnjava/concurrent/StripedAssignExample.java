@@ -8,7 +8,11 @@ import java.util.stream.IntStream;
 import com.google.common.util.concurrent.Striped;
 
 /**
- * Striped 怎么分配和共享锁
+ * 
+ * {@link Striped} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StripedAssignExample {
     private static void test(int strips, int tasks) {
@@ -21,7 +25,7 @@ public class StripedAssignExample {
     private static void test2(int strips, int tasks) {
         Striped<Lock> stripedLocks = Striped.lock(strips);
         Set<Lock> used = IntStream.rangeClosed(1, tasks).boxed().map(v -> {
-            //System.out.println(stripedLocks.size());
+            // System.out.println(stripedLocks.size());
             int bucket = v % stripedLocks.size();
             return stripedLocks.get(bucket);
         })

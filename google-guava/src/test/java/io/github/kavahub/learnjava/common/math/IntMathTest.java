@@ -11,6 +11,13 @@ import com.google.common.math.IntMath;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link IntMath} 提供 <code>Integer</code> 的实用方法
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class IntMathTest {
     @Test
     public void whenPerformBinomialOnTwoIntegerValues_shouldReturnResultIfUnderInt() {
@@ -174,24 +181,28 @@ public class IntMathTest {
 
     @Test
     public void whenMeanTwoIntegerValues_shouldMeanThemAndReturnTheResult() {
+        // 算术平均数
         int result = IntMath.mean(30, 20);
         assertEquals(25, result);
     }
 
     @Test
     public void whenModTwoIntegerValues_shouldModThemAndReturnTheResult() {
+        // 取模，也就是余数
         int result = IntMath.mod(30, 4);
         assertEquals(2, result);
     }
 
     @Test
     public void whenPowTwoIntegerValues_shouldPowThemAndReturnTheResult() {
+        // 6 的 4 次方
         int result = IntMath.pow(6, 4);
         assertEquals(1296, result);
     }
 
     @Test
     public void whenSaturatedAddTwoIntegerValues_shouldAddThemAndReturnTheResult() {
+        // 加
         int result = IntMath.saturatedAdd(6, 4);
         assertEquals(10, result);
     }
@@ -210,6 +221,7 @@ public class IntMathTest {
 
     @Test
     public void whenSaturatedMultiplyTwoIntegerValues_shouldMultiplyThemAndReturnTheResult() {
+        // 乘
         int result = IntMath.saturatedMultiply(6, 4);
         assertEquals(24, result);
     }
@@ -228,6 +240,7 @@ public class IntMathTest {
 
     @Test
     public void whenSaturatedPowTwoIntegerValues_shouldPowThemAndReturnTheResult() {
+        // 次方
         int result = IntMath.saturatedPow(6, 2);
         assertEquals(36, result);
     }
@@ -246,6 +259,7 @@ public class IntMathTest {
 
     @Test
     public void whenSaturatedSubstractTwoIntegerValues_shouldSubstractThemAndReturnTheResult() {
+        // 减
         int result = IntMath.saturatedSubtract(6, 2);
         assertEquals(4, result);
     }
@@ -264,6 +278,7 @@ public class IntMathTest {
 
     @Test
     public void whenSqrtIntegerValues_shouldSqrtThemAndReturnTheResultForCeilingRounding() {
+        // 开方
         int result = IntMath.sqrt(30, RoundingMode.CEILING);
         assertEquals(6, result);
     }

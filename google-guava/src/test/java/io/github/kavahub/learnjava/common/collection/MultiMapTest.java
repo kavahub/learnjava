@@ -1,5 +1,8 @@
 package io.github.kavahub.learnjava.common.collection;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.LinkedHashMap;
@@ -12,6 +15,13 @@ import com.google.common.collect.Multimap;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link MultiMap} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MultiMapTest {
     @Test
     public void givenMap_whenAddTwoValuesForSameKey_shouldOverridePreviousKey() {
@@ -39,8 +49,9 @@ public class MultiMapTest {
 
         //then
         assertEquals(2, map.size());
-        System.out.println(map);
-    }
+        assertThat(map.get(key)).isInstanceOf(List.class);
+        assertThat(map.get(key), containsInAnyOrder("firstValue", "secondValue"));
+      }
 
     @Test
     public void givenMapOfListValues_whenAddTwoValuesForSameKey_shouldHaveTwoElementsInList() {

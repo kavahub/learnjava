@@ -10,6 +10,14 @@ import com.google.common.collect.MutableClassToInstanceMap;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link ClassToInstanceMap} 接口提供了一种是用Class作为Key,
+ * 对应实例作为Value的途径
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ClassToInstanceMapTest {
     @Test
     public void whenOfCalled_thenCreateEmptyImmutableMap() {
@@ -65,13 +73,13 @@ public class ClassToInstanceMapTest {
 
     abstract class Action {
     }
-    
+
     class Save extends Action {
     }
-    
+
     class Open extends Action {
     }
-    
+
     class Delete extends Action {
     }
 }

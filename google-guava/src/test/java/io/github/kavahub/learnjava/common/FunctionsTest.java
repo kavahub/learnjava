@@ -27,7 +27,14 @@ import com.google.common.collect.Sets;
 
 import org.junit.jupiter.api.Test;
 
-public class FunctionalTest {
+/**
+ * 
+ * {@link Predicat} ，{@link Functions} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
+public class FunctionsTest {
     // tests
 
     // predicates - filtering

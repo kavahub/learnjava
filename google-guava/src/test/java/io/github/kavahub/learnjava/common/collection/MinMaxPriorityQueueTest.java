@@ -10,7 +10,10 @@ import com.google.common.collect.MinMaxPriorityQueue;
 import org.junit.jupiter.api.Test;
 
 /**
- * MinMaxPriorityQueue类，它提供了一种常数时间复杂度的方式访问其最小和最大元素的数据结构。
+ * {@link MinMaxPriorityQueue}类，它提供了一种常数时间复杂度的方式访问其最小和最大元素的数据结构。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MinMaxPriorityQueueTest {
     @Test

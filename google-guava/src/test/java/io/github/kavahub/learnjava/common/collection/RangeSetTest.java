@@ -12,7 +12,14 @@ import com.google.common.collect.TreeRangeSet;
 
 import org.junit.jupiter.api.Test;
 
-public class TreeRangeSetTest {
+/**
+ * 
+ * {@link RangeSet} 类是用来存储一些不为空的也不相交的范围的数据结构
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
+public class RangeSetTest {
     @Test
     public void givenRangeSet_whenQueryWithinRange_returnsSucessfully() {
         final RangeSet<Integer> numberRangeSet = TreeRangeSet.create();

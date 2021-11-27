@@ -9,6 +9,13 @@ import org.junit.jupiter.api.Test;
 
 import lombok.Getter;
 
+/**
+ * 
+ * {@link MoreObjects} 示例，主要使用 <code>toStringHelper</code> 方法
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MoreObjectsTest {
     @Test
     public void whenToString_shouldIncludeAllFields() throws Exception {

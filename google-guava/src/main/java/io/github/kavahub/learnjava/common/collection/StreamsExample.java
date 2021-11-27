@@ -13,6 +13,13 @@ import java.util.stream.Stream;
 
 import com.google.common.collect.Streams;
 
+/**
+ * 
+ * {@link Streams} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @SuppressWarnings({"unused","deprecation"})
 public class StreamsExample {
     public static void main(String[] args) {

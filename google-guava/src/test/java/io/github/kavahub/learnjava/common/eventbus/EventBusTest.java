@@ -11,7 +11,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 
- * 
+ * @{link EventBus} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class EventBusTest {
     private CustomEventListener listener;

@@ -29,11 +29,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 
- * ListeningExecutorService 该类是对ExecutorService的扩展
- * 
- * 
+ * {@link ListenableFuture} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
-public class ListenableFutureSimpleTest {
+public class ListenableFutureTest {
     @Test
     public void whenSubmitToListeningExecutor_thenSuccess() throws ExecutionException, InterruptedException {
         ExecutorService execService = Executors.newSingleThreadExecutor();

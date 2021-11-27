@@ -5,6 +5,13 @@ import com.google.common.eventbus.Subscribe;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 自定义事件监听
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class CustomEventListener {
     private int eventsHandled;

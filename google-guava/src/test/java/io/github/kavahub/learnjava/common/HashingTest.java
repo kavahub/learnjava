@@ -8,6 +8,22 @@ import com.google.common.hash.Hashing;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link HashFunction} hash函数，可以用于创建Hasher对象
+ * 
+ * <p>
+ * {@link Hashing} 定义了一些hash函数
+ * 
+ * <p>
+ * {@link Hasher} 计算hash值，提供了putXxx（）方法用于添加数据，以及hash()方法返回计算结果HashCode
+ * 
+ * <p>
+ * {@link HashCode} hash值计算结果
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HashingTest {
     @Test
     public void whenHashingInSha384_hashFunctionShouldBeReturned() throws Exception {

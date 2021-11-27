@@ -11,6 +11,13 @@ import com.google.common.math.LongMath;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link LongMath} 提供 <code>Long</code> 的实用方法
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class LongMathTest {
     @Test
     public void whenPerformBinomialOnTwoLongValues_shouldReturnResultIfUnderLong() {

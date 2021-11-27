@@ -18,3 +18,7 @@ gongle guava项目学习
 - [guava-retrying 初体验](https://www.jianshu.com/p/a289dde63043)
 - [Guava中的集合类](https://mrlongx.com/index.php/2016/10/30/new-collections-in-guava/)
 - [Google Guava Cache 全解析](https://www.jianshu.com/p/38bd5f1cf2f2)
+- [Guava学习](https://blog.csdn.net/wypblog/category_1524253.html)
+- [Google Guava 并发编程 - ListenableFuture](https://www.jianshu.com/p/0f615b6f1566)
+
+

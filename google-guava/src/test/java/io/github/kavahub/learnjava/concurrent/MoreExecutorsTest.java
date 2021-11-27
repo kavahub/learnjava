@@ -13,6 +13,13 @@ import com.google.common.util.concurrent.MoreExecutors;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link MoreExecutors} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MoreExecutorsTest {
     @Test
     public void whenExecutingRunnableInThreadPool_shouldLogAllThreadsExecutions() throws Exception {
@@ -37,6 +44,7 @@ public class MoreExecutorsTest {
 
         Runnable logThreadRun = () -> threadExecutions.put(Thread.currentThread().getName(), true);
 
+        // 创建一个直接执行的Executor，调用execute()会在当前线程执行Runnable的方法
         Executor executor = MoreExecutors.directExecutor();
         executor.execute(logThreadRun);
 
@@ -49,6 +57,7 @@ public class MoreExecutorsTest {
 
         Runnable logThreadRun = () -> threadExecutions.put(Thread.currentThread().getName(), true);
 
+        // 创建一个直接执行的线程池，线程池里面所有的任务在提交的时候就执行
         ListeningExecutorService executor = MoreExecutors.newDirectExecutorService();
         executor.execute(logThreadRun);
         executor.execute(logThreadRun);

@@ -12,7 +12,18 @@ import org.junit.jupiter.api.Test;
 
 import lombok.Getter;
 
+/**
+ * 
+ * {@link MapMaker} 工具示例
+ * 
+ * <p>
+ * 超级强大的 <code>ConcurrentMap</code> 构造工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapMakerTest {
+
     @Test
     public void whenCreateCaches_thenCreated() {
         ConcurrentMap<User, Session> sessionCache = new MapMaker().makeMap();
@@ -58,7 +69,7 @@ public class MapMakerTest {
     @Getter
     public class Session {
         private long id;
-    
+
         public Session(long id) {
             this.id = id;
         }
@@ -68,22 +79,22 @@ public class MapMakerTest {
     public class User {
         private long id;
         private String name;
-    
+
         public User(long id, String name) {
             this.id = id;
             this.name = name;
-        }    
+        }
     }
 
     @Getter
     public class Profile {
         private long id;
         private String type;
-    
+
         public Profile(long id, String type) {
             this.id = id;
             this.type = type;
-        }   
+        }
     }
-    
+
 }

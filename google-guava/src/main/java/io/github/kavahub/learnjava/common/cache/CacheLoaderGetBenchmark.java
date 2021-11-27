@@ -21,15 +21,22 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.ChainedOptionsBuilder;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+
 /**
- * @formatter::off
+ * {@link CacheLoader} 的get方法性能测试
  * 
+ * <p>
+ * 测试结果如下：
+ * 
+ * <pre>
  * Benchmark                              Mode  Cnt      Score      Error   Units
  * CacheLoaderGetBenchmark.get           thrpt   10  26418.137 ±  592.573  ops/ms
  * CacheLoaderGetBenchmark.getIfPresent  thrpt   10  24938.504 ± 1337.478  ops/ms
  * CacheLoaderGetBenchmark.getUnchecked  thrpt   10  25008.564 ± 1133.266  ops/ms
+ * </pre>
  * 
- * @formatter::on
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)

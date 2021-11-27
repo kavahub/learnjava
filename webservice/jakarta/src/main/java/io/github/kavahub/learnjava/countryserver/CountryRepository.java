@@ -1,8 +1,15 @@
-package io.github.kavahub.learnjava.simpleserver;
+package io.github.kavahub.learnjava.countryserver;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 
+ * 数据访问
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CountryRepository {
 
     private static final Map<String, Country> countries = new HashMap<>();

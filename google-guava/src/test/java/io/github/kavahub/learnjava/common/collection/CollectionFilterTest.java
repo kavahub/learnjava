@@ -22,7 +22,17 @@ import com.google.common.collect.Lists;
 
 import org.junit.jupiter.api.Test;
 
-public class FilterTransformCollectionsManualTest {
+/**
+ * 集合过滤
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
+ * @see Iterables#filter(Iterable, Predicate)
+ * @see Iterables#filter(Iterable, Class)
+ * @see Collections2#filter(Collection, Predicate)
+ */
+public class CollectionFilterTest {
     @Test
     public void whenFilterWithIterables_thenFiltered() {
         final List<String> names = Lists.newArrayList("John", "Jane", "Adam", "Tom");

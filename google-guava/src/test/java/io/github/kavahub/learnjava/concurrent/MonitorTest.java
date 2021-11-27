@@ -8,7 +8,11 @@ import com.google.common.util.concurrent.Monitor;
 import org.junit.jupiter.api.Test;
 
 /**
- * Monitor类在处理互斥操作，同步访问数据块，提供了相比于synchronized关键字更加方便简洁的解决方案
+ * 
+ * {@link Monitor} 类在处理互斥操作，同步访问数据块，提供了相比于synchronized关键字更加方便简洁的解决方案
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MonitorTest {
     @Test

@@ -6,6 +6,13 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
+/**
+ * 
+ * Factorial(阶乘), 使用缓存实现
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FactorialSequence {
     private static LoadingCache<Integer, BigInteger> memo = CacheBuilder.newBuilder()
             .build(CacheLoader.from(FactorialSequence::getFactorial));

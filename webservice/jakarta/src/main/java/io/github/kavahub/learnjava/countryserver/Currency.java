@@ -1,5 +1,12 @@
-package io.github.kavahub.learnjava.simpleserver;
+package io.github.kavahub.learnjava.countryserver;
 
+/**
+ * 
+ * 币种
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public enum Currency {
 
     EUR, INR, USD;

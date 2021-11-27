@@ -15,7 +15,22 @@ import com.google.common.collect.TreeRangeMap;
 
 import org.junit.jupiter.api.Test;
 
-public class TreeRangeMapTest {
+/**
+ * 
+ * {@link RangeMap} 接口是一种集合类型，它将不相交、且不为空的 <code>Range</code>（key）映射给一个值（Value），
+ *  <code>RangeMap</code> 不可以将相邻的区间合并，即使这个区间映射的值是一样的，实现类如下：
+ * <ul>
+ * <li> mmutableRangeMap: 不可变的集合</li>
+ * <li> TreeRangeMap: 键是有序的</li>
+ * </ul>
+ *
+ * <p>
+ * <code>Range<、code> 定义了连续跨度的范围边界，这个连续跨度是一个可以比较的类型(Comparable type)。比如1到100之间的整型数据。
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
+public class RangeMapTest {
     @Test
     public void givenRangeMap_whenQueryWithinRange_returnsSucessfully() {
         final RangeMap<Integer, String> experienceRangeDesignationMap = TreeRangeMap.create();

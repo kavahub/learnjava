@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava.common.collection;
+package io.github.kavahub.learnjava.enhance;
 
 import java.util.AbstractMap;
 import java.util.AbstractSet;
@@ -9,6 +9,15 @@ import java.util.WeakHashMap;
 
 import com.google.common.base.Function;
 
+
+/**
+ * 
+ * <code>Set</code> 集合转换成 {@link MapFromSet}。 规则是: <code>Set</code>集合数据做键值，定义
+ * {@link Function} 函数将健转换成值
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapFromSet<K, V> extends AbstractMap<K, V> {
 
     private class SingleEntry implements Entry<K, V> {
@@ -97,5 +106,5 @@ public class MapFromSet<K, V> extends AbstractMap<K, V> {
     public Set<Map.Entry<K, V>> entrySet() {
         return this.entries;
     }
-    
+
 }

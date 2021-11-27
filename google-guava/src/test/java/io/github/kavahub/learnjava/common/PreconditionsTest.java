@@ -8,6 +8,13 @@ import com.google.common.base.Preconditions;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Preconditions} 用与参数校验
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PreconditionsTest {
     @Test
     public void whenCheckArgumentEvaluatesFalse_throwsException() {

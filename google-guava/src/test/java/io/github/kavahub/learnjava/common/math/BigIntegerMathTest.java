@@ -11,6 +11,13 @@ import com.google.common.math.BigIntegerMath;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link BigIntegerMath} 提供 <code>BigInteger</code> 的实用方法
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class BigIntegerMathTest {
     @Test
     public void whenPerformBinomialOnTwoIntValues_shouldReturnResult() {

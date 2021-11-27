@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava.common.collection;
+package io.github.kavahub.learnjava.enhance;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -11,12 +11,20 @@ import com.google.common.base.Function;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link MapFromSet} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MapFromSetTest {
     @Test
     public void givenStringSet_whenMapsToElementLength_thenCorrect() {
         Function<Integer, String> function = new Function<Integer, String>() {
             @Override
             public String apply(Integer from) {
+                // 返回int变量的二进制表示的字符串
                 return Integer.toBinaryString(from);
             }
         };

@@ -15,6 +15,13 @@ import com.google.common.base.Suppliers;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SequenceTest {
     @Test
     public void givenInteger_whenGetFibonacciNumber_thenShouldCalculateFibonacciNumber() {

@@ -9,8 +9,18 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
+import lombok.experimental.UtilityClass;
+
+/**
+ * 
+ * 流断言工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
+@UtilityClass
 public class StreamUtility {
-    public static <T> boolean assertStreamEquals(Stream<T> stream1, Stream<T> stream2) {
+    public <T> boolean assertStreamEquals(Stream<T> stream1, Stream<T> stream2) {
 
         Iterator<T> iterator1 = stream1.iterator();
         Iterator<T> iterator2 = stream2.iterator();
@@ -24,7 +34,7 @@ public class StreamUtility {
         return true;
     }
 
-    public static boolean assertStreamEquals(LongStream stream1, LongStream stream2) {
+    public boolean assertStreamEquals(LongStream stream1, LongStream stream2) {
 
         Iterator<?> iterator1 = stream1.iterator();
         Iterator<?> iterator2 = stream2.iterator();
@@ -38,7 +48,7 @@ public class StreamUtility {
         return true;
     }
 
-    public static boolean assertStreamEquals(DoubleStream stream1, DoubleStream stream2) {
+    public boolean assertStreamEquals(DoubleStream stream1, DoubleStream stream2) {
 
         Iterator<?> iterator1 = stream1.iterator();
         Iterator<?> iterator2 = stream2.iterator();
@@ -52,7 +62,7 @@ public class StreamUtility {
         return true;
     }
 
-    public static boolean assertStreamEquals(IntStream stream1, IntStream stream2) {
+    public boolean assertStreamEquals(IntStream stream1, IntStream stream2) {
 
         Iterator<?> iterator1 = stream1.iterator();
         Iterator<?> iterator2 = stream2.iterator();

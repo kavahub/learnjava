@@ -11,6 +11,27 @@ import com.google.common.math.DoubleMath;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link DoubleMath} 提供 <code>Double</code> 的实用方法
+ *
+ * <p>
+ * {@link RoundingMode} 枚举：
+ * 
+ * <ul>
+ * <li> CEILING：取右边最近的整数</li> 
+ * <li> DOWN：去掉小数部分取整，也就是正数取左边，负数取右边，相当于向原点靠近的方向取整</li> 
+ * <li> FLOOR：取左边最近的正数</li> 
+ * <li> HALF_DOWN:五舍六入，负数先取绝对值再五舍六入再负数</li> 
+ * <li> HALF_UP:四舍五入，负数原理同上</li> 
+ * <li> HALF_EVEN:这个比较绕，整数位若是奇数则四舍五入，若是偶数则五舍六入</li> 
+ * <li> UNNECESSARY: 无需舍位 </li> 
+ * </ul>
+ * 
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DoubleMathTest {
     @Test
     public void whenFactorailDouble_shouldFactorialThemAndReturnTheResultIfInDoubleRange() {
@@ -84,13 +105,6 @@ public class DoubleMathTest {
 
     @Test
     public void whenLog2DoubleValues_shouldLog2ThemAndReturnTheResultForCeilingRounding() {
-        // RoundingMode.CEILING：取右边最近的整数
-        // RoundingMode.DOWN：去掉小数部分取整，也就是正数取左边，负数取右边，相当于向原点靠近的方向取整
-        // RoundingMode.FLOOR：取左边最近的正数
-        // RoundingMode.HALF_DOWN:五舍六入，负数先取绝对值再五舍六入再负数
-        // RoundingMode.HALF_UP:四舍五入，负数原理同上
-        // RoundingMode.HALF_EVEN:这个比较绕，整数位若是奇数则四舍五入，若是偶数则五舍六入
-        // RoundingMode.UNNECESSARY: 无需舍位 
         int result = DoubleMath.log2(30, RoundingMode.CEILING);
         assertEquals(5, result);
     }

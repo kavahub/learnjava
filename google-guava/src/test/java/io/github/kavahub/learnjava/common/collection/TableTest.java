@@ -15,6 +15,13 @@ import com.google.common.collect.TreeBasedTable;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Table} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class TableTest {
     @Test
     public void givenTable_whenGet_returnsSuccessfully() {

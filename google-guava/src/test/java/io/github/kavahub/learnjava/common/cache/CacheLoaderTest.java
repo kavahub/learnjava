@@ -12,6 +12,14 @@ import com.google.common.collect.Maps;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CacheLoader} 抽象类。子类需实现 {@link CacheLoader#load(Object)} 方法，参数是key值，
+ * 通过处理，生成返回值。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CacheLoaderTest {
     int callCount = 0;
 

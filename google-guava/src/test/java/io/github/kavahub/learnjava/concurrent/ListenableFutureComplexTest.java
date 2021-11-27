@@ -27,6 +27,16 @@ import com.google.common.util.concurrent.MoreExecutors;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link ListeningExecutorService} 继承 <code>ExecutorService</code>
+ *
+ * <p>
+ * {@link MoreExecutors} 是对jdk自带的Executors工具类的扩展， 创建 <code>ListeningExecutorService</code> 实例
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ListenableFutureComplexTest {
     @Test
     public void givenAllSucceedingTasks_whenAllAsList_thenAllSuccess() {
@@ -115,14 +125,20 @@ public class ListenableFutureComplexTest {
         ListenableFuture<String> customerNameTask = service.getCustomerName();
         ListenableFuture<List<String>> cartItemsTask = service.getCartItems();
 
-        ListenableFuture<CartInfo> cartInfoTask = Futures.whenAllSucceed(cartIdTask, customerNameTask, cartItemsTask)
+        ListenableFuture<CartInfo> cartInfoTask = Futures
+            // 所有的任务运行完成
+            .whenAllSucceed(cartIdTask, customerNameTask, cartItemsTask)
+            // 然后执行
             .call(() -> {
+                // 获取任务返回值
                 int cartId = Futures.getDone(cartIdTask);
                 String customerName = Futures.getDone(customerNameTask);
                 List<String> cartItems = Futures.getDone(cartItemsTask);
+
                 return new CartInfo(cartId, customerName, cartItems);
             }, listeningExecService);
 
+        // 任务完成后回调
         Futures.addCallback(cartInfoTask, new FutureCallback<CartInfo>() {
             @Override
             public void onSuccess(@Nullable CartInfo result) {

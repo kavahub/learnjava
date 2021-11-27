@@ -18,7 +18,17 @@ import com.google.common.collect.Maps;
 
 import org.junit.jupiter.api.Test;
 
-public class JoinSplitManualTest {
+/**
+ * 
+ * 字符串连接与分割
+ * 
+ * @see Joiner
+ * @see Splitter
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
+public class JoinerSpliterTest {
     @Test
     public void whenConvertListToString_thenConverted() {
         final List<String> names = Lists.newArrayList("John", "Jane", "Adam", "Tom");

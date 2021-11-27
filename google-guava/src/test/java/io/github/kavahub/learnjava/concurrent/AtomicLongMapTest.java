@@ -7,6 +7,13 @@ import com.google.common.util.concurrent.AtomicLongMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link AtomicLongMap} 实现多线程环境下计数
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class AtomicLongMapTest {
     private static final String SPRING_COURSE_KEY = "Spring";
     private static final String HIBERNATE_COURSE_KEY = "hibernate";

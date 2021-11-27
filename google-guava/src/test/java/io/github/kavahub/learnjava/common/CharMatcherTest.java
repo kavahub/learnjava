@@ -11,6 +11,13 @@ import com.google.common.base.Predicate;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CharMatcher} 提供了多种对字符串查找与处理的方法
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CharMatcherTest {
     @Test
     public void whenRemoveSpecialCharacters_thenRemoved() {

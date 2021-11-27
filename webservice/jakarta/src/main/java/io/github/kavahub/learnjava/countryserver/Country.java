@@ -1,5 +1,12 @@
-package io.github.kavahub.learnjava.simpleserver;
+package io.github.kavahub.learnjava.countryserver;
 
+/**
+ * 
+ * 实体
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class Country {
     protected String name;
     protected int population;

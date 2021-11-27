@@ -7,6 +7,13 @@ import com.google.common.base.Throwables;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Throwables} 简化异常和错误的传播与检查
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThrowablesTest {
     @Test
     public void whenThrowable_shouldWrapItInRuntimeException() throws Exception {

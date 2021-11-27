@@ -22,6 +22,13 @@ import com.google.common.collect.Streams;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Streams} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StreamsV21Test {
     private List<Integer> numbers;
 

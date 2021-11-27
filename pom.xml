@@ -108,6 +108,11 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava-testlib</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+      <dependency>
         <groupId>one.util</groupId>
         <artifactId>streamex</artifactId>
         <version>${streamex.version}</version>

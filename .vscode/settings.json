@@ -1,5 +1,14 @@
 {
     "java.configuration.updateBuildConfiguration": "automatic",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.templates.typeComment": [
+      "/**",
+      " * TODO",
+      " *  ",
+      " * @author PinWei Wan",
+      " * @since 1.0.0",
+      " */"
+    ],
     "java.completion.favoriteStaticMembers": [
         "org.junit.Assert.*",
         "org.junit.Assume.*",

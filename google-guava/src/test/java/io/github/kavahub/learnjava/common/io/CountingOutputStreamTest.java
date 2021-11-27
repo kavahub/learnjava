@@ -9,6 +9,14 @@ import com.google.common.io.CountingOutputStream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CountingOutputStream} 类继承了 <code>FilterOutputStream</code> 类，提供了为写出的字节计数的功能。
+ * 封装了计数器 <code>count</code>， 提供了 getCount()方法
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CountingOutputStreamTest {
     public static final int MAX = 5;
 

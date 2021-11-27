@@ -12,10 +12,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 
- * RateLimiter使用的是一种叫令牌桶的流控算法，RateLimiter会按照一定的频率往桶里扔令牌，
- * 线程拿到令牌才能执行，比如你希望自己的应用程序QPS不要超过1000，那么RateLimiter设置1000的速率后， 
+ * {@link RateLimiter} 使用的是一种叫令牌桶的流控算法，<code>RateLimiter</code> 会按照一定的频率往桶里扔令牌，
+ * 线程拿到令牌才能执行，比如你希望自己的应用程序QPS不要超过1000，那么<code>RateLimiter</code> 设置1000的速率后，
  * 就会每秒往桶里扔1000个令牌。
- * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class RateLimiterLongRunningTest {
     @Test

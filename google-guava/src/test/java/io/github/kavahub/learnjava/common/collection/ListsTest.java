@@ -14,7 +14,14 @@ import com.google.common.collect.Lists;
 
 import org.junit.jupiter.api.Test;
 
-public class ListsUnitTest {
+/**
+ * 
+ * {@link Lists} 工具示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
+public class ListsTest {
     @Test
     public void whenCreateList_thenCreated() {
         final List<String> names = Lists.newArrayList("John", "Adam", "Jane");

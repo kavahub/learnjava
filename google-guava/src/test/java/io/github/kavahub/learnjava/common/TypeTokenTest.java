@@ -10,6 +10,13 @@ import com.google.common.reflect.TypeToken;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link TypeToken} 用来解决java运行时泛型类型被擦除的问题
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class TypeTokenTest {
     @Test
     public void whenCheckingIsAssignableFrom_shouldReturnTrueEvenIfGenericIsSpecified() throws Exception {

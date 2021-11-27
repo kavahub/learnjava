@@ -27,6 +27,13 @@ import com.google.common.net.InetAddresses;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MiscUtilsTest {
     @Test
     public void whenHashingData_shouldReturnCorrectHashCode() throws Exception {
