@@ -3,6 +3,8 @@ package io.github.kavahub.learnjava;
 /**
  * 常量的最佳实践
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
  */
 public final class MathConstants {

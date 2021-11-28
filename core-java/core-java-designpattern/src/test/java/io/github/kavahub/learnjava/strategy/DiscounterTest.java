@@ -13,6 +13,13 @@ import io.github.kavahub.learnjava.strategy.discounter.EasterDiscounter;
 import static io.github.kavahub.learnjava.strategy.discounter.Discounter.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 
+ * {@link Discounter} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DiscounterTest {
     @Test
     public void shouldDivideByTwo_WhenApplyingStaffDiscounter() {
