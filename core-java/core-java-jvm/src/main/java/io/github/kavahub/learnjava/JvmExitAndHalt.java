@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * JVM退出或停止
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class JvmExitAndHalt {
     static {

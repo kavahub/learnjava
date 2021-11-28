@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.util;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * {@link InstrumentationAgent} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class InstrumentationExample {
     public static void printObjectSize(Object object) {
         System.out.println("Object type: " + object.getClass() + ", size: " + InstrumentationAgent.getObjectSize(object)

@@ -5,6 +5,13 @@ import java.lang.reflect.Method;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CustomClassLoader} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CustomClassLoaderTest {
     @Test
     public void customLoader() throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
