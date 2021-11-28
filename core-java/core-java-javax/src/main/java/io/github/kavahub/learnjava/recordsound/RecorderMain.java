@@ -5,6 +5,9 @@ import javax.sound.sampled.AudioFormat;
 
 /**
  * 程序入口
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class RecorderMain {
     

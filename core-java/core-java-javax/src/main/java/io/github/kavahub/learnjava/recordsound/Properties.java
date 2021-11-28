@@ -3,7 +3,11 @@ package io.github.kavahub.learnjava.recordsound;
 import javax.sound.sampled.AudioFormat;
 
 /**
+ * 
  * 常量
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class Properties {
     public final static AudioFormat.Encoding ENCODING = AudioFormat.Encoding.PCM_SIGNED;

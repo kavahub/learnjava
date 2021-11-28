@@ -8,6 +8,9 @@ import javax.sound.sampled.AudioSystem;
 
 /**
  * 声音数据工具
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class WaveDataUtil {
 

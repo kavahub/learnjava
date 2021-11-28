@@ -8,6 +8,9 @@ import java.awt.image.BufferedImage;
 
 /**
  * 将字符串输出为艺术体
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class AsciiArt {
     public void drawString(String text, String artChar, Settings settings) {

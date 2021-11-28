@@ -52,6 +52,8 @@ import lombok.extern.slf4j.Slf4j;
  * capacity as the original {@link BufferedImage} has, but {@link BigBufferedImage} has the real benefit that it 
  * stores the image on the hard drive and you don't have to worry about the heap size or the physical memory limit.
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class BigBufferedImage extends BufferedImage {

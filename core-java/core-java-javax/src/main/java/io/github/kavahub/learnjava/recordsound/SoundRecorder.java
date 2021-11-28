@@ -12,6 +12,9 @@ import javax.sound.sampled.TargetDataLine;
 
 /**
  * 声音录制
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class SoundRecorder implements Runnable {
     private AudioInputStream audioInputStream;

@@ -6,6 +6,13 @@ import io.github.kavahub.learnjava.AsciiArt.Settings;
 
 import java.awt.*;
 
+/**
+ * 
+ * {@link AsciiArt} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class AsciiArtManualTest {
     @Test
     public void givenTextWithAsciiCharacterAndSettings_shouldPrintAsciiArt() {

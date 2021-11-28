@@ -7,6 +7,9 @@ import java.io.File;
 
 /**
  * 截屏
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class Screenshot {
     private final String path;

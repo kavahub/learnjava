@@ -7,6 +7,13 @@ import java.io.File;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Screenshot} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ScreenshotManualTest {
     private final static String FILE_NAME = "Screenshot.jpg";
     private Screenshot screenshot = new Screenshot(FILE_NAME);
