@@ -1,5 +1,14 @@
 package io.github.kavahub.learnjava;
 
+/**
+ * 
+ * 两个线程交替执行，使用 {@code Object#wait()} 和 {@code Object#notify()}
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
+ * @see SemaphorePrintEvenOddExample
+ */
 public class WaitNotifyPrintEvenOddExample {
     public static void main(String... args) {
         Printer print = new Printer();

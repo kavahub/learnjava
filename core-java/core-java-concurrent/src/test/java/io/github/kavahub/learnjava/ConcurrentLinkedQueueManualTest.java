@@ -21,7 +21,8 @@ import org.junit.jupiter.api.Test;
  * {@link ConcurrentLinkedQueue} 一个基于链接节点的无界线程安全的队列，先进先出原则。新元素从队列尾部插入，
  * 而获取队列元素，则需要从队列头部获取。队列元素中不可以放置null元素
  * 
- * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ConcurrentLinkedQueueManualTest {
     @Test

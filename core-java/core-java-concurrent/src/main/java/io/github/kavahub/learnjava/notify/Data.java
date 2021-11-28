@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.notify;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 控制器，控制发送接收的状态
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class Data {
     private String packet;

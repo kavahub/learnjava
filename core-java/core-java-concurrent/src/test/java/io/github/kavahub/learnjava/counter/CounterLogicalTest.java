@@ -11,7 +11,13 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-
+/**
+ * 
+ * 逻辑(真确性)测试
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CounterLogicalTest {
     private static ExecutorService EXECUTOR;
 

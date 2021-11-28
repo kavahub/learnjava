@@ -4,6 +4,13 @@ import java.math.BigInteger;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 数学工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class MathUtils {
     public BigInteger factorial(int number) {

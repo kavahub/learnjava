@@ -17,6 +17,13 @@ import com.google.common.util.concurrent.MoreExecutors;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * Guava 线程池
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadPoolGuavaTest {
     @Test
     public void whenExecutingTaskWithDirectExecutor_thenTheTaskIsExecutedInTheCurrentThread() {

@@ -9,18 +9,25 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Exchanger;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 注意：添加log输出后，需要添加sleep，否则，日志输出太快，造成IDE无响应。
+ * 
+ * {@link Exchanger} 示例
+ *
+ * <p>
+ * {@link CompletableFuture} 任务是不能中断(interrupt)
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
-public class ExchangerPipeLineExceptionManualTest {
+public class ExchangerPipeLineCancelManualTest {
     private static final int BUFFER_SIZE = 100;
+    private boolean running = true;
 
     @Test
     public void givenData_whenPassedThrough_thenCorrect() throws InterruptedException, ExecutionException {
@@ -29,21 +36,18 @@ public class ExchangerPipeLineExceptionManualTest {
 
         Runnable reader = () -> {
             Queue<String> readerBuffer = new ConcurrentLinkedQueue<>();
-            int no = 1;
             try {
                 do {
                     while (readerBuffer.size() < BUFFER_SIZE) {
                         readerBuffer.add(UUID.randomUUID().toString());
                     }
-                    log.info("第 {} 次，共 {} 条 数据正在发送...", no, readerBuffer.size());
+                    log.info("[{}] 数据正在发送...", System.currentTimeMillis());
                     readerBuffer = readerExchanger.exchange(readerBuffer);
 
-                    no++;
-                    TimeUnit.MILLISECONDS.sleep(150);
-                } while (true);
-
+                    workTime(150);
+                } while (running);
+                log.info("reader canceled");
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
                 log.info("reader interrupted");
             }
         };
@@ -58,61 +62,49 @@ public class ExchangerPipeLineExceptionManualTest {
                         writerBuffer.add(processorBuffer.poll());
                     }
                     writerBuffer = writerExchanger.exchange(writerBuffer);
-                } while (true);
+
+                } while (running);
+                log.info("processor canceled");
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
                 log.info("processor interrupted");
             }
         };
 
         Runnable writer = () -> {
             Queue<String> writerBuffer = new ConcurrentLinkedQueue<>();
-            int no = 1;
             try {
                 do {
                     writerBuffer = writerExchanger.exchange(writerBuffer);
-                    log.info("第 {} 次，共 {} 条 数据正在处理...", no, writerBuffer.size());
+                    log.info("[{}] 正在处理数据...", System.currentTimeMillis());
                     while (!writerBuffer.isEmpty()) {
                         writerBuffer.poll();
                     }
 
-                    no++;
-                    TimeUnit.MILLISECONDS.sleep(250);
-                } while (true);
+                    workTime(150);
+                } while (running);
+
+                log.info("writer canceled");
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
                 log.info("writer interrupted");
             }
 
         };
 
-        CompletableFuture<Void> allFuture = waitForAllButAbortOnFirstException(runAsync(reader), runAsync(processor), runAsync(writer));
-        
-        // 5秒后停止任务
-        new Thread(() -> {
-            try {
-                TimeUnit.SECONDS.sleep(5);
-                allFuture.completeExceptionally(new RuntimeException("手工停止任务"));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }).start();
+        CompletableFuture<Void> all = CompletableFuture.allOf(runAsync(reader), runAsync(processor), runAsync(writer));
+        all.whenComplete((a, t) -> {
+            running = false;
+            log.info("Stop");
+        });
 
-        allFuture.get();
+        TimeUnit.SECONDS.sleep(5);
+        all.cancel(false);
+        TimeUnit.SECONDS.sleep(1);
     }
 
-    /**
-     * 当其中有有一个异常时，任务全部停止
-     * @param futures
-     * @return
-     */
-    public CompletableFuture<Void> waitForAllButAbortOnFirstException(CompletableFuture<?>... futures) {
-        CompletableFuture<Void> allWithFailFast = CompletableFuture.allOf(futures);
-        Stream.of(futures).forEach(f -> f.exceptionally(e -> {
-            allWithFailFast.completeExceptionally(e);
-            return null;
-        }));
+    private void workTime(long worktime) {
+        final long now = System.currentTimeMillis();
+        while (System.currentTimeMillis() <= now + worktime) {
 
-        return allWithFailFast;
+        }
     }
 }

@@ -23,6 +23,9 @@ import org.junit.jupiter.api.Test;
  * 等操作都是线程安全的。迭代器是弱一致性的，升序迭代器比降序的快。该map的size方法不是常量时间开销，
  * 需要遍历，所以这个值在并发的时候可能不准。该map也不允许空键或值
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class ConcurrentSkipListMapTest {
     @Test

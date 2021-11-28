@@ -4,6 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 线程唤醒
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class ThreadWakingUpExample {
     private static final ThreadAnthor b = new ThreadAnthor();

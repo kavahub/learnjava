@@ -3,7 +3,13 @@ package io.github.kavahub.learnjava.fairnessboundedblockingqueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 有限的阻塞队列
+ * 
+ * <p>
  * 3 锁拆分优化
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class FairnessBoundedBlockingQueueV3<T> implements Queue<T> {
     // 当前大小

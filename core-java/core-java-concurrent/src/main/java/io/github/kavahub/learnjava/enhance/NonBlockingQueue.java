@@ -5,7 +5,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * 非阻塞队列，先进先出
+ * 
+ * 非阻塞队列， 先进先出，无限容，线程安全
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class NonBlockingQueue<T> {
     private final AtomicReference<Node<T>> head, tail;

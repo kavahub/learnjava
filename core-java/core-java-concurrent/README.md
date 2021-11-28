@@ -8,3 +8,4 @@ Java 多线程
 - [使用JAVA CompletableFuture的20例子](https://segmentfault.com/a/1190000013452165)
 - [LinkedBlockingQueue和ConcurrentLinkedQueue的选择问题](https://www.jianshu.com/p/bca60b87a5ae)
 - [并发编程实践之公平有界阻塞队列实现](https://developer.aliyun.com/article/800322?spm=a2c6h.12873581.0.0.27db6446f79yf5&groupCode=alitech)
+- [Java并发编程之 ThreadLocal](http://www.philpy.top/articles/140)

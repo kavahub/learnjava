@@ -6,6 +6,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 
+ * 任务定时器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PriorityJobScheduler {
     private ExecutorService priorityJobPoolExecutor;
     private ExecutorService priorityJobScheduler = Executors.newSingleThreadExecutor();

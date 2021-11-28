@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.counter;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+/**
+ * 
+ * {@link ReentrantReadWriteLock} 锁计数器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ReentrantReadWriteLockCounter {
     private int counter;
     private final ReentrantReadWriteLock rwLock = new ReentrantReadWriteLock();

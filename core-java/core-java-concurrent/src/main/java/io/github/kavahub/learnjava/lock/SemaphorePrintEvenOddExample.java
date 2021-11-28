@@ -3,7 +3,11 @@ package io.github.kavahub.learnjava.lock;
 import java.util.concurrent.Semaphore;
 
 /**
+ * 
  * {@link Semaphore} 示例。实现两个线程交替执行
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class SemaphorePrintEvenOddExample {
     public static void main(String[] args) {

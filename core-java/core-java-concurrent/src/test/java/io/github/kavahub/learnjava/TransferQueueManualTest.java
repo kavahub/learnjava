@@ -14,16 +14,24 @@ import org.junit.jupiter.api.Test;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * {@link TransferQueue} 继承了BlockingQueue（BlockingQueue又继承了Queue）并扩展了一些新方法。BlockingQueue（和Queue）是Java
+ * 
+ * {@link TransferQueue} 继承了 {@code BlockingQueue}
+ * 并扩展了一些新方法。{@code BlockingQueue} 是Java
  * 5中加入的接口， 它是指这样的一个队列：当生产者向队列添加元素但队列已满时，生产者会被阻塞；当消费者从队列移除元素但队列为空时，消费者会被阻塞。
  * 
- * TransferQueue则更进一步，生产者会一直阻塞直到所添加到队列的元素被某一个消费者所消费（不仅仅是添加到队列里就完事）。
+ * <p>
+ * {@code TransferQueue} 则更进一步，生产者会一直阻塞直到所添加到队列的元素被某一个消费者所消费（不仅仅是添加到队列里就完事）。
  * 新添加的transfer方法用来实现这种约束。顾名思义，阻塞就是发生在元素从一个线程transfer到另一个线程的过程中，
  * 它有效地实现了元素在线程之间的传递（以建立Java内存模型中的happens-before关系的方式）。
  * 
- * TransferQueue还包括了其他的一些方法：两个tryTransfer方法，一个是非阻塞的，
- * 另一个带有timeout参数设置超时时间的。还有两个辅助方法hasWaitingConsumer()和getWaitingConsumerCount()。
+ * <p>
+ * {@code TransferQueue} 还包括了其他的一些方法：两个tryTransfer方法，一个是非阻塞的，
+ * 另一个带有timeout参数设置超时时间的。还有两个辅助方法 {@code TransferQueue#hasWaitingConsumer()} 和
+ * {@code TransferQueue#getWaitingConsumerCount()} 。
  * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class TransferQueueManualTest {

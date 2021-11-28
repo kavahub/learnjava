@@ -6,6 +6,13 @@ import java.util.concurrent.ExecutionException;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link ThreadLocal} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadLocalTest {
     @Test
     public void givenThreadThatStoresContextInAMap_whenStartThread_thenShouldSetContextForBothUsers() throws ExecutionException, InterruptedException {

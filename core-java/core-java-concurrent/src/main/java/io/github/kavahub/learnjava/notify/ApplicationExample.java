@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava.notify;
 
+/**
+ * 
+ * 程序入口
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ApplicationExample {
     public static void main(String[] args) {
         Data data = new Data();

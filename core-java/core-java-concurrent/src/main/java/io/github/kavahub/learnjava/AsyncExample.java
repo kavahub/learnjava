@@ -19,7 +19,11 @@ import com.jcabi.aspects.Async;
 import com.jcabi.aspects.Loggable;
 
 /**
+ * 
  * 异步示例：使用线程执行计算
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class AsyncExample {
     static {

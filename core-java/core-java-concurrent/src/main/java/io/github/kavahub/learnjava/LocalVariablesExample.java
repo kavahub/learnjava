@@ -5,6 +5,13 @@ import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 多线程共享本地变量
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class LocalVariablesExample {
     private int field;

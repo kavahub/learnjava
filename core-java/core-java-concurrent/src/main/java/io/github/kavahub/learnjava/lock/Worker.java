@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.lock;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * 
+ * 任务
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class Worker implements Runnable {
     private final List<String> outputScraper;
     private final CountDownLatch countDownLatch;

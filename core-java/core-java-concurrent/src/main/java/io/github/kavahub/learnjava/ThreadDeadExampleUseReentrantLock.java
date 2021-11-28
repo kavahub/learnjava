@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 
+ * 线程死锁，使用 {@code ReentrantLock} 锁
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadDeadExampleUseReentrantLock {
     private Lock lock1 = new ReentrantLock(true);
     private Lock lock2 = new ReentrantLock(true);

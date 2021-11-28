@@ -5,13 +5,17 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * LinkedBlockingQueue是一个单向链表实现的阻塞队列。
+ * 
+ * {@link LinkedBlockingQueue} 是一个单向链表实现的阻塞队列
  * 
  * <p>
  * 该队列按FIFO（先进先出）排序元素，新元素插入到队列的尾部，并且队列获取操作会获得位于队列头部的元素。
  * 链接队列的吞吐量通常要高于基于数组的队列，但是在大多数并发应用程序中，其可预知的性能要低。
- * 此外，LinkedBlockingQueue还是可选容量的(防止过度膨胀)，即可以指定队列的容量。如果不指定，
- * 默认容量大小等于Integer.MAX_VALUE。
+ * 此外，{@code LinkedBlockingQueue} 还是可选容量的(防止过度膨胀)，即可以指定队列的容量。如果不指定，
+ * 默认容量大小等于 {@code Integer#MAX_VALUE}。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class LinkedBlockingQueueExample {
     public static void main(String[] args) {

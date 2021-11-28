@@ -1,8 +1,12 @@
 package io.github.kavahub.learnjava;
 
+
 /**
- * 同步方法实践
  * 
+ * 同步 {@code synchronized} 实践
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @SuppressWarnings("unused")
 public class SynchronizationPractice {

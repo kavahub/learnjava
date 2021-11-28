@@ -2,6 +2,9 @@ package io.github.kavahub.learnjava.tester;
 
 /**
  * 计数器，非线程安全的
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MyCounter {
     private int count;

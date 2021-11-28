@@ -6,6 +6,13 @@ import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 
+ * {@link SimpleDateFormat} 是非线程安全的
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SimpleDateFormatThreadUnsafetyExample {
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 

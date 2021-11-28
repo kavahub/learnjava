@@ -11,6 +11,13 @@ import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 
+/**
+ * 
+ * tempus-fugit 框架测试
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MyCounterTempusFugitManualTest {
     @Rule
 	public ConcurrentRule concurrently = new ConcurrentRule();

@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava.lifecycle;
 
+/**
+ * 
+ * 线程状态 {@link Thread.State#WAITING} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class WaitingStateExample implements Runnable {
     public static Thread t1;
 

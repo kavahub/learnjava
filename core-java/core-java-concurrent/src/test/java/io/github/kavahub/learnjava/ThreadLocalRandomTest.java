@@ -7,6 +7,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link ThreadLocalRandom} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadLocalRandomTest {
     @Test
     public void givenUsingThreadLocalRandom_whenGeneratingRandomIntBounded_thenCorrect() {

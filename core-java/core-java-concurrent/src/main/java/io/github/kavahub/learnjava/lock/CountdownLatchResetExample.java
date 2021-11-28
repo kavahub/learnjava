@@ -8,7 +8,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 
  * {@link CountdownLatch} 不能被重置，只能用一次
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class CountdownLatchResetExample {

@@ -19,9 +19,14 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * 多数测试返回值的数量是不相等的，除{@see CounterThreadTest#givenReentrantLockCounter()}外，
- * 这是因为XXXXCallable类中的call方法中的代码没有同步，
+ * 多线程测试
+ * 
+ * <p>
+ * 多数测试返回值的数量是不相等的, 这是因为XXXXCallable类中的call方法中的代码没有同步，
  * 更好的方式是加1后返回值，参考{@see ReentrantLockCounter#incrementCounter()}。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CounterThreadTest {
     private final static int THREADS = 1000;

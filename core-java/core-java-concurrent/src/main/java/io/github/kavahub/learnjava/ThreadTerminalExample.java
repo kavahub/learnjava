@@ -7,6 +7,13 @@ import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 线程执行中断
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class ThreadTerminalExample {
     public static void main(String[] args) {

@@ -22,6 +22,22 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link RejectedExecutionHandler} 示例
+ *
+ * <p>
+ * 支持自定义策略。已支持的有：
+ * <ul>
+ * <li> AbortPolicy（默认）：直接抛出RejectedExecutionException异常阻止系统正常运行 </li>
+ * <li> CallerRunsPolicy: 在任务被拒绝添加后，会在调用execute方法的的线程来执行被拒绝的任务 </li>
+ * <li> DiscardPolicy: 拒绝任务的处理程序，以静默方式丢弃被拒绝的任务  </li>
+ * <li> DiscardOldestPolicy: 抛弃进入队列最早(队首)的那个任务，然后尝试把这次拒绝的任务放入队列（队尾） </li>
+ * </ul>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadPoolExecutorPolicyTest {
     private ThreadPoolExecutor executor;
 
@@ -35,18 +51,18 @@ public class ThreadPoolExecutorPolicyTest {
     @Test
     public void givenAbortPolicy_WhenSaturated_ThenShouldThrowRejectedExecutionException() {
         // 只能运行一个线程，当任务队列满时，执行定义策略
-        // AbortPolicy（默认）：直接抛出RejectedExecutionException异常阻止系统正常运行。
         // SynchronousQueue是一种阻塞队列，其中每个 put 必须等待一个 take，反之亦然
         executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new SynchronousQueue<>(), new AbortPolicy());
         executor.execute(() -> waitFor(250));
 
-        assertThatThrownBy(() -> executor.execute(() -> System.out.println("Will be rejected"))).isInstanceOf(RejectedExecutionException.class);
+        assertThatThrownBy(() -> executor.execute(() -> System.out.println("Will be rejected")))
+                .isInstanceOf(RejectedExecutionException.class);
     }
 
     @Test
     public void givenCallerRunsPolicy_WhenSaturated_ThenTheCallerThreadRunsTheTask() {
-        // CallerRunsPolicy在任务被拒绝添加后，会在调用execute方法的的线程来执行被拒绝的任务。
-        executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new SynchronousQueue<>(), new CallerRunsPolicy());
+        executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new SynchronousQueue<>(),
+                new CallerRunsPolicy());
         executor.execute(() -> waitFor(250));
 
         long startTime = System.currentTimeMillis();
@@ -58,8 +74,8 @@ public class ThreadPoolExecutorPolicyTest {
 
     @Test
     public void givenDiscardPolicy_WhenSaturated_ThenExecutorDiscardsTheNewTask() throws InterruptedException {
-        // DiscardPolicy拒绝任务的处理程序，以静默方式丢弃被拒绝的任务
-        executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new SynchronousQueue<>(), new DiscardPolicy());
+        executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new SynchronousQueue<>(),
+                new DiscardPolicy());
         executor.execute(() -> waitFor(100));
 
         BlockingQueue<String> queue = new LinkedBlockingDeque<>();
@@ -70,15 +86,14 @@ public class ThreadPoolExecutorPolicyTest {
 
     @Test
     public void givenDiscardOldestPolicy_WhenSaturated_ThenExecutorDiscardsTheOldestTask() throws InterruptedException {
-        // DiscardOldestPolicy抛弃进入队列最早(队首)的那个任务，然后尝试把这次拒绝的任务放入队列（队尾）。
-        executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(2), new DiscardOldestPolicy());
+        executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(2),
+                new DiscardOldestPolicy());
         executor.execute(() -> waitFor(100));
 
         BlockingQueue<String> queue = new LinkedBlockingDeque<>();
         executor.execute(() -> queue.offer("Third"));
         executor.execute(() -> queue.offer("Second"));
         executor.execute(() -> queue.offer("First"));
-        
 
         waitFor(150);
         assertThat(queue.poll(200, TimeUnit.MILLISECONDS)).isEqualTo("Second");
@@ -91,7 +106,8 @@ public class ThreadPoolExecutorPolicyTest {
 
     @Test
     public void givenGrowPolicy_WhenSaturated_ThenExecutorIncreaseTheMaxPoolSize() throws InterruptedException {
-        executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(2), new GrowPolicy());
+        executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(2),
+                new GrowPolicy());
         executor.execute(() -> waitFor(100));
 
         BlockingQueue<String> queue = new LinkedBlockingDeque<>();
@@ -111,7 +127,8 @@ public class ThreadPoolExecutorPolicyTest {
 
     @Test
     public void givenExecutorIsTerminated_WhenSubmittedNewTask_ThenTheSaturationPolicyApplies() {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS,
+                new LinkedBlockingQueue<>());
         executor.shutdownNow();
 
         assertThatThrownBy(() -> executor.execute(() -> {
@@ -120,7 +137,8 @@ public class ThreadPoolExecutorPolicyTest {
 
     @Test
     public void givenExecutorIsTerminating_WhenSubmittedNewTask_ThenTheSaturationPolicyApplies() {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS,
+                new LinkedBlockingQueue<>());
         executor.execute(() -> waitFor(100));
         executor.shutdown();
 
@@ -153,5 +171,5 @@ public class ThreadPoolExecutorPolicyTest {
             Thread.sleep(millis);
         } catch (InterruptedException ignored) {
         }
-    } 
+    }
 }

@@ -6,6 +6,13 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Phaser;
 
+/**
+ * 
+ * 多个线程同时执行
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadsStartAtSameTimeExample {
     public static void main(String[] args) throws BrokenBarrierException, InterruptedException {
         usingCountDownLatch();

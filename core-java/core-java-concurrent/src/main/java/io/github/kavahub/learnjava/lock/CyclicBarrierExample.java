@@ -7,6 +7,13 @@ import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
+/**
+ * 
+ * {@link CyclicBarrier} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CyclicBarrierExample {
     private CyclicBarrier cyclicBarrier;
     private List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());

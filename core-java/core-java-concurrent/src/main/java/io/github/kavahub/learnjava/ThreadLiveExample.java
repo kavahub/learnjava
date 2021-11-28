@@ -5,7 +5,11 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 虽然线程活动，但无法执行完成
+ * 
+ * 使用锁超时解决死锁
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ThreadLiveExample {
     private Lock lock1 = new ReentrantLock(true);

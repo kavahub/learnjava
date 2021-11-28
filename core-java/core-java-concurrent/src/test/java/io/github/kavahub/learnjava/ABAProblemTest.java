@@ -10,6 +10,18 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * ABA 问题
+ * 
+ * <p>
+ * 描述ABA: 假设两个线程T1和T2访问同一个变量V，当T1访问变量V时，读取到V的值为A；此时线程T1被抢占了，T2开始执行，
+ * T2先将变量V的值从A变成了B，然后又将变量V从B变回了A；此时T1又抢占了主动权，继续执行，它发现变量V的值还是A，以为没有发生变化，
+ * 所以就继续执行了。这个过程中，变量V从A变为B，再由B变为A就被形象地称为ABA问题了
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ABAProblemTest {
     private Account account;
 

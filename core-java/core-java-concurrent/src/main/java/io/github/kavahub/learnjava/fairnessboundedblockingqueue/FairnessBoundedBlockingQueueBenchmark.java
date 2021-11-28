@@ -21,12 +21,12 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * 性能测试结果如下：
  * 
  * <pre>
- * Benchmark                                                     Mode  Cnt     Score     Error  Units
- * FairnessBoundedBlockingQueueBenchmarker.V2                   thrpt   10  3926.104 ± 869.521  ops/s
- * FairnessBoundedBlockingQueueBenchmarker.V3                   thrpt   10  3531.130 ± 278.957  ops/s
- * FairnessBoundedBlockingQueueBenchmarker.V4                   thrpt   10  3624.021 ±  89.659  ops/s
- * FairnessBoundedBlockingQueueBenchmarker.linkedBlockingQueue  thrpt   10  5373.745 ±  82.383  ops/s
- * FairnessBoundedBlockingQueueBenchmarker.synchronousQueue     thrpt   10  5112.596 ± 334.031  ops/s
+ * Benchmark                                                  Mode  Cnt     Score     Error  Units
+ * FairnessBoundedBlockingQueueBenchmark.V2                   thrpt   10  3926.104 ± 869.521  ops/s
+ * FairnessBoundedBlockingQueueBenchmark.V3                   thrpt   10  3531.130 ± 278.957  ops/s
+ * FairnessBoundedBlockingQueueBenchmark.V4                   thrpt   10  3624.021 ±  89.659  ops/s
+ * FairnessBoundedBlockingQueueBenchmark.linkedBlockingQueue  thrpt   10  5373.745 ±  82.383  ops/s
+ * FairnessBoundedBlockingQueueBenchmark.synchronousQueue     thrpt   10  5112.596 ± 334.031  ops/s
  * </pre>
  * 
  */
@@ -36,12 +36,12 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @Warmup(iterations = 1)
 @Fork(1)
 @State(Scope.Thread)
-public class FairnessBoundedBlockingQueueBenchmarker {
+public class FairnessBoundedBlockingQueueBenchmark {
     private final static int queueSize = 10;
     private final static int loopCount = queueSize * 10;
 
     public static void main(String[] args) throws Exception {
-        Options opts = new OptionsBuilder().include(FairnessBoundedBlockingQueueBenchmarker.class.getSimpleName())
+        Options opts = new OptionsBuilder().include(FairnessBoundedBlockingQueueBenchmark.class.getSimpleName())
         .shouldFailOnError(true).build();
 
         new Runner(opts).run();

@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.lifecycle;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 线程状态 {@link Thread.State#BLOCKED} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class BlockedStateExample{
     public static void main(String[] args) throws InterruptedException {

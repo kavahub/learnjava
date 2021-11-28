@@ -52,7 +52,11 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * 测试结果如下：
  * 
  * <pre>
- * 
+ * Benchmark                                                Mode  Cnt    Score    Error  Units
+ * ConcurrentAccessBenchmark.singleLockConcurrentHashMap   thrpt   10  126.930 ±  6.549  ops/s
+ * ConcurrentAccessBenchmark.singleLockHashMap             thrpt   10  132.946 ± 12.524  ops/s
+ * ConcurrentAccessBenchmark.stripedLockConcurrentHashMap  thrpt   10  136.093 ±  4.063  ops/s
+ * ConcurrentAccessBenchmark.stripedLockHashMap            thrpt   10  138.853 ±  7.774  ops/s
  * </pre>
  * 
  * <p>
@@ -60,12 +64,12 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * 
  * <ul>
  * <li>锁代码块逻辑太简单，体现不了锁的优势</li>
- * 
  * <li>添加了workTime方法后，性能测试正常</li>
- * 
  * <li>调整workTime方法中的worktime的值，观察性能变化</li>
  * </ul>
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
  */
 @BenchmarkMode(Mode.Throughput)
@@ -82,7 +86,11 @@ public class ConcurrentAccessBenchmark {
     StripedLock stripedLock = new StripedLock(BUCKETS);
 
     public static void main(String[] args) throws Exception {
-        Options opts = new OptionsBuilder().include(ConcurrentAccessBenchmark.class.getSimpleName()).build();
+        Options opts = new OptionsBuilder()
+        .include(ConcurrentAccessBenchmark.class.getSimpleName())
+        .shouldFailOnError(true)
+        .threads(4)
+        .build();
 
         new Runner(opts).run();
     }
@@ -149,15 +157,11 @@ public class ConcurrentAccessBenchmark {
      * <ul>
      * <li>对于Synchronized来说，它是java语言的关键字，是原生语法层面的互斥，需要jvm实现。而ReentrantLock它是JDK1.5之后提供的API层面的互斥锁，
      * 需要lock()和unlock()方法配合try/finally语句块来完成。</li>
-     * 
      * <li>synchronized是不可中断类型的锁，除非加锁的代码中出现异常或正常执行完成；ReentrantLock则可以中断，可通过trylock(long
      * timeout,TimeUnit unit)设置超时方法或者将lockInterruptibly()放到代码块中，
      * 调用interrupt方法进行中断</li>
-     * 
      * <li>synchronized为非公平锁， ReentrantLock则即可以选公平锁也可以选非公平锁</li>
-     * 
      * <li>synchronized不能绑定；ReentrantLock通过绑定Condition结合await()/singal()方法实现线程的精确唤醒，而不是像synchronized通过Object类的wait()/notify()/notifyAll()方法要么随机唤醒一个线程要么唤醒全部线程</li>
-     * 
      * <li>synchronzied锁的是对象，锁是保存在对象头里面的，根据对象头数据来标识是否有线程获得锁/争抢锁；ReentrantLock锁的是线程，
      * 根据进入的线程和int类型的state标识锁的获得/争抢</li>
      * </ul>
@@ -199,9 +203,9 @@ public class ConcurrentAccessBenchmark {
      * Striped 实现细粒度锁是基于它自己在 Striped Javadoc 中提出的一个真理，简单说来就以下三条
      * 
      * <ul>
-     * <li> 相同的 key (hashCode()/equals()) 时, striped.get(key) 总会得到相同的锁实例  </li>
-     * <li> 但是不同的 key 却可能调用striped.get(key) 获得相同的锁实例  </li>
-     * <li> 基于上一条，预建更多的锁实例数量能减低锁碰撞的可能性 </li>
+     * <li>相同的 key (hashCode()/equals()) 时, striped.get(key) 总会得到相同的锁实例</li>
+     * <li>但是不同的 key 却可能调用striped.get(key) 获得相同的锁实例</li>
+     * <li>基于上一条，预建更多的锁实例数量能减低锁碰撞的可能性</li>
      * </ul>
      */
     public class StripedLock extends ConcurrentAccessExperiment {

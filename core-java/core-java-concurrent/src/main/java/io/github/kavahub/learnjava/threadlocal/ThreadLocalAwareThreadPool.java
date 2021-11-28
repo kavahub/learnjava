@@ -6,6 +6,13 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 
+ * {@link ThreadLocal} 适配线程池
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadLocalAwareThreadPool extends ThreadPoolExecutor {
 
     public ThreadLocalAwareThreadPool(int corePoolSize,

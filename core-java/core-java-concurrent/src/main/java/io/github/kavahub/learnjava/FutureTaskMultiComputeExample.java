@@ -11,7 +11,9 @@ import java.util.concurrent.FutureTask;
 /**
  * 
  * {@link FutureTask} 执行多任务计算
- * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class FutureTaskMultiComputeExample {
     public static void main(String[] args) {

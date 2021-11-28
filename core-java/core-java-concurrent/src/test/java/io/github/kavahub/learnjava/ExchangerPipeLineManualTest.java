@@ -14,10 +14,14 @@ import org.junit.jupiter.api.Test;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 
  * {@link Exchanger} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
-public class ExchangerPipeLineInterruptManualTest {
+public class ExchangerPipeLineManualTest {
     private static final int BUFFER_SIZE = 100;
 
     @Test
@@ -26,24 +30,19 @@ public class ExchangerPipeLineInterruptManualTest {
         Exchanger<Queue<String>> writerExchanger = new Exchanger<>();
 
         Runnable reader = () -> {
-                // ConcurrentLinkedQueue是线程安全的队列，它适用于“高并发”的场景。它是一个基于链接节点的无界线程安全队列，按照
-                // FIFO（先进先出）原则对元素进行排序。队列元素中不可以放置null元素
                 Queue<String> readerBuffer = new ConcurrentLinkedQueue<>();
-                int no = 1;
                 try {
                     do {
                         while (readerBuffer.size() < BUFFER_SIZE) {
                             readerBuffer.add(UUID.randomUUID().toString());
                         }
-                        log.info("第 {} 次，共 {} 条 数据正在发送...", no, readerBuffer.size());
+                        log.info("[{}] 数据正在发送...", System.currentTimeMillis());
                         readerBuffer = readerExchanger.exchange(readerBuffer);
 
-                        no++;
-                        TimeUnit.MILLISECONDS.sleep(150);
+                        workTime(150);
                     } while (true);
       
                 } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
                     log.info("reader interrupted");
                 }
         };
@@ -58,31 +57,28 @@ public class ExchangerPipeLineInterruptManualTest {
                             writerBuffer.add(processorBuffer.poll());
                         }
                         writerBuffer = writerExchanger.exchange(writerBuffer);
+
                     } while (true);
 
                 } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
                     log.info("processor interrupted");
                 }
         };
 
         Runnable writer = () -> {
                 Queue<String> writerBuffer = new ConcurrentLinkedQueue<>();
-                int no = 1;
                 try {
                     do {
                         writerBuffer = writerExchanger.exchange(writerBuffer);
-                        log.info("第 {} 次，共 {} 条 数据正在处理...", no, writerBuffer.size());
+                        log.info("[{}] 正在处理数据...", System.currentTimeMillis());
                         while (!writerBuffer.isEmpty()) {
                             writerBuffer.poll();
                         }
 
-                        no++;
-                        TimeUnit.MILLISECONDS.sleep(250);
+                        workTime(150);
                     } while (true);
 
                 } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
                     log.info("writer interrupted");
                 }
 
@@ -92,13 +88,24 @@ public class ExchangerPipeLineInterruptManualTest {
         es.submit(reader);
         es.submit(processor);
         es.submit(writer);
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(2);
 
+        es.shutdown();
+        es.awaitTermination(2, TimeUnit.SECONDS);
         es.shutdownNow();
 
-        TimeUnit.SECONDS.sleep(5);
 
+        TimeUnit.SECONDS.sleep(10);
     }
 
+    /**
+     * 非阻塞等待，避免日志输出太快，导致IDE无响应
+     * @param worktime
+     */
+    private void workTime(long worktime) {
+        final long now = System.currentTimeMillis();
+        while (System.currentTimeMillis() <= now + worktime) {
 
+        }
+    }
 }

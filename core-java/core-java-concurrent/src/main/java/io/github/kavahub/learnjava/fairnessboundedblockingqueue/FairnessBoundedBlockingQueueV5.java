@@ -4,7 +4,13 @@ import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 有限的阻塞队列
+ * 
+ * <p>
  * 6 解决公平性
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class FairnessBoundedBlockingQueueV5<T> implements Queue<T> {
     // 当前大小

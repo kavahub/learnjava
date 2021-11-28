@@ -4,6 +4,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 发送器，处理发送数据
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class Sender implements Runnable {
     private Data data;
@@ -26,7 +33,7 @@ public class Sender implements Runnable {
             
             //Thread.sleep() to mimic heavy server-side processing
             try {
-                Thread.sleep(ThreadLocalRandom.current().nextInt(1000, 5000));
+                Thread.sleep(ThreadLocalRandom.current().nextInt(0, 500));
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt(); 
                 System.out.println("Thread Interrupted");

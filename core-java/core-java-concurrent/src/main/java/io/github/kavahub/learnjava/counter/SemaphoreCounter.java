@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.counter;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 
+ * {@link Semaphore} 计数器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SemaphoreCounter {
     private final Semaphore lock;
     private int count;

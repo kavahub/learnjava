@@ -8,6 +8,7 @@ import static org.hamcrest.Matchers.is;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -19,9 +20,12 @@ import org.junit.jupiter.api.Test;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 
  * {@link LinkedBlockingQueue} 内部由单链表实现，只能从head取元素，从tail添加元素, 先进先出的顺序。
- * 添加元素和获取元素都有独立的锁，也就是说LinkedBlockingQueue是读写分离的，
- * 读写操作可以并行执行。LinkedBlockingQueue采用可重入锁(ReentrantLock)来保证在并发情况下的线程安全。
+ * 添加元素和获取元素都有独立的锁，也就是说是读写分离的，读写操作可以并行执行
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class LinkedBlockingQueueManualTest {
@@ -38,20 +42,21 @@ public class LinkedBlockingQueueManualTest {
         LinkedBlockingQueue<Integer> linkedBlockingQueue = new LinkedBlockingQueue<>();
         executorService.submit(() -> {
             try {
-                // 从队列中消费数据, 当队列为空是，线程阻塞
+                // 从队列中消费数据, 当队列为空时，线程阻塞
                 linkedBlockingQueue.take();
                 log.info("正在消费数据...");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         });
-        TimeUnit.SECONDS.sleep(1);
-        executorService.awaitTermination(1, TimeUnit.SECONDS);
+
         executorService.shutdown();
+        executorService.awaitTermination(1, TimeUnit.SECONDS);
     }
 
     @Test
-    public void givenProducerPutsElementInQueue_WhenConsumerAccessQueue_ThenItRetrieve() {
+    public void givenProducerPutsElementInQueue_WhenConsumerAccessQueue_ThenItRetrieve()
+            throws InterruptedException, ExecutionException {
         int element = 10;
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         LinkedBlockingQueue<Integer> linkedBlockingQueue = new LinkedBlockingQueue<>();
@@ -79,14 +84,10 @@ public class LinkedBlockingQueueManualTest {
 
         executorService.submit(putTask);
         Future<Integer> returnElement = executorService.submit(takeTask);
-        try {
-            TimeUnit.SECONDS.sleep(1);
-            assertThat(returnElement.get().intValue(), is(equalTo(element)));
-            executorService.awaitTermination(1, TimeUnit.SECONDS);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        assertThat(returnElement.get().intValue(), is(equalTo(element)));
 
         executorService.shutdown();
+        executorService.awaitTermination(1, TimeUnit.SECONDS);
     }
 }

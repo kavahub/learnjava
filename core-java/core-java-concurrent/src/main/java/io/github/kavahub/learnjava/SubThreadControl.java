@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * 
+ * 子线程控制，自己创建 {@code Thread} 运行自己
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SubThreadControl implements Runnable {
 
     private Thread worker;
@@ -34,6 +41,7 @@ public class SubThreadControl implements Runnable {
         return !isRunning();
     }
 
+    @Override
     public void run() {
         if (!running.get()) {
             throw new IllegalStateException("not running");

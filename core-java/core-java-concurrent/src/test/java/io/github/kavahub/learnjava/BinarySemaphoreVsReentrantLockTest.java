@@ -7,6 +7,13 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Semaphore} 与 {@link ReentrantLock} 比较
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class BinarySemaphoreVsReentrantLockTest {
     @Test
     public void givenBinarySemaphore_whenAcquireAndRelease_thenCheckAvailablePermits() throws InterruptedException {

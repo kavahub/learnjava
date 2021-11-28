@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.fairnessboundedblockingqueue;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link FairnessBoundedBlockingQueueV5} 测试
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Disabled("V5 存在问题，测试不能通过")
 public class FairnessBoundedBlockingQueueV5Test extends AbstractTestFairnessBoundedBlockingQueue {
 

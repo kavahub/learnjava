@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.threadlocal;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * {@link ThreadLocal} 实现上下文
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class ThreadLocalWithContext implements Runnable {   
     private static final ThreadLocal<Context> context = new ThreadLocal<>();

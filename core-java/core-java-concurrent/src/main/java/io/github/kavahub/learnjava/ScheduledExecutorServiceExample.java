@@ -10,7 +10,11 @@ import java.util.function.Consumer;
  * 也就是说,任务是并发执行,互不影响。
  * 
  * <p>
- * 需要注意,只有当调度任务来的时候,ScheduledExecutorService才会真正启动一个线程,其余时间ScheduledExecutorService都是出于轮询任务的状态。
+ * 需要注意,只有当调度任务来的时候,{@code ScheduledExecutorService} 才会真正启动一个线程,其余时间都是出于轮询任务的状态。
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class ScheduledExecutorServiceExample {
     private void execute() {

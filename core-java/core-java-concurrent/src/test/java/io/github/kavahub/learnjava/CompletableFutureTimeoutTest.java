@@ -13,10 +13,14 @@ import org.junit.jupiter.api.Test;
 
 /**
  * {@link CompletableFuture#orTimeout(long, TimeUnit)} 调用上述方法之后，如果未在指定的超时内完成，
- * 将来会抛出 {@link ExecutionException} 异常。
+ * 将来会抛出 {@code ExecutionException} 异常。
  * 
  * <p>
- * {@link CompletableFuture#completeOnTimeout(Object, long, TimeUnit)}达到超时后返回默认值
+ * {@code CompletableFuture#completeOnTimeout(Object, long, TimeUnit)}达到超时后返回默认值
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class CompletableFutureTimeoutTest {
     @Test

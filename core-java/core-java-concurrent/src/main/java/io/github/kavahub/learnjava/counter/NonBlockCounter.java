@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.counter;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 
+ * 非阻塞计数器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class NonBlockCounter {
     private final AtomicInteger counter = new AtomicInteger(0);
 

@@ -3,7 +3,11 @@ package io.github.kavahub.learnjava.enhance;
 import java.util.concurrent.ThreadFactory;
 
 /**
- * 自定义 {@link ThreadFactory}
+ * 
+ * {@link ThreadFactory} 自定义 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CustomThreadFactory implements ThreadFactory {
     private int threadId;

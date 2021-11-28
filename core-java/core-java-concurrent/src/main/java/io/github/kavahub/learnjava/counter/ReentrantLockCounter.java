@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.counter;
 
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 
+ * {@link ReentrantLock} 计数器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ReentrantLockCounter {
     private int counter;
     private final ReentrantLock reLock = new ReentrantLock(true);

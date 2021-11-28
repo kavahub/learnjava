@@ -2,8 +2,13 @@ package io.github.kavahub.learnjava.lock;
 
 import java.util.concurrent.CountDownLatch;
 
+
 /**
+ * 
  * {@link CountDownLatch} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CountdownLatchCountExample {
     private int count;

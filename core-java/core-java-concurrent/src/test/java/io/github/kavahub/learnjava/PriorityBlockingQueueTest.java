@@ -12,11 +12,16 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+
 /**
+ * 
  * {@link PriorityBlockingQueue}
- * 是一个无界有序的阻塞队列。同样的该队列不支持插入null元素，同时不支持插入非comparable的对象。
- * 它的迭代器并不保证队列保持任何特定的顺序，如果想要顺序遍历，考虑使用Arrays.sort(pq.toArray())。该类不保证同等优先级的元素顺序，
- * 如果你想要强制顺序，就需要考虑自定义顺序或者是Comparator使用第二个比较属性
+ * 是一个无界有序的阻塞队列。同样的该队列不支持插入null元素，同时不支持插入非 {@code Comparable} 的对象。
+ * 它的迭代器并不保证队列保持任何特定的顺序，如果想要顺序遍历，考虑使用 {@code Arrays.sort(pq.toArray())} 。
+ * 该类不保证同等优先级的元素顺序，如果你想要强制顺序，就需要考虑自定义顺序或者是  {@code Comparator} 使用第二个比较属性
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class PriorityBlockingQueueTest {

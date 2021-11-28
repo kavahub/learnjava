@@ -8,19 +8,24 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import lombok.extern.slf4j.Slf4j;
 
+
 /**
- * 使用ReentrantLock和Condition实现阻塞栈
+ * 
+ * 阻塞栈
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
-public class ReentrantLockWithConditionExample {
-    private Stack<String> stack = new Stack<>();
+public class BlockingStackUsingRentrantLockCondition<T> {
+    private Stack<T> stack = new Stack<>();
     private static final int CAPACITY = 5;
 
     private ReentrantLock lock = new ReentrantLock();
     private Condition stackEmptyCondition = lock.newCondition();
     private Condition stackFullCondition = lock.newCondition();
 
-    private void pushToStack(String item) throws InterruptedException {
+    private void pushToStack(T item) throws InterruptedException {
         try {
             lock.lock();
             if (stack.size() == CAPACITY) {
@@ -36,7 +41,7 @@ public class ReentrantLockWithConditionExample {
 
     }
 
-    private String popFromStack() throws InterruptedException {
+    private T popFromStack() throws InterruptedException {
         try {
             lock.lock();
             if (stack.size() == 0) {
@@ -52,7 +57,7 @@ public class ReentrantLockWithConditionExample {
 
     public static void main(String[] args) {
         final int threadCount = 4;
-        ReentrantLockWithConditionExample object = new ReentrantLockWithConditionExample();
+        BlockingStackUsingRentrantLockCondition<String> object = new BlockingStackUsingRentrantLockCondition<>();
         final ExecutorService service = Executors.newFixedThreadPool(threadCount);
 
         Runnable push = () -> {

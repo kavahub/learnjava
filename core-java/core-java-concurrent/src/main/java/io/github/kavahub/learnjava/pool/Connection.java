@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.pool;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 
+ * 连接
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class Connection {
     private String name;
 

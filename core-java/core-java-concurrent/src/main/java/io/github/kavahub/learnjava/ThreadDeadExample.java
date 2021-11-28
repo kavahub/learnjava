@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava;
 
+/**
+ * 
+ * 线程死锁示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadDeadExample {
     public static Object lock1 = new Object();
     public static Object lock2 = new Object();

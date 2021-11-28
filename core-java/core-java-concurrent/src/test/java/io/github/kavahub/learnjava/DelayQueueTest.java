@@ -16,8 +16,11 @@ import com.google.common.primitives.Ints;
 import org.junit.jupiter.api.Test;
 
 /**
- * {@link DelayQueue} 是BlockingQueue的一种，所以它是线程安全的，
+ * {@link DelayQueue} 是 {@code BlockingQueue} 的实现，所以它是线程安全的，
  * 特点就是插入Queue中的数据可以按照自定义的delay时间进行排序。 只有delay时间小于0的元素才能够被取出
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
  */
 public class DelayQueueTest {

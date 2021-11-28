@@ -17,6 +17,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link ExecutorService} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ExecutorServiceTest {
     private ExecutorService executorService;
 
@@ -100,11 +107,7 @@ public class ExecutorServiceTest {
         TimeUnit.MILLISECONDS.sleep(1);
         assertEquals(true,future.isDone());
     }
-
-    /**
-     * 最快的任务也需要1ms运行时间
-     * 
-     */
+    
     @Test
     public void givenFastestTask_ThenCalRunTime(){
         Future<?> future= executorService.submit(() -> {});

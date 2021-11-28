@@ -7,6 +7,13 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 线程间共享对象，使用 {@code ReentrantLock} 锁
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class SharedObjectWithLock {
     private ReentrantLock lock = new ReentrantLock(true);

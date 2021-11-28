@@ -2,8 +2,15 @@ package io.github.kavahub.learnjava.fairnessboundedblockingqueue;
 
 import java.util.concurrent.TimeUnit;
 
+
 /**
- * 1 基础版本
+ * 有限的阻塞队列
+ * 
+ * <p>
+ * 基础版本
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class FairnessBoundedBlockingQueueV1<T> implements Queue<T> {
     // 当前大小

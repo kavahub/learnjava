@@ -25,11 +25,14 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * 随机数生成性能测试
  * 
  * <pre>
- * Benchmark                                                         Mode  Cnt    Score    Error   Units
- * ThreadLocalRandomBenchMarker.randomValuesUsingRandom             thrpt   10  429.473 ± 25.148  ops/us
- * ThreadLocalRandomBenchMarker.randomValuesUsingSecureRandom       thrpt   10    2.775 ±  0.160  ops/us
- * ThreadLocalRandomBenchMarker.randomValuesUsingThreadLocalRandom  thrpt   10  765.769 ± 80.361  ops/us 
+ * Benchmark                                                      Mode  Cnt    Score    Error   Units
+ * ThreadLocalRandomBenchmark.randomValuesUsingRandom             thrpt   10  429.473 ± 25.148  ops/us
+ * ThreadLocalRandomBenchmark.randomValuesUsingSecureRandom       thrpt   10    2.775 ±  0.160  ops/us
+ * ThreadLocalRandomBenchmark.randomValuesUsingThreadLocalRandom  thrpt   10  765.769 ± 80.361  ops/us 
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
  */
 @BenchmarkMode(Mode.Throughput)
@@ -38,12 +41,12 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @Warmup(iterations = 1)
 @Fork(1)
 @State(Scope.Thread)
-public class ThreadLocalRandomBenchmarker {
+public class ThreadLocalRandomBenchmark {
     private final Random random = new Random();
     private final SecureRandom  secureRandom = new SecureRandom();
 
     public static void main(String[] args) throws Exception {
-        ChainedOptionsBuilder opts = new OptionsBuilder().include(ThreadLocalRandomBenchmarker.class.getSimpleName());
+        ChainedOptionsBuilder opts = new OptionsBuilder().include(ThreadLocalRandomBenchmark.class.getSimpleName());
 
         for (Integer i : ImmutableList.of(1, 2, 8, 32)) {
             new Runner(opts.threads(i).build()).run();

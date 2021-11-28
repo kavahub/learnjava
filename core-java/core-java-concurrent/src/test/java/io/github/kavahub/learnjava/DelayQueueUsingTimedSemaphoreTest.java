@@ -13,6 +13,13 @@ import org.junit.jupiter.api.Test;
 
 import io.github.kavahub.learnjava.enhance.DelayQueueUsingTimedSemaphore;
 
+/**
+ * 
+ * {@link DelayQueueUsingTimedSemaphore} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DelayQueueUsingTimedSemaphoreTest {
     @Test
     public void givenDelayQueue_whenReachLimit_thenBlocked() throws InterruptedException {

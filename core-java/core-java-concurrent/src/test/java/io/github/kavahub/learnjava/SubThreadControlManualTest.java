@@ -7,6 +7,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link SubThreadControl} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SubThreadControlManualTest {
     @Test
     public void whenStoppedThreadIsStopped() throws InterruptedException {

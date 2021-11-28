@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.job;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link PriorityJobScheduler} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PriorityJobSchedulerManualTest {
     private static int POOL_SIZE = 1;
     private static int QUEUE_SIZE = 10;

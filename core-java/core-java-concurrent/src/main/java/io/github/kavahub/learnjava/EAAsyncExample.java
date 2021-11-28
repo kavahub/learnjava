@@ -6,6 +6,13 @@ import java.util.concurrent.ExecutionException;
 
 import com.ea.async.Async;
 
+/**
+ * 
+ * {@link Async} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class EAAsyncExample {
     static {
         Async.init();

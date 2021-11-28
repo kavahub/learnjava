@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava.job;
 
+/**
+ * 
+ * 任务定义
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class Job implements Runnable {
     private String jobName;
     private JobPriority jobPriority;

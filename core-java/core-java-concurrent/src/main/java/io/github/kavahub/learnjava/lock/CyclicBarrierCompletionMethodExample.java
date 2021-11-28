@@ -34,6 +34,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * isBroken()方法用来了解阻塞的线程是否被中断；</li>
  * <li>CountDownLatch允许一个或多个线程等待一组事件的产生，而CyclicBarrier用于等待其他线程运行到栅栏位置。</li>
  * </ul>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CyclicBarrierCompletionMethodExample {
     private int count;

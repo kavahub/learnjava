@@ -4,6 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 线程唤醒
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class ThreadWakingUpUsingObjectExample {
     private static final Object LOCK = new Object();
@@ -32,6 +39,7 @@ public class ThreadWakingUpUsingObjectExample {
         @Override
         public void run() {
             synchronized (this.lock) {
+                log.debug("ThreadAnthor run...");
                 try {
                     TimeUnit.SECONDS.sleep(2);
                 } catch (InterruptedException e) {
@@ -43,6 +51,8 @@ public class ThreadWakingUpUsingObjectExample {
                     sum += i;
                     i++;
                 }
+
+                log.debug("ThreadAnthor complete...");
                 // 必须的
                 this.lock.notify();
             }

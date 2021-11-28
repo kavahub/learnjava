@@ -10,6 +10,13 @@ import com.google.testing.threadtester.ThreadedSecondary;
 
 import org.junit.Test;
 
+/**
+ * 
+ * threadweaver 框架测试
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MyCounterThreadWeaverManualTest {
     private MyCounter counter;
 

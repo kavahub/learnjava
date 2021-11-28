@@ -5,6 +5,13 @@ import org.junit.Test;
 import edu.umd.cs.mtc.MultithreadedTestCase;
 import edu.umd.cs.mtc.TestFramework;
 
+/**
+ * 
+ * multithreadedtc 框架测试
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MyCounterMultithreadedTCManualTest extends MultithreadedTestCase {
 
     private MyCounter counter;

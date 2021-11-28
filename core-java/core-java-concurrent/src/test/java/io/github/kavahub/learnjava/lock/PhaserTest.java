@@ -8,6 +8,23 @@ import java.util.concurrent.Phaser;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Phaser} 示例
+ *
+ * <p>
+ * {@code Phaser} 支持动态调整注册任务的数量等
+ * <ul>
+ * <li> {@code Phaser#register()} ：注册一个需要协作的线程</li>
+ * <li> {@code Phaser#bulkRegister(int)} ：批量注册需要协作的线程</li>
+ * <li> {@code Phaser#arrive()} ：到达屏障直接执行，无需等待其他线程</li>
+ * <li> {@code Phaser#arriveAndAwaitAdvance()} ：到达屏障，必须等待其他线程</li>
+ * <li> {@code Phaser#arriveAndDeregister()} ：到达屏障，注销自己，无需等待其他线程到达</li>
+ * </ul>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PhaserTest {
     @Test
     public void givenPhaser_whenCoordinateWorksBetweenThreads_thenShouldCoordinateBetweenMultiplePhases() {

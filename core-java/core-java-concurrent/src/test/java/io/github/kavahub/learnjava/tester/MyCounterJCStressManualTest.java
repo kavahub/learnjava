@@ -10,6 +10,13 @@ import org.openjdk.jcstress.annotations.Outcome;
 import org.openjdk.jcstress.annotations.State;
 import org.openjdk.jcstress.infra.results.I_Result;
 
+/**
+ * 
+ * jcstress-core 框架测试
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @JCStressTest
 @Outcome(id = "1", expect = ACCEPTABLE_INTERESTING, desc = "One update lost.")
 @Outcome(id = "2", expect = ACCEPTABLE, desc = "Both updates.")

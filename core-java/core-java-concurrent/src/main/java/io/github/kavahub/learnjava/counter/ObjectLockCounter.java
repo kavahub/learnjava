@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava.counter;
 
+/**
+ * 
+ * 对象锁计数器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ObjectLockCounter {
     private int counter;
     private final Object lock = new Object();

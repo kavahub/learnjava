@@ -8,8 +8,16 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 
-public class FutureTaskConnectionPoolManualTest {
+/**
+ * 
+ * {@link ConnectionPool} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
+public class ConnectionPoolManualTest {
     private static final int POOL_SIZE = 5;
+
     /**
      * 有限的连接池，但很多线程获取连接
      * @throws InterruptedException

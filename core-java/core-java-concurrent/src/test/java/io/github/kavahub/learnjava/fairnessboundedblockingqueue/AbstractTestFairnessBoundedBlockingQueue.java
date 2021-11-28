@@ -8,6 +8,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 
+ * 抽象测试类
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public abstract class AbstractTestFairnessBoundedBlockingQueue {
     private final static int MAX_SIZE = 10;
     protected abstract Queue<Integer> newInstance(int size);

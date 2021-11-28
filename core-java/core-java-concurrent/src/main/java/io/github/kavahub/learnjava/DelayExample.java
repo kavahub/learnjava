@@ -6,7 +6,11 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 延时示例
+ * 
+ * 延时：阻塞与非阻塞
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class DelayExample {
     public static void main(String args[]) throws InterruptedException {

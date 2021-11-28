@@ -8,6 +8,13 @@ import java.util.concurrent.Executors;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * jupiter 框架测试
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MyCounterSimpleManualTest {
     @Test
 	public void testCounter() {

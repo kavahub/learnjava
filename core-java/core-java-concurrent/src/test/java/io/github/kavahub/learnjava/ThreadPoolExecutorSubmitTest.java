@@ -17,6 +17,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link ExecutorService} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadPoolExecutorSubmitTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -32,8 +39,9 @@ public class ThreadPoolExecutorSubmitTest {
     };
 
     @AfterAll
-    public static void clearUp() {
+    public static void clearUp() throws InterruptedException {
         WORKER_THREAD_POOL.shutdown();
+        WORKER_THREAD_POOL.awaitTermination(3, TimeUnit.SECONDS);
     }
 
     @BeforeEach
