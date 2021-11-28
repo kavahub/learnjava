@@ -11,6 +11,12 @@ import java.util.Collection;
 /**
  * An abstract class that is to be extended by the classes that
  * perform lookup in the arrays either of Java primitive types or their wrappers.
+ * 
+ * <p>
+ * 抽象类，在数组中查找元素。
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public abstract class Lookup {
     /**

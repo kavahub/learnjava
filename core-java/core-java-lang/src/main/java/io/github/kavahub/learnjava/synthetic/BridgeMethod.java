@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.synthetic;
 
 import java.util.Comparator;
 
+/**
+ * 
+ * （辅助类）
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class BridgeMethod implements Comparator<Integer> {
 
     @Override

@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.math;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * 
+ * {@link Scanner} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CommandLineCalculatorExample {
     public static void main(String[] args) {
 

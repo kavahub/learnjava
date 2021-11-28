@@ -14,6 +14,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * {@link Optional} 链
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class OptionalChainingTest {
     private static boolean getEmptyEvaluated;

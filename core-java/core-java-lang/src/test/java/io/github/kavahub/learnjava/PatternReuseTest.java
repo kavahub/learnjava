@@ -13,6 +13,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 正则表达式 {@link Pattern} 复用
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class PatternReuseTest {
     @Test

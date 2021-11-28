@@ -4,6 +4,9 @@ import java.math.BigDecimal;
 
 /**
  * 浮点数分割：整数和小数
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class SplitFloatingPointNumbersExample {
     public static void main(String[] args) {

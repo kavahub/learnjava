@@ -6,6 +6,13 @@ import java.util.Set;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 
+/**
+ * 
+ * 排列组合，使用Guava库
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CombinationUseGuavaExample {
     public static void main(String[] args) {
 

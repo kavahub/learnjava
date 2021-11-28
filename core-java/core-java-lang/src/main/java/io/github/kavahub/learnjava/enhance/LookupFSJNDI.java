@@ -7,6 +7,13 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+/**
+ * 
+ * 文件系统JNDI
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class LookupFSJNDI {
     private InitialContext ctx = null;
 

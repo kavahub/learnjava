@@ -2,6 +2,9 @@ package io.github.kavahub.learnjava.spliterator;
 
 /**
  * 统计关联作者数
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class RelatedAuthorCounter {
     private final int counter;

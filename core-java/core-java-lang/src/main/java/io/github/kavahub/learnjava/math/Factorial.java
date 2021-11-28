@@ -11,6 +11,9 @@ import lombok.experimental.UtilityClass;
 
 /**
  * 阶乘
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class Factorial {

@@ -4,6 +4,9 @@ import lombok.experimental.UtilityClass;
 
 /**
  * 两点之间的距离
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class DistanceBetweenPoints {

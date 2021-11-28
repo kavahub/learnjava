@@ -9,7 +9,10 @@ import org.apache.commons.math3.util.Precision;
 import org.junit.jupiter.api.Test;
 
 /**
- * double类型比较
+ * {@link Double} 类型比较
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CompareDoubleTest {
     @Test

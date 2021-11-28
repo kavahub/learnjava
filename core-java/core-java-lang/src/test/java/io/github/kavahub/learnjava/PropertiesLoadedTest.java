@@ -15,6 +15,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * {@link Properties} 加载，支持 <code>properties</code>, <code>xml</code> 文件格式
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class PropertiesLoadedTest {
     @Test

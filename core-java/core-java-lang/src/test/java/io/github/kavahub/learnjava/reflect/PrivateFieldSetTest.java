@@ -11,6 +11,8 @@ import lombok.Setter;
 /**
  * 私有属性设置
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class PrivateFieldSetTest {
     @Test

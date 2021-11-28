@@ -20,6 +20,9 @@ import lombok.Setter;
 
 /**
  * 序列化与反序列化，将对象序列化到文件，从文件反序列化到对象
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class SerializingAndDeserializingObjectTest {
     private final static String OUTPUT_YOUR_FILE = "yourfile.txt";

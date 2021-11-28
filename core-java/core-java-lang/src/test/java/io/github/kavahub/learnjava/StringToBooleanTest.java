@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * {@link String} 与 {@link Boolean} 之间的互转
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StringToBooleanTest {
     @Test

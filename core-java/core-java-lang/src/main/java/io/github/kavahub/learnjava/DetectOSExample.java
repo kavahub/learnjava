@@ -6,6 +6,9 @@ import lombok.experimental.UtilityClass;
 
 /**
  * 操作系统判定
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class DetectOSExample {

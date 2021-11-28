@@ -22,6 +22,13 @@ import org.javamoney.moneta.format.CurrencyStyle;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * Java 货币
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JavaMoneyIntegrateTest {
     @Test
     public void givenCurrencyCode_whenString_thanExist() {

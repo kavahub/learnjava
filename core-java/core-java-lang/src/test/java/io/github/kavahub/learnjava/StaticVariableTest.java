@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 静态变量
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StaticVariableTest {
     @Test

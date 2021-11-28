@@ -8,6 +8,13 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link AccessingAllClassesInExample} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class AccessingAllClassesInPackageTest {
     // @Rule
     // public final ExpectedException exception = ExpectedException.none();

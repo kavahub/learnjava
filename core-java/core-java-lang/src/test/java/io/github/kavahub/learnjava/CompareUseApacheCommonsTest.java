@@ -9,6 +9,9 @@ import java.util.Objects;
 
 /**
  * {@link ObjectUtils} 工具比较对象
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CompareUseApacheCommonsTest {
     @Test

@@ -11,6 +11,8 @@ import java.util.stream.Stream;
 /**
  * 迭代计数器，集合的循环方法
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class IterationCounter {
     public static final List<String> IMDB_TOP_MOVIES = Arrays.asList("The Shawshank Redemption",

@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * JVM位：64或32
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class JVMBitVersionManualTest {
     @Test

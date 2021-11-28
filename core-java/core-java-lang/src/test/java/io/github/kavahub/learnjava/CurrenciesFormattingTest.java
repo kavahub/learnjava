@@ -14,6 +14,8 @@ import org.junit.jupiter.api.Test;
 /**
  * 货币格式化
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CurrenciesFormattingTest {
  

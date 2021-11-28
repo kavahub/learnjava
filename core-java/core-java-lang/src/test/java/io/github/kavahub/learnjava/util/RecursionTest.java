@@ -7,7 +7,10 @@ import org.junit.jupiter.api.Test;
 import static io.github.kavahub.learnjava.util.Recursion.*;
 
 /**
- * 递归
+ * {@link Recursion} 类型示例 
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class RecursionTest {
     @Test

@@ -14,10 +14,14 @@ import java.util.Set;
 
 import javax.annotation.Nullable;
 
-/**
- * @see com.google.common.collect.Sets#powerSet(Set)
- */
 
+/**
+ * 
+ * @see com.google.common.collect.Sets#powerSet(Set)
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */ 
 public class PowerSets<T> {
  
     private Map<T, Integer> map = new HashMap<>();

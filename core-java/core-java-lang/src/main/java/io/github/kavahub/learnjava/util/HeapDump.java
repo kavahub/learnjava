@@ -12,6 +12,9 @@ import lombok.experimental.UtilityClass;
 
 /**
  * 堆转储到文件
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class HeapDump {

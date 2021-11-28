@@ -41,6 +41,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * IntegerListSumBenchmark.jdkList                thrpt   10   181.351 ±  15.635  ops/s
  * IntegerListSumBenchmark.jdkListParallel        thrpt   10  1439.250 ±  87.989  ops/s
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)

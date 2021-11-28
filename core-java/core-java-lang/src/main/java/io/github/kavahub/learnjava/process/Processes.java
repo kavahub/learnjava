@@ -5,6 +5,13 @@ import java.io.IOException;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 工具，获取JVM环境信息
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class Processes {
     public static String getClassPath() {

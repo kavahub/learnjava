@@ -7,6 +7,9 @@ import java.util.Objects;
 
 /**
  * 根异常查找
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class RootCauseFinderExample {
     public static void main(String[] args) {

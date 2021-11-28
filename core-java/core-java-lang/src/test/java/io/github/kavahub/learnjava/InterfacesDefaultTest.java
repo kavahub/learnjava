@@ -8,6 +8,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 接口默认方法示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class InterfacesDefaultTest {
     private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private PrintStream originalOut = System.out;

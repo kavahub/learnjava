@@ -15,6 +15,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 
+/**
+ * 
+ * {@link ProcessUnderstanding} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ProcessUnderstandingTest {
     @Test
     public void givenSubProcess_whenEncounteringError_thenErrorStreamNotNull() throws IOException {

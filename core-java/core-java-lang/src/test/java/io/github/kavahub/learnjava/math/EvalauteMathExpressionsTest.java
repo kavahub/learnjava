@@ -15,6 +15,9 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 
 /**
  * 数学表达式计算工具
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class EvalauteMathExpressionsTest {
     @Test

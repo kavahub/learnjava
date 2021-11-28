@@ -2,6 +2,9 @@ package io.github.kavahub.learnjava.math;
 
 /**
  * 最大公约数
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class GCD {
     public static int gcdByBruteForce(int n1, int n2) {

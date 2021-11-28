@@ -18,6 +18,13 @@ import org.hamcrest.collection.IsCollectionWithSize;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link PowerSets} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PowerSetsTest {
     @Test
     public void givenSet_WhenGuavaLibraryGeneratePowerSet_ThenItContainsAllSubsets() {

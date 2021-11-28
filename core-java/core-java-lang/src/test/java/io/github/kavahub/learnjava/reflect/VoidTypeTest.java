@@ -8,7 +8,10 @@ import java.util.function.Function;
 import org.junit.jupiter.api.Test;
 
 /**
- * {@link Void}类型示例 
+ * {@link Void} 类型示例 
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class VoidTypeTest {
     @Test

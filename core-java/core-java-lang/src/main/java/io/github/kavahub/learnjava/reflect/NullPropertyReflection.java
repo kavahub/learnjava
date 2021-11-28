@@ -12,6 +12,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 属性反射
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class NullPropertyReflection {

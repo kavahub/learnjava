@@ -12,6 +12,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * {@link Optional} 流
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class OptionalsStreamTest {
     private static List<Optional<String>> listOfOptionals = Arrays.asList(Optional.empty(), Optional.of("foo"),

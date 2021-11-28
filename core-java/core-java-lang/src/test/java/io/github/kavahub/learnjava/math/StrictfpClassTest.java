@@ -14,6 +14,9 @@ import org.junit.jupiter.api.Test;
  * <p>
  * 而一旦使用了strictfp来声明一个类、接口或者方法时，那么所声明的范围内Java的编译器以及运行环境会完全依照浮点规范IEEE-754来执行。
  * 因此如果你想让你的浮点运算更加精确，而且不会因为不同的硬件平台所执行的结果不一致的话，那就请用关键字strictfp。
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StrictfpClassTest {
     @Test

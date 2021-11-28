@@ -17,12 +17,15 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Transient类型序列化
+ * Transient 类型序列化
  * 
  * <p>
  * Java中transient关键字的作用，简单地说，就是让某些被修饰的成员属性变量不被序列化，这一看好像很好理解，
  * 就是不被序列化，那么什么情况下，一个对象的某些字段不需要被序列化呢？如果有如下情况，可以考虑使用关键字transient修饰：
  * 类中的字段值可以根据其它字段推导出来，如一个长方形类有三个属性：长度、宽度、面积，那么在序列化的时候，面积这个属性就没必要被序列化了；
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class TransientSerializableTest {
 

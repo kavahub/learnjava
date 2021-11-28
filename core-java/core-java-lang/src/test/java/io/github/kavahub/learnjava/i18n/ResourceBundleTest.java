@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava.resource;
+package io.github.kavahub.learnjava.i18n;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,6 +14,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 资源文件加载
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ResourceBundleTest {
     @Test

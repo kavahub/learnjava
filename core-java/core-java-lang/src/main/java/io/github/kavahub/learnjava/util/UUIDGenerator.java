@@ -48,6 +48,8 @@ import lombok.experimental.UtilityClass;
  * 和基于名字的UUID算法类似，只是散列值计算使用SHA1（Secure Hash Algorithm 1）算法
  * 
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
  * @see <a href=
  *      "https://www.baeldung.com/java-generate-alphanumeric-uuid">Baeldung</a>

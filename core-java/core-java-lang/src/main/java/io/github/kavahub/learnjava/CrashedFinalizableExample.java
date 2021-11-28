@@ -22,7 +22,10 @@ import java.lang.reflect.Field;
  * 这里的理解是比较简单的，很多细节被忽略掉了。比如被放入 F-Queue 的，不是对象本身，而是一个 Finalizer
  * 对象，当一些特殊情况下，比如在一个循环里，不停的创建对象，创建完了没有其他任何的引用，这样，这些对象都被标记为可回收的状态，会有很多的 Finalizer
  * 对象存在，而处理 Finalizer 对象的线程比主线程的优先级要低，创建的速度大于了回收的速度，可能会积攒很多 Finalizer
- * 对象在内存里，这个时候是有可能内存溢出的。
+ * 对象在内存里，这个时候是有可能内存溢出的
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CrashedFinalizableExample {
     public static void main(String[] args) throws ReflectiveOperationException {

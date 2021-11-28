@@ -5,6 +5,13 @@ import java.util.Spliterator;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
+/**
+ * 
+ * {@link Author} 分割器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class RelatedAuthorSpliterator implements Spliterator<Author> {
 	private final List<Author> list;
 	AtomicInteger current = new AtomicInteger();

@@ -11,6 +11,12 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link HeapDump} 类型示例 
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HeapDumpTest {
     private final static Path FILE_NAME = Paths.get("target", "dump.hprof");
 

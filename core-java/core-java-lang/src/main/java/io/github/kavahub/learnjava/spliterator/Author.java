@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.spliterator;
 
 import lombok.Data;
 
+/**
+ * 
+ * 作者
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Data
 public class Author {
     private String name;

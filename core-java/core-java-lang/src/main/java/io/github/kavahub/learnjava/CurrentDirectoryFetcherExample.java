@@ -6,6 +6,9 @@ import java.nio.file.Paths;
 
 /**
  * 获取当前工作路径
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CurrentDirectoryFetcherExample {
     public static void main(String[] args) {

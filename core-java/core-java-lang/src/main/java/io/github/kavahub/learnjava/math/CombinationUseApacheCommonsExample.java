@@ -5,6 +5,13 @@ import java.util.Iterator;
 
 import org.apache.commons.math3.util.CombinatoricsUtils;
 
+/**
+ * 
+ * 排列组合，使用commons库
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CombinationUseApacheCommonsExample {
     private static final int N = 6;
     private static final int R = 3;

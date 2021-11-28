@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava;
 
+/**
+ * 
+ * Jar 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JarExample {
     public static void main(String[] args) {
         System.out.println("Hello, JarExample!");

@@ -6,6 +6,9 @@ import org.openjdk.jmh.annotations.*;
 
 /**
  * 布尔基础类型定位
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @State(Scope.Thread)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)

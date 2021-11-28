@@ -20,7 +20,9 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 /**
+ * {@link Process} 示例
  * 
+ * <p>
  * 运行情况说明：
  * <ul>
  * <li> 使用IDE单独运行每个测试，与Maven运行测试的结果不同 </li>
@@ -31,6 +33,9 @@ import org.junit.jupiter.api.Test;
  * 
  * <p>
  * mvn test -Dtest=ProcessApiTest
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ProcessApiManualTest {
     private static List<Process> childProcess = new ArrayList<>();

@@ -53,6 +53,8 @@ import org.junit.jupiter.api.Test;
  * 再通过MethodHandle的asType转换后得到一个新的MethodHandle，最后通过新MethodHandle的invokeExact方法来完成调用 </li>
  * </ul>
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MethodHandlesTest {
     @Test

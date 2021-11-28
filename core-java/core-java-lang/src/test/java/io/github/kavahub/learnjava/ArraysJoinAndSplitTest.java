@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 数组的合并及分割
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ArraysJoinAndSplitTest {
     private final String[] sauces = { "Marinara", "Olive Oil" };

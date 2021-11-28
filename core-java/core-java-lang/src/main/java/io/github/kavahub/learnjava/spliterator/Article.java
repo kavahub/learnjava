@@ -4,6 +4,13 @@ import java.util.List;
 
 import lombok.Data;
 
+/**
+ * 
+ * 文章
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Data
 public class Article {
     private List<Author> listOfAuthors;

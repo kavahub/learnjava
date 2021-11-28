@@ -13,8 +13,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * {@link Modifier}示例
+ * {@link Modifier} 示例
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ModifierTest {
     @Test
@@ -41,8 +43,8 @@ public class ModifierTest {
         Class<Date> clazz = Date.class;
         int mod = clazz.getModifiers();
         Assertions.assertFalse(Modifier.isAbstract(mod) && !Modifier.isInterface(mod));
-    } 
-    
+    }
+
     @Test
     void whenCheckStaticMethod_ThenSuccess() throws Exception {
         Method method = AbstractExample.class.getMethod("getAuthorName", new Class<?>[0]);
@@ -52,9 +54,9 @@ public class ModifierTest {
     @Test
     void whenCheckAllStaticMethods_thenSuccess() {
         List<Method> methodList = Arrays.asList(AbstractExample.class.getMethods())
-          .stream()
-          .filter(method -> Modifier.isStatic(method.getModifiers()))
-          .collect(Collectors.toList());
+                .stream()
+                .filter(method -> Modifier.isStatic(method.getModifiers()))
+                .collect(Collectors.toList());
         Assertions.assertEquals(1, methodList.size());
     }
 
@@ -63,14 +65,13 @@ public class ModifierTest {
         public static String getAuthorName() {
             return "Umang Budhwar";
         }
-    
+
         public abstract LocalDate getLocalDate();
-    
+
         public abstract LocalTime getLocalTime();
     }
 
     public static interface InterfaceExample {
     }
-    
-    
+
 }

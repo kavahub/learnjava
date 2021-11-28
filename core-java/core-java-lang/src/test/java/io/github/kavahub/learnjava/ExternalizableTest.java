@@ -27,6 +27,9 @@ import lombok.EqualsAndHashCode;
  * <p>
  * Externalizable接口扩展自java.io.Serializable接口。实现java.io.Serializable即可获得对类的对象的序列化功能。
  * 而Externalizable可以通过writeExternal()和readExternal()方法可以指定序列化哪些属性
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ExternalizableTest {
     private final static String OUTPUT_FILE = "externalizable.txt";

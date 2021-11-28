@@ -5,6 +5,13 @@ import static io.github.kavahub.learnjava.math.DistanceBetweenPoints.*;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link DistanceBetweenPoints} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DistanceBetweenPointsTest {
     @Test
     public void givenTwoPoints_whenCalculateDistanceByFormula_thenCorrect() {

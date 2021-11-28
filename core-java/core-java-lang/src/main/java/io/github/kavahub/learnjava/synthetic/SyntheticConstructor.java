@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava.synthetic;
 
+/**
+ * 
+ * （辅助类）
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SyntheticConstructor {
  /**
      * We need to instantiate the {@link NestedClass} using a private

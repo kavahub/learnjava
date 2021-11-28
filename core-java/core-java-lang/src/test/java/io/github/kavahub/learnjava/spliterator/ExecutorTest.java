@@ -26,7 +26,7 @@ public class ExecutorTest {
 				new Author("Alice", 1), new Author("Mike", 0), new Author("Alice", 1), new Author("Mike", 0),
 				new Author("Mike", 0), new Author("Alice", 1), new Author("Mike", 0), new Author("Alice", 1),
 				new Author("Mike", 0), new Author("Alice", 1), new Author("Mike", 0), new Author("Alice", 1),
-				new Author("Mike", 0), new Author("Michał", 0), new Author("Loredana", 1)), 0);
+				new Author("Mike", 0), new Author("Michał", 0), new Author("Loredana", 1), new Author("Mike", 0)), 0);
 		stream = article.getListOfAuthors().stream();
 		split1 = Executor.generateElements().spliterator();
 		split2 = split1.trySplit();
@@ -36,7 +36,7 @@ public class ExecutorTest {
 	@Test
 	public void givenAstreamOfAuthors_whenProcessedInParallelWithCustomSpliterator_coubtProducessRightOutput() {
 		Stream<Author> stream2 = StreamSupport.stream(spliterator, true);
-		assertThat(Executor.countAutors(stream2.parallel())).isEqualTo(9);
+		assertThat(Executor.countAuthors(stream2.parallel())).isEqualTo(9);
 	}
 
 	@Test

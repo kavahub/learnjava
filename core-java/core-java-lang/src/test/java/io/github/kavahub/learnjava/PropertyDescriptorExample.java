@@ -11,6 +11,9 @@ import lombok.Setter;
 
 /**
  * {@link PropertyDescriptor} 示例
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class PropertyDescriptorExample {
     public static void main(String[] args) {

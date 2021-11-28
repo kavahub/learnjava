@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava.synthetic;
 
+/**
+ * 
+ * （辅助类）
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SyntheticMethod {
 /**
      * Class which contains two synthetic methods accessors to a private field.

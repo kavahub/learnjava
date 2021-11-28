@@ -9,6 +9,12 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.UUIDGenerator.*;
 
+/**
+ * {@link UUIDGenerator} 类型示例 
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class UUIDGeneratorTest {
     private static final String NAMESPACE_URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
     private static final String NAMESPACE_DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";

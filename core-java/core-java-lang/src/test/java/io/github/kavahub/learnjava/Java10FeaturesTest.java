@@ -12,6 +12,13 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * Java10功能示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class Java10FeaturesTest {
     private static  List<Integer> someIntList;
     

@@ -11,6 +11,12 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * {@link ThreadDumpHelper} 类型示例 
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ThreadDumpHelperTest {
     private final static Path FILE_NAME = Paths.get("target", "ThreadDump.txt");
 

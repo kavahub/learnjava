@@ -5,6 +5,9 @@ import java.util.concurrent.Callable;
 
 /**
  * 给每篇文章加后缀
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class Task implements Callable<String> {
     private Spliterator<Article> spliterator;

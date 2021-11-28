@@ -10,6 +10,13 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * Jav9 {@link Objects} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class Java9ObjectsAPITest {
     private List<String> aMethodReturningNullList(){
         return null;

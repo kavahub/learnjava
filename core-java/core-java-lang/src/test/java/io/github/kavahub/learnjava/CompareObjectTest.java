@@ -10,6 +10,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
+/**
+ * 
+ * {@link Object} 类型比较
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class CompareObjectTest {
     private Employee[] employees;

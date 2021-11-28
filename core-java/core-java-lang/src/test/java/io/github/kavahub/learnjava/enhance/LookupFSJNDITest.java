@@ -8,6 +8,13 @@ import javax.naming.NamingException;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link LookupFSJNDI} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class LookupFSJNDITest {
     LookupFSJNDI fsjndi;
     final String FILENAME = "test.find";

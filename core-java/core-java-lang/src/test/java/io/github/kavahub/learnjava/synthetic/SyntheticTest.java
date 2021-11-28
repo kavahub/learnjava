@@ -10,6 +10,13 @@ import java.lang.reflect.Method;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * Synthetic 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SyntheticTest {
     /**
      * Tests that the {@link SyntheticMethod.NestedClass} contains two synthetic

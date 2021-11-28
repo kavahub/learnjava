@@ -8,7 +8,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.test.util.ReflectionTestUtils;
 
 /**
- * 执行私有方法
+ * 调用私有方法
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class InvokePrivateMethodsTest {
     private final long[] someLongArray = new long[] { 1L, 2L, 1L, 4L, 2L };

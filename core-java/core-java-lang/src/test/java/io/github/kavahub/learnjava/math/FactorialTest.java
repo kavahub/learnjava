@@ -7,6 +7,13 @@ import java.math.BigInteger;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Factorial} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FactorialTest {
     @Test
     public void whenCalculatingFactorialUsingForLoop_thenCorrect() {

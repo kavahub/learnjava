@@ -18,8 +18,11 @@ import org.junit.jupiter.api.Test;
  * {@link Spliterator} 自定义
  * 
  * <p>
- * Spliterator是一个可分割迭代器(splitable iterator)，可以和iterator顺序遍历迭代器一起看。jdk1.8发布后，
- * 对于并行处理的能力大大增强，Spliterator就是为了并行遍历元素而设计的一个迭代器
+ * {@code Spliterator} 是一个可分割迭代器(splitable iterator)，可以和iterator顺序遍历迭代器一起看。jdk1.8发布后，
+ * 对于并行处理的能力大大增强，{@code Spliterator} 就是为了并行遍历元素而设计的一个迭代器
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class SpliteratorCustomTest {
     @Test
