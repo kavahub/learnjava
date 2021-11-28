@@ -28,7 +28,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * 可以多种方式写文件
+ * 多种方式写文件
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileWriteManualTest {
     private static Path file = Paths.get("target", "FileWriteManualTest.txt");

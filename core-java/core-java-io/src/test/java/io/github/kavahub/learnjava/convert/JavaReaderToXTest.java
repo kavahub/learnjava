@@ -30,6 +30,13 @@ import org.apache.commons.io.input.CharSequenceReader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Reader} 转换成其他
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @SuppressWarnings("unused")
 public class JavaReaderToXTest {
     private final static String MIX_STRING = "Some Test 1 : 中文";

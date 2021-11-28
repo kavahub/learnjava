@@ -19,6 +19,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 目录大小示例
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class DirectorySizeTest {
     private final long EXPECTED_SIZE = 24;

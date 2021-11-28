@@ -14,6 +14,13 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link InputStream} 与 {@link OutputStream} 的转换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class InputStreamToOutputStreamTest {
     /**
      * Reads all bytes from an input stream and writes them to an output stream.

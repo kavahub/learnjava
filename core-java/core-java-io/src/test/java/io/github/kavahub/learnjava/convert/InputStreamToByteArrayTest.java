@@ -13,6 +13,13 @@ import com.google.common.io.ByteStreams;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link InputStream} 与字节数组的转换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class InputStreamToByteArrayTest {
     @Test
     public final void givenUsingPlainJavaOnFixedSizeStream_whenConvertingAnInputStreamToAByteArray_thenCorrect() throws IOException {

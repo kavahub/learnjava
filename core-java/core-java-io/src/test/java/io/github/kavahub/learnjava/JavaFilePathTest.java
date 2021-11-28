@@ -11,6 +11,13 @@ import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * Java 文件路径示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JavaFilePathTest {
     private static String userDir;
     private static String sep = File.separator;

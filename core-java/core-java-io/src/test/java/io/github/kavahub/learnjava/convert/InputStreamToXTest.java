@@ -37,6 +37,13 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * {@link InputStream} 转换成其他
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class InputStreamToXTest {
     private static final int DEFAULT_SIZE = 1500000;

@@ -14,6 +14,13 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link BufferedReader} 与 {@link JSONObject} 的转换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JavaBufferedReaderToJSONObjecTest {
     @Test
     public void givenValidJson_whenUsingBufferedReader_thenJSONTokenerConverts() {

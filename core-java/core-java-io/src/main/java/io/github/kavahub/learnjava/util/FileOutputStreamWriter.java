@@ -12,6 +12,9 @@ import lombok.experimental.UtilityClass;
 /**
  * 文件写入
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @UtilityClass
 public class FileOutputStreamWriter {

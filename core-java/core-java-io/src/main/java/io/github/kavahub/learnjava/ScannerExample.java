@@ -7,6 +7,10 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * {@link Scanner} 示例，读取字符串（包含换行符）
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @Slf4j
 public class ScannerExample {

@@ -25,6 +25,10 @@ import net.sf.jmimemagic.MagicParseException;
 
 /**
  * 确定文件类型
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class MimeTypeTest {
     /**

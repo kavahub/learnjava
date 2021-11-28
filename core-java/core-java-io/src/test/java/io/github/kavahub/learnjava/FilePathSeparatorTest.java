@@ -11,7 +11,11 @@ import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 
 /**
- * 文件路径分割符
+ * {@link File#pathSeparator} 文件路径分割符
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FilePathSeparatorTest {
     @Test

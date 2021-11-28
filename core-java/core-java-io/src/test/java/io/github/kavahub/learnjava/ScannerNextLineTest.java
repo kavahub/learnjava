@@ -8,6 +8,13 @@ import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Scanner#nextLine()} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ScannerNextLineTest {
     @Test
     public void whenReadingLines_thenCorrect() {

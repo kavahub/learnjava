@@ -25,6 +25,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 文件数据清除
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileDataClearTest {
     public static final Path FILE_DATA_TO_CLEAR = Paths.get("target", "fileDataToClear.txt");

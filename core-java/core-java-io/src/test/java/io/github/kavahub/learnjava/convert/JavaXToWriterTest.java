@@ -11,6 +11,13 @@ import com.google.common.io.CharSink;
 import org.apache.commons.io.output.StringBuilderWriter;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 其他类型转换成 {@link Writer} 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JavaXToWriterTest {
     // tests - byte[] to Writer
 

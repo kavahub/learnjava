@@ -13,6 +13,13 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Path} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PathEmptinessTest {
     @Test
     public void givenPath_whenInvalid_thenReturnsFalse() throws IOException {

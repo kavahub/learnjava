@@ -20,6 +20,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 文件复制示例
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileCopierTest {
     private final static Path original = Paths.get("src", "test", "resources", "sample.txt");

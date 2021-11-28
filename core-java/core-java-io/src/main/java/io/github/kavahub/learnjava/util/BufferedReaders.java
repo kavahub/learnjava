@@ -9,7 +9,11 @@ import java.util.stream.Collectors;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * {@link BufferedReader} 工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class BufferedReaders {

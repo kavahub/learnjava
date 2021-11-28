@@ -17,6 +17,13 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 其他类型转换成 {@link InputStream} 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JavaXToInputStreamManualTest {
     // tests - String - InputStream
 

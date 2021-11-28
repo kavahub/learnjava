@@ -11,6 +11,13 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link FileOutputStreamWriter} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileOutputStreamWriterTest {
     private final static Path OUTPUT_FILE = Paths.get("target", "output_file.txt");
     

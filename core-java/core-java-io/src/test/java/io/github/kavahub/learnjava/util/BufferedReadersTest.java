@@ -16,6 +16,13 @@ import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link BufferedReaders} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class BufferedReadersTest {
     private static final Path INPUT_FILE_PATH = Paths.get("src", "test", "resources", "input.txt");
 

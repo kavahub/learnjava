@@ -9,6 +9,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 获取文件名，不带扩展名
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileNameDelExtensionTest {
     @Test

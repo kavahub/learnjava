@@ -21,6 +21,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 文件行定位
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileLineNumberLocateTest {
     private final static Path FILE_PATH = Paths.get("src", "test", "resources", "linesInput.txt");

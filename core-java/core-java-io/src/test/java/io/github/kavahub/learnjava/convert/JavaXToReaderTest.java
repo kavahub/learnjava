@@ -20,6 +20,13 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.CharSequenceReader;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 其他类型转换成 {@link Reader} 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JavaXToReaderTest {
     // tests - String to Reader
 

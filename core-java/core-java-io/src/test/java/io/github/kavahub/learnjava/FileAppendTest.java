@@ -27,6 +27,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 文件追加示例
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileAppendTest {
     public static final Path FIEL_TO_APPEND = Paths.get("target","fileToAppend.txt");

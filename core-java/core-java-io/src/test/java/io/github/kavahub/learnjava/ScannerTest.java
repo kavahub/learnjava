@@ -18,6 +18,13 @@ import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Scanner} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ScannerTest {
     private static final Path TEST_READ_FILE = Paths.get("src","test","resources","test_read.in");
     private static final Path TEST_READ_MULT_FILE = Paths.get("src", "test","resources", "test_read_multiple.in");

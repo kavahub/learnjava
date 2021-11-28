@@ -15,6 +15,13 @@ import com.google.common.io.ByteStreams;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link InputStream} 与 {@link ByteBuffer} 的转换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class InputStreamToByteBufferTest {
     @Test
     public void givenUsingCoreClasses_whenByteArrayInputStreamToAByteBuffer_thenLengthMustMatch() throws IOException {

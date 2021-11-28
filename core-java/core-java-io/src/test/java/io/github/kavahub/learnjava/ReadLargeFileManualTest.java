@@ -16,6 +16,13 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 读取大文件
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class ReadLargeFileManualTest {
     private final static Path LARGE_FILE = Paths.get("src","test","resources","largefile.txt");

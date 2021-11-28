@@ -25,6 +25,13 @@ import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * IO 与 NIO 客户端示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @WireMockTest
 public class IOvsNIOClientLiveTest {
     private static final String REQUESTED_RESOURCE = "/test.json";

@@ -15,6 +15,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 文件重命名
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileRenameTest {
     private final String FILE_TO_MOVE = "originalFileToMove.txt";
     private final String TARGET_FILE = "targetFileToMove.txt";

@@ -15,6 +15,13 @@ import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link FileLastModifiedFinder} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileLastModifiedFinderTest {
     private final static String SOURCEDIRECTORY = Paths.get("target", "lastmodfiles").toString();
 

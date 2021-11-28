@@ -15,6 +15,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * {@link BufferedReader} 示例
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class BufferedReaderTest {
     private static final Path INPUT_FILE_PATH = Paths.get("src", "test", "resources", "input.txt");

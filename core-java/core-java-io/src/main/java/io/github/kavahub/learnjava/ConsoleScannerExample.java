@@ -8,6 +8,10 @@ import java.util.regex.Pattern;
 
 /**
  * {@link Scanner} 示例，读取控制台输入的信息
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class ConsoleScannerExample {
     public static void main(String[] args) {

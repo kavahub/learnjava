@@ -13,6 +13,13 @@ import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link FileReaders} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileReadersTest {
     private static final Path FILE_PATH = Paths.get("src", "test", "resources", "HelloWorld.txt");
 

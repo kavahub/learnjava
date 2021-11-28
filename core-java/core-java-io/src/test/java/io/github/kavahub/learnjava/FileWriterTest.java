@@ -13,6 +13,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * {@link FileWriter} 示例
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileWriterTest {
     private final static Path FILE_TO_WRITE = Paths.get("target", "FileWriterTest.txt");

@@ -21,6 +21,10 @@ import lombok.extern.slf4j.Slf4j;
  * readObject()和writeObject() 既不存在于java.lang.Object，也没有在Serializable中声明。
  * 那么ObjectOutputStream如何使用它们的呢？原来，ObjectOutputStream使用了反射来寻找是否声明了这两个方法。
  * 因为ObjectOutputStream使用getPrivateMethod，所以这些方法不得不被声明为private以至于供ObjectOutputStream来使用。
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @Slf4j
 public class ObjectStreamManualTest {

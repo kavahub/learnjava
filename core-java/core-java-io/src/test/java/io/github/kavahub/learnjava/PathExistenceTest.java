@@ -14,6 +14,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Path} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PathExistenceTest {
     @Test
     public void givenFile_whenDoesNotExist_thenFilesReturnsFalse() {

@@ -11,6 +11,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 
+/**
+ * 
+ * {@link File#separator} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileSeparatorTest {
     @Test
     @EnabledOnOs(OS.WINDOWS)

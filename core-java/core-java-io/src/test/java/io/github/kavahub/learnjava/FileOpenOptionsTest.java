@@ -21,6 +21,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 文件打开选项
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileOpenOptionsTest {
     private static final String HOME = "target";

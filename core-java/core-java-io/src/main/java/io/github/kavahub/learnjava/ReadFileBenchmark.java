@@ -25,7 +25,9 @@ import org.openjdk.jmh.runner.options.ChainedOptionsBuilder;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 /**
- * 读取文件性能测试
+ * 读取文件性能测试: {@link Files#readString(Path)} , {@link BufferedReader},
+ * {@link FileUtils#readFileToString(java.io.File, Charset)},
+ * {@link com.google.common.io.Files#asCharSource(java.io.File, Charset)}
  * 
  * <p>
  * 测试结果：
@@ -37,6 +39,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * ReadFileBenchmark.readAllLinesUsingGoogleGuava     thrpt   10  75.422 ±  6.792  ops/s
  * ReadFileBenchmark.readAllLinesUsingJavaFiles       thrpt   10  85.609 ± 13.245  ops/s
  * </pre>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)

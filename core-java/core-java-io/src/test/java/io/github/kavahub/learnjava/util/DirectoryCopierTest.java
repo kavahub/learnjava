@@ -16,7 +16,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.DirectoryCopier.*;
 
-
+/**
+ * 
+ * {@link DirectoryCopier} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DirectoryCopierTest {
     private final static String sourceDirectoryLocation = "sourceDirectory1";
     private final static String subDirectoryName = "/childDirectory";

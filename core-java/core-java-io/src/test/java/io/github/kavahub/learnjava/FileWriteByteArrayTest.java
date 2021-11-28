@@ -19,6 +19,10 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 向文件中写入字节
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class FileWriteByteArrayTest {
     private static final Path FILE_TO_WRITE = Paths.get("target", "FileWriteByteArrayTest.jpg");
