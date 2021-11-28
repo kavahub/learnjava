@@ -9,9 +9,14 @@ import lombok.experimental.UtilityClass;
 
 /**
  * {@link Date} 日期比较
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @UtilityClass
 public class LegacyDateComparer {
+    
     /**
      * 随机生成之间的日期
      * 

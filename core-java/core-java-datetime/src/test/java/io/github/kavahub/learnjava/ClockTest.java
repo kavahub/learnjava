@@ -17,6 +17,10 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * {@link  Clock} 类用于使用时区提供对当前时刻, 日期和时间的访问
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 @Slf4j
 public class ClockTest {

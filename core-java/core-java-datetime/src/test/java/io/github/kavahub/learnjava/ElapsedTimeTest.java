@@ -9,6 +9,13 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.time.StopWatch;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 耗时计算
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ElapsedTimeTest {
  
     @Test

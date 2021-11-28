@@ -8,6 +8,13 @@ import org.junit.jupiter.api.RepeatedTest;
 
 import static io.github.kavahub.learnjava.util.RandomDates.*;
 
+/**
+ * 
+ * {@link RandomDates} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class RandomDatesTest {
     private static final Date MIN_DATE = new Date(Long.MIN_VALUE);
     private static final Date MAX_DATE = new Date(Long.MAX_VALUE);

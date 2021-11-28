@@ -15,6 +15,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.use.UseToInstant.*;
 
+/**
+ * 
+ * {@link UseToInstant} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class UseToInstantTest {
     @Test
     public void givenAGregorianCalenderDate_whenConvertingToLocalDate_thenAsExpected() {

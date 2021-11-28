@@ -11,10 +11,14 @@ import java.time.temporal.ChronoUnit;
 import org.junit.jupiter.api.Test;
 
 /**
- * Period 和 Duration。两个类看表示时间量或两个日期之间的差.
+ * 
+ * {@link Period} 和 {@code Duration}。两个类看表示时间量或两个日期之间的差.
  * 
  * <p>
- * 两者之间的差异为：Period基于日期值，而Duration基于时间值。
+ * 两者之间的差异为：{@link Period} 基于日期值，而 {@code Duration} 基于时间值。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class JavaPeriodTest {
     @Test

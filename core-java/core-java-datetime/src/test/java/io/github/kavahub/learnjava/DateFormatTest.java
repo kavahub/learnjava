@@ -12,6 +12,13 @@ import java.util.TimeZone;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link DateFormat} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DateFormatTest {
     @Test
     public void givenGregorianCalendar_whenLocaleSpecificDateInstance_givenLanguageSpecificMonths() {

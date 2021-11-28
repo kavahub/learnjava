@@ -13,7 +13,11 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
+ * 
  * Java提供的日期比较方法示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class Java8DateTimeApiGeneralComparisonsTest {
     @Test

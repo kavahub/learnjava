@@ -15,6 +15,13 @@ import mockit.Mock;
 import mockit.MockUp;
 import mockit.integration.junit5.JMockitExtension;
 
+/**
+ * 
+ * {@link Instant} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Disabled("JMockit didn't get initialized")
 @ExtendWith(JMockitExtension.class)
 public class InstantWithJMockTest {

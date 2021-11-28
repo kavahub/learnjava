@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.util;
 import java.time.Instant;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * 
+ * {@link Instant} 随机生成
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class RandomDateTimes {
     public static Instant timestamp() {
         return Instant.ofEpochSecond(ThreadLocalRandom.current().nextInt());

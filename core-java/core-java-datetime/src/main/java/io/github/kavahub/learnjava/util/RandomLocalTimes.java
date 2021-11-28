@@ -3,6 +3,13 @@ package io.github.kavahub.learnjava.util;
 import java.time.LocalTime;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * 
+ * {@link LocalTime} 随机生成
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class RandomLocalTimes {
     /**
      * 随机生成之间的时间

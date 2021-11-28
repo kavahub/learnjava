@@ -12,6 +12,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.use.UseLocalDate.*;
 
+/**
+ * 
+ * {@link UseLocalDate} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class UseLocalDateTest {
     @Test
     public void givenValues_whenUsingFactoryOf_thenLocalDate() {

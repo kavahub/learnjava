@@ -9,6 +9,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.use.UsePeriod.*;
 
+/**
+ * 
+ * {@link UsePeriod} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class UsePeriodTest {
     @Test
     public void givenPeriodAndLocalDate_thenCalculateModifiedDate() {

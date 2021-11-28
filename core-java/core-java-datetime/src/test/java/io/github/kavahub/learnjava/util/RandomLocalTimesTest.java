@@ -7,6 +7,13 @@ import org.junit.jupiter.api.RepeatedTest;
 
 import static io.github.kavahub.learnjava.util.RandomLocalTimes.*;
 
+/**
+ * 
+ * {@link RandomLocalTimes} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class RandomLocalTimesTest {
     @RepeatedTest(100)
     void givenNoRange_WhenGenDate_ShouldGenerateRandomDates() {

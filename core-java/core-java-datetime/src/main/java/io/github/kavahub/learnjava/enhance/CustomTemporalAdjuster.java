@@ -7,7 +7,10 @@ import java.time.temporal.Temporal;
 import java.time.temporal.TemporalAdjuster;
 
 /**
- * {@link TemporalAdjuster} 是函数接口，类中有很多预定义的实现
+ * {@link TemporalAdjuster} 自定义实现
+ * 
+ * <p>
+ * {@code TemporalAdjuster}是函数接口，类中有很多预定义的实现，可以执行复杂的日期操作
  * 
  * <p>
  * 类中预定义实现列表：
@@ -20,6 +23,9 @@ import java.time.temporal.TemporalAdjuster;
  * <li> lastDayOfMonth()     : 当月的最后一天 </li>
  * <li> nextOrSame()         : 下一次或当天发生的一周中的某天 </li>
  * </ul>
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CustomTemporalAdjuster implements TemporalAdjuster {
 

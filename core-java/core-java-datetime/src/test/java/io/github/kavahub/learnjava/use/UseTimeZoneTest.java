@@ -16,11 +16,14 @@ import org.joda.time.DateTimeZone;
 import org.junit.jupiter.api.Test;
 
 /**
- * 参考：
+ * 
+ * {@link TimeZone} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
  * @see <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Wiki</a>
  * @see <a href="https://infogalactic.com/info/List_of_tz_database_time_zones">Infogalactic</a>
- * 
  * 
  */
 public class UseTimeZoneTest {

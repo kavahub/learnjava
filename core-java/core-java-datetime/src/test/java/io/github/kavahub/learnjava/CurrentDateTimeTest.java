@@ -12,7 +12,10 @@ import java.time.temporal.ChronoField;
 import org.junit.jupiter.api.Test;
 
 /**
- * 应用程序的最佳实践是将Clock传递给任何需要当前瞬间的方法
+ * 应用程序的最佳实践是将 {@code Clock} 传递给任何需要当前瞬间的方法
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
  */
 public class CurrentDateTimeTest {

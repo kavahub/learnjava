@@ -7,6 +7,9 @@ import lombok.experimental.UtilityClass;
 
 /**
  * {@link Period} 表示是两个日期之间的差
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class UsePeriod {

@@ -5,6 +5,13 @@ import java.time.temporal.ChronoUnit;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * {@link LocalTime} 使用
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class UseLocalTime {
     LocalTime getLocalTimeUsingFactoryOfMethod(int hour, int min, int seconds) {

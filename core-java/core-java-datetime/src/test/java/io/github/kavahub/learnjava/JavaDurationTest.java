@@ -11,11 +11,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
+
 /**
- * Duration 是在 Java 8中加入的，主要是用来计算日期，差值之类的。
+ * 
+ * {@link Duration} 是在 Java 8中加入的，主要是用来计算日期，差值之类的。
  * 
  * <p>
- * Duration 被声明final（immutable），并且线程安全。
+ * {@code Duration} 被声明final（immutable），并且线程安全。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class JavaDurationTest {
     @Test

@@ -14,6 +14,13 @@ import mockit.Expectations;
 import mockit.Mock;
 import mockit.MockUp;
 
+/**
+ * 
+ * {@link LocalDateTime} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Disabled("JMockit didn't get initialized")
 public class LocalDateTimeWithJMockTest {
     @Test

@@ -11,6 +11,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.use.UseOffsetDateTime.*;
 
+/**
+ * 
+ * {@link UseOffsetDateTime} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class UseOffsetDateTimeTest {
     @Test
     public void givenAZoneOffSetAndLocalDateTime_whenCombing_thenValidResult() {

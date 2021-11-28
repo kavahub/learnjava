@@ -7,6 +7,13 @@ import java.time.ZoneId;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 
+ * {@link Instant} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class InstantTest {
     @Test
     public void givenFixedClock_whenNow_thenGetFixedInstant() {

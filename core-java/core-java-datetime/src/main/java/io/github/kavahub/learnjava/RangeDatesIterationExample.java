@@ -8,10 +8,14 @@ import java.util.Date;
 /**
  * 日期范围迭代器，日期循环
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
  */
 public class RangeDatesIterationExample {
     public void iterateBetweenDatesJava9(LocalDate startDate, LocalDate endDate) {
 
+        // 包含startDate, 不包含endDate
         startDate.datesUntil(endDate)
             .forEach(this::processDate);
     }

@@ -5,6 +5,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * {@link Date} 随机生成
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class RandomDates {
     /**

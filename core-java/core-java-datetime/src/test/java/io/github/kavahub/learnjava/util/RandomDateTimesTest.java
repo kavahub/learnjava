@@ -8,6 +8,13 @@ import org.junit.jupiter.api.RepeatedTest;
 
 import static io.github.kavahub.learnjava.util.RandomDateTimes.*;
 
+/**
+ * 
+ * {@link RandomDateTimes} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class RandomDateTimesTest {
     @RepeatedTest(100)
     void givenNoRange_WhenGenTimestamp_ShouldGenerateRandomTimestamps() {

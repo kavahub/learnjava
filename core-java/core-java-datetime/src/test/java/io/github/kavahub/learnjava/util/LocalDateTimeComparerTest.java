@@ -12,6 +12,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.LocalDateTimeComparer.*;
 
+/**
+ * 
+ * {@link LocalDateTimeComparer} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class LocalDateTimeComparerTest {
     @Test
     void givenLocalDateTimes_whenIsSameDay_thenCompareTrue() {
