@@ -130,6 +130,7 @@
     <module>webservice</module>
     <module>google-guava</module>
     <module>dubhe</module>
+    <module>design-pattern</module>
   </modules>
 
   <dependencyManagement>

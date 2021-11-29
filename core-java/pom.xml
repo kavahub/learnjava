@@ -22,7 +22,6 @@
         <module>core-java-string</module>
         <module>core-java-lang</module>
         <module>core-java-stream</module>
-        <module>core-java-designpattern</module>
         <module>core-java-concurrent</module>
         <module>core-java-net</module>
         <module>core-java-io</module>
