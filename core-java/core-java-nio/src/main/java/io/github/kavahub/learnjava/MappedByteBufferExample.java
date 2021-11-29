@@ -25,8 +25,9 @@ import java.util.concurrent.TimeUnit;
  * <li> {@code MappedByteBuffer} 在处理大文件时的确性能很高，但也存在一些问题，如内存占用、文件关闭不确定，
  * 被其打开的文件只有在垃圾回收的才会被关闭，而且这个时间点是不确定的。javadoc中也提到： A mapped byte buffer and the
  * file mapping that it represents remain valid until the buffer itself is
- * garbage-collected.</li>
- *
+ * garbage-collected. </li>
+ * </ul>
+ * 
  * @author PinWei Wan
  * @since 1.0.0
  */
