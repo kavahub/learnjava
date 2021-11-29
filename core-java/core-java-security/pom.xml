@@ -3,11 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>core-java-security</artifactId>
     <name>core-java-security</name>
-    <description>security</description>
-
-    <description>
-        Java 安全
-    </description>
+    <description>Java 安全</description>
 
     <parent>
         <groupId>io.github.kavahub.learnjava.core-java</groupId>
