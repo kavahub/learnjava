@@ -20,6 +20,13 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link FileChannel} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileChannelTest {
     private final static String TEST_WRITE_USING_FILECHANNEL = "test_write_using_filechannel.txt";
     private final static String TEST_TRUNCATE = "test_truncate.txt";

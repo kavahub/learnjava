@@ -11,7 +11,11 @@ import java.util.Optional;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 文件创建时间属性
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class CreationDateResolver {

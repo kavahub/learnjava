@@ -11,7 +11,11 @@ import java.nio.file.attribute.BasicFileAttributes;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 文件查找示例
+ * 
+ * 文件查找示例， {@link FileVisitor} 接口实现
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class FileSearchExample implements FileVisitor<Path> {

@@ -14,7 +14,10 @@ import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * The Server With Selector
+ * NIO 服务器，使用 {@link Selector} 实现
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class AsyncSelectorServer {

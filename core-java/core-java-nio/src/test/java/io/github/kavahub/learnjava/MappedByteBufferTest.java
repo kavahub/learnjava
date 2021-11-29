@@ -17,7 +17,11 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 /**
- * MappedByteBuffer读写大文件
+ * 
+ * {@link MappedByteBuffer} 应用示例，适用读写大文件
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MappedByteBufferTest {
     @Test

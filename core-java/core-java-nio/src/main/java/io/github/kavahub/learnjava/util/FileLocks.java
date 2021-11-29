@@ -18,8 +18,11 @@ import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 文件锁
  * 
+ * {@link FileLock} 文件锁
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 @UtilityClass

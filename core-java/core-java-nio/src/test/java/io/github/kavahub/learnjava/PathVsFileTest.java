@@ -11,6 +11,13 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Path}, {@link File} 应用比较
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PathVsFileTest {
     @Test
     public void whenCreateFileAndPath_thenShouldPointTheSame() {

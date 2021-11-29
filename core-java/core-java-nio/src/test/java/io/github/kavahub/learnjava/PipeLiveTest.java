@@ -15,9 +15,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 
 /**
+ * 
  * we use Java NIO's Pipe class to open a channel for testing purposes. 
  * We track code execution steps in a thread-safe list. By analyzing these steps, 
  * we can see how selector.wakeup() releases the thread blocked by selector.select().
+ * 
+ * {@link Pipe} 一般在测试使用
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class PipeLiveTest {
     @Test

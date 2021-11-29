@@ -15,9 +15,12 @@ import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
+
 /**
- * The Server With Future 接收客户端发送的消息，并返回消息给客户端
+ * NIO 服务器，使用 {@link Future} 实现，接收客户端发送的消息，并返回消息给客户端
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class AsyncFutureServer {

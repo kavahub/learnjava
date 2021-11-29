@@ -17,8 +17,11 @@ import java.util.stream.Stream;
 import lombok.experimental.UtilityClass;
 
 /**
- * 目录下的文件列表，不包含子目录下文件
  * 
+ * 目录下的文件列表，不包含子目录下文件
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class FileLister {

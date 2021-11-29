@@ -12,8 +12,11 @@ import java.util.stream.IntStream;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 链接示例
  * 
+ * 链接示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class SymLinkExample {

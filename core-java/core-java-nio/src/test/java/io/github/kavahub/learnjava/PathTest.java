@@ -15,6 +15,13 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * {@link Path} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class PathTest {
     private static final String HOME = System.getProperty("user.home");

@@ -10,6 +10,13 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CreationDateResolver} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CreationDateResolverTest {
 
     @Test

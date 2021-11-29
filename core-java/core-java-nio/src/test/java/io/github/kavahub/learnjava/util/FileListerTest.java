@@ -10,6 +10,13 @@ import org.junit.jupiter.api.Test;
 
 import static  io.github.kavahub.learnjava.util.FileLister.*;
 
+/**
+ * 
+ * {@link FileLister} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileListerTest {
     private String DIRECTORY = "src/test/resources/listFilesUnitTestFolder";
     private static final int DEPTH = 1;

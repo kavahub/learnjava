@@ -12,7 +12,12 @@ import java.nio.file.WatchService;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 目录监控
+
+ * 
+ */
+/**
+ * 
+ * {@link WatchService} 目录监控
  * 
  * <p>
  * 说明:
@@ -20,7 +25,9 @@ import lombok.extern.slf4j.Slf4j;
  * <li>只能监控当前目录下的，也就是说你在其中一个子目录下创建文件或者文件夹，都是只会返回这个目录的修改事件。</li>
  * <li>运行后，操作目录</li>
  * </ul>
- * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class DirectoryWatcherExample {

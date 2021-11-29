@@ -4,6 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link NumberOfLineFinder} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class NumberOfLineFinderTest  {
     private static final String INPUT_FILE_NAME = "src/test/resources/input.txt";
     private static final int ACTUAL_LINE_COUNT = 45;

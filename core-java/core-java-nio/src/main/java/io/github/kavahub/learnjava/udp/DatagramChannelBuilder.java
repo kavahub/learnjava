@@ -4,6 +4,13 @@ import java.io.IOException;
 import java.net.SocketAddress;
 import java.nio.channels.DatagramChannel;
 
+/**
+ * 
+ * {@link DatagramChannel} 构建器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DatagramChannelBuilder {
     private DatagramChannel channel;
 

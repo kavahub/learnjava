@@ -9,6 +9,13 @@ import java.nio.channels.SocketChannel;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * NIO 客户端
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class Client2 {
     private SocketChannel client;

@@ -14,13 +14,21 @@ import java.util.EnumSet;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 多种方式的文件读写
+ * 
+ * <p>
+ * {@link MappedByteBuffer} 介绍：
+ * 
  * <ul>
- * <li>MappedByteBuffer使用虚拟内存，因此分配(map)的内存大小不受JVM的-Xmx参数限制，但是也是有大小限制的。</li>
+ * <li> {@code MappedByteBuffer} 使用虚拟内存，因此分配(map)的内存大小不受JVM的-Xmx参数限制，但是也是有大小限制的。</li>
  * <li>如果当文件超出1.5G限制时，可以通过position参数重新map文件后面的内容。</li>
- * <li>MappedByteBuffer在处理大文件时的确性能很高，但也存在一些问题，如内存占用、文件关闭不确定，
+ * <li> {@code MappedByteBuffer} 在处理大文件时的确性能很高，但也存在一些问题，如内存占用、文件关闭不确定，
  * 被其打开的文件只有在垃圾回收的才会被关闭，而且这个时间点是不确定的。javadoc中也提到： A mapped byte buffer and the
  * file mapping that it represents remain valid until the buffer itself is
  * garbage-collected.</li>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MappedByteBufferExample {
     private final static int length = 1024 * 1024 * 5; // 5M

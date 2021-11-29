@@ -22,8 +22,13 @@ import org.apache.commons.io.LineIterator;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
+
 /**
+ * 
  * 读取文件，计算行数
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 @UtilityClass

@@ -12,6 +12,13 @@ import java.nio.channels.NonWritableChannelException;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link FileLocks} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileLocksTest {
     @Test
     void givenAnInputStream_whenGetWriteLock_thenThrowNonWritableChannelException() {

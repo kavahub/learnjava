@@ -20,6 +20,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Files} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FilesTest {
     private static final String TEMP_DIR = "target\\" +UUID.randomUUID().toString();
 
