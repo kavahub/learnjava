@@ -17,6 +17,7 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 /**
+ * 
  * 字符串替换性能测试
  * 
  * <p>
@@ -26,7 +27,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * Benchmark                          Mode  Cnt      Score      Error   Units
  * StringReplaceBenchmark.replace     thrpt   10  23091.419 ± 2055.383  ops/ms
  * StringReplaceBenchmark.replaceAll  thrpt   10   2919.702 ±   30.631  ops/ms
-* </pre>
+ * </pre>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -40,10 +44,9 @@ public class StringReplaceBenchmark {
     final String regexTarget = "(Jack)$";
     final String replacement = "Java";
 
-    
     public static void main(String[] args) throws RunnerException {
         Options opts = new OptionsBuilder().include(StringReplaceBenchmark.class.getSimpleName())
-            .build();
+                .build();
 
         new Runner(opts).run();
     }
@@ -57,5 +60,5 @@ public class StringReplaceBenchmark {
     public String replaceAll() {
         return master.replaceAll(regexTarget, replacement);
 
-    }    
+    }
 }

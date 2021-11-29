@@ -18,8 +18,11 @@ import org.passay.PasswordGenerator;
 import lombok.experimental.UtilityClass;
 
 /**
- * 密码生成器
  * 
+ * 密码生成器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class RandomPasswordGenerator {

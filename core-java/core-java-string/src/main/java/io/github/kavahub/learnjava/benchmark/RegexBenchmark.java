@@ -25,13 +25,6 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 /**
  * 
- * 
- * @formatter:off
- * @formatter:on
- * 
- */
-
-/**
  * 正则表达式性能测试，使用预先编译好的正则表达式性能更好
  * 
  * <p>
@@ -44,7 +37,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * RegexBenchmark.patternMatches                             thrpt   10  0.741 ± 0.082  ops/s
  * RegexBenchmark.preCompiledPatternMatcherMatches           thrpt   10  2.474 ± 0.467  ops/s
  * RegexBenchmark.stringMatchs                               thrpt   10  0.803 ± 0.071  ops/s
-* </pre>
+ * </pre>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.SECONDS)
@@ -125,6 +121,5 @@ public class RegexBenchmark {
             bh.consume(value.matches(PATTERN));
         }
     }
-
 
 }

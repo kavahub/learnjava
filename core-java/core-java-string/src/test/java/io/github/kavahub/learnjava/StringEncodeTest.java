@@ -10,8 +10,11 @@ import org.apache.commons.codec.binary.StringUtils;
 import org.junit.jupiter.api.Test;
 
 /**
- * 字符串加解码
  * 
+ * 字符串加解码
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StringEncodeTest {
     @Test

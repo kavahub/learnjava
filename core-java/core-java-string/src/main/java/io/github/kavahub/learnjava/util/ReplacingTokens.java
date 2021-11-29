@@ -5,6 +5,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
+/**
+ * 
+ * 替换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ReplacingTokens {
     public static final Pattern TITLE_CASE_PATTERN = Pattern.compile("(?<=^|[^A-Za-z])([A-Z][a-z]*)(?=[^A-Za-z]|$)");
 

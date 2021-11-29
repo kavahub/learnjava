@@ -14,8 +14,11 @@ import java.nio.charset.CodingErrorAction;
 import lombok.experimental.UtilityClass;
 
 /**
- * 字符编码
  * 
+ * 字符编码
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class CharacterEncoding {

@@ -15,6 +15,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 
+ * 字符串转换成集合
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StringToTests {   
     private final String countries = "Russia,Germany,England,France,Italy";
     private final List<String> expectedCountriesList = Arrays.asList("Russia", "Germany", "England", "France", "Italy");

@@ -9,6 +9,13 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Matcher} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MatcherTest {
     @Test
     public void whenFindFourDigitWorks_thenCorrect() {

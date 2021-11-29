@@ -7,6 +7,13 @@ import org.junit.jupiter.api.Test;
 import static io.github.kavahub.learnjava.util.Recapitalize.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 
+ * {@link Recapitalize} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class RecapitalizeTest {
     @Test
     void givenWords_thenCanComposeSentence() {

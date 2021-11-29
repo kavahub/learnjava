@@ -12,6 +12,13 @@ import org.apache.maven.artifact.versioning.ComparableVersion;
 import org.gradle.util.VersionNumber;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link VersionCompare} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class VersionComparisonTest {
     
     @Test

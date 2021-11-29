@@ -10,6 +10,13 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link StreamTokenizerExample} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StreamTokenizerExampleTest {
     @Test
     public void whenStreamTokenizerWithDefaultConfigurationIsCalled_ThenCorrectTokensAreReturned() throws IOException {

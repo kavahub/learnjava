@@ -6,6 +6,13 @@ import java.util.ResourceBundle;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 国际化
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class Localization {
     public static String getLabel(Locale locale) {

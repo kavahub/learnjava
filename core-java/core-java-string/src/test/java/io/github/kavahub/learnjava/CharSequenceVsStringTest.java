@@ -7,12 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 /**
- * CharSequence是一个描述字符串结构的接口. 常见三个子类：
+ * {@link CharSequence} 与 {@link String} 应用比较
  * 
- * @see String
- * @see StringBuilder
- * @see StringBuffer
- * 
+ * <p>
+ * CharSequence是一个描述字符串结构的接口
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CharSequenceVsStringTest {
     @Test

@@ -21,6 +21,7 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 /**
+ * 
  * 去除字符串前后空格性能测试
  * 
  * <p>
@@ -34,6 +35,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * LTrimRTrimBenchmark.replaceAllRegularExpression  thrpt   10   1035.478 ±  48.099  ops/ms
  * LTrimRTrimBenchmark.whileCharacters              thrpt   10   9383.655 ± 498.941  ops/ms
  * </pre>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)

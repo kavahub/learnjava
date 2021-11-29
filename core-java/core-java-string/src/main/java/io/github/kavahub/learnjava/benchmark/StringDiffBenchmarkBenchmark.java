@@ -22,6 +22,7 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 /**
+ * 
  * 比较两个字符串的不同
  * 
  * <p>
@@ -32,6 +33,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * StringDiffBenchmarkBenchmark.diffMatchPatch  thrpt   10  0.009 ±  0.001  ops/ms
  * StringDiffBenchmarkBenchmark.stringUtils     thrpt   10  4.323 ±  0.083  ops/ms
  * </pre>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -46,7 +50,7 @@ public class StringDiffBenchmarkBenchmark {
 
     public static void main(String[] args) throws RunnerException {
         Options opts = new OptionsBuilder().include(StringDiffBenchmarkBenchmark.class.getSimpleName())
-            .build();
+                .build();
 
         new Runner(opts).run();
     }
@@ -81,5 +85,5 @@ public class StringDiffBenchmarkBenchmark {
             inputs.add(staticPart + RandomStringUtils.randomAlphabetic(20));
         }
         return inputs;
-    } 
+    }
 }

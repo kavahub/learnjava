@@ -5,7 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 /**
+ * 
  * 使用正则表达式替换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ReplaceAllWithWhitespaceRegexTest {
     private static final String INPUT_STR = "Text   With     Whitespaces!   ";

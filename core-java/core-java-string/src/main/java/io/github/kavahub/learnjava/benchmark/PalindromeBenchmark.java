@@ -18,7 +18,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import io.github.kavahub.learnjava.util.Palindrome;
 
 /**
- * 回文搜索性能测试，{@link Palindrome}实现回文搜索
+ * 
+ * {@link Palindrome} 回文搜索性能测试
  * 
  * <p>
  * 测试结果:
@@ -32,6 +33,9 @@ import io.github.kavahub.learnjava.util.Palindrome;
  * PalindromeBenchmark.isPalindromeUsingStringBuffer   thrpt   10  2967.986 ± 1672.002  ops/ms
  * PalindromeBenchmark.isPalindromeUsingStringBuilder  thrpt   10  4606.913 ±  396.342  ops/ms
  * </pre>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)

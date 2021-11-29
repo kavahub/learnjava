@@ -14,7 +14,11 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 /**
+ * 
  * 图片文件与Base64字符串互转
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class FileAndBase64StringConversionTest {
     private final static String TEST_IMAGE_COPY = "test_image_copy.jpg";

@@ -5,7 +5,11 @@ import java.util.Optional;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 字符串删除最后字符
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class StringRemoveLastChar {

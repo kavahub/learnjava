@@ -7,8 +7,11 @@ import org.apache.commons.lang3.StringUtils;
 import lombok.experimental.UtilityClass;
 
 /**
- * 删除字符串前或后的0
  * 
+ * 删除字符串前或后的0
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class RemoveLeadingAndTrailingZeroes {

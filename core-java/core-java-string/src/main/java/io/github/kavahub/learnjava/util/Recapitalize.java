@@ -9,8 +9,11 @@ import java.util.stream.Stream;
 import lombok.experimental.UtilityClass;
 
 /**
- * 重组字符串集合，将字符串集合按一定规则组合成一个字符串
  * 
+ * 重组字符串集合，将字符串集合按一定规则组合成一个字符串
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class Recapitalize {

@@ -8,6 +8,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.MultiLineStringJoiner.*;
 
+/**
+ * 
+ * {@link MultiLineStringJoiner} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MultiLineStringTest {
     @Test
     public void whenCompareMultiLineStrings_thenTheyAreAllTheSame() throws IOException {

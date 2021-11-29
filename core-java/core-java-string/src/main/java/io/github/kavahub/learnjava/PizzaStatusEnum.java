@@ -1,5 +1,12 @@
 package io.github.kavahub.learnjava;
 
+/**
+ * 
+ * （辅助类）
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public enum PizzaStatusEnum {
     ORDERED(5) {
         @Override

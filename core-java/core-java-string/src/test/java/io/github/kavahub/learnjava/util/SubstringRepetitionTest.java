@@ -6,6 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link SubstringRepetition} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SubstringRepetitionTest {
     private String validString = "aa";
     private String validStringTwo = "ababab";

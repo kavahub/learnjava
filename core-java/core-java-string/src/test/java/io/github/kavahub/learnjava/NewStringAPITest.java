@@ -6,6 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static java.util.function.Predicate.not;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 创建字符串 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class NewStringAPITest {
     @Test
     public void whenRepeatStringTwice_thenGetStringTwice() {

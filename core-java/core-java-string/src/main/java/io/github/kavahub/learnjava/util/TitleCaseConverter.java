@@ -11,7 +11,11 @@ import org.apache.commons.text.WordUtils;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 字符串转换成标题型
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class TitleCaseConverter {

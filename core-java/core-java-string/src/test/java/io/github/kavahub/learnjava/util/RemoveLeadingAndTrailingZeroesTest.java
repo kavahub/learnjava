@@ -9,6 +9,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 /**
  * 
+ * {@link RemoveLeadingAndTrailingZeroes} 应用示例
+ *
  * <p>
  * 关于参数化测试：
  * 
@@ -17,7 +19,8 @@ import org.junit.jupiter.params.provider.MethodSource;
  * 按照之前的做法，可能会是通过每个输入参数都写一个测试，或者将测试参数封装到集合中循环遍历执行测试。
  * 在新版的Junit5中，已经提供了一种更加优雅的方式来进行。该特性允许我们：该特性可以让我们运行单个测试多次， 且使得每次运行仅仅是参数不同而已。
  * 
- * <p>
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class RemoveLeadingAndTrailingZeroesTest {
     public static Stream<Arguments> leadingZeroTestProvider() {

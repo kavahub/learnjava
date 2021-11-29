@@ -10,9 +10,9 @@ import org.junit.jupiter.api.Test;
 /**
  * 字符串包含大写和小写字母，数字，特殊符号
  * 
- * <p>
- * 说明：isMatchingRegex函数，checkString函数与regex正则表达式功能相同
- * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StringContainingCharactersTest {
     private static final Pattern[] inputRegexes = new Pattern[4];

@@ -5,7 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 /**
+ * 
  * 16进制与文本互转
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class HexToAsciiTest {
     @Test

@@ -19,10 +19,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import io.github.kavahub.learnjava.util.InsertCharacterInString;
 
 /**
- * 字符串中插入子串性能测试。
  * 
- * <p>
- * 在字符串中插入子串有多种方式实现，参考: {@link InsertCharacterInString}
+ *  {@link InsertCharacterInString} 字符串中插入子串性能测试。
  * 
  * <p>
  * 测试结果:
@@ -34,7 +32,9 @@ import io.github.kavahub.learnjava.util.InsertCharacterInString;
  * InsertCharInStringBenchmark.insertCharSubstring       thrpt   10  17565.969 ±  265.822  ops/ms
  * InsertCharInStringBenchmark.insertCharUsingCharArray  thrpt   10  56525.726 ± 1839.114  ops/ms
  * </pre>
- * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)

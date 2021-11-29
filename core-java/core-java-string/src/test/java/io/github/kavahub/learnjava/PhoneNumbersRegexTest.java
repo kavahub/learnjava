@@ -8,6 +8,13 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 正则表达式：数字
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PhoneNumbersRegexTest {
     @Test
     public void whenMatchesTenDigitsNumber_thenCorrect() {

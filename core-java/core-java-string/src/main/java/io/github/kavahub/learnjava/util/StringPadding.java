@@ -3,7 +3,11 @@ package io.github.kavahub.learnjava.util;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 字符串补全
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class StringPadding {

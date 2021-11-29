@@ -11,9 +11,13 @@ import com.google.common.collect.ImmutableList;
 
 import lombok.experimental.UtilityClass;
 
+
 /**
- * 多行字符串组合
  * 
+ * 多行字符串 合并
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class MultiLineStringJoiner {

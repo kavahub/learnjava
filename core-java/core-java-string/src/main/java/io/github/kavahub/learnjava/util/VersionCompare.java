@@ -3,7 +3,11 @@ package io.github.kavahub.learnjava.util;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 版本比较
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class VersionCompare {

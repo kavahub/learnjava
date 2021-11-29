@@ -5,6 +5,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Pangram} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PangramTest {
     @Test
     public void givenValidString_isPangram_shouldReturnSuccess() {

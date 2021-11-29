@@ -4,8 +4,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.RemoveDuplicateFromString.*;
+
 /**
- * 每个个功能返回字符串的顺序不相同
+ * 
+ * {@link RemoveDuplicateFromString} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class RemoveDuplicateFromStringTest {
  

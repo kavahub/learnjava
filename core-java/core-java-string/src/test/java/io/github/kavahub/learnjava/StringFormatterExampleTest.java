@@ -37,7 +37,9 @@ import org.junit.jupiter.api.Test;
  * 
  * </pre>
  * 
- * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StringFormatterExampleTest {
     @Test

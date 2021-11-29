@@ -17,9 +17,10 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+
 /**
- * <p>
- * 类{@link String#contains(CharSequence)}性能测试
+ * 
+ * 是否包含字符串 性能测试
  * 
  * <p>
  * 测试结果：
@@ -32,7 +33,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * ContainsBenchmark.patternCaseInsensitiveRegexp  thrpt   10  4083.595 ± 243.943  ops/ms
  * ContainsBenchmark.regionMatches                 thrpt   10   282.634 ±  21.358  ops/ms
  * </pre>
- * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)

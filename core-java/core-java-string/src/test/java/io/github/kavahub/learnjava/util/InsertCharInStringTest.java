@@ -4,6 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link InsertCharacterInString} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class InsertCharInStringTest {
     @Test
     public void whenInsertCharAtIndexUsingSubstring_thenSuccess() {

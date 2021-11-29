@@ -11,6 +11,13 @@ import java.util.regex.Pattern;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Matcher} 优化示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class OptimizedMatcherTest {
     private String action;
 

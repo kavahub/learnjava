@@ -9,6 +9,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.StringPadding.*;
 
+/**
+ * 
+ * {@link StringPadding} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StringPaddingTest {
     String inputString = "123456";
     String expectedPaddedStringSpaces = "    123456";

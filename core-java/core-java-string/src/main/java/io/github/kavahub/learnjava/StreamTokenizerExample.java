@@ -11,8 +11,11 @@ import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * {@link StreamTokenizer} 使用示例
  * 
+ * {@link StreamTokenizer} 使用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class StreamTokenizerExample {

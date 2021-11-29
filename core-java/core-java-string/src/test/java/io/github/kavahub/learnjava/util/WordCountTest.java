@@ -8,6 +8,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.WordCounter.*;
 
+/**
+ * 
+ * {@link WordCounter} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class WordCountTest {
     private String string1 = "This is a test sentence with eight words";
     private String string2 = "This#is%a test sentence with eight       words";

@@ -7,6 +7,13 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 正则表达式 使用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class IgnoringPatternMetacharactersTest {
     private static final String dollarAmounts = "$100.25, $100.50, $150.50, $100.50, $100.75";
     private static final String patternStr = "$100.50";

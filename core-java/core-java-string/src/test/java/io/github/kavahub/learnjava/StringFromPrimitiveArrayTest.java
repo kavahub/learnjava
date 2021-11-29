@@ -14,6 +14,13 @@ import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 基础类型数组 转换成字符串
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StringFromPrimitiveArrayTest {
     private int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 

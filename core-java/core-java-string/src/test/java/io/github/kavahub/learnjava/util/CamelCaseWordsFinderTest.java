@@ -5,6 +5,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CamelCaseWordsFinder} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CamelCaseWordsFinderTest {
     @Test
     void givenPlainStringWithNonLetters_thenFindsWords() {

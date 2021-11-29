@@ -11,8 +11,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 
 /**
- * 字符统计
  * 
+ * 字符统计
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class CharCounterTest {
     @Test

@@ -11,8 +11,11 @@ import org.ahocorasick.trie.Trie;
 import lombok.experimental.UtilityClass;
 
 /**
- * 字符串是否包含单词，功能实现都是全包含
  * 
+ * 匹配单词，字符串是否包含单词，功能实现都是全包含
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class MatchWords {

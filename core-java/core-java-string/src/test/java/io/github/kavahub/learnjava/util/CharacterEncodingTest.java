@@ -22,6 +22,13 @@ import static io.github.kavahub.learnjava.util.CharacterEncoding.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/**
+ * 
+ * {@link CharacterEncoding} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CharacterEncodingTest {
   @Test
   public void givenTextFile_whenCalledWithEncodingASCII_thenProduceIncorrectResult() throws IOException {

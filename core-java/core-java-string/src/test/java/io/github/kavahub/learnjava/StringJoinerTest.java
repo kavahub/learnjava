@@ -10,6 +10,13 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link StringJoiner} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StringJoinerTest {
     private final String DELIMITER_COMMA = ",";
     private final String DELIMITER_HYPHEN = "-";

@@ -6,7 +6,11 @@ import java.util.List;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 单词查找
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class WordFinder {

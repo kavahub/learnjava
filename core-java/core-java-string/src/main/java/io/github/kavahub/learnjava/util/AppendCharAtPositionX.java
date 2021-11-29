@@ -3,8 +3,11 @@ package io.github.kavahub.learnjava.util;
 import lombok.experimental.UtilityClass;
 
 /**
- * 在字符串中插入字符
  * 
+ * 在字符串中插入字符
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class AppendCharAtPositionX {

@@ -1,9 +1,13 @@
 package io.github.kavahub.learnjava.util;
 
 import lombok.experimental.UtilityClass;
+
 /**
- * 判断串重复
  * 
+ * 判断串重复
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class SubstringRepetition {

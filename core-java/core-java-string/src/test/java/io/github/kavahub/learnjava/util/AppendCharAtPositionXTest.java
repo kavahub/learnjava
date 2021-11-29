@@ -7,6 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.AppendCharAtPositionX.*;
 
+/**
+ * 
+ * {@link AppendCharAtPositionX} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class AppendCharAtPositionXTest {
     private String word = "Titanc";
     private char letter = 'i';

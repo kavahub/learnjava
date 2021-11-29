@@ -13,10 +13,13 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import io.github.kavahub.learnjava.benchmark.RemovingStopwordsBenchmark;
 
 /**
- * @see RemovingStopwordsBenchmark
+ * 
+ * 禁用词删除
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class RemoveStopwordsTest {
     final static String original = "The quick brown fox jumps over the lazy dog";

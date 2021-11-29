@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.TitleCaseConverter.*;
 
+/**
+ * 
+ * {@link TitleCaseConverter} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class TitleCaseConverterTest {
     private static final String TEXT = "tHis IS a tiTLe";
     private static final String TEXT_EXPECTED = "This Is A Title";

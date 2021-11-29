@@ -6,6 +6,13 @@ import static io.github.kavahub.learnjava.util.MatchWords.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 
+ * {@link MatchWords} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MatchWordsTest {
     private final String[] words = {"hello", "Java"};
     private final String inputString = "hello there, Java";

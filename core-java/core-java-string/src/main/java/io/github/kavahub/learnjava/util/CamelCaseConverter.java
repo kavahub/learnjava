@@ -12,7 +12,11 @@ import org.apache.commons.text.WordUtils;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 字符串转换成驼峰格式
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class CamelCaseConverter {

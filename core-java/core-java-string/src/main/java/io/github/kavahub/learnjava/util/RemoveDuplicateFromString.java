@@ -8,8 +8,11 @@ import java.util.Set;
 import lombok.experimental.UtilityClass;
 
 /**
- * 删除字符串中重复的字符
  * 
+ * 删除字符串中重复的字符
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class RemoveDuplicateFromString {

@@ -8,11 +8,11 @@ import com.google.common.collect.Multiset;
 import lombok.experimental.UtilityClass;
 
 /**
- * 相同字母异序词
  * 
- * <p>
- * {@link #isAnagramSort(String, String)} 与
- * {@link #isAnagramCounting(String, String)} 实现的功能是一致的
+ * 相同字母异序词
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class Anagram {

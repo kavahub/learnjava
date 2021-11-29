@@ -4,6 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Palindrome} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PalindromeTest {
     private String[] words = { "Anna", "Civic", "Kayak", "Level", "Madam", };
 

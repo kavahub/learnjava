@@ -5,10 +5,14 @@ import java.util.stream.IntStream;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 判断回文字符串
  * 
  * <p>
  * "\\s+" 表示匹配任何空白字符，包括空格、制表符、换页符等等
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class Palindrome {

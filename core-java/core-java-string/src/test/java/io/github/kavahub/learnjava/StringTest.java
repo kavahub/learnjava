@@ -14,6 +14,13 @@ import java.util.function.BiFunction;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link String} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StringTest {
     @Test
     public void whenEmptyOrBlank() {

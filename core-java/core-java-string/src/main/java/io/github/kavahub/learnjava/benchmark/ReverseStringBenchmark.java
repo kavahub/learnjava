@@ -19,7 +19,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import io.github.kavahub.learnjava.util.ReverseString;
 
 /**
- * 字符串反向性能测试
+ * 
+ * {@link ReverseString} 字符串反向性能测试
  * 
  * <p>
  * 测试结果:
@@ -32,6 +33,9 @@ import io.github.kavahub.learnjava.util.ReverseString;
  * ReverseStringBenchmark.reverseUsingApacheCommons                 thrpt   10  27981.350 ±  975.124  ops/ms
  * ReverseStringBenchmark.reverseUsingStringBuilder                 thrpt   10  37873.653 ± 2624.676  ops/ms
  * </pre>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -45,7 +49,7 @@ public class ReverseStringBenchmark {
 
     public static void main(String[] args) throws RunnerException {
         Options opts = new OptionsBuilder().include(ReverseStringBenchmark.class.getSimpleName())
-            .build();
+                .build();
 
         new Runner(opts).run();
     }

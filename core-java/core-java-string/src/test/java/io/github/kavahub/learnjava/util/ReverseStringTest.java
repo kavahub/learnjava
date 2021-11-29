@@ -7,6 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.ReverseString.*;
 
+/**
+ * 
+ * {@link ReverseString} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ReverseStringTest {
 
     private static final String STRING_INPUT = "cat";

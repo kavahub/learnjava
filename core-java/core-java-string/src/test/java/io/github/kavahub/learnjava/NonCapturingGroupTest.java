@@ -8,6 +8,13 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 正则表达式 校验网络地址
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class NonCapturingGroupTest {
     private static final Pattern SIMPLE_URL_PATTERN = Pattern.compile("[^:]+://(?:[.a-z]+/?)+");
     private static final Pattern SCOPED_CASE_INSENSITIVE_URL_PATTERN = Pattern.compile("[^:]+://(?i:[.a-z]+/?)+");

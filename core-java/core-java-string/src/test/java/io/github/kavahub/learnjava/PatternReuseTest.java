@@ -14,6 +14,13 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 正则表达式 重用
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PatternReuseTest {
     // 姓名至少三个字母，中间有空格
     private static final Pattern FIRST_LAST_NAME_PRE_COMPILED_PATTERN = Pattern.compile("[a-zA-Z]{3,} [a-zA-Z]{3,}");

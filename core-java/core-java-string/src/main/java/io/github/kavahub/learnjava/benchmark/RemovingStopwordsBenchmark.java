@@ -24,7 +24,8 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 /**
- * 字符串中过滤掉指定单词性能测试
+ * 
+ * 删除禁用词 性能测试
  * 
  * <p>测试开始时，读取文件及需要过滤的单词，然后执行过滤
  * 
@@ -37,6 +38,9 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * RemovingStopwordsBenchmark.removeManually  avgt   10   8.134 ± 0.367  ms/op
  * RemovingStopwordsBenchmark.replaceRegex    avgt   10  27.810 ± 0.453  ms/op
  * </pre>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.AverageTime)

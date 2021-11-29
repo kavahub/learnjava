@@ -9,6 +9,13 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 正则表达式 使用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class LookaroundTest {
     @Test
     void givenPositiveLookahead_thenSuccess() {

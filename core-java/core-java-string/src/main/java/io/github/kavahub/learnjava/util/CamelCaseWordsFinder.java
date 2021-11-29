@@ -8,8 +8,11 @@ import java.util.regex.Pattern;
 import lombok.experimental.UtilityClass;
 
 /**
- * 驼峰型字符串查找
  * 
+ * 驼峰型字符串查找
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class CamelCaseWordsFinder {

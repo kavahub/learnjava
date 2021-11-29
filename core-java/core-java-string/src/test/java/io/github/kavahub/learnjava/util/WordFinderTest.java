@@ -9,6 +9,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.WordFinder.*;
 
+/**
+ * 
+ * {@link WordFinder} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class WordFinderTest {
     final String theString = "To be, or not to be: that is the question: "
             + "Whether 'tis nobler in the mind to suffer " + "The slings and arrows of outrageous fortune, "

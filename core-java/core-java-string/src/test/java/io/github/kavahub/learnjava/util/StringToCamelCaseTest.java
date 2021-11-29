@@ -9,6 +9,13 @@ import com.google.common.base.CaseFormat;
 
 import org.apache.commons.text.CaseUtils;
 
+/**
+ * 
+ * {@link CamelCaseConverter} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StringToCamelCaseTest {
     @Test
     public void givenStringWithWhiteSpaces_WhenToCamelCaseByIteration_ThenReturnCamelCase() {

@@ -9,8 +9,11 @@ import java.util.stream.Stream;
 import lombok.experimental.UtilityClass;
 
 /**
- * 是否全字母字符串
  * 
+ * 是否全字母字符串
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class Pangram {

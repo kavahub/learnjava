@@ -27,7 +27,13 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
  * 性能测试结果如下：
  * 
  * <pre>
- * TODO
+ * Benchmark                                                Mode  Cnt  Score   Error   Units
+ * MapBenchmark.A_randomReadAndWriteConcurrentHashMap  thrpt   10  3.726 ± 0.037  ops/ms
+ * MapBenchmark.A_randomReadAndWriteSynchronizedMap    thrpt   10  3.741 ± 0.046  ops/ms
+ * MapBenchmark.B_randomWriteConcurrentHashMap         thrpt   10  3.508 ± 0.077  ops/ms
+ * MapBenchmark.B_randomWriteSynchronizedMap           thrpt   10  3.591 ± 0.148  ops/ms
+ * MapBenchmark.C_randomReadConcurrentHashMap          thrpt   10  3.838 ± 0.306  ops/ms
+ * MapBenchmark.C_randomReadSynchronizedMap            thrpt   10  3.976 ± 0.148  ops/ms
  * </pre>
  * 
  * @author PinWei Wan

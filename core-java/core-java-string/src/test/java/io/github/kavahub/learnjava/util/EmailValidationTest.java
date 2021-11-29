@@ -5,6 +5,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link EmailValidator} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class EmailValidationTest {
     private String emailAddress;
     private String regexPattern;

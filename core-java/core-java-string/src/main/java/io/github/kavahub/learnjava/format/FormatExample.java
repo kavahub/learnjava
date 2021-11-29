@@ -5,7 +5,11 @@ import java.util.List;
 import java.util.Locale;
 
 /**
+ * 
  * 按地区格式化字符串
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class FormatExample {
     public static void main(String[] args) {

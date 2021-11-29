@@ -5,8 +5,11 @@ import java.util.StringTokenizer;
 import lombok.experimental.UtilityClass;
 
 /**
- * 单词统计
  * 
+ * 单词统计
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class WordCounter {

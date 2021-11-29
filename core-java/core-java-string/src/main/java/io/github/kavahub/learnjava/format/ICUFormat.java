@@ -7,7 +7,11 @@ import java.util.ResourceBundle;
 import com.ibm.icu.text.MessageFormat;
 
 /**
+ * 
  * ICU格式化
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ICUFormat {
     public static String getLabel(Locale locale, Object[] data) {
