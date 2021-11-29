@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.kavahub.learnjava</groupId>
   <artifactId>learnjava-modules</artifactId>
-  <version>1.0.0.RELEASE</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>learnjava-parent-modules</name>
   <packaging>pom</packaging>
 
