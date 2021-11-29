@@ -1,6 +1,6 @@
 package io.github.kavahub.learnjava.common.collection;
 
-import static io.github.kavahub.learnjava.common.collection.StreamUtility.*;
+import static io.github.kavahub.learnjava.common.collection.AssertStream.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

@@ -23,7 +23,7 @@ public class ResourceBundleTest {
     public void whenGetBundleExampleResourceForLocalePlPl_thenItShouldInheritPropertiesGreetingAndLanguage() {
         Locale plLocale = new Locale("pl", "PL");
 
-        ResourceBundle exampleBundle = ResourceBundle.getBundle("io.github.kavahub.learnjava.resource.ExampleResource",
+        ResourceBundle exampleBundle = ResourceBundle.getBundle("io.github.kavahub.learnjava.i18n.ExampleResource",
                 plLocale);
 
         assertTrue(exampleBundle.keySet()
@@ -46,7 +46,7 @@ public class ResourceBundleTest {
     public void whenGetBundleExampleResourceForLocaleUs_thenItShouldContainOnlyGreeting() {
         Locale usLocale = Locale.US;
 
-        ResourceBundle exampleBundle = ResourceBundle.getBundle("io.github.kavahub.learnjava.resource.ExampleResource",
+        ResourceBundle exampleBundle = ResourceBundle.getBundle("io.github.kavahub.learnjava.i18n.ExampleResource",
                 usLocale);
 
         System.out.println("======" + exampleBundle.keySet());

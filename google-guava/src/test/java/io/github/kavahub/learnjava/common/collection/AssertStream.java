@@ -19,7 +19,7 @@ import lombok.experimental.UtilityClass;
  * @since 1.0.0
  */
 @UtilityClass
-public class StreamUtility {
+public class AssertStream {
     public <T> boolean assertStreamEquals(Stream<T> stream1, Stream<T> stream2) {
 
         Iterator<T> iterator1 = stream1.iterator();

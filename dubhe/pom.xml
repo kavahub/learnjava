@@ -5,6 +5,8 @@
     <name>debhe</name>
     <packaging>jar</packaging>
 
+    <description>Java 小工具</description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava</groupId>
         <artifactId>learnjava-modules</artifactId>

@@ -4,6 +4,8 @@
     <artifactId>core-java-io</artifactId>
     <name>core-java-io</name>
 
+    <description>Java IO</description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava.core-java</groupId>
         <artifactId>core-java-modules</artifactId>

@@ -6,6 +6,8 @@
     <name>webservice</name>
     <packaging>pom</packaging>
 
+    <description>Webservice</description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava</groupId>
         <artifactId>learnjava-modules</artifactId>

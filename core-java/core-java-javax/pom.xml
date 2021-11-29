@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>core-java-javax</artifactId>
     <name>core-java-javax</name>
-    <description>javax</description>
+    <description>Java 扩展</description>
 
     <parent>
         <groupId>io.github.kavahub.learnjava.core-java</groupId>

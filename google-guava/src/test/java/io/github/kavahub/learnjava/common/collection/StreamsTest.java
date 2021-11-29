@@ -1,6 +1,6 @@
 package io.github.kavahub.learnjava.common.collection;
 
-import static io.github.kavahub.learnjava.common.collection.StreamUtility.assertStreamEquals;
+import static io.github.kavahub.learnjava.common.collection.AssertStream.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -32,6 +32,7 @@ import org.junit.jupiter.api.Test;
  * @since 1.0.0
  */
 public class StreamsTest {
+
     private List<String> names;
     private List<Integer> ages;
     private List<String> expectedOutput;

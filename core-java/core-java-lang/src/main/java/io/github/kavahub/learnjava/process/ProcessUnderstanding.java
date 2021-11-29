@@ -99,7 +99,7 @@ public class ProcessUnderstanding {
 
     public int outputStreamDemo() throws IOException, InterruptedException {
         Runtime.getRuntime()
-                .exec("javac -cp src src/main/java/io/github/kavahub/learnjava/process/ChildProcess.java "
+                .exec("javac -encoding UTF-8 -cp src src/main/java/io/github/kavahub/learnjava/process/ChildProcess.java "
                         .replace("/", File.separator))
                 .waitFor(5, TimeUnit.SECONDS);
 

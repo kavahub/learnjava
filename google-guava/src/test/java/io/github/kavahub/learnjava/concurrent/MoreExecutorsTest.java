@@ -1,5 +1,6 @@
 package io.github.kavahub.learnjava.concurrent;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.concurrent.ConcurrentHashMap;
@@ -30,12 +31,13 @@ public class MoreExecutorsTest {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         executorService.submit(logThreadRun);
         executorService.submit(logThreadRun);
+
         executorService.shutdown();
+        executorService.awaitTermination(60, TimeUnit.SECONDS);
 
-        executorService.awaitTermination(100, TimeUnit.MILLISECONDS);
-
-        assertTrue(threadExecutions.get("pool-1-thread-1"));
-        assertTrue(threadExecutions.get("pool-1-thread-2"));
+        assertEquals(threadExecutions.size(), 2);
+        //assertTrue(threadExecutions.get("pool-1-thread-1"));
+        //assertTrue(threadExecutions.get("pool-1-thread-2"));
     }
 
     @Test

@@ -6,6 +6,10 @@
     <name>core-java-modules</name>
     <packaging>pom</packaging>
 
+    <description>
+        Java 核心功能
+    </description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava</groupId>
         <artifactId>learnjava-modules</artifactId>

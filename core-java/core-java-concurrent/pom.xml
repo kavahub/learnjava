@@ -4,6 +4,8 @@
     <artifactId>core-java-concurrent</artifactId>
     <name>core-java-concurrent</name>
 
+    <description>Java 多线程</description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava.core-java</groupId>
         <artifactId>core-java-modules</artifactId>

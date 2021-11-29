@@ -7,6 +7,32 @@
   <name>learnjava-parent-modules</name>
   <packaging>pom</packaging>
 
+  <description>
+    学习Java从测试开始
+  </description>
+
+  <url>https://gitee.com/pinweiwan/learnjava</url>
+
+  <licenses>
+    <license>
+      <name>MIT license</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>PinWei Wan</name>
+      <email>44010039@qq.com</email>
+      <organization>none</organization>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git@gitee.com:pinweiwan/learnjava.git</connection>
+    <developerConnection>scm:git:git@gitee.com:pinweiwan/learnjava.git</developerConnection>
+    <url>https://gitee.com/pinweiwan/learnjava.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <properties>
     <!-- Generic properties -->
     <java.version>11</java.version>
@@ -17,9 +43,11 @@
     <argLine>-Dfile.encoding=UTF-8</argLine>
 
     <!-- maven plugin -->
-    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+    <maven-release-plugin.version>3.0.0-M4</maven-release-plugin.version>
+    <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+    <maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-    <maven-jdeps-plugin.version>3.1.2</maven-jdeps-plugin.version>
 
     <!-- logging -->
     <logback.version>1.3.0-alpha10</logback.version>
@@ -539,7 +567,6 @@
     </dependencies>
   </dependencyManagement>
 
-
   <repositories>
     <repository>
       <id>aliyun</id>
@@ -564,11 +591,20 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${maven-compiler-plugin.version}</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jdeps-plugin</artifactId>
-          <version>${maven-jdeps-plugin.version}</version>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${maven-release-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${maven-javadoc-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${maven-source-plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -594,11 +630,64 @@
           <target>${java.version}</target>
         </configuration>
       </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jdeps-plugin</artifactId>
-      </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>release</id>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-release-plugin</artifactId>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <parallel>methods</parallel>
+              <threadCount>10</threadCount>
+            </configuration>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <source>${java.version}</source>
+              <target>${java.version}</target>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

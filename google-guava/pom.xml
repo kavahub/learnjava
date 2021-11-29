@@ -5,6 +5,8 @@
     <name>google-guava</name>
     <packaging>jar</packaging>
 
+    <description>Google Guava库</description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava</groupId>
         <artifactId>learnjava-modules</artifactId>

@@ -4,6 +4,10 @@
     <artifactId>core-java-lang</artifactId>
     <name>core-java-lang</name>
 
+    <description>
+        Java 基础
+    </description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava.core-java</groupId>
         <artifactId>core-java-modules</artifactId>

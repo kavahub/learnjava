@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>core-java-nio</artifactId>
     <name>core-java-nio</name>
-    <description>java io</description>
+    <description>java nio</description>
 
     <parent>
         <groupId>io.github.kavahub.learnjava.core-java</groupId>

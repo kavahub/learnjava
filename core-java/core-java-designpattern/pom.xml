@@ -4,6 +4,8 @@
     <artifactId>core-java-designpattern</artifactId>
     <name>core-java-designpattern</name>
 
+    <description>Java 设计模式</description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava.core-java</groupId>
         <artifactId>core-java-modules</artifactId>

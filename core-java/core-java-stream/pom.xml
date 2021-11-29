@@ -3,6 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>core-java-stream</artifactId>
     <name>core-java-stream</name>
+    
+    <description>
+        Java 流
+    </description>
 
     <parent>
         <groupId>io.github.kavahub.learnjava.core-java</groupId>

@@ -127,7 +127,7 @@ public class ProcessUnderstandingTest {
             throws IOException, InterruptedException {
 
         Runtime.getRuntime().exec(
-                "javac -cp src src/main/java/io/github/kavahub/learnjava/process/ProcessOutStream.java".replace("/", File.separator))
+                "javac -encoding UTF-8 -cp src src/main/java/io/github/kavahub/learnjava/process/ProcessOutStream.java".replace("/", File.separator))
                 .waitFor(5, TimeUnit.SECONDS);
 
         Process process = Runtime.getRuntime()

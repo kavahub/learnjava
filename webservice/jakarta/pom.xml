@@ -4,6 +4,8 @@
     <artifactId>jskarta</artifactId>
     <name>jskarta</name>
 
+    <description>jakarta库创建Webservice服务</description>
+
     <parent>
         <groupId>io.github.kavahub.learnjava.webservice</groupId>
         <artifactId>webservice-modules</artifactId>
