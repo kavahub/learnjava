@@ -8,6 +8,9 @@ import java.net.UnknownHostException;
 
 /**
  * cookie策略实现
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ProxyAcceptCookiePolicy implements CookiePolicy {
     String acceptedProxy;

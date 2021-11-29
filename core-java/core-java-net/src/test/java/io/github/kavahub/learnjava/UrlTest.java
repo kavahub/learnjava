@@ -7,6 +7,13 @@ import java.net.URL;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link URL} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class UrlTest {
     @Test
     public void givenUrl_whenCanIdentifyProtocol_thenCorrect() throws MalformedURLException {

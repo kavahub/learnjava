@@ -8,6 +8,13 @@ import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * 
+ * 服务器端，接收消息并返回消息
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SimpleServerExample {
     private ServerSocket serverSocket;
     private Socket connectedSocket;

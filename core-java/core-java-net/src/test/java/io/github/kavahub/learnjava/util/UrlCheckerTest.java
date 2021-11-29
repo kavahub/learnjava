@@ -8,6 +8,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.UrlChecker.*;
 
+/**
+ * 
+ * {@link UrlChecker} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class UrlCheckerTest {
     @Test
     public void givenValidUrl_WhenUsingHEAD_ThenReturn200() throws IOException {

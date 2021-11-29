@@ -16,6 +16,13 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link NetworkInterface} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class NetworkInterfaceManualTest {
     @Test
     public void givenName_whenReturnsNetworkInterface_thenCorrect() throws SocketException {

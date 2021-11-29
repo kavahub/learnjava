@@ -8,6 +8,9 @@ import java.util.List;
 
 /**
  * cookie持久化
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class PersistentCookieStore implements CookieStore, Runnable {
     CookieStore store;

@@ -7,6 +7,13 @@ import java.net.URLConnection;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * Http 连接工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class UrlConnection {
     /**

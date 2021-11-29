@@ -16,6 +16,9 @@ import javax.mail.internet.MimeMultipart;
 
 /**
  * 发送邮件
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class EmailServiceExample {
     private String host = "";

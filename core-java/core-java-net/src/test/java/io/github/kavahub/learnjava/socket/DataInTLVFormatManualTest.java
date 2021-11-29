@@ -4,6 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link DataInTLVFormatClient} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DataInTLVFormatManualTest {
     @Test
     public void givenServerAndClient_whenClientSendsAndServerReceivesData_thenCorrect() throws InterruptedException {

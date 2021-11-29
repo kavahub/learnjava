@@ -11,6 +11,13 @@ import java.nio.charset.StandardCharsets;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 
+/**
+ * 
+ * Http 客户端
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HttpClient {
     private final String user;
     private final String password;

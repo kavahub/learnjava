@@ -4,6 +4,13 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
+/**
+ * 
+ * 服务器端
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class EchoServer extends Thread {
     protected DatagramSocket socket = null;
     protected boolean running;

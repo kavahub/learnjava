@@ -8,6 +8,13 @@ import java.net.URL;
 
 import io.github.kavahub.learnjava.util.UrlConnection;
 
+/**
+ * 
+ * Http 代理
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ProxyWithWebExample {
     private static final String URL_STRING = "http://cn.bing.com";
 

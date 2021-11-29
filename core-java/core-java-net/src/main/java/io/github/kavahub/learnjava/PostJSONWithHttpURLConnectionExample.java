@@ -7,6 +7,13 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * 
+ * {@link HttpURLConnection} 发送Post请求
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PostJSONWithHttpURLConnectionExample {
     public static void main (String []args) throws IOException{
 		//Change the URL with any other publicly accessible POST resource, which accepts JSON request body

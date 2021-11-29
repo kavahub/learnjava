@@ -6,6 +6,13 @@ import java.net.URL;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * {@link URL} 访问响应状态
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class UrlChecker {
     public int getResponseCodeForURL(String address) throws IOException {

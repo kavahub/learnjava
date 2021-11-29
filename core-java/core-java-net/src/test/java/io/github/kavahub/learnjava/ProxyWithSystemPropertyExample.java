@@ -5,6 +5,13 @@ import java.net.URLConnection;
 
 import io.github.kavahub.learnjava.util.UrlConnection;
 
+/**
+ * 
+ * Http 代理
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ProxyWithSystemPropertyExample {
     public static final String RESOURCE_URL = "http://cn.bing.com";
 

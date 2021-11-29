@@ -9,6 +9,13 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link EchoServer} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class EchoLiveTest {
     private static EchoClient client;
 

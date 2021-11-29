@@ -7,6 +7,13 @@ import java.net.MulticastSocket;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 多播服务器端
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class MulticastEchoServer extends Thread {
 

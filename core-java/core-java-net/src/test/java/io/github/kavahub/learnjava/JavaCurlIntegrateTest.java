@@ -14,6 +14,8 @@ import io.github.kavahub.learnjava.util.InputStreamToString;
 /**
  * curl命令行测试
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class JavaCurlIntegrateTest {
     private final static String USER_HOME = System.getProperty("user.home");

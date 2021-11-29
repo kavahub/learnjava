@@ -18,6 +18,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 文件下载，支持断点续传
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 @UtilityClass

@@ -7,6 +7,13 @@ import java.io.IOException;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link MulticastEchoServer} 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MulticastLiveTest {
     private static MulticastingClient client;
 

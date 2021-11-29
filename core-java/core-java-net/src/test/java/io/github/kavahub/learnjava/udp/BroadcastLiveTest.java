@@ -7,6 +7,13 @@ import java.io.IOException;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link BroadcastingEchoServer} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class BroadcastLiveTest {
     private static BroadcastingClient client;
 

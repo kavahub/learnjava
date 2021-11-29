@@ -19,6 +19,13 @@ import org.springframework.web.util.UriUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 加码解码 示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class EncoderDecoderTest {
     private static final String testUrl = "http://www.baeldung.com?key1=value+1&key2=value%40%21%242&key3=value%253";

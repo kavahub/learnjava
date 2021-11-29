@@ -19,6 +19,13 @@ import org.junit.jupiter.api.Test;
 import io.github.kavahub.learnjava.util.FileDownload;
 import io.github.kavahub.learnjava.util.FileResumableDownload;
 
+/**
+ * 
+ * {@link FileDownload}，{@link FileResumableDownload} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileDownloadIntegrationTest {
     static String FILE_URL = "https://s3.amazonaws.com/baeldung.com/Do+JSON+with+Jackson+by+Baeldung.pdf";
     static String FILE_NAME = "file.dat";

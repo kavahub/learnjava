@@ -10,6 +10,13 @@ import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 服务器端，使用线程处理消息
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class EchoMultiServer {
     private static int index = 1;

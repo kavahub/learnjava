@@ -17,6 +17,13 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
+/**
+ * 
+ * Http 客户端集成测试，使用 {@link ClientAndServer} 模拟服务器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HttpClientIntegrationTest {
  
     private static ClientAndServer mockServer;

@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 /**
  * HttpClient集成测试
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class HttpClientIntegrationTest {
     @Test

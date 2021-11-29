@@ -6,6 +6,13 @@ import java.util.Map;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 参数字符串构建器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class ParameterStringBuilder {
     public String getParamsString(Map<String, String> params) throws UnsupportedEncodingException {

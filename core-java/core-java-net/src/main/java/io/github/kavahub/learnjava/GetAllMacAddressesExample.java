@@ -13,6 +13,8 @@ import java.util.stream.StreamSupport;
 /**
  * 获取本机所有的mac地址
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class GetAllMacAddressesExample {
     public static void main(String[] args) throws SocketException {

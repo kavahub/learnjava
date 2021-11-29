@@ -19,6 +19,8 @@ import lombok.experimental.UtilityClass;
 /**
  * ip地址检测
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class IPWithGivenRangeChecker {

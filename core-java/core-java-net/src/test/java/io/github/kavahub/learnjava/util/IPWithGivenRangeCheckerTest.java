@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.IPWithGivenRangeChecker.*;
 
+/**
+ * 
+ * IP地址范围检查示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class IPWithGivenRangeCheckerTest {
 
     @Test

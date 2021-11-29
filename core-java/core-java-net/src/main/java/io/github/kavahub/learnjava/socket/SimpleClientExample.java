@@ -6,6 +6,13 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * 
+ * 客户端。给服务器发送消息，并接收返回消息
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SimpleClientExample {
     private Socket clientSocket;
     private PrintWriter out;

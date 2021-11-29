@@ -14,6 +14,13 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 下载邮件附件
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class EMailWithAttachmentServiceTest {
     private static EMailWithAttachmentService emailService;
     private static GreenMail greenMail;

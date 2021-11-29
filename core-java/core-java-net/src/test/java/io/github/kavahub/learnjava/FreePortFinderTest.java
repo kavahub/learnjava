@@ -17,6 +17,8 @@ import org.springframework.util.SocketUtils;
 /**
  * 未使用端口查找
  * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class FreePortFinderTest {
     private static int FREE_PORT_NUMBER;

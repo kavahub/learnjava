@@ -12,6 +12,13 @@ import java.util.function.Consumer;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * {@link HttpURLConnection} 响应信息构建器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class FullResponseBuilder {
 

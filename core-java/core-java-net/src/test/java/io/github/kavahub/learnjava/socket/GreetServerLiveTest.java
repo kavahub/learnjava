@@ -11,6 +11,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link GreetServer} 应用实例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class GreetServerLiveTest {
     private GreetClient client;
 

@@ -9,6 +9,13 @@ import java.net.URLConnection;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * {@link URL} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class URLExample {
     String URLSTRING = "https://wordpress.org:443/support/topic/page-jumps-within-wordpress/?replies=3#post-2278484";

@@ -6,6 +6,13 @@ import java.io.IOException;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * 
+ * 客户端
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class DataInTLVFormatClient {
     public void runClient(String ip, int port) {
         try {
@@ -14,6 +21,7 @@ public class DataInTLVFormatClient {
             DataInputStream in = new DataInputStream(System.in);
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             
+            // 生成 TLV 格式数据
             char type = 's'; // s for string
             int length = 29;
             String data = "This is a string of length 29";

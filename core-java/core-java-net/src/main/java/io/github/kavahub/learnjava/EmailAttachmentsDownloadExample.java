@@ -25,6 +25,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 邮件附件下载
+ * 
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class EmailAttachmentsDownloadExample {

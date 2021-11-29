@@ -13,6 +13,13 @@ import java.util.stream.Collectors;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 客户端
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class BroadcastingClient {
     private DatagramSocket socket;

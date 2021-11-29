@@ -7,7 +7,13 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-
+/**
+ * 
+ * {@link ParameterStringBuilder} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ParameterStringBuilderTest {
     @Test
     public void givenNormalChar_whenGetParamsString() throws UnsupportedEncodingException {

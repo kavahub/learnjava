@@ -11,6 +11,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link EchoClient} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class EchoLiveTest {
     private static int port;
 
