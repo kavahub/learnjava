@@ -20,6 +20,13 @@ import javax.net.ssl.SSLSocketFactory;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * TLSv1.2 开启
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class EnableTLSv12Example {   
     public String url = "127.0.0.1";

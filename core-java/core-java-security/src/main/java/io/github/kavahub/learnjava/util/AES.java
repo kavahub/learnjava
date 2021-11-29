@@ -28,6 +28,7 @@ import javax.crypto.spec.SecretKeySpec;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * AES加密解密
  * 
  * <p>
@@ -44,6 +45,10 @@ import lombok.experimental.UtilityClass;
  * 
  * <p>
  * CBC施加了一个额外的约束，那就是IV对攻击者而言必须是不可预测的-因此建议使用SecureRandom生成它是一个很好的选择。
+ 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class AES {

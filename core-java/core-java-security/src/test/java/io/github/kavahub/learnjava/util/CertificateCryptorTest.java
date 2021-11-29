@@ -10,6 +10,13 @@ import java.security.cert.X509Certificate;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link CertificateCryptor} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CertificateCryptorTest {
     private static String message;
     private static String  certificateString;

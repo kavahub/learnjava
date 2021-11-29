@@ -10,6 +10,13 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * 有效的 Ciphers
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class AvailableCiphersManualTest {
     @Test

@@ -13,12 +13,17 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
 /**
+ * 
  * 哈希函数（PBKDF2算法）
  * 
  * <p>
  * PBKDF2简单而言就是将salted hash进行多次重复计算，这个次数是可选择的
  * 
- * @see <a href="http://stackoverflow.com/a/2861125/3474">StackOverflow</a>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
+ * @see <a href="http://stackoverflow.com/a/2861125/3474">How can I hash a password in Java?</a>
  */
 public final class HashAlgorithmPBKDF2 {
     /**

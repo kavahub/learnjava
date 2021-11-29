@@ -12,6 +12,13 @@ import javax.net.ssl.SSLSocketFactory;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * ssl 客户端
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class SimpleClientExample {
     public void connect(String host, int port) throws IOException {

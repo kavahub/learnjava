@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.HashAlgorithmSHA3.*;
 
+/**
+ * 
+ * {@link HashAlgorithmSHA3} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HashAlgorithmSHA3Test {
     private static String originalValue = "abc123";
     private static String hashedValue = "f58fa3df820114f56e1544354379820cff464c9c41cb3ca0ad0b0843c9bb67ee";

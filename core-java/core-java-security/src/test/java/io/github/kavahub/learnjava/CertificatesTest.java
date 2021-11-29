@@ -29,6 +29,13 @@ import javax.net.ssl.X509TrustManager;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Certificate} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CertificatesTest {
     private static final String GODADDY_CA_ALIAS = "godaddyrootg2ca [jdk]";
 

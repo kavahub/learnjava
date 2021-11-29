@@ -16,6 +16,13 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * DES 加密解密应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class TripleDESTest {
     @Test
     public void given3DesKey_whenEncryptAndDecryptString_thenCompareResults() throws Exception {

@@ -10,6 +10,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.enhance.PKCS8PemReader.*;
 
+/**
+ * 
+ * PKCS8 Pem格式公钥，私钥读取
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class PKCS8PemReaderTest {
     @Test
     public void whenReadPublicKeyFromPEMFile_thenSuccess() throws Exception {

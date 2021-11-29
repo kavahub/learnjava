@@ -6,12 +6,17 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
+
 /**
+ * 
  * {@link SecureRandom} 使用示例
  * 
  * <p>
- * SecureRandom是强随机数生成器，主要应用的场景为：用于安全目的的数据数，例如生成秘钥或者会话标示（session
- * ID）。使用SecureRandom这样的强随机数生成器将会极大的降低出问题的风险
+ * {@code SecureRandom} 是强随机数生成器，主要应用的场景为：用于安全目的的数据，例如生成秘钥或者会话标示（session
+ * ID）。使用强随机数生成器将会极大的降低出问题的风险
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class SecureRandomExample {
 

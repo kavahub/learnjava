@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.jaas;
 
 import java.security.PrivilegedAction;
 
+/**
+ * 
+ * jaas 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @SuppressWarnings("all")
 public class ResourceAction implements PrivilegedAction {
     @Override

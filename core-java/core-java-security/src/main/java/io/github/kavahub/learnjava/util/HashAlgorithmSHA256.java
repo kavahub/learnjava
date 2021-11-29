@@ -14,8 +14,11 @@ import org.bouncycastle.util.encoders.Hex;
 import lombok.experimental.UtilityClass;
 
 /**
- * 哈希函数（SHA256算法）
  * 
+ * 哈希函数（SHA256算法）
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class HashAlgorithmSHA256 {

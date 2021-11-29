@@ -18,13 +18,15 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * <p>
+ * 
  * org.ietf.jgss 该软件包提供了一个框架，允许应用程序开发人员使用统一的API从各种底层安全机制（如Kerberos）中使用安全服务，
  * 如身份验证，数据完整性和数据机密性。 应用程序可以选择使用的安全机制用唯一对象标识符标识。 这种机制的一个示例是Kerberos v5
  * GSS-API机制（对象标识符1.2.840.113554.1.2.2）。 此机制可通过GSSManager类的默认实例获得。
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
- * @see <a href="https://www.baeldung.com/java-gss">Baeldung</a>
- * 
+ * @see <a href="https://www.baeldung.com/java-gss">A Guide to Java GSS API</a>
  */
 @Disabled
 public class JgssIntegrationTest {

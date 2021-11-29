@@ -42,6 +42,13 @@ import sun.security.x509.X509CertImpl;
 import sun.security.x509.X509CertInfo;
 import sun.security.util.DerOutputStream;
 
+/**
+ * 
+ * {@link KeyStoreOpts} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class KeyStoreOptsTest {
     private static KeyStoreOpts keyStore;
 

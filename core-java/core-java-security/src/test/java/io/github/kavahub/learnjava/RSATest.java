@@ -18,6 +18,13 @@ import javax.crypto.Cipher;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * RSA 加密解密应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class RSATest {
     @Test
     public void givenRsaKeyPair_whenEncryptAndDecryptString_thenCompareResults() throws Exception {

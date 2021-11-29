@@ -9,11 +9,14 @@ import java.util.zip.Checksum;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 校验码生成，计算一个字符串的 crc32 多项式
  * 
  * <p>
  * CRC（Cyclic Redundancy Check）循环冗余校验
- * 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class ChecksumCRC32 {

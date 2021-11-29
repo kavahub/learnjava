@@ -9,6 +9,13 @@ import javax.security.auth.callback.NameCallback;
 import javax.security.auth.callback.PasswordCallback;
 import javax.security.auth.callback.UnsupportedCallbackException;
 
+/**
+ * 
+ * jaas 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ConsoleCallbackHandler implements CallbackHandler {
 
     @Override

@@ -15,6 +15,13 @@ import javax.security.auth.callback.UnsupportedCallbackException;
 import javax.security.auth.login.LoginException;
 import javax.security.auth.spi.LoginModule;
 
+/**
+ * 
+ * jaas 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @SuppressWarnings("all")
 public class InMemoryLoginModule implements LoginModule {
 

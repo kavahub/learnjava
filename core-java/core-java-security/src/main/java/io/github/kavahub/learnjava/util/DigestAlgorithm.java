@@ -2,6 +2,13 @@ package io.github.kavahub.learnjava.util;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 工具类
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class DigestAlgorithm {
     public static final String SHA3_256 = "SHA3-256";

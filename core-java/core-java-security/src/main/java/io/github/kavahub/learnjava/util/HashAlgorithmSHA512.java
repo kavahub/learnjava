@@ -7,7 +7,11 @@ import java.security.NoSuchAlgorithmException;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 哈希函数（SHA512算法）
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class HashAlgorithmSHA512 {

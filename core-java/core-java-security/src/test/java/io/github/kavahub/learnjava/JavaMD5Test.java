@@ -17,6 +17,13 @@ import com.google.common.hash.Hashing;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * Md5 加密应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class JavaMD5Test {
     String filename = "src/test/resources/test_md5.txt";
     String CHECKSUM = "5EB63BBBE01EEED093CB22BB8F5ACDC3";

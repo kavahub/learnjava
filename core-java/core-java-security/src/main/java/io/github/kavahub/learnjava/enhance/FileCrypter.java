@@ -20,8 +20,11 @@ import javax.crypto.spec.SecretKeySpec;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 文件加解密
  * 
+ * 文件加解密
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class FileCrypter {

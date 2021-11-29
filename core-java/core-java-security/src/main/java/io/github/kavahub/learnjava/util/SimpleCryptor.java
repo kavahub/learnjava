@@ -8,14 +8,20 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
-import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 import lombok.experimental.UtilityClass;
 
 /**
- * 简单的加密解密，使用<code>AES/ECB/PKCS5Padding</code>算法, 没有使用{@link IvParameterSpec}
  * 
+ * 
+ */
+/**
+ * 
+ * 简单的加密解密，{@code AES/ECB/PKCS5Padding} 算法, 没有使用{@code IvParameterSpec}
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class SimpleCryptor {

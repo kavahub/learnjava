@@ -12,6 +12,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.HashAlgorithmSHA512.*;
 
+/**
+ * 
+ * {@link HashAlgorithmSHA512} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HashAlgorithmSHA512Test {
     private static SecureRandom secureRandom;
   

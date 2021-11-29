@@ -14,8 +14,13 @@ import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 import java.util.Enumeration;
 
+
 /**
- * 操作{@link KeyStore}
+ * 
+ * {@link KeyStore} 工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class KeyStoreOpts {
     private KeyStore keyStore;

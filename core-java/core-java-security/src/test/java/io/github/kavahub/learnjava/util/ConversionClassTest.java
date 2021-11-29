@@ -11,6 +11,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.ConversionClass.*;
 
+/**
+ * 
+ * {@link ConversionClass} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ConversionClassTest {
     @Test
     void givenPasswordAndSalt_whenCreateSecreKeyCheckConversion_thenSuccess()

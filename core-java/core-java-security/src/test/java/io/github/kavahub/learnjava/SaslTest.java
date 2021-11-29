@@ -26,7 +26,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 
- * @see <a href="https://blog.csdn.net/asdfsadfasdfsa/article/details/104526427/">CSDN</a>
+ * Sasl 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ * 
+ * @see <a href="https://blog.csdn.net/asdfsadfasdfsa/article/details/104526427/">SASL协议java实现</a>
  */
 public class SaslTest {
     private static final String MECHANISM = "DIGEST-MD5";

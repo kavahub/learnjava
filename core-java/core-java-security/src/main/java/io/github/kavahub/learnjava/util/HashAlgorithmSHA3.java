@@ -15,10 +15,14 @@ import org.bouncycastle.util.encoders.Hex;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 哈希函数（PBKDF2算法）
  * 
  * <p>
  * SHA-3第三代安全散列算法(Secure Hash Algorithm 3)， 之前名为Keccak（念作/ˈkɛtʃæk/或/kɛtʃɑːk/)）算法
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class HashAlgorithmSHA3 {

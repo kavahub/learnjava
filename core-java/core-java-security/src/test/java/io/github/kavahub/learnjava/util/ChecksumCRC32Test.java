@@ -11,6 +11,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.util.ChecksumCRC32.*;
 
+/**
+ * 
+ * {@link ChecksumCRC32} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class ChecksumCRC32Test {
     byte[] arr;
 

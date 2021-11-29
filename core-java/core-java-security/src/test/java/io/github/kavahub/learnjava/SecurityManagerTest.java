@@ -12,6 +12,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link SecurityManager} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Disabled("无法运行")
 public class SecurityManagerTest {
     private static final String TESTING_SECURITY_POLICY = "file:src/test/resources/testing.policy";

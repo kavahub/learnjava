@@ -6,6 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link HashAlgorithmPBKDF2} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class HashAlgorithmPBKDF2Test {
     String message = "this is a message";
     private static HashAlgorithmPBKDF2 pbkdf2;

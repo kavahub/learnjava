@@ -13,9 +13,16 @@ import javax.crypto.spec.SecretKeySpec;
 
 import lombok.experimental.UtilityClass;
 
+/**
+ * 
+ * 密码生成及转换
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @UtilityClass
 public class ConversionClass {
- /* Generating Secret key */
+    /* Generating Secret key */
 
     // Generating Secret Key using KeyGenerator class with 256
     public SecretKey generateKey(int keySize) throws NoSuchAlgorithmException {
@@ -50,5 +57,5 @@ public class ConversionClass {
         // Rebuilding the Secret Key using SecretKeySpec Class
         SecretKey originalKey = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES");
         return originalKey;
-    }   
+    }
 }

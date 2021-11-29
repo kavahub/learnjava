@@ -13,6 +13,13 @@ import javax.crypto.NoSuchPaddingException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link FileCrypter} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class FileCrypterManualTest {
     private final static String KEY = "1234567890123456";
     private final static Path SOURCE_ENCRYPTER_FILE = Paths.get("src", "test", "resources", "sourceEncrypterFile.txt");

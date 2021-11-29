@@ -12,7 +12,11 @@ import javax.crypto.NoSuchPaddingException;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 公钥加密，私钥解密. 使用<code>RSA/ECB/PKCS1Padding</code>算法
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class CertificateCryptor {

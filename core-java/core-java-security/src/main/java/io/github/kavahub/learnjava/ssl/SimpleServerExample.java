@@ -11,6 +11,13 @@ import javax.net.ssl.SSLServerSocketFactory;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * ssl 服务端
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class SimpleServerExample {
     void startServer(int port) throws IOException {
@@ -19,7 +26,7 @@ public class SimpleServerExample {
         try (ServerSocket listener = factory.createServerSocket(port)) {
             log.debug("Server start on port {}", port);
             ((SSLServerSocket) listener).setNeedClientAuth(true);               
-            //((SSLServerSocket) listener).setEnabledCipherSuites(new String[] { "TLS_DHE_DSS_WITH_ARIA_128_GCM_SHA256" });
+            ((SSLServerSocket) listener).setEnabledCipherSuites(new String[] { "TLS_DHE_DSS_WITH_ARIA_128_GCM_SHA256" });
             ((SSLServerSocket) listener).setEnabledProtocols(new String[] { "TLSv1.2" });
             while (true) {
                 try (Socket socket = listener.accept()) {

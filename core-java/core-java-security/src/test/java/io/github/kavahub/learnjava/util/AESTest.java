@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import io.github.kavahub.learnjava.Student;
 import static io.github.kavahub.learnjava.util.AES.*;
 
+/**
+ * 
+ * {@link AES} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class AESTest implements WithAssertions {
 
     @Test
