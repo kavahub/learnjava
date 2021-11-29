@@ -22,7 +22,7 @@ import io.github.kavahub.learnjava.User;
 
 /**
  * 
- * {@link Stream} 多线程与单线程性能测试
+ * 流 多线程与单线程性能测试
  *
  * @author PinWei Wan
  * @since 1.0.0

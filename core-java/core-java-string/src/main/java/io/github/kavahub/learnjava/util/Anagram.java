@@ -26,7 +26,7 @@ public class Anagram {
      * 异序
      * 
      * <p>
-     * (abcd, dcba) -> true
+     * (abcd, dcba) 》 true
      * 
      * @param string1
      * @param string2
@@ -47,7 +47,7 @@ public class Anagram {
      * 个数相同
      * 
      * <p>
-     * (abcd, cabd) -> true
+     * (abcd, cabd) 》 true
      * 
      * @param string1
      * @param string2

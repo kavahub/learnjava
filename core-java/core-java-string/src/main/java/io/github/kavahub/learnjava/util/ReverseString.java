@@ -14,7 +14,7 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class ReverseString {
     /**
-     * I am student -> tneduts ma I
+     * I am student 》 tneduts ma I
      * 
      * @param input
      * @return
@@ -53,7 +53,7 @@ public class ReverseString {
     }
 
     /**
-     * I am student -> student am I
+     * I am student 》 student am I
      * 
      * @param sentence
      * @return
