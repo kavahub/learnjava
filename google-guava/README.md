@@ -1,5 +1,5 @@
 # google-guava
-gongle guava项目学习
+gongle guava库学习
 
 ## 参考文章
 
