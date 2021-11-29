@@ -14,6 +14,10 @@ import static org.assertj.core.api.Assertions.assertThat;
  * 
  * <p>
  * {@link ForkJoinPool} 是线程池，采取工作窃取算法，以避免工作线程由于拆分了任务之后的join等待过程。这样处于空闲的工作线程将从其他工作线程的队列中主动去窃取任务来执行
+ 
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class ForkJoinTest {
     @Test

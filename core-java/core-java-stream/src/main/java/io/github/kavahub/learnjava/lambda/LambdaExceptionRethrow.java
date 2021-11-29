@@ -6,7 +6,11 @@ import java.util.function.Function;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 在Lambda表达式中抛出异常
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class LambdaExceptionRethrow {

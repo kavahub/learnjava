@@ -20,7 +20,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
+ * 
  * 集合排序
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class Java8SortTest {
     @Test

@@ -8,7 +8,11 @@ import java.util.stream.StreamSupport;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * {@link Enumeration} 集合支持流
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class EnumerationStream {

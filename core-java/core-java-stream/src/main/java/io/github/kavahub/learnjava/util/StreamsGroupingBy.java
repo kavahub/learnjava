@@ -10,7 +10,11 @@ import lombok.experimental.UtilityClass;
 import static java.util.stream.Collectors.*;
 
 /**
- * 流分组
+ * 
+ * 流分组 工具
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class StreamsGroupingBy {

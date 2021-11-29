@@ -14,6 +14,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.github.kavahub.learnjava.enumeration.EnumerationStream.*;
 
+/**
+ * 
+ * {@link EnumerationStream} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class EnumerationStreamTest {
     @Test
     public void givenEnumeration_whenConvertedToStream_thenNotNull() {

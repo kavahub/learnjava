@@ -10,14 +10,17 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
+ * 
  * peek功能是消费流中的元素
  * 
- * <p>
- * 1. 存在此方法主要是为了支持调试，您需要在其中查看元素流过管道中特定点的情况
- * <p>
- * 2. 从Java 9开始，如果元素的数量预先已知并且在流中保持不变，则由于性能优化，将不会执行.peek()语句
- * <p>
- * 3. 在没有任何终端操作的情况下使用peek不会执行任何操作
+ * <ul>
+ * <li> 存在此方法主要是为了支持调试，您需要在其中查看元素流过管道中特定点的情况 </li>
+ * <li> 从Java 9开始，如果元素的数量预先已知并且在流中保持不变，则由于性能优化，将不会执行.peek()语句 </li>
+ * <li> 在没有任何终端操作的情况下使用peek不会执行任何操作 </li>
+ * </ul>
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StreamPeekTest {
     private StringWriter out;

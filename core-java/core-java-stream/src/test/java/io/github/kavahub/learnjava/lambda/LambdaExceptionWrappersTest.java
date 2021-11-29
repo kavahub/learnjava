@@ -12,6 +12,13 @@ import lombok.extern.slf4j.Slf4j;
 import static io.github.kavahub.learnjava.lambda.LambdaExceptionWrappers.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/**
+ * 
+ * {@link LambdaExceptionWrappers} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 @Slf4j
 public class LambdaExceptionWrappersTest {
     private List<Integer> integers;

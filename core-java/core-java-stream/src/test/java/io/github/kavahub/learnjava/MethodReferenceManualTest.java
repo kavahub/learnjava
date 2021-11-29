@@ -11,6 +11,13 @@ import org.springframework.util.StringUtils;
 
 import lombok.Data;
 
+/**
+ * 
+ * 方法引用
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class MethodReferenceManualTest {
     private static <T> void doNothingAtAll(Object... o) {
     }

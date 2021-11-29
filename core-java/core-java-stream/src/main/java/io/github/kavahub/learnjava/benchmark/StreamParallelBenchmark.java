@@ -21,7 +21,11 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import io.github.kavahub.learnjava.User;
 
 /**
+ * 
  * {@link Stream} 多线程与单线程性能测试
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)

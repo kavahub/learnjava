@@ -9,7 +9,11 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 
 /**
+ * 
  * 连接（合并）多个流
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class StreamConcatTest {
     @Test

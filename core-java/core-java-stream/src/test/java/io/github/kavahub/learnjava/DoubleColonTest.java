@@ -17,7 +17,11 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 
  * 双冒号的使用方法
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 public class DoubleColonTest {

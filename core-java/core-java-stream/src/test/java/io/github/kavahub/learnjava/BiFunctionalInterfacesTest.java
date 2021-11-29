@@ -11,6 +11,13 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link BiFunction} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class BiFunctionalInterfacesTest {
     @Test
     public void givenStreamValues_whenMappedToNewValues() {

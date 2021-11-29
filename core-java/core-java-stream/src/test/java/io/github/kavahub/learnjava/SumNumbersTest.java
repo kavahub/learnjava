@@ -10,6 +10,13 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 合计
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SumNumbersTest {
     @Test
     public void givenIntStream_whenSum_thenResultIsCorrect() {

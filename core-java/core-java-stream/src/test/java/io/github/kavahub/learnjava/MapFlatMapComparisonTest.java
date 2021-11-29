@@ -12,7 +12,11 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 
 /**
+ * 
  * map 与 flatMap 的区别
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class MapFlatMapComparisonTest {
     @Test

@@ -7,10 +7,14 @@ import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 
  * 除法，与集合中的每个数相除
  * 
  * <p>
  * 说明：函数执行的功能相同，实现方式不同
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @Slf4j
 @UtilityClass

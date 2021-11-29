@@ -7,6 +7,13 @@ import java.util.stream.Stream;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * skip， limit 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SkipLimitComparisonTest {
     @Test
     public void giveStream_whenSkip() {

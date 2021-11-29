@@ -13,11 +13,17 @@ import org.junit.jupiter.api.Test;
 import static io.github.kavahub.learnjava.util.StreamsGroupingBy.*;
 
 /**
+ * 
+ * {@link StreamsGroupingBy}
+ * 
+ * <p>
  * Junit5 已不需要RunWith的注释
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  * 
- * @see <a href="https://www.it1352.com/2156811.html">It1352</a>
- * 
- */ 
+ * @see <a href="https://www.it1352.com/2156811.html">等效于JUnit5的@RunWith(JUnitPlatform.class)</a>
+ */
 // @RunWith(JUnitPlatform.class)
 public class StreamsGroupingByTest {
     private static final Collection<Integer> BASE_INTEGER_COLLECTION = Arrays.asList(9, 12, 55, 56, 101, 115, 8002, 223, 2668, 19, 8);

@@ -7,7 +7,11 @@ import java.util.stream.Stream;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 可中断的ForEach
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class ForEachBreaker {

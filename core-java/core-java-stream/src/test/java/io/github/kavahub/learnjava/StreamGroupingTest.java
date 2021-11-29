@@ -11,6 +11,13 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * 流分组 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StreamGroupingTest {
     @Test
     public void givenListOfStrings_whenGroupingEqualStrings_thenUseCollectorsGroupingByToGroupEqualStringsAndCountOfOccurrences() {

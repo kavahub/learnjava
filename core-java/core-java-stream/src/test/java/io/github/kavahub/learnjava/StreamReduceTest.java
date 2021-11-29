@@ -10,6 +10,13 @@ import org.junit.jupiter.api.Test;
 
 import io.github.kavahub.learnjava.util.NumberDivider;
 
+/**
+ * 
+ * reduce 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StreamReduceTest {
     @Test
     public void givenIntegerList_whenReduceWithSumAccumulatorLambda_thenCorrect() {

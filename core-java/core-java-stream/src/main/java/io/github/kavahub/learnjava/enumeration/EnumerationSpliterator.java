@@ -4,6 +4,13 @@ import java.util.Enumeration;
 import java.util.Spliterators.AbstractSpliterator;
 import java.util.function.Consumer;
 
+/**
+ * 
+ * {@link Enumeration} 分段器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class EnumerationSpliterator<T> extends AbstractSpliterator<T> {
     private final Enumeration<T> enumeration;
 

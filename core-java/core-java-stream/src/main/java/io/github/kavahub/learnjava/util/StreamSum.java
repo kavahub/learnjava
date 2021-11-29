@@ -8,7 +8,11 @@ import java.util.stream.Collectors;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 流合计
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class StreamSum {

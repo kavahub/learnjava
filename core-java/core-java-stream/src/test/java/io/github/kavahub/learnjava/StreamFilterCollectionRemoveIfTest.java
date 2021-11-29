@@ -12,6 +12,13 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * filter 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StreamFilterCollectionRemoveIfTest {
     private List<Item> itemList;
 

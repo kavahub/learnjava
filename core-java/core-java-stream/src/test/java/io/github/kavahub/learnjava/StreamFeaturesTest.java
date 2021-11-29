@@ -14,6 +14,13 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Stream} 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class StreamFeaturesTest {
     @Nested
     public class TakeAndDropWhileTest {

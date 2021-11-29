@@ -8,6 +8,13 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * {@link Supplier} 包装 {@link Stream}
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class SupplierStreamTest {
     @Test // (expected = IllegalStateException.class)
     public void givenStream_whenStreamUsedTwice_thenThrowException() {

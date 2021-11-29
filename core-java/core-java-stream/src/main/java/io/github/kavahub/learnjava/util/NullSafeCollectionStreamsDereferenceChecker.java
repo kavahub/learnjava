@@ -9,7 +9,11 @@ import org.apache.commons.collections4.CollectionUtils;
 import lombok.experimental.UtilityClass;
 
 /**
+ * 
  * 空集合转换成流检查器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class NullSafeCollectionStreamsDereferenceChecker {

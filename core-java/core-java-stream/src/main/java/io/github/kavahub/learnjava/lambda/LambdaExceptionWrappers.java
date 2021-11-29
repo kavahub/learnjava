@@ -5,8 +5,11 @@ import java.util.function.Consumer;
 import lombok.experimental.UtilityClass;
 
 /**
- * Lambda表达式异常适配器
  * 
+ * Lambda表达式异常适配器
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 @UtilityClass
 public class LambdaExceptionWrappers {

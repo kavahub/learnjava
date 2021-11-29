@@ -13,8 +13,11 @@ import static org.hamcrest.Matchers.contains;
 import org.junit.jupiter.api.Test;
 
 /**
- * 将Iterable转换成流
  * 
+ * 将Iterable转换成流
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
  */
 public class IterableStreamTest {
     @Test

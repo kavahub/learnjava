@@ -11,6 +11,13 @@ import org.junit.jupiter.api.Test;
 
 import lombok.Getter;
 
+/**
+ * 
+ * groupingBy 应用示例
+ *
+ * @author PinWei Wan
+ * @since 1.0.0
+ */
 public class CollectorsGroupingByTest {
     @Test
     public void givenList_whenSatifyPredicate_thenMapValueWithOccurences() {
