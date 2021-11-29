@@ -2,7 +2,6 @@
 
 [![Gitee stars](https://gitee.com/pinweiwan/learnjava/badge/star.svg)](https://gitee.com/pinweiwan/learnjava/stargazers)
 [![Gitee forks](https://gitee.com/pinweiwan/learnjava/badge/fork.svg)](https://gitee.com/pinweiwan/learnjava/members)
-[![Gitee release](https://gitee.com/pinweiwan/learnjava/badge/release.svg)](https://gitee.com/pinweiwan/learnjava/releases)
 [![License](https://img.shields.io/github/license/kavahub/learnjava.svg)](https://github.com/kavahub/learnjava/blob/main/LICENSE)
 
 
