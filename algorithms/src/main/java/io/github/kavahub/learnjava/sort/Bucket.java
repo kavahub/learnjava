@@ -24,7 +24,7 @@ import java.util.stream.Stream;
  * <ul>
  * <li> 桶数量(numberOfBuckets) : 排序数组大小的开方 </li>
  * <li> 最大值(maxValue) : 排序数组中的最大值 </li>
- * <li> 求Hash值(也就是放入哪个桶中) : 当前排序值/maxValue * (numberOfBuckets - 1) </li>
+ * <li> 计算桶标(也就是放入哪个桶中) : 当前排序值/maxValue * (numberOfBuckets - 1) </li>
  * </ul>
  * 
  * @author PinWei Wan
@@ -64,7 +64,7 @@ public class Bucket extends Sort<Integer> {
      * @return
      */
     protected List<List<Integer>> splitIntoBuckets(List<Integer> list) {
-
+        // 排序集合中的最大值
         final int maxValue = findMax(list);
         // 求开方
         final int numberOfBuckets = (int) Math.sqrt(list.size());
@@ -75,6 +75,7 @@ public class Bucket extends Sort<Integer> {
 
         // distribute the data
         for (int i : list) {
+            // 计算桶标
             final int hash = hash(i, maxValue, numberOfBuckets);
             buckets.get(hash).add(i);
         }
@@ -89,7 +90,7 @@ public class Bucket extends Sort<Integer> {
     }
 
     /**
-     * 算法核心
+     * 计算桶标
      * 
      * @param i               当前数
      * @param max             最大数
