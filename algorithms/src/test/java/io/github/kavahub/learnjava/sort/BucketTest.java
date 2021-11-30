@@ -28,6 +28,7 @@ public class BucketTest {
         sort(10000);
         sort(100000);
         sort(1000000);
+        sort(10000000);
     }
 
     private void sort(int size) {
