@@ -4,7 +4,11 @@
     <name>google-guava</name>
     <packaging>jar</packaging>
 
-    <description>Google Guava库</description>
+    <description>
+        Guava 是Java的工具集，包含了若干被Google的 Java项目广泛依赖 的核心库，例如：集合 [collections] 、缓存 [caching] 、
+        原生类型支持 [primitives support] 、并发库 [concurrency libraries] 、通用注解 [common annotations] 、
+        字符串处理 [string processing] 、I/O 等等
+    </description>
 
     <parent>
         <groupId>io.github.kavahub.learnjava</groupId>

@@ -1,6 +1,7 @@
 package io.github.kavahub.learnjava;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,12 +12,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import javax.activation.MimetypesFileTypeMap;
-
 import org.apache.tika.Tika;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import jakarta.activation.MimetypesFileTypeMap;
 import net.sf.jmimemagic.Magic;
 import net.sf.jmimemagic.MagicException;
 import net.sf.jmimemagic.MagicMatch;
@@ -39,7 +38,7 @@ public class MimeTypeTest {
     /**
      * The location of the file.
      */
-    public static final Path FILE_LOC = Paths.get("src","test","resources","product.png");
+    public static final Path FILE_LOC = Paths.get("src","test","resources","product");
 
     /**
      * Test method, demonstrating usage in Java 7.
@@ -52,7 +51,7 @@ public class MimeTypeTest {
     @Test
     public void whenUsingJava7_thenSuccess() throws IOException {
         final String mimeType = Files.probeContentType(FILE_LOC);
-        assertEquals(PNG_EXT, mimeType);
+        assertNotEquals(PNG_EXT, mimeType);
     }
 
     /**
@@ -80,7 +79,7 @@ public class MimeTypeTest {
     public void whenUsingGuessContentTypeFromName_thenSuccess() {
         final File file = FILE_LOC.toFile();
         final String mimeType = URLConnection.guessContentTypeFromName(file.getName());
-        assertEquals(PNG_EXT, mimeType);
+        assertNotEquals(PNG_EXT, mimeType);
     }
 
     /**
@@ -95,21 +94,23 @@ public class MimeTypeTest {
         final File file = FILE_LOC.toFile();
         final FileNameMap fileNameMap = URLConnection.getFileNameMap();
         final String mimeType = fileNameMap.getContentTypeFor(file.getName());
-        assertEquals(PNG_EXT, mimeType);
+        assertNotEquals(PNG_EXT, mimeType);
     }
 
     /**
      * Test method demonstrating the usage of MimeTypesFileTypeMap for resolution of
      * MIME type.
      * 
+     * <p>
+     * 使用扩展名判断
+     * 
      */
     @Test
-    @Disabled("java.lang.NoClassDefFoundError: com/sun/activation/registries/LogSupport")
     public void whenUsingMimeTypesFileTypeMap_thenSuccess() {
         final File file = FILE_LOC.toFile();
         final MimetypesFileTypeMap fileTypeMap = new MimetypesFileTypeMap();
         final String mimeType = fileTypeMap.getContentType(file.getName());
-        assertEquals(PNG_EXT, mimeType);
+        assertNotEquals(PNG_EXT, mimeType);
     }
 
     /**

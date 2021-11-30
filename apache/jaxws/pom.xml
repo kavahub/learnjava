@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">    <modelVersion>4.0.0</modelVersion>
+    <artifactId>jaxws</artifactId>
+    <name>jaxws</name>
+
+    <description>
+        JAX-WS RI是JAX WebService参考实现。相对于Axis2和CXF，JAX-WS RI是一个轻量级的框架。
+        虽然是个轻量级框架，JAX-WS RI也提供了在Web服务器中发布Webservice的功能
+    </description>
+
+    <parent>
+        <groupId>io.github.kavahub.learnjava.apache</groupId>
+        <artifactId>apache-modules</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <dependencies>  
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+    
+</project>

@@ -20,7 +20,7 @@ Java 编程语言学习，内容包含多个方面，如：字符串，日期，
 
 学习编程语言从测试开始。项目包含大量的示例，测试代码及代码注释。在 `README.md`中，还有在网络中收集的技术文章
 
-如果有好的代码，文章推荐，或者疑问等等，请在 [`issues`](https://gitee.com/pinweiwan/learnjava/issues) 中给我留言
+如果有好的代码，文章推荐，或者疑问等等，请在 [issues](https://gitee.com/pinweiwan/learnjava/issues) 中给我留言
 
 #### 特色
 
