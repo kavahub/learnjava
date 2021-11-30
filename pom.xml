@@ -131,6 +131,7 @@
     <module>google-guava</module>
     <module>dubhe</module>
     <module>design-pattern</module>
+    <module>algorithms</module>
   </modules>
 
   <dependencyManagement>
