@@ -110,7 +110,7 @@ public class AsyncCompletionHandlerServer {
         String className = AsyncCompletionHandlerServer.class.getCanonicalName();
 
         ProcessBuilder builder = new ProcessBuilder(javaBin, "-cp", classpath, className);
-
+        builder.inheritIO();
         return builder.start();
     }    
 }

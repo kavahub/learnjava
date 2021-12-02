@@ -90,7 +90,7 @@ public class AsyncSelectorServer {
         String className = AsyncSelectorServer.class.getCanonicalName();
 
         ProcessBuilder builder = new ProcessBuilder(javaBin, "-cp", classpath, className);
-
+        builder.inheritIO();
         return builder.start();
     }
 }

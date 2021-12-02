@@ -125,6 +125,7 @@
     <streamex.version>0.8.0</streamex.version>
     <cxf-bom.version>3.4.5</cxf-bom.version>
     <jaxws-ri.version>3.0.2</jaxws-ri.version>
+    <tomcat-embed.version>10.1.0-M7</tomcat-embed.version>
   </properties>
 
   <modules>
@@ -133,11 +134,23 @@
     <module>dubhe</module>
     <module>design-pattern</module>
     <module>algorithms</module>
-    <module>apache</module>
+    <module>webservice</module>
   </modules>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.apache.tomcat.embed</groupId>
+        <artifactId>tomcat-embed-core</artifactId>
+        <version>${tomcat-embed.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.tomcat.embed</groupId>
+        <artifactId>tomcat-embed-jasper</artifactId>
+        <version>${tomcat-embed.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>com.sun.xml.ws</groupId>
         <artifactId>jaxws-ri</artifactId>

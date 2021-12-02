@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javaee:handler-chains xmlns:javaee="https://jakarta.ee/xml/ns/jakartaee"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <javaee:handler-chain>
+    <javaee:handler>
+      <javaee:handler-class>io.github.kavahub.learnjava.ws.handler.LogHandler</javaee:handler-class>
+    </javaee:handler>
+    
+    <javaee:handler>
+      <javaee:handler-class>io.github.kavahub.learnjava.ws.handler.AuthenticationHandler$ServerAuthenticationHandler</javaee:handler-class>
+    </javaee:handler>
+  </javaee:handler-chain>
+</javaee:handler-chains>
