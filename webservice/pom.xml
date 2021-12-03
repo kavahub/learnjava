@@ -21,6 +21,7 @@
         <module>jaxws</module>
         <module>jaxws-tomcat-auth</module>
         <module>apache-cxf</module>
+        <module>apache-cxf-jaxrs</module>
     </modules>
 
     <dependencies>
