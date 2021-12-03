@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jaxws</artifactId>
-    <name>jaxws</name>
+    <artifactId>jaxws-tomcat-auth</artifactId>
+    <name>jaxws-tomcat-auth</name>
     <packaging>war</packaging>
 
     <description>
-        JAX-WS 示例
+        JAX-WS 使用 Tomcat 自带的安全认证
     </description>
 
     <parent>
@@ -17,7 +17,7 @@
     </parent>
 
     <dependencies>
-         <dependency>
+        <dependency>
             <groupId>com.sun.xml.ws</groupId>
             <artifactId>jaxws-rt</artifactId>
         </dependency>

@@ -4,9 +4,9 @@ JAX-WS RI是JAX WebService参考实现。相对于Axis2和CXF，JAX-WS RI是一�
 
 项目做了如下工作：
 * 创建了两个 WebService 服务， 其中的一个服务使用 SOAPHandler 添加安全认证功能，客户端需要在请求头添加用户和密码信息；
-* 实现了两个中方式发布服务：使用命令行（main）方法和 tomcat 容器
-* 内嵌tomcat服务集成测试
+* 实现了两种方式发布服务：使用命令行（main）方法和 tomcat 容器 
 * 内嵌命令行服务集成测试
+* 将项目打包成war包，部署到 tomcat 容器(apache-tomcat-10.0.13版本测试成功，这个版本中servlet-api.jar的版本是5.0)中， 服务可以访问
 
 ## 参考文章
 

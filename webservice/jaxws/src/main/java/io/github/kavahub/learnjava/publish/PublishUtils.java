@@ -13,7 +13,7 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class PublishUtils {
-   private final static String PREFIX = "http://localhost:9080/jax-ws/services";
+   private final static String PREFIX = "http://localhost:9080/jaxws/services";
 
    public void publish() {
       Endpoint.publish(PREFIX + "/student", new StudentWSImpl());

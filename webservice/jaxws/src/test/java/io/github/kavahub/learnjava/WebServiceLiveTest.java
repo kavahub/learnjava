@@ -1,6 +1,7 @@
 package io.github.kavahub.learnjava;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -16,17 +17,17 @@ import org.junit.jupiter.api.Test;
 import io.github.kavahub.learnjava.publish.UseMain;
 import io.github.kavahub.learnjava.ws.Student;
 import io.github.kavahub.learnjava.ws.StudentWS;
+import io.github.kavahub.learnjava.ws.WelcomeWS;
+import jakarta.xml.ws.soap.SOAPFaultException;
 
 /**
- * student 功能测试，内嵌命令行服务
+ * WebService 集成测试
  * 
  * @author PinWei Wan
  * @since 1.0.1
  */
-public class StudentLiveTest {
+public class WebServiceLiveTest {
     private static Process server;
-
-    private static StudentWS studentProxy;
 
     @BeforeAll
     public static void setup() throws IOException, InterruptedException {
@@ -34,9 +35,6 @@ public class StudentLiveTest {
         server = UseMain.start();
         // 等待启动完成
         TimeUnit.SECONDS.sleep(3);
-
-        ServiceHelper.addStudentHandler();
-        studentProxy = ServiceHelper.getStudentWS();
     }
 
     @AfterAll
@@ -49,12 +47,15 @@ public class StudentLiveTest {
 
     @Test
     public void whenUsingHelloMethod_thenCorrect() {
+        StudentWS studentProxy = ServiceHelper.getStudentWSAuth();
         final String endpointResponse = studentProxy.hello("learnjava");
         assertEquals("Hello learnjava", endpointResponse);
     }
 
     @Test
     public void usingGetStudentsMethod_thenCorrect() {
+        StudentWS studentProxy = ServiceHelper.getStudentWSAuth();
+
         studentProxy.hello("Adam");
         studentProxy.hello("Eve");
 
@@ -72,10 +73,28 @@ public class StudentLiveTest {
 
     @Test
     public void whenUsingHelloStudentMethod_thenCorrect() {
+        StudentWS studentProxy = ServiceHelper.getStudentWSAuth();
+
         final Student student = new Student("John Doe");
         final String endpointResponse = studentProxy.helloStudent(student);
         assertEquals("Hello John Doe", endpointResponse);
 
+    }
+
+    @Test
+    public void whenSay_thenCorrect() {
+        WelcomeWS welcomeProxy = ServiceHelper.getWelcomeWS();
+
+        final String endpointResponse = welcomeProxy.say("learnjava");
+        assertEquals("learnjava Welcome", endpointResponse);
+    }
+
+    @Test
+    public void whenNoAuth_thenCorrect() {
+        StudentWS studentProxy = ServiceHelper.getStudentWSNoAuth();
+
+        assertThatThrownBy(() -> studentProxy.hello("learnjava"))
+                .isInstanceOf(SOAPFaultException.class).hasMessageContaining("授权校验失败：用户名或密码错误");
     }
 
 }

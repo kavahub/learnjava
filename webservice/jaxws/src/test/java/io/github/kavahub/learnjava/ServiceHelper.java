@@ -25,10 +25,10 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class ServiceHelper {
-    private final static String SERVICE_URL = "http://localhost:9080/jax-ws/services";
+    private final static String SERVICE_URL = "http://localhost:9080/jaxws/services";
     private final static String NAMESPACE_URI = "http://ws.learnjava.kavahub.github.io/";
 
-    private final static QName STUDENT_SERVICE_QN_NAME = new QName(NAMESPACE_URI, "StudentWSImplService");
+    private final static QName STUDENT_SERVICE_QNAME = new QName(NAMESPACE_URI, "StudentWSImplService");
     private final static QName STUDENT_PORT_QNAME = new QName(NAMESPACE_URI, "StudentWSImplPort");
     private final static String STUDENT_WSDL_URL = SERVICE_URL + "/student?wsdl";
   
@@ -36,18 +36,29 @@ public class ServiceHelper {
     private final static QName WELCOME_PORT_QNAME = new QName(NAMESPACE_URI, "WelcomeWSImplPort");
     private final static String WELCOME_WSDL_URL = SERVICE_URL + "/welcome?wsdl";
 
+    /**
+     * 获取Welcome远程接口
+     * @return
+     */
     public WelcomeWS getWelcomeWS() {
         return WelcomeServiceCreator.INSTANCE.get();
     }
     
-    public StudentWS getStudentWS() {
+    /**
+     * 获取Student远程接口, 没有认证信息
+     * @return
+     */
+    public StudentWS getStudentWSNoAuth() {
+        return StudentServiceNoAuthCreator.INSTANCE.get();
+    }
+
+    /**
+     * 获取Student远程接口, 有认证信息
+     * @return
+     */
+    public StudentWS getStudentWSAuth() {
         return StudentServiceCreator.INSTANCE.get();
     }
-
-    public void addStudentHandler() {
-        StudentServiceCreator.INSTANCE.addHandler();
-    }
-
 
     /**
      * 
@@ -103,20 +114,12 @@ public class ServiceHelper {
                 return;
             }
             try {
-                service = Service.create(new URL(STUDENT_WSDL_URL), STUDENT_SERVICE_QN_NAME);
+                service = Service.create(new URL(STUDENT_WSDL_URL), STUDENT_SERVICE_QNAME);
             } catch (MalformedURLException e) {
                 throw new RuntimeException("创建远程服务异常", e);
             }
-        }
-        
-        /**
-         * 添加 Handler：安全认证和日志记录
-         */
-        public void addHandler() {
-            if (service == null) {
-                init();
-            }
 
+            // 添加 Handler：安全认证和日志记录
             service.setHandlerResolver(new HandlerResolver() {
                 @SuppressWarnings("rawtypes")
                 @Override
@@ -129,6 +132,43 @@ public class ServiceHelper {
                     return handlerList;
                 }
             });
+        }
+
+        /**
+         * 获取远程服务
+         * @return
+         */
+        public StudentWS get() {
+            if (service == null) {
+                init();
+            }
+            return service.getPort(STUDENT_PORT_QNAME, StudentWS.class);
+        }
+
+    }
+
+    /**
+     * 
+     * Student远程接口创建, 没有安全认证
+     *
+     * @author PinWei Wan
+     * @since 1.0.1
+     */
+    private static class StudentServiceNoAuthCreator {
+        public static final StudentServiceNoAuthCreator INSTANCE = new StudentServiceNoAuthCreator();
+
+        private Service service;
+
+        private synchronized void init(){
+            if (service != null) {
+                return;
+            }
+            try {
+                service = Service.create(new URL(STUDENT_WSDL_URL), STUDENT_SERVICE_QNAME);
+            } catch (MalformedURLException e) {
+                throw new RuntimeException("创建远程服务异常", e);
+            }
+
         }
 
         /**

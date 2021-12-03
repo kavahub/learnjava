@@ -27,12 +27,12 @@
 
     <servlet-mapping>
         <servlet-name>student</servlet-name>
-        <url-pattern>/student</url-pattern>
+        <url-pattern>/services/student</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>welcome</servlet-name>
-        <url-pattern>/welcome</url-pattern>
+        <url-pattern>/services/welcome</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

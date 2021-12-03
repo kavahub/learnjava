@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+   http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+    <description>jaxws-tomcat-auth</description>
+    <display-name>jaxws-tomcat-auth</display-name>
+
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <description>JAX-WS endpoint - hello</description>
+        <display-name>hello</display-name>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/services/hello</url-pattern>
+    </servlet-mapping>
+
+    <security-role>
+        <description>Normal operator user</description>
+        <role-name>operator</role-name>
+    </security-role>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Operator Roles Security</web-resource-name>
+            <url-pattern>/services/hello</url-pattern>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>operator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+</web-app> 
