@@ -1,5 +1,7 @@
 # jaxws
 
+JAX-WS 示例
+
 JAX-WS RI是JAX WebService参考实现。相对于Axis2和CXF，JAX-WS RI是一个轻量级的框架。虽然是个轻量级框架，JAX-WS RI也提供了在Web服务器中发布Webservice的功能
 
 执行单元测试 WebServiceLiveTest.java，测试自动启动服务端，测试完成后关闭服务端

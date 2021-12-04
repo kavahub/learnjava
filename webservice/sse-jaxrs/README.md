@@ -1,5 +1,7 @@
 # sse-jaxrs
 
+SSE JAX-RS 示例
+
 Server-Sent Events（以下简称 SSE）, 服务器向浏览器推送信息。SSE 是单向通道，只能服务器向浏览器发送
 
 SSE 优点：

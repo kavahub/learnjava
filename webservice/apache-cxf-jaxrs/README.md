@@ -1,4 +1,6 @@
-# core-java-collection
+# apache-cxf-jaxrs
+
+JAX-RS 示例
 
 JAX-RS,全称为Java API for RESTful Web Services.的核心概念是resource，即面向资源。 
 
