@@ -13,7 +13,7 @@ public class UseMain {
     public static void main(String args[]) throws InterruptedException {
         PublishUtils.publish();
         System.out.println("Server ready...");
-        Thread.sleep(30 * 1000);
+        Thread.sleep(60 * 1000);
         System.out.println("Server exiting");
         System.exit(0);
     }
