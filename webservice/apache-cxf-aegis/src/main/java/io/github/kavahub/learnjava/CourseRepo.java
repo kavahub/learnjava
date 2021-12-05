@@ -3,7 +3,7 @@ package io.github.kavahub.learnjava;
 import java.util.Map;
 
 /**
- * TODO
+ * 课程接口
  *  
  * @author PinWei Wan
  * @since 1.0.1

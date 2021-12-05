@@ -5,7 +5,7 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * TODO
+ * 课程
  *  
  * @author PinWei Wan
  * @since 1.0.1

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * TODO
+ * 课程接口实现
  *  
  * @author PinWei Wan
  * @since 1.0.1

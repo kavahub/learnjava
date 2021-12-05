@@ -18,7 +18,7 @@ import javax.ws.rs.sse.SseBroadcaster;
 import javax.ws.rs.sse.SseEventSink;
 
 /**
- * TODO
+ * SSE 请求接口
  *  
  * @author PinWei Wan
  * @since 1.0.1

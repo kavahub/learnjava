@@ -30,7 +30,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * TODO
+ * 测试，使用 {@link AegisContext} 测试，不用启动服务
  *  
  * @author PinWei Wan
  * @since 1.0.1

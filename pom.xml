@@ -57,7 +57,7 @@
     <jcl-over-slf4j.version>2.0.0-alpha5</jcl-over-slf4j.version>
 
     <junit-bom.version>5.8.1</junit-bom.version>
-    <lombok.version>1.18.20</lombok.version>
+    <!-- <lombok.version>1.18.20</lombok.version> -->
     <guava.version>31.0.1-jre</guava.version>
     <assertj-core.version>3.21.0</assertj-core.version>
     <openjdk.jmh.version>1.33</openjdk.jmh.version>
@@ -79,28 +79,27 @@
     <joda-time.version>2.10.12</joda-time.version>
     <eclipse.collections.version>11.0.0.M3</eclipse.collections.version>
     <mockserver.version>5.11.2</mockserver.version>
-    <jakarta.ws-api.version>3.0.1</jakarta.ws-api.version>
-    <jaxws-rt.version>3.0.2</jaxws-rt.version>
+    <!-- <jakarta.xml.ws-api.version>3.0.1</jakarta.xml.ws-api.version> -->
+    <!-- <jaxws-rt.version>3.0.2</jaxws-rt.version> -->
     <commons-beanutils.version>1.9.4</commons-beanutils.version>
     <commons-math3.version>3.6.1</commons-math3.version>
     <combinatoricslib3.version>3.3.2</combinatoricslib3.version>
     <exp4j.version>0.4.8</exp4j.version>
     <javaluator.version>3.0.3</javaluator.version>
     <reflections.version>0.9.12</reflections.version>
-    <spring-framework.version>5.3.12</spring-framework.version>
+    <spring-boot-dependencies.version>2.6.1</spring-boot-dependencies.version>
     <unix4j.version>0.6</unix4j.version>
     <jmockit.version>1.49</jmockit.version>
     <bouncycastle.version>1.69</bouncycastle.version>
-    <commons-codec.version>1.15</commons-codec.version>
 
     <jgonian-commons-ip-math.version>1.32</jgonian-commons-ip-math.version>
     <seancfoley-ipaddress.version>5.3.3</seancfoley-ipaddress.version>
     <googlecode-ipv6.version>0.17</googlecode-ipv6.version>
-    <jetty-server.version>11.0.7</jetty-server.version>
+    <!-- <jetty-server.version>11.0.7</jetty-server.version> -->
     <tomcat-embeded.version>10.1.0-M6</tomcat-embeded.version>
     <async-http-client.version>2.12.3</async-http-client.version>
     <greenmail.version>2.0.0-alpha-2</greenmail.version>
-    <javaassist.version>3.28.0-GA</javaassist.version>
+    <javassist.version>3.28.0-GA</javassist.version>
     <bcel.version>6.5.0</bcel.version>
     <asm.version>9.2</asm.version>
     <json.version>20210307</json.version>
@@ -128,8 +127,9 @@
     <jaxws-ri.version>3.0.2</jaxws-ri.version>
     <tomcat-embed.version>10.1.0-M7</tomcat-embed.version>
     <httpclient.version>4.5.13</httpclient.version>
-    <jakarta.mail.version>2.0.1</jakarta.mail.version>
+    <!-- <jakarta.mail.version>2.0.1</jakarta.mail.version> -->
     <jakarta.servlet-api.version>5.0.0</jakarta.servlet-api.version>
+    <commons-logging.version>1.2</commons-logging.version>
   </properties>
 
   <modules>
@@ -156,20 +156,28 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>${commons-logging.version}</version>
+    </dependency>
+
+      <dependency>
         <groupId>jakarta.servlet</groupId>
         <artifactId>jakarta.servlet-api</artifactId>
         <version>${jakarta.servlet-api.version}</version>
-    </dependency>
-      <dependency>
+      </dependency>
+
+      <!-- <dependency>
         <groupId>com.sun.mail</groupId>
         <artifactId>jakarta.mail</artifactId>
         <version>${jakarta.mail.version}</version>
-      </dependency>
-      <dependency>
+      </dependency> -->
+
+      <!-- <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
         <version>${httpclient.version}</version>
-      </dependency>
+      </dependency> -->
 
       <dependency>
         <groupId>org.apache.tomcat.embed</groupId>
@@ -239,12 +247,12 @@
         <artifactId>jcstress-core</artifactId>
         <version>${jcstress-core.version}</version>
       </dependency>
-
+<!-- 
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>${junit.version}</version>
-      </dependency>
+      </dependency> -->
       <dependency>
         <groupId>com.googlecode.thread-weaver</groupId>
         <artifactId>threadweaver</artifactId>
@@ -337,7 +345,7 @@
       <dependency>
         <groupId>org.javassist</groupId>
         <artifactId>javassist</artifactId>
-        <version>${javaassist.version}</version>
+        <version>${javassist.version}</version>
       </dependency>
 
       <dependency>
@@ -346,11 +354,11 @@
         <version>${greenmail.version}</version>
       </dependency>
 
-      <dependency>
+      <!-- <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jcl-over-slf4j</artifactId>
         <version>${jcl-over-slf4j.version}</version>
-      </dependency>
+      </dependency> -->
 
       <dependency>
         <groupId>org.asynchttpclient</groupId>
@@ -358,17 +366,11 @@
         <version>${async-http-client.version}</version>
       </dependency>
 
-      <dependency>
-        <groupId>org.apache.tomcat.embed</groupId>
-        <artifactId>tomcat-embed-core</artifactId>
-        <version>${tomcat-embeded.version}</version>
-      </dependency>
-
-      <dependency>
+      <!-- <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-server</artifactId>
         <version>${jetty-server.version}</version>
-      </dependency>
+      </dependency> -->
 
       <dependency>
         <groupId>com.googlecode.java-ipv6</groupId>
@@ -416,24 +418,19 @@
       </dependency>
 
       <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-framework-bom</artifactId>
-        <version>${spring-framework.version}</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot-dependencies.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
 
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-test</artifactId>
-        <version>${spring-framework.version}</version>
-      </dependency>
 
-      <dependency>
+      <!-- <dependency>
         <groupId>org.hamcrest</groupId>
         <artifactId>hamcrest</artifactId>
         <version>${hamcrest.version}</version>
-      </dependency>
+      </dependency> -->
 
       <dependency>
         <groupId>org.reflections</groupId>
@@ -468,17 +465,17 @@
         <artifactId>commons-beanutils</artifactId>
         <version>${commons-beanutils.version}</version>
       </dependency>
-      <dependency>
+      <!-- <dependency>
         <groupId>com.sun.xml.ws</groupId>
         <artifactId>jaxws-rt</artifactId>
         <version>${jaxws-rt.version}</version>
-      </dependency>
+      </dependency> -->
 
-      <dependency>
+      <!-- <dependency>
         <groupId>jakarta.xml.ws</groupId>
         <artifactId>jakarta.xml.ws-api</artifactId>
-        <version>${jakarta.ws-api.version}</version>
-      </dependency>
+        <version>${jakarta.xml.ws-api.version}</version>
+      </dependency> -->
 
       <dependency>
         <groupId>org.mock-server</groupId>
@@ -535,12 +532,6 @@
       </dependency>
 
       <dependency>
-        <groupId>commons-codec</groupId>
-        <artifactId>commons-codec</artifactId>
-        <version>${commons-codec.version}</version>
-      </dependency>
-
-      <dependency>
         <groupId>org.bitbucket.cowwoc</groupId>
         <artifactId>diff-match-patch</artifactId>
         <version>${diff-match-patch.version}</version>
@@ -582,11 +573,11 @@
         <version>${openjdk.jmh.version}</version>
       </dependency>
 
-      <dependency>
+      <!-- <dependency>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-core</artifactId>
         <version>${assertj-core.version}</version>
-      </dependency>
+      </dependency> -->
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
@@ -597,16 +588,16 @@
         <artifactId>commons-io</artifactId>
         <version>${commons-io.version}</version>
       </dependency>
-      <dependency>
+      <!-- <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
         <version>${logback.version}</version>
-      </dependency>
-      <dependency>
+      </dependency> -->
+      <!-- <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <version>${lombok.version}</version>
-      </dependency>
+      </dependency> -->
     </dependencies>
   </dependencyManagement>
 

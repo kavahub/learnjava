@@ -14,10 +14,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <properties>
-        <!-- 覆盖父pom中的定义，wiremock使用的是这个版本 -->
-        <jetty-server.version>9.4.43.v20210629</jetty-server.version>
-    </properties>    
 
     <dependencies>
         <dependency>
