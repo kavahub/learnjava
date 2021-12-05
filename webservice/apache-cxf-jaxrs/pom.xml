@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <artifactId>apache-cxf-jaxrs</artifactId>
     <name>apache-cxf-jaxrs</name>
 
@@ -21,31 +22,23 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.kavahub.learnjava</groupId>
+                <artifactId>java-deprecated-modules-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+              </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
         </dependency>
-
-        <!-- 解决 java.lang.ClassNotFoundException: javax.annotation.Resource -->
-        <dependency>
-            <groupId>javax.annotation</groupId>
-            <artifactId>javax.annotation-api</artifactId>
-        </dependency>
-
-
-        <!-- No message body writer has been found for 
-            class io.github.kavahub.learnjava.Course, ContentType: text/xml -->
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
-            <version>2.1.2</version>
-        </dependency>
-
 
         <dependency>
             <groupId>org.apache.cxf</groupId>

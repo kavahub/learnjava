@@ -13,7 +13,7 @@ import javax.ws.rs.sse.SseEventSource;
  * 运行 main 前，先运行服务端。
  * 
  * <p>
- * 运行客户端后，在命令行执行：curl -X GET http://localhost:9080/sse-jaxrs/sse/stock/publish 后，客户端会收到信息
+ * 运行客户端后，在命令行执行：curl -X GET http://localhost:9080/sse-jaxrs/sse/stock/publish ，客户端会收到信息
  *  
  * @author PinWei Wan
  * @since 1.0.1

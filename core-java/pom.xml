@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.kavahub.learnjava.core-java</groupId>
     <artifactId>core-java-modules</artifactId>
-    <name>core-java-modules</name>
+    <name>core-java</name>
     <packaging>pom</packaging>
 
     <description>
@@ -31,7 +31,7 @@
         <module>core-java-security</module>
         <module>core-java-jvm</module>
     </modules>
-
+    
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>

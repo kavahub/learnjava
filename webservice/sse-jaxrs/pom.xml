@@ -16,6 +16,18 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.kavahub.learnjava</groupId>
+                <artifactId>java-deprecated-modules-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+              </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
     <dependencies>
         <dependency>
             <groupId>javax.ws.rs</groupId>
@@ -46,8 +58,8 @@
 
         <!-- 解决 java.lang.ClassNotFoundException: javax.annotation.Resource -->
         <dependency>
-            <groupId>javax.annotation</groupId>
-            <artifactId>javax.annotation-api</artifactId>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
             <scope>test</scope>
         </dependency>
 

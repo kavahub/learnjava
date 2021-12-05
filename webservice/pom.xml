@@ -20,11 +20,11 @@
     <modules>
         <module>jaxws</module>
         <module>jaxws-tomcat-auth</module>
-        <module>apache-cxf</module>
+        <module>apache-cxf-aegis</module>
         <module>apache-cxf-jaxrs</module>
         <module>sse-jaxrs</module>
     </modules>
-
+    
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>

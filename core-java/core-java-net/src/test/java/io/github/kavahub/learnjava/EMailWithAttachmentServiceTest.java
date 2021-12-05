@@ -4,15 +4,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 
-import javax.mail.MessagingException;
-import javax.mail.Session;
-
 import com.icegreen.greenmail.util.GreenMail;
 import com.icegreen.greenmail.util.ServerSetupTest;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import jakarta.mail.MessagingException;
+import jakarta.mail.Session;
 
 /**
  * 

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>java-deprecated-modules-bom</artifactId>
+    <name>java-deprecated-modules-bom</name>
+    <packaging>pom</packaging>
+
+    <description>
+        收集被‘移除’的包
+    </description>
+
+    <parent>
+        <groupId>io.github.kavahub.learnjava</groupId>
+        <artifactId>learnjava-modules</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    
+    <properties>
+        <jakarta.activation.version>1.2.2</jakarta.activation.version>
+        <jakarta.transaction-api.version>1.3.3</jakarta.transaction-api.version>
+        <jakarta.xml.bind-api.version>2.3.3</jakarta.xml.bind-api.version>
+        <jaxb-impl.version>2.3.5</jaxb-impl.version>
+        <jaxb-runtime.version>2.3.5</jaxb-runtime.version>
+        <jaxws-rt.version>2.3.3</jaxws-rt.version>
+        <jakarta.xml.ws-api.version>2.3.3</jakarta.xml.ws-api.version>
+        <jakarta.annotation-api.version>1.3.5</jakarta.annotation-api.version>
+        <cdi-api.version>2.0.SP1</cdi-api.version>
+        <javax.json.bind-api.version>1.0</javax.json.bind-api.version>
+        <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
+        <javax.mail.version>1.6.2</javax.mail.version>
+        <servlet-api.version>4.0.1</servlet-api.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>javax.ws.rs-api</artifactId>
+                <version>${javax.ws.rs-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.json.bind</groupId>
+                <artifactId>javax.json.bind-api</artifactId>
+                <version>${javax.json.bind-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.enterprise</groupId>
+                <artifactId>cdi-api</artifactId>
+                <version>${cdi-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.annotation</groupId>
+                <artifactId>jakarta.annotation-api</artifactId>
+                <version>${jakarta.annotation-api.version}</version>
+            </dependency>
+
+            <!-- API -->
+            <dependency>
+                <groupId>jakarta.xml.ws</groupId>
+                <artifactId>jakarta.xml.ws-api</artifactId>
+                <version>${jakarta.xml.ws-api.version}</version>
+            </dependency>
+
+            <!-- Runtime -->
+            <dependency>
+                <groupId>com.sun.xml.ws</groupId>
+                <artifactId>jaxws-rt</artifactId>
+                <version>${jaxws-rt.version}</version>
+            </dependency>
+
+            <!-- API -->
+            <dependency>
+                <groupId>jakarta.xml.bind</groupId>
+                <artifactId>jakarta.xml.bind-api</artifactId>
+                <version>${jakarta.xml.bind-api.version}</version>
+            </dependency>
+
+            <!-- Runtime -->
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${jaxb-impl.version}</version>
+            </dependency>
+
+            <!-- Alternative runtime -->
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${jaxb-runtime.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.transaction</groupId>
+                <artifactId>jakarta.transaction-api</artifactId>
+                <version>${jakarta.transaction-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.activation</groupId>
+                <artifactId>jakarta.activation</artifactId>
+                <version>${jakarta.activation.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

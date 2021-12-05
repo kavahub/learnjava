@@ -1,0 +1,5 @@
+<mappings xmlns:ns="http://learnjava.kavahub.github.io/">
+    <mapping name="ns:learnjava">
+        <property name="greeting" style="attribute"/>
+    </mapping>
+</mappings>

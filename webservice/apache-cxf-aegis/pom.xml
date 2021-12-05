@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">    <modelVersion>4.0.0</modelVersion>
-    <artifactId>apache-cxf</artifactId>
-    <name>apache-cxf</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>apache-cxf-aegis</artifactId>
+    <name>apache-cxf-aegis</name>
 
     <description>
-        Apache CXF一个开源的Service框架，它实现了JCP与Web Service中一些重要标准。CXF简化了构造，
-        集成，面 向服务架构(SOA)业务组件与技术的灵活复用
+        Aegis 是一个数据绑定 API，用于在 Java 对象与 XML 文档之间执行映射，是 Apache CXF 的一部分
     </description>
 
     <parent>
@@ -15,10 +16,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <dependencies>  
+    <dependencies>
         <dependency>
-            <groupId>com.sun.xml.ws</groupId>
-            <artifactId>jaxws-rt</artifactId>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-databinding-aegis</artifactId>
         </dependency>
 
         <dependency>
@@ -35,5 +36,4 @@
     </dependencies>
 
 
-    
 </project>
