@@ -30,10 +30,17 @@
         <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
         <javax.mail.version>1.6.2</javax.mail.version>
         <servlet-api.version>4.0.1</servlet-api.version>
+        <javax.jws-api.version>1.1</javax.jws-api.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>javax.jws</groupId>
+                <artifactId>javax.jws-api</artifactId>
+                <version>${javax.jws-api.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
