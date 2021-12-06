@@ -7,7 +7,7 @@ import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * TODO
+ * 服务入口，使用内嵌的 Jetty 容器
  *  
  * @author PinWei Wan
  * @since 1.0.1

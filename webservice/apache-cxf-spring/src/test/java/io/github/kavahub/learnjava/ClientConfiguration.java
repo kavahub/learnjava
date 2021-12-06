@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 /**
- * TODO
+ * 客户端配置
  *  
  * @author PinWei Wan
  * @since 1.0.1
@@ -23,7 +23,7 @@ public class ClientConfiguration {
         JaxWsProxyFactoryBean proxyFactory = new JaxWsProxyFactoryBean();
         proxyFactory.setServiceClass(StudentWS.class);
         proxyFactory.setAddress("http://localhost:9080/apache-cxf-spring/services/student");
-        //proxyFactory.setWsdlURL("http://localhost:9080/services/student?wsdl");
+
         return proxyFactory;
     }
 }

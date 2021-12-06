@@ -32,6 +32,18 @@
         <module>core-java-jvm</module>
     </modules>
     
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.kavahub.learnjava</groupId>
+                <artifactId>dependencies-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+              </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
