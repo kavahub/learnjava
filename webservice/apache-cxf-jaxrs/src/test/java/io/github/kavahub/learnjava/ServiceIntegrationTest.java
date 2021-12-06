@@ -27,7 +27,7 @@ import org.junit.jupiter.api.Test;
  * @since 1.0.1
  */
 public class ServiceIntegrationTest {
-    private static final String BASE_URL = "http://localhost:9080/jaxrs/courses/";
+    private static final String BASE_URL = "http://localhost:9080/apache-cxf-jaxrs/courses/";
     private static CloseableHttpClient client;
 
     @BeforeAll

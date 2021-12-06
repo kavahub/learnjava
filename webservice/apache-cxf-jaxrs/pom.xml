@@ -3,6 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>apache-cxf-jaxrs</artifactId>
+    <packaging>war</packaging>
     <name>apache-cxf-jaxrs</name>
 
     <description>
@@ -24,10 +25,10 @@
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-              </dependency>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -41,14 +42,14 @@
 
         <dependency>
             <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <artifactId>cxf-rt-frontend-jaxrs</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
         </dependency>
-
+        
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
@@ -61,4 +62,58 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+    </build>
+
+    <profiles>
+        <profile>
+            <id>integration-test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven3-plugin</artifactId>
+                        <configuration>
+                            <container>
+                                <containerId>tomcat9x</containerId>
+                            </container>
+
+                            <configuration>
+                                <properties>
+                                    <cargo.hostname>localhost</cargo.hostname>
+                                    <cargo.servlet.port>9080</cargo.servlet.port>
+                                </properties>
+                            </configuration>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-server</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>start</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>stop-server</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

@@ -5,7 +5,7 @@ import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 import org.apache.cxf.jaxrs.lifecycle.SingletonResourceProvider;
 
 /**
- * 服务入口
+ * 服务入口，使用内嵌的 Jetty 容器
  *  
  * @author PinWei Wan
  * @since 1.0.1
@@ -15,7 +15,7 @@ public class RestfulServer {
         JAXRSServerFactoryBean factoryBean = new JAXRSServerFactoryBean();
         factoryBean.setResourceClasses(CourseRepository.class);
         factoryBean.setResourceProvider(new SingletonResourceProvider(new CourseRepository()));
-        factoryBean.setAddress("http://localhost:9080/jaxrs");
+        factoryBean.setAddress("http://localhost:9080/apache-cxf-jaxrs");
         Server server = factoryBean.create();
 
         System.out.println("Server ready...");

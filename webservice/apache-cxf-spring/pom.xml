@@ -5,7 +5,7 @@
     <artifactId>apache-cxf-spring</artifactId>
     <name>apache-cxf-spring</name>
     <packaging>war</packaging>
-    
+
     <description>
         Apache CXF 与 Spring 集成开发
     </description>
@@ -25,10 +25,10 @@
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-              </dependency>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <dependencies>
         <!-- NoClassDefFoundError: javax/xml/soap/SOAPException -->
         <dependency>
@@ -48,8 +48,9 @@
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <artifactId>cxf-rt-transports-http</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-features-logging</artifactId>
@@ -71,9 +72,13 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <!-- <scope>provided</scope> -->
+            <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
@@ -89,52 +94,56 @@
 
     <build>
         <finalName>${project.artifactId}</finalName>
-        
+
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-            </plugin>          
+            </plugin>
         </plugins>
-    </build> 
-    
+    </build>
+
     <profiles>
         <profile>
-          <id>integration-test</id>
-          <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.codehaus.cargo</groupId>
-                    <artifactId>cargo-maven2-plugin</artifactId>
-                    <configuration>
+            <id>integration-test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven3-plugin</artifactId>
                         <configuration>
-                            <properties>
-                                <cargo.hostname>localhost</cargo.hostname>
-                                <cargo.servlet.port>9080</cargo.servlet.port>
-                            </properties>
+                            <container>
+                                <containerId>tomcat9x</containerId>
+                            </container>
+
+                            <configuration>
+                                <properties>
+                                    <cargo.hostname>localhost</cargo.hostname>
+                                    <cargo.servlet.port>9080</cargo.servlet.port>
+                                </properties>
+                            </configuration>
                         </configuration>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>start-server</id>
-                            <phase>pre-integration-test</phase>
-                            <goals>
-                                <goal>start</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>stop-server</id>
-                            <phase>post-integration-test</phase>
-                            <goals>
-                                <goal>stop</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>                  
-            </plugins>
-        </build>
-      </profile>
-    </profiles>                    
+                        <executions>
+                            <execution>
+                                <id>start-server</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>start</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>stop-server</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
