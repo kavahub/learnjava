@@ -55,10 +55,11 @@ public class ReadWriteLockHashMap {
 
     }
 
-    public String get(String key) {
+    public String get(String key) throws InterruptedException {
         try {
             readLock.lock();
             log.info(Thread.currentThread().getName() + " reading");
+            Thread.sleep(100);
             return syncHashMap.get(key);
         } finally {
             log.info(Thread.currentThread().getName() + " reading end");
@@ -99,9 +100,9 @@ public class ReadWriteLockHashMap {
         ReadWriteLockHashMap object = new ReadWriteLockHashMap();
 
         service.execute(new Thread(new Writer(object), "Writer1"));
-        service.execute(new Thread(new Writer(object), "Writer2"));
         service.execute(new Thread(new Reader(object), "Reader1"));
         service.execute(new Thread(new Reader(object), "Reader2"));
+        service.execute(new Thread(new Writer(object), "Writer2"));
 
         service.shutdown();
     }
@@ -117,7 +118,11 @@ public class ReadWriteLockHashMap {
         @Override
         public void run() {
             for (int i = 0; i < 10; i++) {
-                object.get("key" + i);
+                try {
+                    object.get("key" + i);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -135,7 +140,6 @@ public class ReadWriteLockHashMap {
             for (int i = 0; i < 10; i++) {
                 try {
                     object.put("key" + i, "value" + i);
-                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

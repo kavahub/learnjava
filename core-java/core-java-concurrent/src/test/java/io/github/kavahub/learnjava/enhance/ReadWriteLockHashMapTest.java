@@ -32,13 +32,14 @@ public class ReadWriteLockHashMapTest {
     }
 
     @Test
-    public void whenReading_ThenMultipleReadingAllowed() {
+    public void whenReading_ThenMultipleReadingAllowed() throws InterruptedException {
         ReadWriteLockHashMap object = new ReadWriteLockHashMap();
         final int threadCount = 5;
         final ExecutorService service = Executors.newFixedThreadPool(threadCount);
 
         executeReaderThreads(object, threadCount, service);
-
+        TimeUnit.MILLISECONDS.sleep(10);
+        
         assertEquals(object.isReadLockAvailable(), true);
         assertEquals(object.isWriteLockAvailable(), false);
 
@@ -59,6 +60,12 @@ public class ReadWriteLockHashMapTest {
 
     private void executeReaderThreads(ReadWriteLockHashMap object, int threadCount, ExecutorService service) {
         for (int i = 0; i < threadCount; i++)
-            service.execute(() -> object.get("key" + threadCount));
+            service.execute(() -> {
+                try {
+                    object.get("key" + threadCount);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            });
     }
 }

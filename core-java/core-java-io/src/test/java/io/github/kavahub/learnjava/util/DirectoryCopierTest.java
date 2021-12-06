@@ -6,15 +6,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import static io.github.kavahub.learnjava.util.DirectoryCopier.*;
+import io.github.kavahub.learnjava.util.DirectoryCopier.ApacheCommons;
+import io.github.kavahub.learnjava.util.DirectoryCopier.CoreOld;
+import io.github.kavahub.learnjava.util.DirectoryCopier.JavaNio;
 
 /**
  * 
@@ -24,43 +26,41 @@ import static io.github.kavahub.learnjava.util.DirectoryCopier.*;
  * @since 1.0.0
  */
 public class DirectoryCopierTest {
-    private final static String sourceDirectoryLocation = "sourceDirectory1";
-    private final static String subDirectoryName = "/childDirectory";
-    private final static String fileName = "/file.txt";
-    private final static String destinationDirectoryLocation = "destinationDirectory1";
+    private final static Path sourceDirectory = Paths.get("target", "sourceDirectory1");
+    private final static Path subSourceDirectory = sourceDirectory.resolve("childDirectory");
+    private final static Path sourceFileName = subSourceDirectory.resolve("file.txt");
+
+    private final static Path destinationDirectory = Paths.get("target", "destinationDirectory1");
+    private final static Path subDestinationDirectory = sourceDirectory.resolve("childDirectory");
+    private final static Path destinationFileName = subSourceDirectory.resolve("file.txt");
 
     @BeforeEach
-    public void createDirectoryWithSubdirectoryAndFile() throws IOException {
-        Files.createDirectories(Paths.get(sourceDirectoryLocation));
-        Files.createDirectories(Paths.get(sourceDirectoryLocation + subDirectoryName));
-        Files.createFile(Paths.get(sourceDirectoryLocation + subDirectoryName + fileName));
-    }
+    public void beforeEach() throws IOException {
+        FileUtils.deleteDirectory(destinationDirectory.toFile());
+        FileUtils.deleteDirectory(sourceDirectory.toFile());
+        
 
-    @AfterEach
-    public void cleanUp() throws IOException {
-        FileUtils.deleteDirectory(new File(sourceDirectoryLocation));
-        FileUtils.deleteDirectory(new File(destinationDirectoryLocation));
+        Files.createDirectories(sourceDirectory);
+        Files.createDirectories(subSourceDirectory);
+        Files.createFile(sourceFileName);
     }
 
     @Nested
     class CoreOldTest {
         @Test
         public void whenSourceDirectoryExists_thenDirectoryIsFullyCopied() throws IOException {
-            File sourceDirectory = new File(sourceDirectoryLocation);
-            File destinationDirectory = new File(destinationDirectoryLocation);
-            CoreOld.copyDirectoryJavaUnder7(sourceDirectory, destinationDirectory);
+            CoreOld.copyDirectoryJavaUnder7(sourceDirectory.toFile(), destinationDirectory.toFile());
 
-            assertTrue(new File(destinationDirectoryLocation).exists());
-            assertTrue(new File(destinationDirectoryLocation + subDirectoryName).exists());
-            assertTrue(new File(destinationDirectoryLocation + subDirectoryName + fileName).exists());
+            assertTrue(Files.exists(destinationDirectory));
+            assertTrue(Files.exists(subDestinationDirectory));
+            assertTrue(Files.exists(destinationFileName));
         }
 
         @Test
         public void whenSourceDirectoryDoesNotExist_thenExceptionIsThrown() throws IOException {
-            File sourceDirectory = new File("nonExistingDirectory");
-            File destinationDirectory = new File(destinationDirectoryLocation);
+            File sourceDirectory1 = new File("nonExistingDirectory");
             assertThrows(IOException.class,
-                    () -> CoreOld.copyDirectoryJavaUnder7(sourceDirectory, destinationDirectory));
+                    () -> CoreOld.copyDirectoryJavaUnder7(sourceDirectory1, destinationDirectory.toFile()));
         }
 
     }
@@ -69,16 +69,16 @@ public class DirectoryCopierTest {
     class JavaNioUnitTest {    
         @Test
         public void whenSourceDirectoryExists_thenDirectoryIsFullyCopied() throws IOException {
-            JavaNio.copyDirectory(sourceDirectoryLocation, destinationDirectoryLocation);
-    
-            assertTrue(new File(destinationDirectoryLocation).exists());
-            assertTrue(new File(destinationDirectoryLocation + subDirectoryName).exists());
-            assertTrue(new File(destinationDirectoryLocation + subDirectoryName + fileName).exists());
+            JavaNio.copyDirectory(sourceDirectory.toString(), destinationDirectory.toString());
+
+            assertTrue(Files.exists(destinationDirectory));
+            assertTrue(Files.exists(subDestinationDirectory));
+            assertTrue(Files.exists(destinationFileName));
         }
     
         @Test
         public void whenSourceDirectoryDoesNotExist_thenExceptionIsThrown() {
-            assertThrows(IOException.class, () -> JavaNio.copyDirectory("nonExistingDirectory", destinationDirectoryLocation));
+            assertThrows(IOException.class, () -> JavaNio.copyDirectory("nonExistingDirectory", destinationDirectory.toString()));
         }   
     }
 
@@ -86,16 +86,17 @@ public class DirectoryCopierTest {
     class ApacheCommonsUnitTest {   
         @Test
         public void whenSourceDirectoryExists_thenDirectoryIsFullyCopied() throws IOException {
-            ApacheCommons.copyDirectory(sourceDirectoryLocation, destinationDirectoryLocation);
-    
-            assertTrue(new File(destinationDirectoryLocation).exists());
-            assertTrue(new File(destinationDirectoryLocation + subDirectoryName).exists());
-            assertTrue(new File(destinationDirectoryLocation + subDirectoryName + fileName).exists());
+            ApacheCommons.copyDirectory(sourceDirectory.toString(), destinationDirectory.toString());
+
+            assertTrue(Files.exists(destinationDirectory));
+            assertTrue(Files.exists(subDestinationDirectory));
+            assertTrue(Files.exists(destinationFileName));
+
         }
     
         @Test
         public void whenSourceDirectoryDoesNotExist_thenExceptionIsThrown() {
-            assertThrows(Exception.class, () -> ApacheCommons.copyDirectory("nonExistingDirectory", destinationDirectoryLocation));
+            assertThrows(Exception.class, () -> ApacheCommons.copyDirectory("nonExistingDirectory", destinationDirectory.toString()));
         }    
     }
 }

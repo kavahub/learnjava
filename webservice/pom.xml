@@ -23,6 +23,7 @@
         <module>apache-cxf-aegis</module>
         <module>apache-cxf-jaxrs</module>
         <module>sse-jaxrs</module>
+        <module>apache-cxf-spring</module>
     </modules>
     
     <dependencies>

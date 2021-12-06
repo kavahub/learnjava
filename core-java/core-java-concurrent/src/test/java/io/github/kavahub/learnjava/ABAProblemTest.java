@@ -132,6 +132,9 @@ public class ABAProblemTest {
         }
     
         public int getCurrentThreadCASFailureCount() {
+            if (currentThreadCASFailureCount.get() == null) {
+                currentThreadCASFailureCount.set(0);
+            }
             return currentThreadCASFailureCount.get();
         }
     

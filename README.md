@@ -24,12 +24,33 @@ Java 编程语言学习，内容包含多个方面，如：字符串，日期，
 
 #### 特色
 
+项目说明：
 * 项目导入到IDE中，示例及测试用例可以直接运行
 * 关注单个类的应用，适合初级开发者
 * 示例及测试用例代码短小精悍，通俗易懂
 * 代码中包含注释，代码与注释相互辅助，有血有肉
 * 单元测试，集成测试，性能测试都有，适合高级开发者
 * 工作中的参考书，有疑问，想法，写个测试验证一下
+
+几种测试说明：
+* [*Test.java] 单元测试，单个类的测试，有断言
+* [*ManualTest.java] 手工测试，单个或多个类的测试，没有断言，通常用控制台输出查看结果
+* [*LiveTest.java] 集成测试，测试依赖某些服务，在测试开始前，会自动启动服务，完成后关闭
+* [*IntegrationTest.java] 集成测试，测试依赖某些服务，但不会自动启动服务，而是依靠工具启动， 如：[cargo-maven2-plugin]
+
+#### 运行项目
+
+克隆代码到本地，运行 Maven 命令编译打包项目，也包括运行测试：
+
+```text
+mvn clean install
+```text
+
+如果需要运行集成测试（依赖某些服务，可能会失败），运行 Maven 命令：
+
+```text
+mvn clean install -Pintegration-test
+```text
 
 #### 其他项目
 - [eugenp](https://github.com/eugenp/tutorials) : This project is a collection of small and focused tutorials 
