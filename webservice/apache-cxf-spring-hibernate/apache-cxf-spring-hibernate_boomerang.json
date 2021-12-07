@@ -1,0 +1,595 @@
+{
+  "version": "7.7.4",
+  "timestamp": 1638865458071,
+  "projects": [
+    {
+      "name": "apache-cxf-spring-hibernate",
+      "documents": [
+        {
+          "type": "project",
+          "folderIds": [],
+          "name": "apache-cxf-spring-hibernate",
+          "selectedEnvironmentId": null,
+          "selectedFolderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "selectedSidebarTab": null,
+          "selectedTabId": "c253f1e5-37cf-4d75-a6cd-03ddba493265",
+          "sidebarWidth": null,
+          "createdAt": 1638848711563,
+          "id": "e9d6e8f0-f57f-4b10-9baa-79ab5a8b7f5c",
+          "selectedRequestId": "99b6d439-e4aa-46af-9009-37b15fbd6459",
+          "updatedAt": 1638862438507,
+          "sidebarView": "requests"
+        },
+        {
+          "type": "folder",
+          "name": "My Folder",
+          "description": null,
+          "collapsed": false,
+          "selectedEnvironmentId": null,
+          "requestIds": [
+            "8cd8005e-8fbc-43c5-b2f1-d4b60c7b14e9",
+            "bf95ea91-985e-4262-981a-7797ae0b1ae4",
+            "cb6fd25e-a219-4729-9b3f-97a128287f9f",
+            "49b568ac-d7a6-4ac0-a027-26a3291e1152",
+            "b122b3ea-6cb0-4e92-af78-8389a0a4dc19",
+            "21e7fd56-05a5-489a-abcf-51e6bcbb8b04",
+            "99b6d439-e4aa-46af-9009-37b15fbd6459",
+            "ea73223c-793f-4538-aef0-23b89962a39c"
+          ],
+          "createdAt": 1638848733884,
+          "id": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "updatedAt": 1638853793557
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "name": "delete",
+          "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players/2",
+          "method": "DELETE",
+          "bodyType": "xml",
+          "bodyXml": "",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "date",
+                "value": "Tue, 07 Dec 2021 04:15:24 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=20"
+              }
+            ],
+            "responseText": "",
+            "statusCode": 204,
+            "statusText": "",
+            "duration": 37,
+            "sentRequest": {
+              "id": "21e7fd56-05a5-489a-abcf-51e6bcbb8b04",
+              "method": "DELETE",
+              "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players/2",
+              "headers": {
+                "Content-Type": "application/xml"
+              },
+              "data": "",
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 0,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": 0.5411392405063291,
+          "resPanelSize": 0.4588607594936709,
+          "spec": null,
+          "createdAt": 1638848733939,
+          "id": "21e7fd56-05a5-489a-abcf-51e6bcbb8b04",
+          "_rename": false,
+          "_inProgress": false,
+          "previewMode": false,
+          "updatedAt": 1638850524134
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "name": "create",
+          "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players",
+          "method": "POST",
+          "bodyType": "xml",
+          "bodyXml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<PlayerType xmlns=\"http://benchresources.in/cdm/Player\">\r\n    <name>张三3</name>\r\n    <age>25</age>\r\n    <matches>168</matches>\r\n</PlayerType>",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "text/plain",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "content-length",
+                "value": "1"
+              },
+              {
+                "name": "content-type",
+                "value": "text/plain"
+              },
+              {
+                "name": "date",
+                "value": "Tue, 07 Dec 2021 07:17:44 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=20"
+              }
+            ],
+            "responseText": "1",
+            "statusCode": 201,
+            "statusText": "",
+            "duration": 110,
+            "size": "1 bytes",
+            "sentRequest": {
+              "id": "49b568ac-d7a6-4ac0-a027-26a3291e1152",
+              "method": "POST",
+              "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players",
+              "headers": {
+                "Content-Type": "application/xml"
+              },
+              "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<PlayerType xmlns=\"http://benchresources.in/cdm/Player\">\r\n    <name>张三3</name>\r\n    <age>25</age>\r\n    <matches>168</matches>\r\n</PlayerType>",
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 0,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": 0.5411392405063291,
+          "resPanelSize": 0.4588607594936709,
+          "spec": null,
+          "createdAt": 1638848733939,
+          "id": "49b568ac-d7a6-4ac0-a027-26a3291e1152",
+          "_rename": false,
+          "_inProgress": false,
+          "updatedAt": 1638861464772,
+          "previewMode": false
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "name": "index.html",
+          "url": "http://localhost:9080/apache-cxf-spring-hibernate",
+          "method": "GET",
+          "bodyType": null,
+          "bodyXml": "",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "text/html",
+            "headers": [
+              {
+                "name": "accept-ranges",
+                "value": "bytes"
+              },
+              {
+                "name": "content-length",
+                "value": "28"
+              },
+              {
+                "name": "content-type",
+                "value": "text/html"
+              },
+              {
+                "name": "date",
+                "value": "Tue, 07 Dec 2021 03:47:47 GMT"
+              },
+              {
+                "name": "etag",
+                "value": "W/\"28-1638846620000\""
+              },
+              {
+                "name": "last-modified",
+                "value": "Tue, 07 Dec 2021 03:10:20 GMT"
+              }
+            ],
+            "responseText": "Apache CXF Spring Hibernate\n",
+            "statusCode": 200,
+            "statusText": "",
+            "duration": 39,
+            "size": "28 bytes",
+            "sentRequest": {
+              "id": "8cd8005e-8fbc-43c5-b2f1-d4b60c7b14e9",
+              "method": "GET",
+              "url": "http://localhost:9080/apache-cxf-spring-hibernate",
+              "headers": {},
+              "data": null,
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 0,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": null,
+          "resPanelSize": null,
+          "spec": null,
+          "createdAt": 1638848733939,
+          "id": "8cd8005e-8fbc-43c5-b2f1-d4b60c7b14e9",
+          "_rename": false,
+          "updatedAt": 1638848867095,
+          "_inProgress": false
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "name": "getByName - xml",
+          "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players?name=a",
+          "method": "GET",
+          "bodyType": "text",
+          "bodyXml": "三",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "application/xml",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "content-length",
+                "value": "887"
+              },
+              {
+                "name": "content-type",
+                "value": "application/xml"
+              },
+              {
+                "name": "date",
+                "value": "Tue, 07 Dec 2021 08:23:34 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=20"
+              }
+            ],
+            "responseText": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><PlayerListType xmlns=\"http://benchresources.in/cdm/Player\"><PlayerType><playerId>1</playerId><name>Sachin Tendulkar</name><age>41</age><matches>200</matches></PlayerType><PlayerType><playerId>2</playerId><name>Shane Warne</name><age>44</age><matches>145</matches></PlayerType><PlayerType><playerId>4</playerId><name>Shahid Afridi</name><age>35</age><matches>27</matches></PlayerType><PlayerType><playerId>5</playerId><name>Brian Lara</name><age>45</age><matches>131</matches></PlayerType><PlayerType><playerId>6</playerId><name>Graeme Smith</name><age>34</age><matches>117</matches></PlayerType><PlayerType><playerId>7</playerId><name>Mahela Jayawardene</name><age>37</age><matches>145</matches></PlayerType><PlayerType><playerId>8</playerId><name>Steve Waugh</name><age>49</age><matches>168</matches></PlayerType></PlayerListType>",
+            "statusCode": 200,
+            "statusText": "",
+            "duration": 1332,
+            "size": "887 bytes",
+            "sentRequest": {
+              "id": "99b6d439-e4aa-46af-9009-37b15fbd6459",
+              "method": "GET",
+              "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players?name=a",
+              "headers": {
+                "Content-Type": "text/plain"
+              },
+              "data": "",
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 2,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": 0.4451476793248945,
+          "resPanelSize": 0.5548523206751055,
+          "spec": null,
+          "createdAt": 1638848733939,
+          "id": "99b6d439-e4aa-46af-9009-37b15fbd6459",
+          "_rename": false,
+          "_inProgress": false,
+          "previewMode": false,
+          "updatedAt": 1638862977514
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "name": "update",
+          "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players/1",
+          "method": "PUT",
+          "bodyType": "xml",
+          "bodyXml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<PlayerType xmlns=\"http://benchresources.in/cdm/Player\">\r\n    <name>李四</name>\r\n    <age>25</age>\r\n    <matches>190</matches>\r\n</PlayerType>",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "date",
+                "value": "Tue, 07 Dec 2021 07:17:48 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=20"
+              }
+            ],
+            "responseText": "",
+            "statusCode": 204,
+            "statusText": "",
+            "duration": 49,
+            "sentRequest": {
+              "id": "b122b3ea-6cb0-4e92-af78-8389a0a4dc19",
+              "method": "PUT",
+              "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players/1",
+              "headers": {
+                "Content-Type": "application/xml"
+              },
+              "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<PlayerType xmlns=\"http://benchresources.in/cdm/Player\">\r\n    <name>李四</name>\r\n    <age>25</age>\r\n    <matches>190</matches>\r\n</PlayerType>",
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 0,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": 0.5411392405063291,
+          "resPanelSize": 0.4588607594936709,
+          "spec": null,
+          "createdAt": 1638848733939,
+          "id": "b122b3ea-6cb0-4e92-af78-8389a0a4dc19",
+          "_rename": false,
+          "_inProgress": false,
+          "previewMode": false,
+          "updatedAt": 1638861468892
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "name": "getById - xml",
+          "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players/1",
+          "method": "GET",
+          "bodyType": null,
+          "bodyXml": "",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "application/xml",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "content-length",
+                "value": "200"
+              },
+              {
+                "name": "content-type",
+                "value": "application/xml"
+              },
+              {
+                "name": "date",
+                "value": "Tue, 07 Dec 2021 07:18:00 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=20"
+              }
+            ],
+            "responseText": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><PlayerType xmlns=\"http://benchresources.in/cdm/Player\"><playerId>1</playerId><name>李四</name><age>25</age><matches>190</matches></PlayerType>",
+            "statusCode": 200,
+            "statusText": "",
+            "duration": 38,
+            "size": "196 bytes",
+            "sentRequest": {
+              "id": "bf95ea91-985e-4262-981a-7797ae0b1ae4",
+              "method": "GET",
+              "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players/1",
+              "headers": {},
+              "data": null,
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 1,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": null,
+          "resPanelSize": null,
+          "spec": null,
+          "createdAt": 1638848733939,
+          "id": "bf95ea91-985e-4262-981a-7797ae0b1ae4",
+          "_rename": false,
+          "_inProgress": false,
+          "updatedAt": 1638861480462
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "name": "getById - json",
+          "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players/1",
+          "method": "GET",
+          "bodyType": "xml",
+          "bodyXml": "",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "application/json",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "date",
+                "value": "Tue, 07 Dec 2021 05:09:26 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=20"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              }
+            ],
+            "responseText": "{\"playerId\":1,\"name\":\"李四\",\"age\":25,\"matches\":190}",
+            "statusCode": 200,
+            "statusText": "",
+            "duration": 327,
+            "size": "49 bytes",
+            "sentRequest": {
+              "id": "cb6fd25e-a219-4729-9b3f-97a128287f9f",
+              "method": "GET",
+              "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players/1",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/xml"
+              },
+              "data": "",
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 1,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": null,
+          "resPanelSize": null,
+          "spec": null,
+          "createdAt": 1638848733939,
+          "id": "cb6fd25e-a219-4729-9b3f-97a128287f9f",
+          "_rename": false,
+          "_inProgress": false,
+          "updatedAt": 1638853766386,
+          "previewMode": false
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "1770c2c3-ab2d-4298-b012-5091fbfa79b5",
+          "name": "getByName - json",
+          "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players?name=三",
+          "method": "GET",
+          "bodyType": "text",
+          "bodyXml": "三",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "application/json",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "date",
+                "value": "Tue, 07 Dec 2021 05:10:27 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=20"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              }
+            ],
+            "responseText": "{\"playerType\":[{\"playerId\":3,\"name\":\"张三3\",\"age\":25,\"matches\":168},{\"playerId\":4,\"name\":\"张三3\",\"age\":25,\"matches\":168},{\"playerId\":5,\"name\":\"张三3\",\"age\":25,\"matches\":168},{\"playerId\":6,\"name\":\"张三3\",\"age\":25,\"matches\":168}]}",
+            "statusCode": 200,
+            "statusText": "",
+            "duration": 39,
+            "size": "220 bytes",
+            "sentRequest": {
+              "id": "ea73223c-793f-4538-aef0-23b89962a39c",
+              "method": "GET",
+              "url": "http://localhost:9080/apache-cxf-spring-hibernate/services/players?name=三",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "text/plain"
+              },
+              "data": "",
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 1,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": 0.4451476793248945,
+          "resPanelSize": 0.5548523206751055,
+          "spec": null,
+          "createdAt": 1638848733939,
+          "id": "ea73223c-793f-4538-aef0-23b89962a39c",
+          "_rename": false,
+          "_inProgress": false,
+          "previewMode": false,
+          "updatedAt": 1638853827902
+        },
+        {
+          "type": "requestQuery",
+          "requestId": "99b6d439-e4aa-46af-9009-37b15fbd6459",
+          "name": "name",
+          "value": "a",
+          "enabled": true,
+          "createdAt": 1638850388701,
+          "id": "a5e352cc-5a22-4006-925f-2d73a5015a18",
+          "updatedAt": 1638862455506
+        },
+        {
+          "type": "requestQuery",
+          "requestId": "ea73223c-793f-4538-aef0-23b89962a39c",
+          "name": "name",
+          "value": "三",
+          "enabled": true,
+          "createdAt": 1638850388701,
+          "id": "afa87572-016f-4ac5-8b61-4c5c7abbc304"
+        },
+        {
+          "type": "requestHeader",
+          "requestId": "cb6fd25e-a219-4729-9b3f-97a128287f9f",
+          "name": "Accept",
+          "value": "application/json",
+          "enabled": true,
+          "createdAt": 1638853752122,
+          "id": "20b773b6-d636-4347-9d4c-1095d3fd48be",
+          "updatedAt": 1638853764564
+        },
+        {
+          "type": "requestHeader",
+          "requestId": "ea73223c-793f-4538-aef0-23b89962a39c",
+          "name": "Accept",
+          "value": "application/json",
+          "enabled": true,
+          "createdAt": 1638853815056,
+          "id": "4c67f295-b1e5-4961-b365-f3029dbced2d",
+          "updatedAt": 1638853827603
+        },
+        {
+          "type": "tab",
+          "requestId": "99b6d439-e4aa-46af-9009-37b15fbd6459",
+          "title": "getByName - xml",
+          "view": "HttpClient",
+          "createdAt": 1638856485378,
+          "id": "c253f1e5-37cf-4d75-a6cd-03ddba493265"
+        }
+      ]
+    }
+  ]
+}

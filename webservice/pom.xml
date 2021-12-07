@@ -24,6 +24,7 @@
         <module>apache-cxf-jaxrs</module>
         <module>sse-jaxrs</module>
         <module>apache-cxf-spring</module>
+        <module>apache-cxf-spring-hibernate</module>
     </modules>
     
     <dependencyManagement>

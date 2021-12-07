@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PlayerType
+    xmlns="http://benchresources.in/cdm/Player">
+    <name>李四</name>
+    <age>25</age>
+    <matches>190</matches>
+</PlayerType>

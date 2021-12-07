@@ -52,7 +52,7 @@
     <exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
     <liberty-maven-plugin.version>3.0.M1</liberty-maven-plugin.version>
     <cargo-maven3-plugin.version>1.9.8</cargo-maven3-plugin.version>
-
+    <jaxb2-maven-plugin.version>2.5.0</jaxb2-maven-plugin.version>
   </properties>
 
   <modules>
@@ -80,6 +80,11 @@
   <build>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>jaxb2-maven-plugin</artifactId>
+          <version>${jaxb2-maven-plugin.version}</version>
+      </plugin>
         <plugin>
           <groupId>org.codehaus.cargo</groupId>
           <artifactId>cargo-maven3-plugin</artifactId>
