@@ -12,7 +12,7 @@ import lombok.Data;
 
 /**
  * 
- * TODO
+ * 实体
  *  
  * @author PinWei Wan
  * @since 1.0.1

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * TODO
+ * Web Services 接口实现
  * 
  * @author PinWei Wan
  * @since 1.0.1
@@ -28,21 +28,19 @@ public class PlayerServiceImpl implements PlayerService {
     @Override
     public Response create(PlayerType playerType) {
 
-        // get player information from formal arguments
+        // 创建需要保存的实体
         Player playerForCreate = new Player();
+        // 转换
         playerForCreate.setName(playerType.getName());
         playerForCreate.setAge(playerType.getAge());
         playerForCreate.setMatches(playerType.getMatches());
 
-        // inserts into database & return playerId (primary_key)
+        // 持久化，返回主键
         int playerId = (Integer) sessionFactory.getCurrentSession().save(playerForCreate);
         return Response.status(Status.CREATED).entity(playerId).build();
     }
 
-    /**
-     * retrieves a player object based on the playerId supplied in the formal
-     * argument using @PathParam
-     */
+
     @Transactional
     @Override
     public Response getById(int id) {
@@ -52,7 +50,7 @@ public class PlayerServiceImpl implements PlayerService {
             return Response.status(Status.NOT_FOUND).build();
         }
 
-        // set values and return
+        // 传话
         PlayerType getplayer = new PlayerType();
         getplayer.setPlayerId(player.getPlayerId());
         getplayer.setName(player.getName());
@@ -91,40 +89,36 @@ public class PlayerServiceImpl implements PlayerService {
             return Response.status(Status.NOT_FOUND).build();
         }
 
-        // delete player information and return success msg
         sessionFactory.getCurrentSession().delete(playerForDelete);
         return Response.status(Status.NO_CONTENT).build();
     }
 
-    /**
-     * retrieves all players stored
-     */
+
+
     @Transactional
     @Override
     public Response getByName(String name) {
 
+        // 创建查询对象
         Query<Player> query = sessionFactory.getCurrentSession().createQuery("from Player where name like :name", Player.class);
         query.setParameter("name", "%" + name + "%");
         List<Player> lstPlayer = query.list();
         
-        // create a object of type PlayerType which takes player objects in its list
+        // 转换
         PlayerListType playerListType = new PlayerListType();
-
-        // iterate and set the values and return list
         for (Player player : lstPlayer) {
-            // add player info
             PlayerType playerType = new PlayerType();
             playerType.setPlayerId(player.getPlayerId());
             playerType.setName(player.getName());
             playerType.setAge(player.getAge());
             playerType.setMatches(player.getMatches());
-            playerListType.getPlayerType().add(playerType); // add to playerListType
+            playerListType.getPlayerType().add(playerType);
         }
         return Response.ok(playerListType).build();
     }
 
     private Player findById(int id) {
-        // retrieve player based on the id supplied in the formal argument
+        
         return sessionFactory.getCurrentSession().get(Player.class, id);
     }
 }

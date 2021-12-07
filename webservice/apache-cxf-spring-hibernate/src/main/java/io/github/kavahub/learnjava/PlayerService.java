@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 /**
- * TODO
+ * Web Services 接口，支持XML和JSON数据格式
  *  
  * @author PinWei Wan
  * @since 1.0.1

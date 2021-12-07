@@ -8,21 +8,21 @@
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
 
-	<!-- to support Java-to-JSON and vice-versa conversion -->
+	<!-- Json数据支持，Java对象与json数据转换 -->
 	<bean id="jsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 
-	<!-- to support Java-to-XML and vice-versa conversion -->
+	<!-- XML数据支持，Java对象与xml数据转换 -->
 	<bean id="jaxbXmlProvider" class="org.apache.cxf.jaxrs.provider.JAXBElementProvider" />
 
-	<!-- CXFServlet configured in web.xml sends requests here -->
+	<!-- 定义服务 -->
 	<jaxrs:server id="restContainer" address="/">
 		<jaxrs:serviceBeans>
 			<ref bean="playerService" />
 		</jaxrs:serviceBeans>
 
 		<jaxrs:extensionMappings>
-			<entry key="json" value="application/json" /> <!-- use .json to get data in JSON format -->
-			<entry key="xml" value="application/xml" />   <!-- use .xml to get data in XML format -->
+			<entry key="json" value="application/json" /> <!-- JSON数据格式支持 -->
+			<entry key="xml" value="application/xml" />   <!-- XML数据格式支持 -->
 		</jaxrs:extensionMappings>
 
 		<jaxrs:providers>

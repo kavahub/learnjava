@@ -2,7 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://benchresources.in/cdm/Player" xmlns:tns="http://benchresources.in/cdm/Player" elementFormDefault="qualified">
 
 
-    <!-- player object with four attributes -->
+    <!-- Player 视图类 -->
     <xsd:element name="PlayerType">
         <xsd:complexType>
             <xsd:sequence>
@@ -14,7 +14,7 @@
         </xsd:complexType>
     </xsd:element>
 
-    <!-- an object to contain lists of players referencing above player object -->
+    <!-- Player 列表视图类 -->
     <xsd:element name="PlayerListType">
         <xsd:complexType>
             <xsd:sequence>

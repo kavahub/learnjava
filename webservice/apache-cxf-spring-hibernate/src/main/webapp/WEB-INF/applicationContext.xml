@@ -12,7 +12,7 @@
 		context -->
 	<context:annotation-config />
 
-	<!-- scans packages to find and register beans within the application context -->
+	<!-- 在应用上下文中扫描组件 -->
 	<context:component-scan base-package="io.github.kavahub.learnjava" />
 
 	<!-- turn on spring transaction annotation -->
@@ -61,6 +61,7 @@
 		<property name="password" value="" />
 	</bean>	
 
+	<!-- 测试数据生成 -->
 	<jdbc:initialize-database data-source="dataSource">
 		<jdbc:script location="classpath:init-data.sql" />
 	 </jdbc:initialize-database>
