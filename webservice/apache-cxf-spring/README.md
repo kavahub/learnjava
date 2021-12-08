@@ -12,6 +12,6 @@ Apache CXF 与 Spring 集成开发
 
 服务端运行成功后，在游览器中输入接口地址，如：http://localhost:9080/apache-cxf-spring/services/student?wsdl 等等；运行单元测试 StudentIntegrationTest.java
 
-## 参考文章
+## 参考
 
 

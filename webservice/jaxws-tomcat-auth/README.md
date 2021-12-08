@@ -12,5 +12,5 @@ JAX-WS 使用 `Tomcat` 自带的安全认证
 * 配置 `Tomcat` 使用认证，添加 `operator` 角色，添加一个用户拥有该角色。如果使用IDE的插件，配置应该在插件中完成
 * 启动 `Tomcat`， 可以运行 `HelloWSManualTest.java` 测试
 
-## 参考文章
+## 参考
 

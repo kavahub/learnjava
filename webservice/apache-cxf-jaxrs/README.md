@@ -16,6 +16,6 @@ JAX-RS,全称为Java API for RESTful Web Services , 核心概念是resource，�
 
 服务端运行成功后，在游览器中输入接口地址，如：http://localhost:9080/apache-cxf-jaxrs/courses/1 等等，也可以运行单元测试 ServiceIntegrationTest.java
 
-## 参考文章
+## 参考
 
 

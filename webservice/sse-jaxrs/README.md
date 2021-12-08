@@ -29,7 +29,7 @@ java.lang.module.FindException: Module java.instrument not found
 缺少模块。Java 已经模块化了，使用 jmod 工具定制jre
 
 
-## 参考文章
+## 参考
 
 - [Server-Sent Events (SSE) In JAX-RS](https://www.baeldung.com/java-ee-jax-rs-sse)
 - [ci.maven](https://github.com/OpenLiberty/ci.maven) Collection of Maven plugins and archetypes for managing Open Liberty and WebSphere Liberty servers and applications.

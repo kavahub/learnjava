@@ -1,7 +1,7 @@
 # google-guava
 gongle guava库学习
 
-## 参考文章
+## 参考
 
 - [Google Guava IO 操作](https://www.jianshu.com/p/047e3135c398)
 - [如何加载缓存](https://www.jianshu.com/p/d2fb0f5ccdcd)

@@ -18,7 +18,7 @@ JAX-WS RI是JAX WebService参考实现。相对于Axis2和CXF，JAX-WS RI是一�
 * 打包项目，运行 `Maven` 命令：`mvn clean install` ，在 `target` 目录下，生成 `war` 包
 * 部署war包到 `Tomcat` 容器，启动 `Tomcat`，成功后可在游览器中访问地址：http://localhost:9080/jaxws/services/welcome， http://localhost:9080/jaxws/services/student , 查看发布接口信息
 
-## 参考文章
+## 参考
 
 - [JAX-WS Users Guide](https://javaee.github.io/metro-jax-ws/doc/user-guide/ch03.html)
 - [Introduction to JAX-WS](https://www.baeldung.com/jax-ws)

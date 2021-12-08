@@ -27,10 +27,10 @@ import lombok.Getter;
  * @since 1.0.1
  */
 public class EmailRenderManualTest {
-    static STGroup group = new STGroupFile("email.stg");
 
     @Test
     public void render() {
+        STGroup group = new STGroupFile("email.stg");
         ST st = group.getInstanceOf("email");
         st.add("order", order);
         st.add("separator", "----------------");
@@ -40,10 +40,10 @@ public class EmailRenderManualTest {
 
     @Test
     public void renderWithFormater() {
-        STGroup test = new STGroupFile("email.stg");
-        test.registerRenderer(Date.class, new DateRenderer());
-        test.registerRenderer(BigDecimal.class, new BigDecimalRenderer());
-        ST st = test.getInstanceOf("email");
+        STGroup group = new STGroupFile("email.stg");
+        group.registerRenderer(Date.class, new DateRenderer());
+        group.registerRenderer(BigDecimal.class, new BigDecimalRenderer());
+        ST st = group.getInstanceOf("email");
         st.add("order", order);
         st.add("separator", "----------------");
         
