@@ -55,6 +55,7 @@
     <jaxb2-maven-plugin.version>2.5.0</jaxb2-maven-plugin.version>
     <antlr4-maven-plugin.version>4.9.3</antlr4-maven-plugin.version>
     <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
+    <asciidoctor-maven-plugin.version>2.2.1</asciidoctor-maven-plugin.version>
   </properties>
 
   <modules>
@@ -67,6 +68,7 @@
     <module>java-deprecated-modules-bom</module>
     <module>dependencies-bom</module>
     <module>antlr</module>
+    <module>projects-lab</module>
   </modules>
 
   <repositories>
@@ -84,10 +86,15 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.asciidoctor</groupId>
+          <artifactId>asciidoctor-maven-plugin</artifactId>
+          <version>${asciidoctor-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
           <version>${build-helper-maven-plugin.version}</version>
-      </plugin>
+        </plugin>
 
         <plugin>
           <groupId>org.antlr</groupId>
