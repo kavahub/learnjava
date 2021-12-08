@@ -19,6 +19,7 @@
 
     <modules>
         <module>asciidoctor</module>
+        <module>asm</module>
     </modules>
     
     <dependencyManagement>
