@@ -10,9 +10,9 @@
 
 
 
-[Gitee](https://gitee.com/pinweiwan/learnjava)
+[`Gitee`](https://gitee.com/pinweiwan/learnjava)
 
-[GitHub](https://github.com/kavahub/learnjava)
+[`GitHub`](https://github.com/kavahub/learnjava)
 
 #### 介绍
 
@@ -20,7 +20,7 @@ Java 编程语言学习，内容包含多个方面，如：字符串，日期，
 
 学习编程语言从测试开始。项目包含大量的示例，测试代码及代码注释。在 `README.md`中，还有在网络中收集的技术文章
 
-如果有好的代码，文章推荐，或者疑问等等，请在 [issues](https://gitee.com/pinweiwan/learnjava/issues) 中给我留言
+如果有好的代码，文章推荐，或者疑问等等，请在 [`issues`](https://gitee.com/pinweiwan/learnjava/issues) 中给我留言
 
 #### 特色
 
@@ -33,10 +33,10 @@ Java 编程语言学习，内容包含多个方面，如：字符串，日期，
 * 工作中的参考书，有疑问，想法，写个测试验证一下
 
 几种测试说明：
-* [*Test.java] 单元测试，单个类的测试，有断言
-* [*ManualTest.java] 手工测试，单个或多个类的测试，没有断言，通常用控制台输出查看结果
-* [*LiveTest.java] 集成测试，测试依赖某些服务，在测试开始前，会自动启动服务，完成后关闭
-* [*IntegrationTest.java] 集成测试，测试依赖某些服务，但不会自动启动服务，而是依靠工具启动， 如：[cargo-maven2-plugin]
+* `*Test.java` 单元测试，单个类的测试，有断言
+* `*ManualTest.java` 手工测试，单个或多个类的测试，没有断言，通常用控制台输出查看结果
+* `*LiveTest.java` 集成测试，测试依赖某些服务，在测试开始前，会自动启动服务，完成后关闭
+* `*IntegrationTest.java` 集成测试，测试依赖某些服务，但不会自动启动服务，而是依靠工具启动， 如：`cargo-maven2-plugin`
 
 #### 运行项目
 
@@ -44,13 +44,14 @@ Java 编程语言学习，内容包含多个方面，如：字符串，日期，
 
 ```text
 mvn clean install
-```text
+```
 
-如果需要运行集成测试（依赖某些服务，可能会失败），运行 Maven 命令：
+如果需要运行集成测试（依赖某些服务，可能会失败），运行 `Maven`命令：
 
 ```text
 mvn clean install -Pintegration-test
-```text
+```
 
 #### 其他项目
-- [eugenp](https://github.com/eugenp/tutorials) : This project is a collection of small and focused tutorials 
+
+- [`eugenp`](https://github.com/eugenp/tutorials) : This project is a collection of small and focused tutorials 

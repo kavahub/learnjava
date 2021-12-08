@@ -12,6 +12,6 @@ Maven 命令打包: `mvn clean install` 。成功后，`target/generated-sources
 
 ## 参考文章
 
-- [Apache CXF: JAX-RS Restful web service + Integrating with Spring & Hibernate](https://www.benchresources.net/apache-cxf-jax-rs-restful-web-service-integrating-with-spring-hibernate/#google_vignette)
+- [`Apache CXF: JAX-RS Restful web service + Integrating with Spring & Hibernate`](https://www.benchresources.net/apache-cxf-jax-rs-restful-web-service-integrating-with-spring-hibernate/#google_vignette)
 
 
