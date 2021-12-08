@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">    <modelVersion>4.0.0</modelVersion>
+    
+    <artifactId>string-template4</artifactId>
+    <name>string-template4</name>
+    <packaging>jar</packaging>
+
+    <description>模板引擎</description>
+
+    <parent>
+        <groupId>io.github.kavahub.learnjava.antlr</groupId>
+        <artifactId>antlr-modules</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>ST4</artifactId>
+          </dependency>
+    </dependencies>
+
+
+</project>

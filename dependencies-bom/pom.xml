@@ -82,10 +82,23 @@
     <tomcat-embed.version>10.1.0-M7</tomcat-embed.version>
     <commons-logging.version>1.2</commons-logging.version>
     <auto-service.version>1.0.1</auto-service.version>
+    <antlr4-runtime.version>4.9.3</antlr4-runtime.version>
+    <ST4.version>4.3.1</ST4.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.antlr</groupId>
+        <artifactId>ST4</artifactId>
+        <version>${ST4.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.antlr</groupId>
+        <artifactId>antlr4-runtime</artifactId>
+        <version>${antlr4-runtime.version}</version>
+      </dependency>
       <dependency>
         <groupId>com.google.auto.service</groupId>
         <artifactId>auto-service</artifactId>

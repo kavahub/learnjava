@@ -53,6 +53,8 @@
     <liberty-maven-plugin.version>3.0.M1</liberty-maven-plugin.version>
     <cargo-maven3-plugin.version>1.9.8</cargo-maven3-plugin.version>
     <jaxb2-maven-plugin.version>2.5.0</jaxb2-maven-plugin.version>
+    <antlr4-maven-plugin.version>4.9.3</antlr4-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
   </properties>
 
   <modules>
@@ -64,6 +66,7 @@
     <module>webservice</module>
     <module>java-deprecated-modules-bom</module>
     <module>dependencies-bom</module>
+    <module>antlr</module>
   </modules>
 
   <repositories>
@@ -82,9 +85,21 @@
       <plugins>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>${build-helper-maven-plugin.version}</version>
+      </plugin>
+
+        <plugin>
+          <groupId>org.antlr</groupId>
+          <artifactId>antlr4-maven-plugin</artifactId>
+          <version>${antlr4-maven-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
           <artifactId>jaxb2-maven-plugin</artifactId>
           <version>${jaxb2-maven-plugin.version}</version>
-      </plugin>
+        </plugin>
         <plugin>
           <groupId>org.codehaus.cargo</groupId>
           <artifactId>cargo-maven3-plugin</artifactId>
@@ -134,7 +149,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <forkCount>3</forkCount>
-          <reuseForks>true</reuseForks>          
+          <reuseForks>true</reuseForks>
           <excludes>
             <exclude>**/*ManualTest.java</exclude>
             <exclude>**/*LiveTest.java</exclude>
@@ -163,21 +178,21 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <executions>
               <execution>
-                 <phase>integration-test</phase>
-                 <goals>
-                    <goal>test</goal>
-                 </goals>
-                 <configuration>
-                    <excludes>
-                      <exclude>**/*ManualTest.java</exclude>
-                    </excludes>
-                    <includes>
-                      <include>**/*LiveTest.java</include>
-                       <include>**/*IntegrationTest.java</include>
-                    </includes>
-                 </configuration>
+                <phase>integration-test</phase>
+                <goals>
+                  <goal>test</goal>
+                </goals>
+                <configuration>
+                  <excludes>
+                    <exclude>**/*ManualTest.java</exclude>
+                  </excludes>
+                  <includes>
+                    <include>**/*LiveTest.java</include>
+                    <include>**/*IntegrationTest.java</include>
+                  </includes>
+                </configuration>
               </execution>
-           </executions>
+            </executions>
           </plugin>
         </plugins>
       </build>
