@@ -10,9 +10,9 @@
 
 
 
-[`Gitee`](https://gitee.com/pinweiwan/learnjava)
+[Gitee](https://gitee.com/pinweiwan/learnjava)
 
-[`GitHub`](https://github.com/kavahub/learnjava)
+[GitHub](https://github.com/kavahub/learnjava)
 
 #### 介绍
 
@@ -20,7 +20,7 @@ Java 编程语言学习，内容包含多个方面，如：字符串，日期，
 
 学习编程语言从测试开始。项目包含大量的示例，测试代码及代码注释。在 `README.md`中，还有在网络中收集的技术文章
 
-如果有好的代码，文章推荐，或者疑问等等，请在 [`issues`](https://gitee.com/pinweiwan/learnjava/issues) 中给我留言
+如果有好的代码，文章推荐，或者疑问等等，请在 [issues](https://gitee.com/pinweiwan/learnjava/issues) 中给我留言
 
 #### 特色
 
@@ -54,4 +54,4 @@ mvn clean install -Pintegration-test
 
 #### 其他项目
 
-- [`eugenp`](https://github.com/eugenp/tutorials) : This project is a collection of small and focused tutorials 
+- [eugenp](https://github.com/eugenp/tutorials) : This project is a collection of small and focused tutorials 

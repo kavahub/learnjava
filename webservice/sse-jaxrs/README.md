@@ -31,6 +31,6 @@ java.lang.module.FindException: Module java.instrument not found
 
 ## 参考文章
 
-- [`Server-Sent Events (SSE) In JAX-RS`](https://www.baeldung.com/java-ee-jax-rs-sse)
-- [`ci.maven`](https://github.com/OpenLiberty/ci.maven) Collection of Maven plugins and archetypes for managing Open Liberty and WebSphere Liberty servers and applications.
-- [`IBM 开源动态的应用服务器运行时环境 Open Liberty`](https://www.oschina.net/news/88879/open-sourcing-liberty)
+- [Server-Sent Events (SSE) In JAX-RS](https://www.baeldung.com/java-ee-jax-rs-sse)
+- [ci.maven](https://github.com/OpenLiberty/ci.maven) Collection of Maven plugins and archetypes for managing Open Liberty and WebSphere Liberty servers and applications.
+- [IBM 开源动态的应用服务器运行时环境 Open Liberty](https://www.oschina.net/news/88879/open-sourcing-liberty)

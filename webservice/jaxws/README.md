@@ -20,6 +20,6 @@ JAX-WS RI是JAX WebService参考实现。相对于Axis2和CXF，JAX-WS RI是一�
 
 ## 参考文章
 
-- [`JAX-WS Users Guide`](https://javaee.github.io/metro-jax-ws/doc/user-guide/ch03.html)
-- [`Introduction to JAX-WS`](https://www.baeldung.com/jax-ws)
-- [`JAX-WS Samples`](https://github.com/javaee/metro-jax-ws/tree/master/jaxws-ri/samples/src/main/samples)
+- [JAX-WS Users Guide](https://javaee.github.io/metro-jax-ws/doc/user-guide/ch03.html)
+- [Introduction to JAX-WS](https://www.baeldung.com/jax-ws)
+- [JAX-WS Samples](https://github.com/javaee/metro-jax-ws/tree/master/jaxws-ri/samples/src/main/samples)
