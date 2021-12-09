@@ -31,6 +31,7 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+        
         <dependency>
             <groupId>com.googlecode.thread-weaver</groupId>
             <artifactId>threadweaver</artifactId>

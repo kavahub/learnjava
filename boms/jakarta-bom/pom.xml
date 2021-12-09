@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>jakarta-bom</artifactId>
+    <name>jakarta-bom</name>
+    <packaging>pom</packaging>
+
+    <description>
+        jakarta.* 包
+    </description>
+
+    <parent>
+        <groupId>io.github.kavahub.learnjava.boms</groupId>
+        <artifactId>boms-modules</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <properties>
+        <jakarta.servlet-api.version>5.0.0</jakarta.servlet-api.version>
+        <jakarta.mail.version>2.0.1</jakarta.mail.version>
+        <jakarta.activation.version>2.0.1</jakarta.activation.version>
+        <jaxws.version>3.0.2</jaxws.version>
+        <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>javax.ws.rs-api</artifactId>
+                <version>${javax.ws.rs-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.xml.ws</groupId>
+                <artifactId>jaxws-ri</artifactId>
+                <version>${jaxws.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.activation</groupId>
+                <artifactId>jakarta.activation</artifactId>
+                <version>${jakarta.activation.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>jakarta.mail</artifactId>
+                <version>${jakarta.mail.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>${jakarta.servlet-api.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.kavahub.learnjava.boms</groupId>
     <artifactId>boms-modules</artifactId>
-    <name>bom</name>
+    <name>boms</name>
     <packaging>pom</packaging>
 
     <description>
@@ -18,45 +18,10 @@
     </parent>
 
     <modules>
-        <module>java-deprecated-modules-bom</module>
-        <module>learnjava-dependencies-bom</module>
+        <module>javax-bom</module>
         <module>tomcat-bom</module>
+        <module>spring-bom</module>
+        <module>jakarta-bom</module>
+        <module>apache-cxf-bom</module>
     </modules>
-    
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.github.kavahub.learnjava</groupId>
-                <artifactId>dependencies-bom</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-              </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <scope>test</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <scope>test</scope>
-          </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 </project>

@@ -7,6 +7,7 @@ ASM 是一个 Java 字节码操控框架。它能被用来动态生成类或者�
 
 ## 参考
 
-- [A Guide to Java Bytecode Manipulation with ASM](https://www.baeldung.com/java-asm)  
+- [A Guide to Java Bytecode Manipulation with ASM](https://www.baeldung.com/java-asm) 
+- [原理探究 premain实践](https://www.dazhuanlan.com/superduperdrive/topics/1657570)   
 
 

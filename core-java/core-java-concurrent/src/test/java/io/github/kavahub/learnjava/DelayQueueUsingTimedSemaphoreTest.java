@@ -46,7 +46,7 @@ public class DelayQueueUsingTimedSemaphoreTest {
         executorService.awaitTermination(10, TimeUnit.MILLISECONDS);
         assertEquals(0, delayQueue.availableSlots());
         
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         assertTrue(delayQueue.availableSlots() > 0);
         assertTrue(delayQueue.tryAdd());
 

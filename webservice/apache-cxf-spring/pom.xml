@@ -21,11 +21,27 @@
         <dependencies>
             <dependency>
                 <groupId>io.github.kavahub.learnjava.boms</groupId>
-                <artifactId>java-deprecated-modules-bom</artifactId>
+                <artifactId>javax-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>io.github.kavahub.learnjava.boms</groupId>
+                <artifactId>spring-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.kavahub.learnjava.boms</groupId>
+                <artifactId>apache-cxf-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+              </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -5,9 +5,7 @@
     <artifactId>embed-tomcat-bootstrap</artifactId>
     <name>embed-tomcat-bootstrap</name>
 
-    <description>
-        
-    </description>
+    <description></description>
 
     <parent>
         <groupId>io.github.kavahub.learnjava.projects-lab</groupId>
@@ -24,19 +22,33 @@
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-              </dependency>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.kavahub.learnjava.boms</groupId>
+                <artifactId>jakarta-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-logging-juli</artifactId>
+            <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
+            <artifactId>tomcat-embed-el</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-annotations-api</artifactId>
         </dependency>
 
         <dependency>
@@ -48,6 +60,7 @@
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jasper-el</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jsp-api</artifactId>
@@ -56,15 +69,47 @@
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>${project.artifactId}</finalName>
         <resources>
             <resource>
                 <directory>src/main/webapp</directory>
                 <targetPath>META-INF/resources</targetPath>
             </resource>
+
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
         </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>io.github.kavahub.learnjava.TomcatApplication</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>

@@ -50,7 +50,7 @@
                     <archive>
                         <manifestEntries>
                             <Premain-Class>
-                                io.github.kavahub.learnjava.instrumentation.IntegerPremain
+                                io.github.kavahub.learnjava.IntegerPremain
                             </Premain-Class>
                         </manifestEntries>
                     </archive>

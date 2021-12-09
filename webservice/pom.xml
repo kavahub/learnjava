@@ -27,18 +27,6 @@
         <module>apache-cxf-spring-hibernate</module>
     </modules>
     
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.github.kavahub.learnjava.boms</groupId>
-                <artifactId>learnjava-dependencies-bom</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-              </dependency>
-        </dependencies>
-    </dependencyManagement>
-    
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>

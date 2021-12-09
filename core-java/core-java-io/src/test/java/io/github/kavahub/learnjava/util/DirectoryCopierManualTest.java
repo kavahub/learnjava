@@ -22,10 +22,13 @@ import io.github.kavahub.learnjava.util.DirectoryCopier.JavaNio;
  * 
  * {@link DirectoryCopier} 示例
  *
+ * <p>
+ * 三个测试类可能同时执行, 这样就存在多线程问题：多个线程操作同一个目录。所有改为手工执行
+ * 
  * @author PinWei Wan
  * @since 1.0.0
  */
-public class DirectoryCopierTest {
+public class DirectoryCopierManualTest {
     private final static Path sourceDirectory = Paths.get("target", "sourceDirectory1");
     private final static Path subSourceDirectory = sourceDirectory.resolve("childDirectory");
     private final static Path sourceFileName = subSourceDirectory.resolve("file.txt");
@@ -46,7 +49,8 @@ public class DirectoryCopierTest {
     }
 
     @Nested
-    class CoreOldTest {
+    class CoreOldManualTest {
+
         @Test
         public void whenSourceDirectoryExists_thenDirectoryIsFullyCopied() throws IOException {
             CoreOld.copyDirectoryJavaUnder7(sourceDirectory.toFile(), destinationDirectory.toFile());
@@ -66,7 +70,7 @@ public class DirectoryCopierTest {
     }
 
     @Nested
-    class JavaNioUnitTest {    
+    class JavaNioManualTest {    
         @Test
         public void whenSourceDirectoryExists_thenDirectoryIsFullyCopied() throws IOException {
             JavaNio.copyDirectory(sourceDirectory.toString(), destinationDirectory.toString());
@@ -83,7 +87,7 @@ public class DirectoryCopierTest {
     }
 
     @Nested
-    class ApacheCommonsUnitTest {   
+    class ApacheCommonsManualTest {   
         @Test
         public void whenSourceDirectoryExists_thenDirectoryIsFullyCopied() throws IOException {
             ApacheCommons.copyDirectory(sourceDirectory.toString(), destinationDirectory.toString());
