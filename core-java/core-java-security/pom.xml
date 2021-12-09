@@ -16,7 +16,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.kavahub.learnjava</groupId>
+                <groupId>io.github.kavahub.learnjava.boms</groupId>
                 <artifactId>java-deprecated-modules-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>

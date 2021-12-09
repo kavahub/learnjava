@@ -63,14 +63,13 @@
   </properties>
 
   <modules>
+    <module>boms</module>
     <module>core-java</module>
     <module>google-guava</module>
     <module>dubhe</module>
     <module>design-pattern</module>
     <module>algorithms</module>
     <module>webservice</module>
-    <module>java-deprecated-modules-bom</module>
-    <module>dependencies-bom</module>
     <module>antlr</module>
     <module>projects-lab</module>
   </modules>

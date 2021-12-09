@@ -10,8 +10,8 @@
     </description>
 
     <parent>
-        <groupId>io.github.kavahub.learnjava</groupId>
-        <artifactId>learnjava-modules</artifactId>
+        <groupId>io.github.kavahub.learnjava.boms</groupId>
+        <artifactId>boms-modules</artifactId>
         <version>1.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>

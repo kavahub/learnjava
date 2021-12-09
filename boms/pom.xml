@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">    <modelVersion>4.0.0</modelVersion>
-    <artifactId>design-pattern</artifactId>
-    <name>design-pattern</name>
-    <packaging>jar</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.kavahub.learnjava.boms</groupId>
+    <artifactId>boms-modules</artifactId>
+    <name>bom</name>
+    <packaging>pom</packaging>
 
-    <description>设计模式Java实现</description>
+    <description>
+        物料清单（Bill of Material，Bom）
+    </description>
 
     <parent>
         <groupId>io.github.kavahub.learnjava</groupId>
@@ -13,11 +17,17 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <modules>
+        <module>java-deprecated-modules-bom</module>
+        <module>learnjava-dependencies-bom</module>
+        <module>tomcat-bom</module>
+    </modules>
+    
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.kavahub.learnjava.boms</groupId>
-                <artifactId>learnjava-dependencies-bom</artifactId>
+                <groupId>io.github.kavahub.learnjava</groupId>
+                <artifactId>dependencies-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -27,33 +37,21 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest</artifactId>
-            <scope>test</scope>
-        </dependency>
-        
-        <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
         </dependency>
-
+        
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
-        </dependency>
+          </dependency>
 
-        <dependency>
+          <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
             <scope>test</scope>
-        </dependency>
+          </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
