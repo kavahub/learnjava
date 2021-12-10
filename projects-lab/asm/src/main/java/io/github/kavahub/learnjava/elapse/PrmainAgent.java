@@ -11,7 +11,9 @@ import java.lang.instrument.Instrumentation;
 public class PrmainAgent {
     public static void premain(String args, Instrumentation inst){
         System.out.println(">>> PrmainAgent.premain called ");
-        // 注册转换器
-        inst.addTransformer(new TransformerWithJavassist());
+        
+        // 注册转换器, 可以切换两中实现: Javassist 和 asm
+        // inst.addTransformer(new TransformerWithJavassist());
+        inst.addTransformer(new TransformerWithASM());
     }
 }

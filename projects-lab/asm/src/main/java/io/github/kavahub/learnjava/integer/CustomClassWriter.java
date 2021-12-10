@@ -106,6 +106,7 @@ public class CustomClassWriter {
     public class PublicizeMethodAdapter extends ClassVisitor {
 
         final Logger logger = Logger.getLogger("PublicizeMethodAdapter");
+        // 字节码以文本的方式展现
         TraceClassVisitor tracer;
         PrintWriter pw = new PrintWriter(System.out);
 
