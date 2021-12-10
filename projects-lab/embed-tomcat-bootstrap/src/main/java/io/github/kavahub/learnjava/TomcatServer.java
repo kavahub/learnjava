@@ -12,7 +12,7 @@ import org.apache.catalina.webresources.StandardRoot;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * TODO
+ * Tomcat服务器
  *  
  * @author PinWei Wan
  * @since 1.0.1
@@ -40,6 +40,18 @@ public class TomcatServer implements Server {
 			log.error("Exit...");
 			System.exit(1);
 		}
+
+		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+					log.info("Tomcat server shutdown...");
+                    tomcat.getServer().stop();
+               } catch (LifecycleException e) {
+                    e.printStackTrace();
+                }
+            }
+        }));
 
 		log.info("Application started with URL {}.", DEFAULT_HOST + ":" + port + DEFAULT_CONTEXT_PATH);
 		log.info("Hit Ctrl + D or C to stop it...");
@@ -80,6 +92,7 @@ public class TomcatServer implements Server {
 
 	private Context context(Tomcat tomcat) {
 		Context context = tomcat.addWebapp(DEFAULT_CONTEXT_PATH, DOC_BASE);
+
 		File classes = new File(ADDITION_WEB_INF_CLASSES);
 		String base = classes.getAbsolutePath();
 		WebResourceRoot resources = new StandardRoot(context);

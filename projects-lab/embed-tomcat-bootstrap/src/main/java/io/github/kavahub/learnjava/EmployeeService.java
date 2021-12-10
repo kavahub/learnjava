@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
- * TODO
+ * 雇员服务，添加，修改，查询雇员功能
  *  
  * @author PinWei Wan
  * @since 1.0.1

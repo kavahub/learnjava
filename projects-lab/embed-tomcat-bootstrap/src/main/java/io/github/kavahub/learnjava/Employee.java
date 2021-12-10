@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import lombok.Data;
 
 /**
- * TODO
+ * 雇员
  *  
  * @author PinWei Wan
  * @since 1.0.1

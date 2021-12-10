@@ -1,12 +1,20 @@
 # embed-tomcat-bootstrap
 
-ASM 是一个 Java 字节码操控框架。它能被用来动态生成类或者增强既有类的功能。ASM 可以直接产生二进制 class 文件，也可以在类被加载入 Java 虚拟机之前动态改变类行为
+一般情况下，`Web` 项目需要手工部署到容器，这个项目使用内嵌 `Tomcat` 容器启动
 
 ## 运行项目
 
+运行 `Maven` 命令打包项目：`mvn clean install` ，完成后就可以运行项目，如下：
+
+```text
+cd target
+java -jar embed-tomcat-bootstrap-1.x.x-SNAPSHOT-jar-with-dependencies.jar
+```
+
+执行后，内嵌 Tomcat 启动，请不要关闭窗口。在游览器中访问地址：http://localhost:9080/employee
+
+注意：发布时，`embed-tomcat-bootstrap-1.x.x-SNAPSHOT-jar-with-dependencies.jar` 和 `classes` 目录都需要
 
 ## 参考
-
-- [Creating a Web App with Bootstrap and Tomcat Embedded](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/basic_app_embedded_tomcat/basic_app-tomcat-embedded.html#section6)  
 
 

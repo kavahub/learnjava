@@ -22,10 +22,17 @@
         <jakarta.activation.version>2.0.1</jakarta.activation.version>
         <jaxws.version>3.0.2</jaxws.version>
         <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
+        <jakarta.servlet.jsp.jstl.version>2.0.0</jakarta.servlet.jsp.jstl.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.glassfish.web</groupId>
+                <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+                <version>${jakarta.servlet.jsp.jstl.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>javax.ws.rs</groupId>
                 <artifactId>javax.ws.rs-api</artifactId>
