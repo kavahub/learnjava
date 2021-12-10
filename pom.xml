@@ -148,6 +148,7 @@
     <module>webservice</module>
     <module>antlr</module>
     <module>projects-lab</module>
+    <module>java-agent</module>
   </modules>
 
   <repositories>

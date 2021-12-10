@@ -1,0 +1,26 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.templates.typeComment": [
+      "/**",
+      " * TODO",
+      " *  ",
+      " * @author PinWei Wan",
+      " * @since 1.0.1",
+      " */"
+    ],
+    "java.completion.favoriteStaticMembers": [
+        "org.junit.Assert.*",
+        "org.junit.Assume.*",
+        "org.junit.jupiter.api.Assertions.*",
+        "org.junit.jupiter.api.Assumptions.*",
+        "org.junit.jupiter.api.DynamicContainer.*",
+        "org.junit.jupiter.api.DynamicTest.*",
+        "org.mockito.Mockito.*",
+        "org.mockito.ArgumentMatchers.*",
+        "org.mockito.Answers.*",
+        "org.hamcrest.MatcherAssert.*",
+        "org.hamcrest.Matchers.*",
+        "org.assertj.core.api.Assertions.*",
+      ]
+}
