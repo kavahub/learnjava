@@ -31,7 +31,7 @@ public class EmployeeServlet extends HttpServlet {
         @Override
         public void init() throws ServletException {
             super.init();
-            log.info(">>>>> EmployeeServlet init <<<<<");
+            log.info(">>>>> EmployeeServlet init ");
         }
 
         @Override

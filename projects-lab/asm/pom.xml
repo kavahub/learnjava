@@ -18,13 +18,18 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
-          </dependency>
-          <dependency>
+        </dependency>
+        <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-util</artifactId>
-          </dependency>
+        </dependency>
 
         <dependency>
             <groupId>org.assertj</groupId>
@@ -48,10 +53,17 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
                         <manifestEntries>
                             <Premain-Class>
-                                io.github.kavahub.learnjava.IntegerPremain
+                                io.github.kavahub.learnjava.integer.PrmainAgent
+                                <!-- io.github.kavahub.learnjava.elapse.PrmainAgent -->
                             </Premain-Class>
+
+                            <Can-Redefine-Classes>true</Can-Redefine-Classes>
+                            <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>
                     </archive>
                 </configuration>

@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.integer;
 
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
@@ -11,16 +11,16 @@ import java.security.ProtectionDomain;
  * @author PinWei Wan
  * @since 1.0.1
  */
-public class IntegerPremain {
+public class PrmainAgent {
     public static void premain(String agentArgs, Instrumentation inst) {
+        System.out.println(" >>> IntegerPremain.premain called ");
         inst.addTransformer(new ClassFileTransformer() {
-
             @Override
-            public byte[] transform(ClassLoader l, String name, Class<?> c,
+            public byte[] transform(ClassLoader l, String className, Class<?> c,
                     ProtectionDomain d, byte[] b)
                     throws IllegalClassFormatException {
-
-                if (name.equals("java/lang/Integer")) {
+                System.out.println(">>> transform class: " + className);
+                if (className.equals("java/lang/Integer")) {
                     CustomClassWriter cr = new CustomClassWriter(b);
                     return cr.addField();
                 }

@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.integer;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -122,6 +122,7 @@ public class CustomClassWriter {
                 String signature,
                 String[] exceptions) {
 
+            // toUnsignedString0 是 Integer 类的私有方法
             if (name.equals("toUnsignedString0")) {
                 logger.info("Visiting unsigned method");
                 return tracer.visitMethod(ACC_PUBLIC + ACC_STATIC, name, desc, signature, exceptions);
