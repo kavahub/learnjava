@@ -10,17 +10,54 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class StopWatch {
-    static ThreadLocal<Long> t = new ThreadLocal<Long>();
-
-    public static void start() {
-        t.set(System.currentTimeMillis());
+    /**
+     * 
+     * 静态方法实现
+     *
+     * @author PinWei Wan
+     * @since 1.0.1
+     */
+    public static class StaticClazz {
+        static ThreadLocal<Long> t = new ThreadLocal<Long>();
+    
+        public static void start() {
+            t.set(System.currentTimeMillis());
+        }
+    
+        public static void end() {
+            final long elapseOfTime = System.currentTimeMillis() - t.get();
+            log.info("{} elapse of time: {}", Thread.currentThread().getStackTrace()[2] , elapseOfTime);
+    
+            t.remove();          
+        }
+    
     }
 
-    public static void end() {
-        final long elapseOfTime = System.currentTimeMillis() - t.get();
-        log.info("{} elapse of time: {}", Thread.currentThread().getStackTrace()[2] , elapseOfTime);
+    /**
+     * 
+     * 类实现
+     *
+     * @author PinWei Wan
+     * @since 1.0.1
+     */
+    public static class Clazz {
+        private final String methodName;
+        private long start;
+    
+        public Clazz(String methodName) {
+            this.methodName = methodName;
+        }
 
-        t.remove();          
+        public  void start() {
+            start = System.currentTimeMillis();
+        }
+    
+        public void end() {
+            final long elapseOfTime = System.currentTimeMillis() - start;
+            log.info("{} elapse of time: {}", methodName , elapseOfTime);
+       
+        }
+    
     }
 
 }

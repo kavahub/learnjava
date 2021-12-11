@@ -71,7 +71,7 @@ public class ClassFileTransformerWithASM implements ClassFileTransformer {
     }
 
     public static class ElapseMethodAdapter extends MethodVisitor {
-        private final static String owner = "io/github/kavahub/learnjava/StopWatch";
+        private final static String owner = "io/github/kavahub/learnjava/StopWatch$StaticClazz";
 
         public ElapseMethodAdapter(MethodVisitor methodVisitor) {
             super(ASM7, methodVisitor);

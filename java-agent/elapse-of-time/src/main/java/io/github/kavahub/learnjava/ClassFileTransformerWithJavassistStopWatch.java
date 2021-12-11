@@ -18,8 +18,9 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class ClassFileTransformerWithJavassistStopWatch implements ClassFileTransformer {
-    final static String STOPWATCH_START = "\n io.github.kavahub.learnjava.StopWatch.start();\n";
-    final static String STOPWATCH_END = "\n io.github.kavahub.learnjava.StopWatch.end();\n";
+    final static String STOPWATCH_START = "\n final io.github.kavahub.learnjava.StopWatch.Clazz stopwatch = new io.github.kavahub.learnjava.StopWatch.Clazz(\"%s\");\n"
+            + "\n stopwatch.start();\n";
+    final static String STOPWATCH_END = "\n stopwatch.end();\n";
 
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined,
@@ -47,7 +48,7 @@ public class ClassFileTransformerWithJavassistStopWatch implements ClassFileTran
                         // 构建新的方法体
                         StringBuilder bodyStr = new StringBuilder();
                         bodyStr.append("{");
-                        bodyStr.append(STOPWATCH_START);
+                        bodyStr.append(String.format(STOPWATCH_START, methodName));
                         // 调用原有代码，类似于method();($$)表示所有的参数
                         bodyStr.append(newMethodName + "($$);\n");
                         bodyStr.append(STOPWATCH_END);
