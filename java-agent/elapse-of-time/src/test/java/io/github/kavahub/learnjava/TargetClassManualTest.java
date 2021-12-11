@@ -30,18 +30,19 @@ public class TargetClassManualTest {
     public void givenJavassist_whenRunProgream_thenCheckConsole() throws IOException, InterruptedException {
         // 启动程序
         ProcessBuilder builder = Main.build();
-        builder.environment().put("class_file_transformer", "io.github.kavahub.learnjava.ClassFileTransformerWithJavassist");
+        builder.environment().put("transformer_class", "io.github.kavahub.learnjava.TransformerWithJavassist");
         Process process = builder.start();
 
         // 等待程序运行完成
         while(process.isAlive()) {}
     }
     
+
     @Test
-    public void givenJavassistStopWatch_whenRunProgream_thenCheckConsole() throws IOException, InterruptedException {
+    public void givenASM_whenRunProgream_thenCheckConsole() throws IOException, InterruptedException {
         // 启动程序
         ProcessBuilder builder = Main.build();
-        builder.environment().put("class_file_transformer", "io.github.kavahub.learnjava.ClassFileTransformerWithJavassistStopWatch");
+        builder.environment().put("transformer_class", "io.github.kavahub.learnjava.TransformerWithASM");
         Process process = builder.start();
 
         // 等待程序运行完成
@@ -49,10 +50,10 @@ public class TargetClassManualTest {
     }
 
     @Test
-    public void givenASM_whenRunProgream_thenCheckConsole() throws IOException, InterruptedException {
+    public void givenByteBuddy_whenRunProgream_thenCheckConsole() throws IOException, InterruptedException {
         // 启动程序
         ProcessBuilder builder = Main.build();
-        builder.environment().put("class_file_transformer", "io.github.kavahub.learnjava.ClassFileTransformerWithASM");
+        builder.environment().put("transformer_class", "io.github.kavahub.learnjava.TransformerWithByteBuddy");
         Process process = builder.start();
 
         // 等待程序运行完成

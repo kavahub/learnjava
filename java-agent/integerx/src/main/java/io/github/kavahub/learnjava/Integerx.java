@@ -20,7 +20,7 @@ public class Integerx {
    */
   public void printIntegerFields() {
     Field[] fields = Integer.class.getDeclaredFields();
-    log.info(">>> Integer fields {} , [{}]", fields.length,
+    log.info("Integer fields - {} - [{}]", fields.length,
         Stream.of(fields).map(Field::getName).collect(Collectors.joining(",")));
   }
 }

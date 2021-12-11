@@ -13,30 +13,30 @@ import lombok.extern.slf4j.Slf4j;
  * @since 1.0.1
  */
 @Slf4j
-public class ClassFileTransformerProvider implements Supplier<ClassFileTransformer> {
-    public final static String CLASS_FILE_TRANSFORMER_KEY = "class_file_transformer";
+public class TransformerProvider implements Supplier<Transformer> {
+    public final static String CLASS_FILE_TRANSFORMER_KEY = "transformer_class";
     private final String CLASS_FILE_TRANSFORMER_VALUE;
 
-    public final static ClassFileTransformerProvider INSTANCE = new ClassFileTransformerProvider();
+    public final static TransformerProvider INSTANCE = new TransformerProvider();
 
-    private ClassFileTransformerProvider() {
+    private TransformerProvider() {
         CLASS_FILE_TRANSFORMER_VALUE = System.getenv(CLASS_FILE_TRANSFORMER_KEY);
     }
 
     @Override
-    public ClassFileTransformer get() {
+    public Transformer get() {
         String className = CLASS_FILE_TRANSFORMER_VALUE;
         if (className == null) {
             // 默认
-            className = ClassFileTransformerWithASM.class.getName();
+            className = TransformerWithASM.class.getName();
         }
 
         // 反射创建
         Class<?> clazz = null;
         try {
             clazz = Class.forName(className);
-            if (ClassFileTransformer.class.isAssignableFrom(clazz)) {
-                return (ClassFileTransformer)clazz.getDeclaredConstructor().newInstance();
+            if (Transformer.class.isAssignableFrom(clazz)) {
+                return (Transformer)clazz.getDeclaredConstructor().newInstance();
             }
             log.error("Is not a correct subclass of ClassFileTransformer -> {}", className);
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException 

@@ -7,6 +7,7 @@ import static org.objectweb.asm.Opcodes.RETURN;
 
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
+import java.lang.instrument.Instrumentation;
 import java.security.ProtectionDomain;
 
 import org.objectweb.asm.ClassReader;
@@ -14,35 +15,45 @@ import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * ASM 库实现
  * 
  * @author PinWei Wan
  * @since 1.0.1
  */
-public class ClassFileTransformerWithASM implements ClassFileTransformer {
+@Slf4j
+public class TransformerWithASM implements Transformer{
+    private final static String TARGET_CLASS = "io/github/kavahub/learnjava/TargetClass";
 
     @Override
-    public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined,
-            ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+    public void transform(String args, Instrumentation inst) {
+        inst.addTransformer(new ClassFileTransformer() {
 
-        System.out.println(">>> transform class: " + className);
+            @Override
+            public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined,
+                    ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+                log.info("transform class - " + className);
 
-        // 仅处理Main结尾的类
-        if (className.endsWith("/TargetClass")) {
-            ElapseClassWriter writer = new ElapseClassWriter(classfileBuffer);
-            return writer.perform();
-        }
+                // 仅处理TargetClass类
+                if (className.equals(TARGET_CLASS)) {
+                    ElapseOfTimeClassWriter writer = new ElapseOfTimeClassWriter(classfileBuffer);
+                    return writer.perform();
+                }
 
-        return ClassFileTransformer.super.transform(loader, className, classBeingRedefined, protectionDomain,
-                classfileBuffer);
+                return ClassFileTransformer.super.transform(loader, className, classBeingRedefined, protectionDomain,
+                        classfileBuffer);
+            }
+
+        });
     }
 
-    public static class ElapseClassWriter {
+    public static class ElapseOfTimeClassWriter {
         private final ClassReader reader;
         private final ClassWriter writer;
 
-        public ElapseClassWriter(byte[] contents) {
+        public ElapseOfTimeClassWriter(byte[] contents) {
             reader = new ClassReader(contents);
             writer = new ClassWriter(reader, 0);
         }
@@ -97,4 +108,5 @@ public class ClassFileTransformerWithASM implements ClassFileTransformer {
         }
 
     }
+
 }
