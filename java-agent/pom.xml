@@ -19,6 +19,7 @@
 
     <modules>
         <module>integerx</module>
+        <module>elapse-of-time</module>
     </modules>
 
     <dependencies>

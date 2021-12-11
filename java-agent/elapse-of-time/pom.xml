@@ -2,26 +2,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>asm</artifactId>
-    <name>asm</name>
+    <artifactId>elapse-of-time</artifactId>
+    <name>elapse-of-time</name>
+    <packaging>jar</packaging>
 
     <description>
-        ASM 是一个 Java 字节码操控框架
+        显示方法运行时间，使用不同的库实现
     </description>
 
     <parent>
-        <groupId>io.github.kavahub.learnjava.projects-lab</groupId>
-        <artifactId>projects-lab-modules</artifactId>
+        <groupId>io.github.kavahub.learnjava.java-agent</groupId>
+        <artifactId>java-agent-modules</artifactId>
         <version>1.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+
 
     <dependencies>
         <dependency>
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
         </dependency>
-
+        
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
@@ -30,10 +32,7 @@
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-util</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.ow2.asm</groupId>
-            <artifactId>asm-commons</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
@@ -61,8 +60,7 @@
                         </manifest>
                         <manifestEntries>
                             <Premain-Class>
-                                <!-- io.github.kavahub.learnjava.integer.PrmainAgent -->
-                                io.github.kavahub.learnjava.elapse.PrmainAgent
+                                io.github.kavahub.learnjava.PremainAgent
                             </Premain-Class>
 
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
@@ -72,5 +70,5 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>    
 </project>

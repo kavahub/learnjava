@@ -19,7 +19,6 @@
 
     <modules>
         <module>asciidoctor</module>
-        <module>java-agent</module>
         <module>embed-tomcat-bootstrap</module>
     </modules>
 
