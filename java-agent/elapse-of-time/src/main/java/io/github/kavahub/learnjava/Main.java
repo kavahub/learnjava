@@ -29,18 +29,37 @@ public class Main {
      * @throws IOException
      * @throws InterruptedException
      */
-    public static Process start() throws IOException, InterruptedException {
-        String javaHome = System.getProperty("java.home");
-        String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
-        String classpath = System.getProperty("java.class.path");
-        String className = Main.class.getCanonicalName();
-    
-        Path javaagent = Paths.get("target", "elapse-of-time.jar");
+    public static ProcessBuilder build() throws IOException, InterruptedException {
+        ProcessBuilder builder = new ProcessBuilder();
+        addJavaBin(builder);
         // 注意：javaagent要放在前面
-        ProcessBuilder builder = new ProcessBuilder(javaBin, "-javaagent:" + javaagent.toAbsolutePath().toString(), "-cp",
-            classpath, className);
+        addJavaAgent(builder);
+        addClasspath(builder);
+        addClassMain(builder);
     
         builder.inheritIO();
-        return builder.start();
+        return builder;
       }
+
+    private static void addClassMain(ProcessBuilder builder) {
+        String className = Main.class.getCanonicalName();
+        builder.command().add(className);
+    }
+
+    private static void addClasspath(ProcessBuilder builder) {
+        String classpath = System.getProperty("java.class.path");
+        builder.command().add("-cp");
+        builder.command().add(classpath);
+    }
+
+    private static void addJavaAgent(ProcessBuilder builder) {
+        Path javaagent = Paths.get("target", "elapse-of-time.jar");
+        builder.command().add("-javaagent:" + javaagent.toAbsolutePath().toString());
+    }
+
+    private static void addJavaBin(ProcessBuilder builder) {
+        String javaHome = System.getProperty("java.home");
+        String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
+        builder.command().add(javaBin);
+    }
 }
