@@ -5,7 +5,7 @@
   <groupId>io.github.kavahub.learnjava</groupId>
   <artifactId>learnjava-modules</artifactId>
   <name>learnjava-modules</name>
-  <version>1.0.1-RELEASE</version>
+  <version>1.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <description>
@@ -31,7 +31,7 @@
     <connection>scm:git:git@gitee.com:pinweiwan/learnjava.git</connection>
     <developerConnection>scm:git:git@gitee.com:pinweiwan/learnjava.git</developerConnection>
     <url>https://gitee.com/pinweiwan/learnjava.git</url>
-    <tag>learnjava-modules-1.0.1-RELEASE</tag>
+    <tag>learnjava-modules-1.0.2-SNAPSHOT</tag>
   </scm>
 
   <properties>

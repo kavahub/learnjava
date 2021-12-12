@@ -10,7 +10,7 @@
     <parent>
         <groupId>io.github.kavahub.learnjava</groupId>
         <artifactId>learnjava-modules</artifactId>
-        <version>1.0.1-RELEASE</version>
+        <version>1.0.2-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
