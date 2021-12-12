@@ -25,47 +25,43 @@ import net.bytebuddy.utility.JavaModule;
 public class TransformerWithByteBuddy implements Transformer {
     private final static String TARGET_CLASS = "io.github.kavahub.learnjava.TargetClass";
 
-    private AgentBuilder.Transformer transformer = (builder, typeDescription, classLoader, javaModule) -> {
-        return builder
-                // 拦截任意方法
-                .method(ElementMatchers.any())
-                // 委托
-                .intercept(MethodDelegation.to(ElapseOfTimeWriter.class));
-    };
-
-    private AgentBuilder.Listener listener = new AgentBuilder.Listener() {
-
-        @Override
-        public void onDiscovery(String typeName, ClassLoader classLoader, JavaModule module, boolean loaded) {
-            log.info("onDiscovery - {}", typeName);
-        }
-
-        @Override
-        public void onTransformation(TypeDescription typeDescription, ClassLoader classLoader, JavaModule module,
-                boolean loaded, DynamicType dynamicType) {
-            log.info("onTransformation - {}", typeDescription);
-        }
-
-        @Override
-        public void onIgnored(TypeDescription typeDescription, ClassLoader classLoader, JavaModule module,
-                boolean loaded) {
-            log.info("onIgnored - {}", typeDescription);
-        }
-
-        @Override
-        public void onError(String typeName, ClassLoader classLoader, JavaModule module, boolean loaded,
-                Throwable throwable) {
-            log.info("onError - {}", typeName);
-        }
-
-        @Override
-        public void onComplete(String typeName, ClassLoader classLoader, JavaModule module, boolean loaded) {
-            log.info("onComplete - {}", typeName);
-        }
-    };
-
     @Override
     public void transform(String args, Instrumentation inst) {
+        AgentBuilder.Transformer transformer = (builder, typeDescription, classLoader, javaModule) -> {
+            return builder
+                    // 拦截任意方法
+                    .method(ElementMatchers.any())
+                    // 委托
+                    .intercept(MethodDelegation.to(ElapseOfTimeWriter.class));
+        };
+    
+        AgentBuilder.Listener listener = new AgentBuilder.Listener() {
+    
+            @Override
+            public void onDiscovery(String typeName, ClassLoader classLoader, JavaModule module, boolean loaded) {
+            }
+    
+            @Override
+            public void onTransformation(TypeDescription typeDescription, ClassLoader classLoader, JavaModule module,
+                    boolean loaded, DynamicType dynamicType) {
+                log.info("onTransformation - {}", typeDescription);
+            }
+    
+            @Override
+            public void onIgnored(TypeDescription typeDescription, ClassLoader classLoader, JavaModule module,
+                    boolean loaded) {
+            }
+    
+            @Override
+            public void onError(String typeName, ClassLoader classLoader, JavaModule module, boolean loaded,
+                    Throwable throwable) {
+            }
+    
+            @Override
+            public void onComplete(String typeName, ClassLoader classLoader, JavaModule module, boolean loaded) {
+            }
+        };
+
         new AgentBuilder.Default()
                 // 指定需要拦截的类
                 .type(ElementMatchers.named(TARGET_CLASS)) 

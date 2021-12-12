@@ -20,6 +20,7 @@
     <modules>
         <module>integerx</module>
         <module>elapse-of-time</module>
+        <module>threadlocal</module>
     </modules>
 
     <dependencies>

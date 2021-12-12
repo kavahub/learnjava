@@ -34,10 +34,12 @@ public class TransformerWithASM implements Transformer{
             @Override
             public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined,
                     ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-                log.info("transform class - " + className);
+                
 
                 // 仅处理TargetClass类
                 if (className.equals(TARGET_CLASS)) {
+                    log.info("transform class - " + className);
+                    
                     ElapseOfTimeClassWriter writer = new ElapseOfTimeClassWriter(classfileBuffer);
                     return writer.perform();
                 }
