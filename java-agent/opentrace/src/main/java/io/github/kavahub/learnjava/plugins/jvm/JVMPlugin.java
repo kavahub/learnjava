@@ -1,10 +1,10 @@
 package io.github.kavahub.learnjava.plugins.jvm;
 
-import io.github.kavahub.learnjava.plugins.ElementMatcherSupplier;
+import io.github.kavahub.learnjava.plugins.TargetElementProvider;
 import io.github.kavahub.learnjava.plugins.Plugin;
 
 /**
- * TODO
+ * JVM插件，获取JVM信息
  *  
  * @author PinWei Wan
  * @since 1.0.1
@@ -24,8 +24,8 @@ public class JVMPlugin implements Plugin {
 
 
     @Override
-    public ElementMatcherSupplier[] elementMatchers() {
-        return new ElementMatcherSupplier[] {new TargetClassElementMatcherSupplier()};
+    public TargetElementProvider[] elementMatchers() {
+        return new TargetElementProvider[] {new JVMTargetElementProvider()};
     }
 
     

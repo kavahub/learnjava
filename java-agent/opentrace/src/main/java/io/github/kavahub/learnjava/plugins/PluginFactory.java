@@ -7,7 +7,7 @@ import io.github.kavahub.learnjava.plugins.jvm.JVMPlugin;
 import io.github.kavahub.learnjava.plugins.trace.TracePlugin;
 
 /**
- * TODO
+ * 插件工程，包含所有实现的插件
  *  
  * @author PinWei Wan
  * @since 1.0.1

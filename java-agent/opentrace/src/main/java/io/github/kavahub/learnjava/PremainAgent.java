@@ -3,7 +3,7 @@ package io.github.kavahub.learnjava;
 import java.lang.instrument.Instrumentation;
 import java.util.List;
 
-import io.github.kavahub.learnjava.plugins.ElementMatcherSupplier;
+import io.github.kavahub.learnjava.plugins.TargetElementProvider;
 import io.github.kavahub.learnjava.plugins.Plugin;
 import io.github.kavahub.learnjava.plugins.PluginFactory;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +14,7 @@ import net.bytebuddy.dynamic.DynamicType;
 import net.bytebuddy.utility.JavaModule;
 
 /**
- * TODO
+ * 代理入口
  * 
  * @author PinWei Wan
  * @since 1.0.1
@@ -25,15 +25,18 @@ public class PremainAgent {
         log.info("Agent called - {}", PremainAgent.class.getName());
 
         AgentBuilder agentBuilder = new AgentBuilder.Default();
+
+        // 扫描所有的插件
         List<Plugin> plugins = PluginFactory.pluginGroup();
         for (Plugin plugin : plugins) {
-            ElementMatcherSupplier[] suppliers = plugin.elementMatchers();
-            for (ElementMatcherSupplier supplier : suppliers) {
+            // 需要处理的类及方法
+            TargetElementProvider[] providers = plugin.elementMatchers();
+            for (TargetElementProvider provider : providers) {
                 AgentBuilder.Transformer transformer = (builder, typeDescription, classLoader, javaModule) -> {
-                    builder = builder.visit(Advice.to(plugin.advice()).on(supplier.methodDescription().get()));
+                    builder = builder.visit(Advice.to(plugin.advice()).on(provider.methodDescription()));
                     return builder;
                 };
-                agentBuilder = agentBuilder.type(supplier.typeDescription().get()).transform(transformer);
+                agentBuilder = agentBuilder.type(provider.typeDescription()).transform(transformer);
             }
 
         }

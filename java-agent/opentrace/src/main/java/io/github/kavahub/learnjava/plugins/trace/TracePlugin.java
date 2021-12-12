@@ -1,10 +1,10 @@
 package io.github.kavahub.learnjava.plugins.trace;
 
-import io.github.kavahub.learnjava.plugins.ElementMatcherSupplier;
+import io.github.kavahub.learnjava.plugins.TargetElementProvider;
 import io.github.kavahub.learnjava.plugins.Plugin;
 
 /**
- * TODO
+ * 链路追踪插件
  *  
  * @author PinWei Wan
  * @since 1.0.1
@@ -24,8 +24,8 @@ public class TracePlugin implements Plugin {
 
 
     @Override
-    public ElementMatcherSupplier[] elementMatchers() {
-        return new ElementMatcherSupplier[] {new TargetClassElementMatcherSupplier()};
+    public TargetElementProvider[] elementMatchers() {
+        return new TargetElementProvider[] {new TraceTargetElementProvider()};
     }
 
     

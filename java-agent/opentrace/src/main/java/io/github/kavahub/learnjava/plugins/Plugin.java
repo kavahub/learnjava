@@ -10,8 +10,9 @@ public interface Plugin {
         // 名称
         String name();
 
-        ElementMatcherSupplier[] elementMatchers();
+        // 提供者
+        TargetElementProvider[] elementMatchers();
 
-        // 拦截器类
+        // 织入类
         Class<?> advice();
 }

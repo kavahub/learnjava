@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * TODO
+ * 虚拟机信息
  *  
  * @author PinWei Wan
  * @since 1.0.1
