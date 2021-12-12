@@ -55,3 +55,7 @@ mvn clean install -Pintegration-test
 #### 其他项目
 
 - [eugenp](https://github.com/eugenp/tutorials) : This project is a collection of small and focused tutorials 
+
+## 参考
+
+- [Get started using Visual Studio Code with Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
