@@ -12,7 +12,7 @@
     <parent>
         <groupId>io.github.kavahub.learnjava.boms</groupId>
         <artifactId>boms-modules</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.1-RELEASE</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
