@@ -20,7 +20,7 @@
     <modules>
         <module>integerx</module>
         <module>elapse-of-time</module>
-        <module>threadlocal</module>
+        <module>opentrace</module>
     </modules>
 
     <dependencies>

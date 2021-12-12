@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
  * 
  * <p>
  * 使用 Maven 命令打包： mvn clean install，
- * 在 target 目录有 threadlocal.jar 文件， 然后运行测试查看控制条输出
+ * 在 target 目录有 opentrace.jar 文件， 然后运行测试查看控制条输出
  *  
  * @author PinWei Wan
  * @since 1.0.1
@@ -40,7 +40,7 @@ public class TargetClassManualTest {
         String classpath = System.getProperty("java.class.path");
         String className = mainClass.getCanonicalName();
     
-        Path javaagent = Paths.get("target", "threadlocal.jar");
+        Path javaagent = Paths.get("target", "opentrace.jar");
         // 注意：javaagent要放在前面
         ProcessBuilder builder = new ProcessBuilder(javaBin, "-javaagent:" + javaagent.toAbsolutePath().toString(), "-cp",
             classpath, className);

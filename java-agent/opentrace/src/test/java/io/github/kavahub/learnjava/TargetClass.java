@@ -3,7 +3,7 @@ package io.github.kavahub.learnjava;
 import java.util.Random;
 
 /**
- * TODO
+ * 目标类
  *  
  * @author PinWei Wan
  * @since 1.0.1

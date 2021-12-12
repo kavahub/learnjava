@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.plugins.trace;
 
 import lombok.Data;
 

@@ -1,13 +1,16 @@
 package io.github.kavahub.learnjava;
 
 import java.lang.instrument.Instrumentation;
+import java.util.List;
 
+import io.github.kavahub.learnjava.plugins.ElementMatcherSupplier;
+import io.github.kavahub.learnjava.plugins.Plugin;
+import io.github.kavahub.learnjava.plugins.PluginFactory;
 import lombok.extern.slf4j.Slf4j;
 import net.bytebuddy.agent.builder.AgentBuilder;
 import net.bytebuddy.asm.Advice;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.DynamicType;
-import net.bytebuddy.matcher.ElementMatchers;
 import net.bytebuddy.utility.JavaModule;
 
 /**
@@ -21,12 +24,19 @@ public class PremainAgent {
     public static void premain(String agentArgs, Instrumentation inst) {
         log.info("Agent called - {}", PremainAgent.class.getName());
 
-        AgentBuilder.Transformer transformer = (builder, typeDescription, classLoader, javaModule) -> {
-            builder = builder.visit(
-                    Advice.to(TraceAdvice.class)
-                            .on(ElementMatchers.any()));
-            return builder;
-        };
+        AgentBuilder agentBuilder = new AgentBuilder.Default();
+        List<Plugin> plugins = PluginFactory.pluginGroup();
+        for (Plugin plugin : plugins) {
+            ElementMatcherSupplier[] suppliers = plugin.elementMatchers();
+            for (ElementMatcherSupplier supplier : suppliers) {
+                AgentBuilder.Transformer transformer = (builder, typeDescription, classLoader, javaModule) -> {
+                    builder = builder.visit(Advice.to(plugin.advice()).on(supplier.methodDescription().get()));
+                    return builder;
+                };
+                agentBuilder = agentBuilder.type(supplier.typeDescription().get()).transform(transformer);
+            }
+
+        }
 
         // 监听
         AgentBuilder.Listener listener = new AgentBuilder.Listener() {
@@ -60,12 +70,6 @@ public class PremainAgent {
 
         };
 
-        new AgentBuilder.Default()
-                // 指定需要拦截的类
-                .type(ElementMatchers.nameStartsWith("io.github.kavahub.learnjava.TargetClass"))
-                .transform(transformer)
-                .with(listener)
-                .installOn(inst);
-
+        agentBuilder.with(listener).installOn(inst);
     }
 }

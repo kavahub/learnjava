@@ -1,4 +1,4 @@
-package io.github.kavahub.learnjava;
+package io.github.kavahub.learnjava.plugins.trace;
 
 import net.bytebuddy.asm.Advice;
 
@@ -16,6 +16,7 @@ public class TraceAdvice {
 
     @Advice.OnMethodExit()
     public static void exit(@Advice.Origin("#t") String className, @Advice.Origin("#m") String methodName) {
-        System.out.println("Trace - " + TraceManager.INSTANCE.endSpan().get().toString());
+        final Span span = TraceManager.INSTANCE.endSpan().get();
+        System.out.println("链路追踪(MQ) - " + span.toString());
     }
 }
