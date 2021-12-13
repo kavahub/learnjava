@@ -137,6 +137,8 @@
     <jcl-over-slf4j.version>2.0.0-alpha5</jcl-over-slf4j.version>
     <commons-codec.version>1.15</commons-codec.version>
     <byte-buddy.version>1.12.3</byte-buddy.version>
+    <atomikos.version>5.0.8</atomikos.version>
+    <slf4j-jboss-logging.version>1.2.1.Final</slf4j-jboss-logging.version>
   </properties>
 
   <modules>
@@ -165,6 +167,35 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.jboss.slf4j</groupId>
+        <artifactId>slf4j-jboss-logging</artifactId>
+        <version>${slf4j-jboss-logging.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.atomikos</groupId>
+        <artifactId>transactions-jdbc</artifactId>
+        <version>${atomikos.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.atomikos</groupId>
+        <artifactId>transactions-jms</artifactId>
+        <version>${atomikos.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.atomikos</groupId>
+        <artifactId>transactions-hibernate4</artifactId>
+        <version>${atomikos.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.atomikos</groupId>
+        <artifactId>transactions-jta</artifactId>
+        <version>${atomikos.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>net.bytebuddy</groupId>
         <artifactId>byte-buddy-agent</artifactId>
