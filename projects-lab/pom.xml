@@ -21,6 +21,7 @@
         <module>asciidoctor</module>
         <module>embed-tomcat-bootstrap</module>
         <module>atomikos</module>
+        <module>atomix</module>
     </modules>
 
     <dependencies>

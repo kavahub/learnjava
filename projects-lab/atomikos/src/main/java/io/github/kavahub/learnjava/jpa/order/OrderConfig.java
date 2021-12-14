@@ -61,7 +61,7 @@ public class OrderConfig {
         Properties jpaProperties = new Properties();
         //jpaProperties.put("hibernate.show_sql", "true");
         //jpaProperties.put("hibernate.format_sql", "true");
-        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.DerbyDialect");
+        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.DerbyTenSevenDialect");
         jpaProperties.put("hibernate.current_session_context_class", "jta");
         jpaProperties.put("javax.persistence.transactionType", "jta");
         jpaProperties.put("hibernate.transaction.manager_lookup_class", "com.atomikos.icatch.jta.hibernate3.TransactionManagerLookup");

@@ -25,5 +25,6 @@
         <module>apache-cxf-bom</module>
         <module>spring-boot-bom</module>
         <module>hibernate-bom</module>
+        <module>derby-bom</module>
     </modules>
 </project>

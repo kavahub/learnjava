@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>Derby-bom</artifactId>
+  <name>Derby-bom</name>
+  <packaging>pom</packaging>
+
+  <description>
+    Derby 依赖
+  </description>
+
+  <parent>
+    <groupId>io.github.kavahub.learnjava.boms</groupId>
+    <artifactId>boms-modules</artifactId>
+    <version>1.0.2-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <properties>
+    <derby.version>10.15.2.0</derby.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- The embedded database engine contains Derby's core functionality. It contains its own JDBC driver, allowing one JVM to host both Derby and the applications which use it. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derby</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+
+      <!-- The network server wraps the database engine, enabling networked JDBC access. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbynet</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+
+      <!-- The remote JDBC client connects to a server across a network. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbyclient</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+
+      <!-- Basic tools include a schema dumper and an interactive SQL interpreter. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbytools</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+
+      <!-- Optional tools support metadata introspection and access to other vendors' databases. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbyoptionaltools</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+
+      <!-- The runner module supports easy command-line administration of Derby installations. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbyrun</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+
+      <!-- The commons module contains cross-module support utilities. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbyshared</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+
+      <!-- Message localizations support human-readable diagnostics in languages other than English. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbyLocale_zh_CN</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+
+      <!-- An extensive body of tests stresses functionality in all of the other modules. -->
+      <dependency>
+        <groupId>org.apache.derby</groupId>
+        <artifactId>derbyTests</artifactId>
+        <version>${derby.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
