@@ -34,10 +34,17 @@
         <javax.xml.soap-api.version>1.4.0</javax.xml.soap-api.version>
         <javax.el-api.version>3.0.1-b06</javax.el-api.version>
         <javax.el.version>3.0.1-b12</javax.el.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+             <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation-api.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>javax.el</groupId>
                 <artifactId>javax.el-api</artifactId>

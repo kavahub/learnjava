@@ -11,10 +11,10 @@ Atomikos 是一个为Java平台提供增值服务的并且开源类事务管理�
 * Atomikos + Derby + Spring
 * Atomikos + Derby + JPA
 
-## 运行项目
-
 
 ## 参考
+
+- [Integrating TransactionsEssentials®](https://www.atomikos.com/Documentation/IntegratingTransactionEssentials)  包含与Spring, Hibernate, Tomcat, Jetty等等集成文档
 
 
 

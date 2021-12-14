@@ -23,5 +23,7 @@
         <module>spring-bom</module>
         <module>jakarta-bom</module>
         <module>apache-cxf-bom</module>
+        <module>spring-boot-bom</module>
+        <module>hibernate-bom</module>
     </modules>
 </project>

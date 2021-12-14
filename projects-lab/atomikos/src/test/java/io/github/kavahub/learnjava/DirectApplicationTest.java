@@ -76,6 +76,8 @@ public class DirectApplicationTest {
             System.out.println("Product row exists");
         }
         s1.close();
+
+        // 创建订单表，amount字段有约束条件
         String createOrderTable = "create table Orders ( orderId VARCHAR ( 100 ) PRIMARY KEY, productId VARCHAR ( 100 ), amount INT NOT NULL CHECK (amount <= 5) )";
         Statement s2 = orderConnection.createStatement();
         try {

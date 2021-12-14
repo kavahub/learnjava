@@ -1,6 +1,6 @@
-# tomcat-bom
+# spring-boom
 
-Tomcat 依赖
+spring 依赖
 
 ## 参考
 

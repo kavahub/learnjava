@@ -51,6 +51,8 @@ public class JPAApplication {
         order.setOrderId(orderId);
         order.setProductId(productId);
         order.setAmount(Long.valueOf(amount));
+
+        // 校验，Order实体上有校验规则
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
         Set<ConstraintViolation<Order>> violations = validator.validate(order);

@@ -65,6 +65,7 @@ public class OrderConfig {
         jpaProperties.put("hibernate.current_session_context_class", "jta");
         jpaProperties.put("javax.persistence.transactionType", "jta");
         jpaProperties.put("hibernate.transaction.manager_lookup_class", "com.atomikos.icatch.jta.hibernate3.TransactionManagerLookup");
+        // 自动创建表
         jpaProperties.put("hibernate.hbm2ddl.auto", "create-drop");
         factory.setJpaProperties(jpaProperties);
         factory.afterPropertiesSet();

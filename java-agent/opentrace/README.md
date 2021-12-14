@@ -1,6 +1,6 @@
-# threadlocal
+# opentrace
 
-链路追踪实现
+插件化开发：链路追踪实现
 
 ## 参考
 
