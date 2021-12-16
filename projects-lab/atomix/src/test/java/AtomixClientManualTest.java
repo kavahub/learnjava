@@ -11,7 +11,7 @@ import io.atomix.catalyst.transport.Address;
 import io.atomix.catalyst.transport.netty.NettyTransport;
 
 /**
- * TODO
+ * 测试用例
  *  
  * @author PinWei Wan
  * @since 1.0.2

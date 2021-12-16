@@ -12,7 +12,7 @@ import io.atomix.copycat.server.storage.Storage;
 import io.atomix.copycat.server.storage.StorageLevel;
 
 /**
- * TODO
+ * 多节点集群
  *  
  * @author PinWei Wan
  * @since 1.0.2

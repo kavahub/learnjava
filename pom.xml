@@ -140,6 +140,8 @@
     <atomikos.version>5.0.8</atomikos.version>
     <slf4j-jboss-logging.version>1.2.1.Final</slf4j-jboss-logging.version>
     <atomix-all>1.0.8</atomix-all>
+    <akka-http.version>10.0.11</akka-http.version>
+    <akka-stream.version>2.5.11</akka-stream.version>
   </properties>
 
   <modules>
@@ -168,6 +170,27 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>com.typesafe.akka</groupId>
+        <artifactId>akka-http_2.12</artifactId>
+        <version>${akka-http.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.typesafe.akka</groupId>
+        <artifactId>akka-stream_2.12</artifactId>
+        <version>${akka-stream.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.typesafe.akka</groupId>
+        <artifactId>akka-http-jackson_2.12</artifactId>
+        <version>${akka-http.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.typesafe.akka</groupId>
+        <artifactId>akka-http-testkit_2.12</artifactId>
+        <version>${akka-http.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>io.atomix</groupId>
         <artifactId>atomix-all</artifactId>

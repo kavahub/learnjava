@@ -22,6 +22,7 @@
         <module>embed-tomcat-bootstrap</module>
         <module>atomikos</module>
         <module>atomix</module>
+        <module>akka-http</module>
     </modules>
 
     <dependencies>
