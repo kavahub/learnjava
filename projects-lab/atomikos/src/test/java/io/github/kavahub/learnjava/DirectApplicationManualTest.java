@@ -24,7 +24,7 @@ import org.junit.jupiter.api.Test;
  * @author PinWei Wan
  * @since 1.0.2
  */
-public class DirectApplicationTest {
+public class DirectApplicationManualTest {
     
     private static DataSource inventoryDataSource;
     private static DataSource orderDataSource;

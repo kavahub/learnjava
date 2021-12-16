@@ -5,6 +5,8 @@ Akka HTTP 模块组在 akka-actor 和 akka-stream 的基础上实现了全HTTP�
 ## 参考
 
 - [Akka HTTP 文档 （非官方汉化）- 导读](https://zhuanlan.zhihu.com/p/24798365)
+- [Introduction to Akka HTTP](https://www.baeldung.com/akka-http)
+- [Guide to Akka Streams](https://www.baeldung.com/akka-streams)
 
 
 

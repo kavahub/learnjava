@@ -29,7 +29,7 @@ import io.github.kavahub.learnjava.SpringApplication.Config;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { Config.class })
-public class SpringApplicationTest {
+public class SpringApplicationManualTest {
     
     private static String productId = UUID.randomUUID()
         .toString();

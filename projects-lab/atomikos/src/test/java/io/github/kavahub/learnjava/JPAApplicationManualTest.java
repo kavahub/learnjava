@@ -31,7 +31,7 @@ import io.github.kavahub.learnjava.jpa.order.OrderRepository;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { Config.class, InventoryConfig.class, OrderConfig.class })
-public class JPAApplicationTest {
+public class JPAApplicationManualTest {
     
     private static String productId = UUID.randomUUID()
         .toString();
