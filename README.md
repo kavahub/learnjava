@@ -35,8 +35,9 @@ Java 编程语言学习，内容包含多个方面，如：字符串，日期，
 几种测试说明：
 * `*Test.java` 单元测试，单个类的测试，有断言
 * `*ManualTest.java` 手工测试，单个或多个类的测试，没有断言，通常用控制台输出查看结果
-* `*LiveTest.java` 集成测试，测试依赖某些服务，在测试开始前，会自动启动服务，完成后关闭
-* `*IntegrationTest.java` 集成测试，测试依赖某些服务，但不会自动启动服务，而是依靠工具启动， 如：`cargo-maven2-plugin`
+* `*LiveTest.java` 集成测试，测试依赖某些服务，在测试开始前，会自动启动服务（可能依靠工具启动， 如：`cargo-maven2-plugin`），完成后关闭
+* `*IntegrationTest.java` 集成测试，测试依赖某些服务，但不会自动启动服务，需要用户手工启动服务，或者是网络服务
+* `*MockTest.java` 模拟测试，使用第三方 `Mock` 框架测试
 
 #### 运行项目
 
@@ -46,10 +47,10 @@ Java 编程语言学习，内容包含多个方面，如：字符串，日期，
 mvn clean install
 ```
 
-如果需要运行集成测试（依赖某些服务，可能会失败），运行 `Maven`命令：
+如果需要运行集成测试（依赖某些服务，测试前自动启动依赖服务），运行 `Maven`命令：
 
 ```text
-mvn clean install -Pintegration-test
+mvn clean install -Plive-test
 ```
 
 #### 其他项目

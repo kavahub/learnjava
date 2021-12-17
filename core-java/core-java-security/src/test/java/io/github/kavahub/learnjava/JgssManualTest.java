@@ -14,7 +14,6 @@ import org.ietf.jgss.MessageProp;
 import org.ietf.jgss.Oid;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -28,8 +27,7 @@ import org.junit.jupiter.api.Test;
  * 
  * @see <a href="https://www.baeldung.com/java-gss">A Guide to Java GSS API</a>
  */
-@Disabled
-public class JgssIntegrationTest {
+public class JgssManualTest {
     private static final String SERVER_PRINCIPAL = "HTTP/localhost@EXAMPLE.COM";
     private static final String MECHANISM = "1.2.840.113554.1.2.2";
 

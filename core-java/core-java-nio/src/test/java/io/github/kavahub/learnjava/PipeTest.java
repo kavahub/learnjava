@@ -25,7 +25,7 @@ import org.junit.jupiter.api.Test;
  * @author PinWei Wan
  * @since 1.0.0
  */
-public class PipeLiveTest {
+public class PipeTest {
     @Test
     public void whenWakeUpCalledOnSelector_thenBlockedThreadReturns() throws IOException, InterruptedException {
         Pipe pipe = Pipe.open();

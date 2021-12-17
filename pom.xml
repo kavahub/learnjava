@@ -75,7 +75,7 @@
     <commons-validator.version>1.7</commons-validator.version>
     <maven-artifact.version>3.8.3</maven-artifact.version>
     <gradle-core.version>4.3-rc-4</gradle-core.version>
-    <jackson-core.version>2.13.0</jackson-core.version>
+    <jackson.version>2.13.0</jackson.version>
     <semver4j.version>3.1.0</semver4j.version>
     <commons-io.version>2.11.0</commons-io.version>
     <javamoney.moneta.version>1.4.2</javamoney.moneta.version>
@@ -108,7 +108,7 @@
     <jmimemagic.version>0.1.5</jmimemagic.version>
     <tika.version>2.1.0</tika.version>
     <log4j-slf4j-impl.version>2.14.1</log4j-slf4j-impl.version>
-    <awaitility.version>1.7.0</awaitility.version>
+    <jayway.awaitility.version>1.7.0</jayway.awaitility.version>
     <jcabi-aspects.version>0.23.2</jcabi-aspects.version>
     <ea-async.version>1.2.3</ea-async.version>
     <cactoos.version>0.50</cactoos.version>
@@ -129,18 +129,20 @@
     <asciidoctorj.version>2.5.2</asciidoctorj.version>
     <asciidoctorj-pdf.version>1.6.0</asciidoctorj-pdf.version>
     <jruby-complete.version>9.3.2.0</jruby-complete.version>
-    <logback-classic.version>1.3.0-alpha10</logback-classic.version>
+    <logback-classic.version>1.2.8</logback-classic.version>
     <lombok.version>1.18.22</lombok.version>
     <assertj-core.version>3.21.0</assertj-core.version>
     <hamcrest.version>2.2</hamcrest.version>
     <httpclient.version>4.5.13</httpclient.version>
-    <jcl-over-slf4j.version>2.0.0-alpha5</jcl-over-slf4j.version>
+    <slf4j.version>1.7.32</slf4j.version>
     <commons-codec.version>1.15</commons-codec.version>
     <byte-buddy.version>1.12.3</byte-buddy.version>
     <atomikos.version>5.0.8</atomikos.version>
     <slf4j-jboss-logging.version>1.2.1.Final</slf4j-jboss-logging.version>
     <atomix-all>1.0.8</atomix-all>
-
+    <awaitility.version>4.1.1</awaitility.version>
+    <awaitility-proxy.version>3.1.6</awaitility-proxy.version>
+    <testcontainers-jupiter.version>1.16.2</testcontainers-jupiter.version>
   </properties>
 
   <modules>
@@ -154,6 +156,7 @@
     <module>antlr</module>
     <module>projects-lab</module>
     <module>java-agent</module>
+    <module>apache</module>
   </modules>
 
   <repositories>
@@ -169,6 +172,29 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>${slf4j.version}</version>
+    </dependency>
+
+      <dependency>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${testcontainers-jupiter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.awaitility</groupId>
+        <artifactId>awaitility-proxy</artifactId>
+        <version>${awaitility-proxy.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.awaitility</groupId>
+        <artifactId>awaitility</artifactId>
+        <version>${awaitility.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>io.atomix</groupId>
         <artifactId>atomix-all</artifactId>
@@ -210,7 +236,7 @@
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jcl-over-slf4j</artifactId>
-        <version>${jcl-over-slf4j.version}</version>
+        <version>${slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
@@ -377,8 +403,8 @@
 
       <dependency>
         <groupId>com.jayway.awaitility</groupId>
-        <artifactId>awaitility</artifactId>
-        <version>${awaitility.version}</version>
+        <artifactId>jayway.awaitility</artifactId>
+        <version>${jayway.awaitility.version}</version>
       </dependency>
 
       <dependency>
@@ -575,9 +601,19 @@
       </dependency>
 
       <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jsr310</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>${jackson-core.version}</version>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson.version}</version>
       </dependency>
 
       <dependency>
@@ -792,17 +828,46 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <executions>
               <execution>
-                <phase>integration-test</phase>
+                <phase>live-test</phase>
                 <goals>
                   <goal>test</goal>
                 </goals>
                 <configuration>
                   <excludes>
                     <exclude>**/*ManualTest.java</exclude>
+                    <exclude>**/*LiveTest.java</exclude>
+                  </excludes>
+                  <includes>
+                    <include>**/*IntegrationTest.java</include>
+                  </includes>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>live-test</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>live-test</phase>
+                <goals>
+                  <goal>test</goal>
+                </goals>
+                <configuration>
+                  <excludes>
+                    <exclude>**/*ManualTest.java</exclude>
+                    <exclude>**/*IntegrationTest.java</exclude>
                   </excludes>
                   <includes>
                     <include>**/*LiveTest.java</include>
-                    <include>**/*IntegrationTest.java</include>
                   </includes>
                 </configuration>
               </execution>

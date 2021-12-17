@@ -24,7 +24,7 @@ import java.time.Duration;
  * @author PinWei Wan
  * @since 1.0.0
  */
-public class HttpClientIntegrationTest {
+public class HttpClientMockTest {
  
     private static ClientAndServer mockServer;
     private static int port;

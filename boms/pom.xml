@@ -22,7 +22,7 @@
         <module>tomcat-bom</module>
         <module>spring-bom</module>
         <module>jakarta-bom</module>
-        <module>apache-cxf-bom</module>
+        <module>apache-bom</module>
         <module>spring-boot-bom</module>
         <module>hibernate-bom</module>
         <module>derby-bom</module>

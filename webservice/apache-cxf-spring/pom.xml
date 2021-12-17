@@ -37,7 +37,7 @@
 
             <dependency>
                 <groupId>io.github.kavahub.learnjava.boms</groupId>
-                <artifactId>apache-cxf-bom</artifactId>
+                <artifactId>apache-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
