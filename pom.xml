@@ -61,7 +61,7 @@
     <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
     <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
-
+    <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
     <junit5-bom.version>5.8.1</junit5-bom.version>
     <junit4.version>4.13.2</junit4.version>
     <guava.version>31.0.1-jre</guava.version>
@@ -680,6 +680,12 @@
   <build>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>${maven-shade-plugin.version}</version>
+      </plugin>
+
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
